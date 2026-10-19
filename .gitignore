@@ -13,3 +13,12 @@ $RECYCLE.BIN/
 
 # Logs & Temp
 *.log
+.venv/
+__pycache__/
+*.pyc
+extract_summary.py
+slides_extracted_summary.txt
+test_export/
+test_pres.pptx
+test_rtl.pptx
+test_rtl_export/
