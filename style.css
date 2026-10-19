@@ -3328,9 +3328,9 @@ body.theme-light .why-card-footer {
   color: #25D366;
 }
 
-/* Floating WhatsApp Quick Action Button (Bottom Left) */
+/* Floating WhatsApp Quick Action Button (Removed as requested) */
 .floating-whatsapp-btn {
-  position: fixed;
+  display: none !important;
   bottom: 24px;
   left: 24px;
   z-index: 998;
