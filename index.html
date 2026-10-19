@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Pay | ألتميت باي — حلول المدفوعات والتحصيل الذكي</title>
+  <meta name="description"
+    content="البوابة المالية الرائدة وحلول نقاط البيع والتحصيل الذكي للتجار والبنوك والمؤسسات المالية في اليمن. مرخصة من البنك المركزي اليمني ومعتمدة بمعايير الأمان العالمية.">
+
+  <!-- Google Fonts: Cairo for Arabic & Outfit for English / Numbers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-dark track-merchants" data-track="merchants" data-lang="ar">
+
+  <!-- Floating Presentation Toolbar (Useful for Meetings & Pitching) -->
+  <aside class="pitch-toolbar" aria-label="أدوات العرض المباشر">
+    <div class="pitch-toolbar-inner">
+      <span class="pitch-badge"><i class="fa-solid fa-desktop"></i> <span data-i18n="toolbar_pitch_mode">وضع
+          العرض</span></span>
+      <button id="btnToggleFullscreen" class="btn-tool" title="ملء الشاشة للعرض" aria-label="ملء الشاشة">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <button id="btnToggleTheme" class="btn-tool" title="تبديل الوضع الليلي / النهاري" aria-label="تبديل الوضع">
+        <i class="fa-solid fa-sun" id="themeIcon"></i> <span id="themeLabel">نهاري</span>
+      </button>
+      <button id="btnOpenBrochure" class="btn-tool" title="تصفح الكتيب المعتمد للشركة" aria-label="الكتيب الرسمي">
+        <i class="fa-solid fa-book-open"></i> <span class="hide-mobile" data-i18n="toolbar_brochure">الكتيب
+          الرسمي</span>
+      </button>
+      <button id="btnToggleLang" class="btn-tool" title="تبديل اللغة / Switch Language" aria-label="تبديل اللغة">
+        <i class="fa-solid fa-globe"></i> <span id="currentLangLabel">EN</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Ultimate Pay Home">
+        <div class="logo-mark">
+          <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-primary">ULTIMATE <span class="logo-accent">PAY</span></span>
+          <span class="logo-tagline" data-i18n="header_tagline">منظومة المدفوعات والتحصيل الذكي</span>
+        </div>
+      </a>
+
+      <!-- Audience Track Selector (Center Hero Control) -->
+      <nav class="track-selector" aria-label="المسار المستهدف">
+        <button class="track-btn active" data-target="merchants" id="trackBtnMerchants">
+          <i class="fa-solid fa-store"></i>
+          <span data-i18n="track_merchants">للتجار وأصحاب الأعمال</span>
+        </button>
+        <button class="track-btn" data-target="banks" id="trackBtnBanks">
+          <i class="fa-solid fa-building-columns"></i>
+          <span data-i18n="track_banks">للبنوك والمؤسسات المالية</span>
+        </button>
+        <button class="track-btn" data-target="ps" id="trackBtnPS">
+          <i class="fa-solid fa-microchip"></i>
+          <span data-i18n="track_ps">نظام PS ونقاط البيع</span>
+        </button>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="#demoSimulator" class="btn-ghost hide-mobile">
+          <i class="fa-solid fa-play"></i> <span data-i18n="nav_demo">محاكي الدفع</span>
+        </a>
+        <a href="#ctaSection" class="btn-primary">
+          <i class="fa-solid fa-handshake"></i> <span data-i18n="nav_cta">ابدأ الآن</span>
+        </a>
+        <button id="btnHeaderTheme" class="btn-ghost" title="تبديل المظهر النهاري/الليلي" aria-label="تبديل المظهر">
+          <i class="fa-solid fa-sun" id="headerThemeIcon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="logo-mark small"><i class="fa-solid fa-bolt-lightning"></i></div>
+      <span>Ultimate Pay</span>
+      <button class="close-drawer-btn" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-track-nav">
+      <p class="drawer-label" data-i18n="drawer_select_track">اختر المسار المستهدف:</p>
+      <button class="drawer-track-btn active" data-target="merchants"><i class="fa-solid fa-store"></i> <span
+          data-i18n="track_merchants">للتجار وأصحاب الأعمال</span></button>
+      <button class="drawer-track-btn" data-target="banks"><i class="fa-solid fa-building-columns"></i> <span
+          data-i18n="track_banks">للبنوك والمؤسسات</span></button>
+      <button class="drawer-track-btn" data-target="ps"><i class="fa-solid fa-microchip"></i> <span
+          data-i18n="track_ps">نظام PS ونقاط البيع</span></button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link"><i class="fa-solid fa-house"></i> <span
+            data-i18n="nav_home">الرئيسية</span></a></li>
+      <li><a href="#aboutUs" class="drawer-link"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav_about">من
+            نحن (الملف الرسمي)</span></a></li>
+      <li><a href="#whyUs" class="drawer-link"><i class="fa-solid fa-star"></i> <span data-i18n="nav_why">لماذا نحن
+            (ركائز التميز)</span></a></li>
+      <li><a href="#problemsSolutions" class="drawer-link"><i class="fa-solid fa-shield-check"></i> <span
+            data-i18n="nav_solutions">الحلول والمزايا</span></a></li>
+      <li><a href="#servicesGrid" class="drawer-link"><i class="fa-solid fa-cubes"></i> <span
+            data-i18n="nav_services">الخدمات والأجهزة</span></a></li>
+      <li><a href="#demoSimulator" class="drawer-link"><i class="fa-solid fa-mobile-screen"></i> <span
+            data-i18n="nav_simulator">المحاكي التفاعلي</span></a></li>
+      <li><a href="#onboardingSteps" class="drawer-link"><i class="fa-solid fa-list-check"></i> <span
+            data-i18n="nav_steps">خطوات الانضمام</span></a></li>
+      <li><a href="#brochureModal" class="drawer-link open-brochure-link"><i class="fa-solid fa-book"></i> <span
+            data-i18n="nav_brochure">العرض المعتمد (16 صفحة)</span></a></li>
+      <li><button id="btnDrawerTheme" class="drawer-link"
+          style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: inherit; font-size: inherit; font-family: inherit;"><i
+            class="fa-solid fa-sun" id="drawerThemeIcon"></i> <span id="drawerThemeLabel">المظهر النهاري (أخضر
+            وأبيض)</span></button></li>
+      <li><a href="#ctaSection" class="drawer-link highlight"><i class="fa-solid fa-paper-plane"></i> <span
+            data-i18n="nav_contact">تواصل معنا</span></a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section (Dynamic by Track) -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="container hero-container">
+
+      <!-- HERO: Merchant Track -->
+      <div class="hero-content track-content-merchants" id="heroMerchants">
+        <div class="hero-eyebrow">
+          <span class="badge-pulse"></span>
+          <span data-i18n="m_eyebrow">منظومة التحصيل الأولى للتجار في اليمن — مرخصة من البنك المركزي</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="m_hero_title_1">لا تدع مشترياً يغادر</span><br>
+          <span class="gradient-text" data-i18n="m_hero_title_2">استقبل مدفوعات كل البنوك والمحافظ</span>
+          <span data-i18n="m_hero_title_3">في نقطة بيع واحدة وحساب موحد</span>
+        </h1>
+        <p class="hero-desc" data-i18n="m_hero_desc">
+          ودّع فوضى الشاشات المتعددة، والحسابات المتفرقة، وإدخال القيود اليدوي في نهاية اليوم. مع <strong>Ultimate
+            Pay</strong>، جوالك يتحول لجهاز دفع فوري، ومبيعاتك تترحل تلقائياً لنظامك المحاسبي في ثوانٍ.
+        </p>
+        <div class="hero-actions">
+          <a href="#demoSimulator" class="btn-primary btn-large">
+            <i class="fa-solid fa-circle-play"></i> <span data-i18n="m_hero_btn_demo">جرّب الدفع التفاعلي الآن</span>
+          </a>
+          <a href="#aboutUs" class="btn-secondary btn-large">
+            <i class="fa-solid fa-circle-info"></i> <span data-i18n="nav_about">من نحن (الملف التعريفي)</span>
+          </a>
+          <a href="#whyUs" class="btn-ghost btn-large hide-mobile">
+            <i class="fa-solid fa-star"></i> <span data-i18n="nav_why">لماذا نحن؟</span>
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <i class="fa-solid fa-certificate"></i>
+            <div>
+              <strong data-i18n="m_trust_1_title">ترخيص رسمي</strong>
+              <span data-i18n="m_trust_1_sub">البنك المركزي اليمني</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-lock"></i>
+            <div>
+              <strong data-i18n="m_trust_2_title">أعلى معايير الأمان</strong>
+              <span data-i18n="m_trust_2_sub">شهادة PCI-DSS العالمية</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <div>
+              <strong data-i18n="m_trust_3_title">تكامل محاسبي فوري</strong>
+              <span data-i18n="m_trust_3_sub">ترحيل آلي لنظام Onyx ERP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO: Bank Track -->
+      <div class="hero-content track-content-banks" id="heroBanks" style="display: none;">
+        <div class="hero-eyebrow">
+          <span class="badge-pulse"></span>
+          <span data-i18n="b_eyebrow">بوابة التمكين المصرفي وحلول الاستحواذ على التجار (Merchant Acquiring)</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="b_hero_title_1">وسّع شبكة تجارك وعزز ودائعك</span><br>
+          <span class="gradient-text" data-i18n="b_hero_title_2">بمحول مالي وبنية تحتية موحدة</span>
+          <span data-i18n="b_hero_title_3">دون أعباء تشغيلية أو صيانة ميدانية</span>
+        </h1>
+        <p class="hero-desc" data-i18n="b_hero_desc">
+          شريككم الاستراتيجي لربط آلاف التجار بمصرفكم. حلول ربط متطورة، تسويات ومطابقة آلية (Automated Clearing)،
+          ومراقبة ذكية للاحتيال توافق أعلى متطلبات البنك المركزي والامتثال المصرفي.
+        </p>
+        <div class="hero-actions">
+          <a href="#servicesGrid" class="btn-primary btn-large">
+            <i class="fa-solid fa-network-wired"></i> <span data-i18n="b_hero_btn_arch">بنية الربط والتسويات</span>
+          </a>
+          <a href="#ctaSection" class="btn-secondary btn-large">
+            <i class="fa-solid fa-file-contract"></i> <span data-i18n="b_hero_btn_req">طلب جلسة شراكة مصرفية</span>
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <div>
+              <strong data-i18n="b_trust_1_title">امتثال ورقابة كاملة</strong>
+              <span data-i18n="b_trust_1_sub">مطابقة لقوانين AML ومكافحة الاحتيال</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-coins"></i>
+            <div>
+              <strong data-i18n="b_trust_2_title">تسويات ومقاصة دقيقة</strong>
+              <span data-i18n="b_trust_2_sub">تقارير لحظية وإشعارات تسوية آلية</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+              <strong data-i18n="b_trust_3_title">إدارة ميدانية شاملة</strong>
+              <span data-i18n="b_trust_3_sub">تأهيل التجار وتزويدهم بالأجهزة والدعم</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO: PS (Payment Switch & POS) Track -->
+      <div class="hero-content track-content-ps" id="heroPS" style="display: none;">
+        <div class="hero-eyebrow">
+          <span class="badge-pulse"></span>
+          <span data-i18n="ps_eyebrow">منظومة المحول المالي ونقاط البيع الذكية (PS & Smart POS Ecosystem)</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="ps_hero_title_1">جيل جديد من أجهزة نقاط البيع</span><br>
+          <span class="gradient-text" data-i18n="ps_hero_title_2">من تقنية Soft POS بهاتفك</span>
+          <span data-i18n="ps_hero_title_3">إلى أجهزة أندرويد الذكية وشبكات البطاقات</span>
+        </h1>
+        <p class="hero-desc" data-i18n="ps_hero_desc">
+          حلول دفع ذكية متعددة القنوات: تحويل هواتف أندرويد لأجهزة دفع لا تلامسية (Tap to Phone)، أجهزة أندرويد المتنقلة
+          مع طابعات حرارية مدمجة، ورموز QR الديناميكية وروابط الدفع السريع.
+        </p>
+        <div class="hero-actions">
+          <a href="#servicesGrid" class="btn-primary btn-large">
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="ps_hero_btn_devices">استكشف الأجهزة والتقنيات</span>
+          </a>
+          <a href="#demoSimulator" class="btn-secondary btn-large">
+            <i class="fa-solid fa-play"></i> <span data-i18n="ps_hero_btn_sim">جرّب محاكاة Soft POS</span>
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <div>
+              <strong data-i18n="ps_trust_1_title">Soft POS (Tap to Phone)</strong>
+              <span data-i18n="ps_trust_1_sub">دون تكاليف أجهزة إضافية</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-print"></i>
+            <div>
+              <strong data-i18n="ps_trust_2_title">Smart Android POS</strong>
+              <span data-i18n="ps_trust_2_sub">طباعة فواتير، 4G، بطاقات ومحافظ</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-qrcode"></i>
+            <div>
+              <strong data-i18n="ps_trust_3_title">QR & Payment Links</strong>
+              <span data-i18n="ps_trust_3_sub">دفع آمن بالرمز وروابط الدفع المخصصة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Interactive Mockup Card -->
+      <div class="hero-visual">
+        <div class="pos-device-card glass-card">
+          <div class="device-status-bar">
+            <span><i class="fa-solid fa-wifi"></i> 4G / Wi-Fi</span>
+            <span class="device-brand">ULTIMATE POS</span>
+            <span><i class="fa-solid fa-battery-full"></i> 98%</span>
+          </div>
+          <div class="device-screen">
+            <div class="device-header-mini">
+              <span class="status-indicator online"></span>
+              <span data-i18n="sim_device_ready">الجهاز متصل وجاهز للتحصيل</span>
+            </div>
+
+            <div class="quick-amount-box">
+              <span class="currency-label" data-i18n="currency_yer">ريال يمني</span>
+              <div class="live-amount-display" id="heroLiveAmount">25,000</div>
+              <span class="invoice-ref">#INV-9482 • سوبرماركت النخبة</span>
+            </div>
+
+            <!-- Dynamic Channels Icons -->
+            <div class="supported-channels-mini">
+              <div class="channel-chip active"><i class="fa-solid fa-nfc-symbol"></i> NFC البطاقات</div>
+              <div class="channel-chip active"><i class="fa-solid fa-qrcode"></i> QR المحافظ</div>
+              <div class="channel-chip active"><i class="fa-solid fa-link"></i> روابط الدفع</div>
+            </div>
+
+            <div class="device-action-preview">
+              <div class="nfc-wave">
+                <i class="fa-solid fa-wave-square"></i>
+                <span data-i18n="sim_tap_hint">مرّر البطاقة أو الهاتف فوق الشاشة</span>
+              </div>
+            </div>
+
+            <div class="settlement-preview-badge">
+              <i class="fa-solid fa-check-double"></i>
+              <span data-i18n="sim_instant_sync">ترحيل فوري إلى أونكس ERP • تسوية بنكية مؤكدة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Track Switch Bar (Sticky Banner) -->
+  <section class="track-switch-banner">
+    <div class="container">
+      <div class="banner-flex">
+        <span class="banner-title"><i class="fa-solid fa-sliders"></i> <span data-i18n="switch_banner_prompt">أنت الآن
+            تستعرض:</span></span>
+        <div class="track-pills">
+          <button class="track-pill active" data-target="merchants">
+            <i class="fa-solid fa-store"></i> <span data-i18n="track_merchants">التجار وأصحاب الأنشطة</span>
+          </button>
+          <button class="track-pill" data-target="banks">
+            <i class="fa-solid fa-building-columns"></i> <span data-i18n="track_banks">البنوك والمصارف</span>
+          </button>
+          <button class="track-pill" data-target="ps">
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="track_ps">نظام PS ونقاط البيع</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Sections Sub-Navigation Bar (انتقال سلس ومنظم للأقسام الرئيسية) -->
+  <nav class="quick-nav-bar" id="quickNavBar" aria-label="أقسام الموقع الرئيسية">
+    <div class="container quick-nav-container">
+      <a href="#aboutUs" class="quick-nav-link">
+        <i class="fa-solid fa-circle-info"></i>
+        <span data-i18n="nav_about">من نحن</span>
+      </a>
+      <a href="#whyUs" class="quick-nav-link">
+        <i class="fa-solid fa-star"></i>
+        <span data-i18n="nav_why">لماذا نحن</span>
+      </a>
+      <a href="#problemsSolutions" class="quick-nav-link">
+        <i class="fa-solid fa-shield-check"></i>
+        <span data-i18n="nav_solutions">الحلول والمزايا</span>
+      </a>
+      <a href="#servicesGrid" class="quick-nav-link">
+        <i class="fa-solid fa-cubes"></i>
+        <span data-i18n="nav_services">الخدمات والأجهزة</span>
+      </a>
+      <a href="#demoSimulator" class="quick-nav-link">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span data-i18n="nav_simulator">محاكي الدفع</span>
+      </a>
+      <a href="#onboardingSteps" class="quick-nav-link">
+        <i class="fa-solid fa-list-check"></i>
+        <span data-i18n="nav_steps">خطوات الانضمام</span>
+      </a>
+      <a href="#ctaSection" class="quick-nav-link highlight">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span data-i18n="nav_contact">تواصل معنا</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Section: About Us (الكتيب الرسمي والهوية المعتمدة) -->
+  <section class="section section-about" id="aboutUs">
+    <div class="container">
+      <div class="about-card-hero">
+        <div class="about-badge-bar">
+          <div class="license-pill">
+            <i class="fa-solid fa-building-columns"></i>
+            <span data-i18n="abt_lic">مرخص رسمياً من البنك المركزي اليمني</span>
+          </div>
+          <span class="section-tag" data-i18n="abt_tag">الملف التعريفي المعتمد للشركة</span>
+        </div>
+
+        <h2 class="about-headline">
+          <span data-i18n="abt_title_1">من نحن: الشريك المالي والتقني الرائد</span><br>
+          <span class="gradient-text" data-i18n="abt_title_2">لقيادة التحول الرقمي والشمول المالي في اليمن</span>
+        </h2>
+
+        <p class="about-lead-text" data-i18n="abt_lead">
+          تأسست <strong>Ultimate Pay</strong> لتكون منظومة المدفوعات والتحصيل الأكثر تكاملاً وموثوقية في السوق اليمني.
+          نسد الفجوة بين عالم مصادر الدفع المشتتة والأنشطة التجارية عبر بنية تحتية رقمية ذكية توحد العمليات وتضمن أعلى
+          معايير الأمان والسرعة.
+        </p>
+
+        <div class="about-pillars-grid">
+          <!-- Pillar 1: Vision -->
+          <div class="about-pillar-box">
+            <div class="pillar-icon">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3 class="pillar-title" data-i18n="abt_vis_t">رؤيتنا (Our Vision)</h3>
+            <p class="pillar-desc" data-i18n="abt_vis_d">
+              ريادة قطاع التكنولوجيا المالية وحلول الدفع الإلكتروني في اليمن، والمساهمة الفاعلة في التحول نحو مجتمع غير
+              نقدي ذكي يدعم النمو الاقتصادي الوطني ويسهل حياة المواطنين والتجار.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Mission -->
+          <div class="about-pillar-box">
+            <div class="pillar-icon cyan">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="pillar-title" data-i18n="abt_mis_t">مهمتنا (Our Mission)</h3>
+            <p class="pillar-desc" data-i18n="abt_mis_d">
+              تمكين التجار والشركات والمؤسسات المالية من أتمتة عمليات الدفع والتحصيل وتوسيع شبكاتهم عبر حلول تقنية ذكية،
+              مرنة، وموثوقة تواكب المعايير العالمية وتلائم خصوصية السوق اليمني.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Values -->
+          <div class="about-pillar-box">
+            <div class="pillar-icon gold">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="pillar-title" data-i18n="abt_val_t">قيمنا المؤسسية المعتمدة</h3>
+            <p class="pillar-desc" style="margin-bottom: 12px;" data-i18n="abt_val_sub">مبادئنا الثابتة كما وردت في
+              الدليل الرسمي للشركة:</p>
+            <div class="values-tags-grid">
+              <div class="value-tag"><i class="fa-solid fa-shield-halved"></i> <strong
+                  data-i18n="val_1">الأمانة</strong></div>
+              <div class="value-tag"><i class="fa-solid fa-scale-balanced"></i> <strong
+                  data-i18n="val_2">الشفافية</strong></div>
+              <div class="value-tag"><i class="fa-solid fa-handshake"></i> <strong data-i18n="val_3">المصداقية</strong>
+              </div>
+              <div class="value-tag"><i class="fa-solid fa-certificate"></i> <strong data-i18n="val_4">النزاهة
+                  والامتثال</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Real Merchant Pain Points vs Ultimate Pay Solution -->
+  <section class="section section-problems" id="problemsSolutions">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tag_why_us">لماذا يختارنا كبار التجار؟</span>
+        <h2 class="section-title">
+          <span data-i18n="prob_title_1">الفرق الحقيقي بين</span>
+          <span class="gradient-text" data-i18n="prob_title_2">فوضى التحصيل التقليدية</span>
+          <span data-i18n="prob_title_3">ومنظومة Ultimate Pay الذكية</span>
+        </h2>
+        <p class="section-desc" data-i18n="prob_subtitle">
+          صُممت خدماتنا من واقع التحديات اليومية للأسواق اليمنية: إرهاق الكاشير، ضياع المبيعات، وتأخر ترحيل الأموال
+          لحساباتك.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Before / Pain Points -->
+        <div class="comparison-card card-pain">
+          <div class="card-badge pain"><i class="fa-solid fa-triangle-exclamation"></i> <span
+              data-i18n="card_pain_badge">بدون Ultimate Pay (المعاناة اليومية)</span></div>
+          <ul class="comparison-list">
+            <li>
+              <div class="icon-wrap danger"><i class="fa-solid fa-xmark"></i></div>
+              <div>
+                <strong data-i18n="pain_1_t">خسارة زبائن مؤكدة</strong>
+                <p data-i18n="pain_1_d">عميلك يريد الدفع عبر بنك أو محفظة لا يملك الكاشير حساباً فيها، فتضيع عملية البيع
+                  فوراً.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap danger"><i class="fa-solid fa-xmark"></i></div>
+              <div>
+                <strong data-i18n="pain_2_t">فوضى شاشات وتطبيقات متعددة</strong>
+                <p data-i18n="pain_2_d">جوالات مختلفة لكل محفظة، بطء في الكاشير، طوابير انتظار، وأخطاء بشرية في تأكيد
+                  الدفع.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap danger"><i class="fa-solid fa-xmark"></i></div>
+              <div>
+                <strong data-i18n="pain_3_t">كابوس المطابقة وإدخال القيود</strong>
+                <p data-i18n="pain_3_d">ساعات طويلة تضيع بعد الإغلاق لمطابقة إشعارات المحافظ مع فواتير الكاشير، وإدخال
+                  السندات يدوياً.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap danger"><i class="fa-solid fa-xmark"></i></div>
+              <div>
+                <strong data-i18n="pain_4_t">تشتت السيولة ومخاطر الكاش</strong>
+                <p data-i18n="pain_4_d">أموالك مبعثرة بين 5 محافظ وبنوك نقدية متفرقة، مع مخاطر السرقات والأموال التالفة
+                  والمزورة.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- After / Solution with Ultimate Pay -->
+        <div class="comparison-card card-gain highlight-border">
+          <div class="card-badge gain"><i class="fa-solid fa-circle-check"></i> <span data-i18n="card_gain_badge">مع
+              Ultimate Pay (راحة وربحية)</span></div>
+          <ul class="comparison-list">
+            <li>
+              <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong data-i18n="gain_1_t">نقطة بيع واحدة تقبل الجميع</strong>
+                <p data-i18n="gain_1_d">استقبل كافة المحافظ (كريمي، جيب، جوال باي، كاش، إم فلوس...) والبطاقات المصرفية
+                  عبر جهاز أو جوال واحد.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong data-i18n="gain_2_t">تحصيل فوري بضغطة زر</strong>
+                <p data-i18n="gain_2_d">عبر تمرير البطاقة بالهاتف (Soft POS) أو مسح QR ديناميكي بقيمة الفاتورة المحددة
+                  دون أي خطأ في إدخال المبلغ.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong data-i18n="gain_3_t">ترحيل آلي مباشر لنظام Onyx ERP</strong>
+                <p data-i18n="gain_3_d">كل عملية دفع تولّد قيداً محاسبياً تلقائياً في شجرتك المحاسبية؛ رصيدك مطابق
+                  فورياً بدون تدخل يدوي.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong data-i18n="gain_4_t">حساب تسوية موحد ولوحة تحكم حية</strong>
+                <p data-i18n="gain_4_d">كل مبيعات فروعك تصب في حسابك المصرفي المعتمد، مع إشعارات تسوية فورية ورؤية شاملة
+                  للسيولة.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Why Ultimate Pay? (أسلحة إقناع التاجر في الاجتماعات) -->
+  <section class="section section-why-us" id="whyUs">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="why_tag">لماذا Ultimate Pay؟ • ركائز القوة والتميز</span>
+        <h2 class="section-title">
+          <span data-i18n="why_t1">6 أسباب استراتيجية تجعلنا الخيار الحتمي</span><br>
+          <span class="gradient-text" data-i18n="why_t2">لكل تاجر يبحث عن الأمان ونمو المبيعات</span>
+        </h2>
+        <p class="section-desc" data-i18n="why_sub">
+          صُممت هذه الركائز من واقع متطلبات السوق اليمني لتمنحك تفوقاً عملياً وتغلق كل أبواب التشتت والاحتيال:
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <!-- 1. الربط التقني الموحد -->
+        <div class="why-card">
+          <div class="why-card-header">
+            <div class="why-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <span class="why-badge" data-i18n="why_b1">عقد واحد بدل 10</span>
+          </div>
+          <h3 class="why-card-title" data-i18n="why_c1_t">الربط التقني الموحد</h3>
+          <p class="why-card-desc" data-i18n="why_c1_d">
+            لا داعي لتوقيع 10 عقود وفتح 10 حسابات مع كل بنك ومحفظة متفرقة؛ اتفاقية تقنية واحدة مع Ultimate Pay تفتح لك
+            أبواب كافة وسائل الدفع المحلية والدولية فوراً.
+          </p>
+          <div class="why-card-footer">
+            <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c1_f">توفير إداري وقانوني فوري</span>
+          </div>
+        </div>
+
+        <!-- 2. التوجيه اللحظي الذكي والقضاء على الاحتيال -->
+        <div class="why-card">
+          <div class="why-card-header">
+            <div class="why-icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <span class="why-badge" data-i18n="why_b2">صفر احتيال 100%</span>
+          </div>
+          <h3 class="why-card-title" data-i18n="why_c2_t">التوجيه اللحظي ومكافحة الاحتيال</h3>
+          <p class="why-card-desc" data-i18n="why_c2_d">
+            تنفيذ وخصم في أقل من ثانيتين مع إشعار برمجي مشفر يصل مباشرة لشاشة كاشيرك؛ يقضي نهائياً على احتيال رسائل SMS
+            المزيفة ولقطات الشاشة المفبركة.
+          </p>
+          <div class="why-card-footer">
+            <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c2_f">الكاشير لا يعتمد على جوال الزبون</span>
+          </div>
+        </div>
+
+        <!-- 3. التسوية المصرفية الموحدة -->
+        <div class="why-card">
+          <div class="why-card-header">
+            <div class="why-icon"><i class="fa-solid fa-vault"></i></div>
+            <span class="why-badge" data-i18n="why_b3">حساب بنكي رئيسي واحد</span>
+          </div>
+          <h3 class="why-card-title" data-i18n="why_c3_t">التسوية المصرفية الموحدة</h3>
+          <p class="why-card-desc" data-i18n="why_c3_d">
+            بدلاً من تشتت أموالك في أرصدة متفرقة يصعب سحبها، تتجمع كافة مبيعات فروعك وتتحول آلياً لحساب بنكي رئيسي واحد
+            تختاره، مع تقرير مطابقة يومي مفصل (Reconciliation Report).
+          </p>
+          <div class="why-card-footer">
+            <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c3_f">إدارة سيولة مركزية وواضحة</span>
+          </div>
+        </div>
+
+        <!-- 4. التكامل المباشر مع Onyx ERP -->
+        <div class="why-card">
+          <div class="why-card-header">
+            <div class="why-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+            <span class="why-badge" data-i18n="why_b4">أتمتة محاسبية كاملة</span>
+          </div>
+          <h3 class="why-card-title" data-i18n="why_c4_t">ترحيل فوري لنظام Onyx ERP</h3>
+          <p class="why-card-desc" data-i18n="why_c4_d">
+            كل حركة دفع ناجحة تولّد سند قبض وقيد يومية آلياً في شجرتك المحاسبية، وتغلق الفاتورة بدون أي إدخال يدوي أو
+            أخطاء بشرية أو عجز بالصناديق.
+          </p>
+          <div class="why-card-footer">
+            <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c4_f">مطابقة تامة برقم العملية RRN</span>
+          </div>
+        </div>
+
+        <!-- 5. مرونة خيارات نقاط البيع (POS & Soft POS) -->
+        <div class="why-card">
+          <div class="why-card-header">
+            <div class="why-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <span class="why-badge" data-i18n="why_b5">حرية اختيار الجهاز</span>
+          </div>
+          <h3 class="why-card-title" data-i18n="why_c5_t">مرونة نقاط البيع (POS & Soft POS)</h3>
+          <p class="why-card-desc" data-i18n="why_c5_d">
+            لا نلزمك بشراء أجهزة باهظة؛ يمكنك تحويل هواتف موظفيك مجاناً لأجهزة دفع لاتلامسية (Soft POS)، أو اختيار أجهزة
+            أندرويد الذكية المتنقلة المزودة بطابعات إيصالات حرارية.
+          </p>
+          <div class="why-card-footer">
+            <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c5_f">حلول للميدان وللكاشير الثابت</span>
+          </div>
+        </div>
+
+        <!-- 6. دعم محلي وتدريب شامل -->
+        <div class="why-card">
+          <div class="why-card-header">
+            <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+            <span class="why-badge" data-i18n="why_b6">فريق يمني في خدمتك</span>
+          </div>
+          <h3 class="why-card-title" data-i18n="why_c6_t">دعم ميداني وتدريب مستمر</h3>
+          <p class="why-card-desc" data-i18n="why_c6_d">
+            فريقنا التقني والميداني يرافقك خطوة بخطوة في فروعك، ويدرب كاشيراتك، مع استجابة فورية ودعم تشغيلي متواصل على
+            مدار الساعة لحل أي طارئ فوراً.
+          </p>
+          <div class="why-card-footer">
+            <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c6_f">شريك تقني معك في الميدان</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Interactive Payment Simulator (Visual WOW Factor for Pitching) -->
+  <section class="section section-simulator" id="demoSimulator">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tag_simulator">تجربة حية تفاعلية</span>
+        <h2 class="section-title">
+          <span data-i18n="sim_title_1">جرّب بنفسك:</span>
+          <span class="gradient-text" data-i18n="sim_title_2">كيف تتم عمليات الدفع</span>
+          <span data-i18n="sim_title_3">في ثوانٍ معدودة؟</span>
+        </h2>
+        <p class="section-desc" data-i18n="sim_subtitle">
+          اختر وسيلة الدفع أدناه، واضغط لتنفيذ عملية تحصيل حقيقية ومتابعة الترحيل المالي الفوري.
+        </p>
+      </div>
+
+      <div class="simulator-wrapper glass-card">
+        <!-- Simulator Mode Selector Tabs -->
+        <div class="sim-tabs">
+          <button class="sim-tab active" data-mode="softpos">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span data-i18n="sim_tab_softpos">Soft POS (Tap to Phone)</span>
+          </button>
+          <button class="sim-tab" data-mode="qr">
+            <i class="fa-solid fa-qrcode"></i>
+            <span data-i18n="sim_tab_qr">الدفع عبر رمز QR</span>
+          </button>
+          <button class="sim-tab" data-mode="link">
+            <i class="fa-solid fa-link"></i>
+            <span data-i18n="sim_tab_link">روابط الدفع (Payment Links)</span>
+          </button>
+          <button class="sim-tab" data-mode="pos">
+            <i class="fa-solid fa-print"></i>
+            <span data-i18n="sim_tab_pos">جهاز أندرويد POS الذكي</span>
+          </button>
+        </div>
+
+        <!-- Simulator Interactive Area -->
+        <div class="sim-stage">
+          <!-- Left: The Merchant Phone / Terminal Screen -->
+          <div class="sim-device-frame">
+            <div class="phone-notch"></div>
+
+            <div class="phone-screen-content" id="simScreen">
+              <!-- Step 1: Input -->
+              <div class="sim-step" id="simStepInput">
+                <div class="sim-app-header">
+                  <div class="sim-brand"><i class="fa-solid fa-bolt"></i> Ultimate Pay POS</div>
+                  <span class="badge-branch">فرع حدة • كاشير 1</span>
+                </div>
+
+                <div class="sim-amount-container">
+                  <label data-i18n="sim_enter_amount">أدخل مبلغ الفاتورة:</label>
+                  <div class="sim-amount-input-group">
+                    <input type="number" id="simInputAmount" value="18500" min="500" step="500">
+                    <span class="currency">YER</span>
+                  </div>
+                </div>
+
+                <div class="sim-order-info">
+                  <div class="info-row">
+                    <span data-i18n="sim_inv_no">رقم الفاتورة:</span>
+                    <strong id="simInvNo">#UP-2026-8819</strong>
+                  </div>
+                  <div class="info-row">
+                    <span data-i18n="sim_customer">العميل:</span>
+                    <span data-i18n="sim_walkin">عميل تجزئة / نقدي</span>
+                  </div>
+                </div>
+
+                <div class="sim-mode-preview-area" id="simModeDisplay">
+                  <!-- Injected via JS based on active tab -->
+                </div>
+
+                <button class="btn-primary btn-block sim-action-btn" id="btnExecuteSim">
+                  <i class="fa-solid fa-circle-check"></i> <span id="simBtnLabel">تنفيذ عملية التحصيل الآن</span>
+                </button>
+              </div>
+
+              <!-- Step 2: Processing Animation -->
+              <div class="sim-step" id="simStepProcessing" style="display: none;">
+                <div class="sim-processing-box">
+                  <div class="spinner-ring"></div>
+                  <h4 data-i18n="sim_processing_title">جاري التوجيه عبر المحول المالي...</h4>
+                  <p data-i18n="sim_processing_sub">فحص الأمان PCI-DSS والتسوية المباشرة</p>
+                  <div class="switch-routing-badge">
+                    <span>Ultimate Payment Switch</span>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <span>البنك المركزي / محفظة العميل</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Success Receipt -->
+              <div class="sim-step" id="simStepSuccess" style="display: none;">
+                <div class="sim-receipt-box">
+                  <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                  <h4 data-i18n="sim_success_title">تمت العملية بنجاح!</h4>
+                  <div class="receipt-amount" id="receiptAmountDisplay">18,500 YER</div>
+
+                  <div class="receipt-details">
+                    <div class="r-row"><span>رقم المرجع (RRN):</span> <strong id="receiptRrn">9823471029</strong></div>
+                    <div class="r-row"><span>وسيلة الدفع:</span> <strong id="receiptMethod">Soft POS (NFC
+                        Contactless)</strong></div>
+                    <div class="r-row"><span>التاريخ والوقت:</span> <strong id="receiptTime">الآن</strong></div>
+                    <div class="r-row highlight"><span>ترحيل الأونكس ERP:</span> <strong class="text-success"><i
+                          class="fa-solid fa-check"></i> تم توليد سند القيد آلياً</strong></div>
+                  </div>
+
+                  <div class="receipt-actions">
+                    <button class="btn-ghost btn-sm" id="btnSimReset">
+                      <i class="fa-solid fa-rotate-left"></i> <span data-i18n="sim_new_txn">عملية تجريبية جديدة</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Behind-the-Scenes Ledger & Value Explanation -->
+          <div class="sim-explanation">
+            <h3 class="exp-title">
+              <i class="fa-solid fa-bolt text-accent"></i>
+              <span data-i18n="sim_exp_title">ماذا يحدث في خلفية العملية؟</span>
+            </h3>
+            <p class="exp-desc" data-i18n="sim_exp_desc">
+              تتحول العملية المعقدة تقنياً إلى تجربة فورية وسلسة تمنح التاجر أماناً مصرفياً كاملاً:
+            </p>
+
+            <div class="backend-steps">
+              <div class="b-step">
+                <div class="b-num">1</div>
+                <div>
+                  <h4 data-i18n="b_step_1_t">التحقق الأمني اللحظي</h4>
+                  <p data-i18n="b_step_1_d">تشفير كامل وفق معيار PCI-DSS، مع فحص سريع لمنع الاحتيال وازدواجية العمليات.
+                  </p>
+                </div>
+              </div>
+              <div class="b-step">
+                <div class="b-num">2</div>
+                <div>
+                  <h4 data-i18n="b_step_2_t">التوجيه الذكي بالمحول المالي (Switching)</h4>
+                  <p data-i18n="b_step_2_d">إرسال طلب الخصم مباشرة للبنك أو المحفظة المصدرة بزمن استجابة أقل من ثانيتين.
+                  </p>
+                </div>
+              </div>
+              <div class="b-step">
+                <div class="b-num">3</div>
+                <div>
+                  <h4 data-i18n="b_step_3_t">الترحيل الآلي لنظام التاجر (Onyx ERP Sync)</h4>
+                  <p data-i18n="b_step_3_d">توليد قيد يومية فوري (من حـ/ وسيط Ultimate Pay إلى حـ/ الصندوق أو المبيعات)
+                    وإغلاق الفاتورة.</p>
+                </div>
+              </div>
+              <div class="b-step">
+                <div class="b-num">4</div>
+                <div>
+                  <h4 data-i18n="b_step_4_t">التسوية المصرفية المجمعة</h4>
+                  <p data-i18n="b_step_4_d">إيداع المبالغ في حسابك البنكي المعتمد مع تقرير تفصيلي وإشعار تسوية فوري.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="merchant-badge-highlight">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span><strong>ضمان الاستقرار:</strong> نسبة نجاح عمليات تفوق 99.8% مع جاهزية تشغيلية مستمرة على مدار
+                الساعة.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Full Services & Hardware Ecosystem (All 3 Tracks) -->
+  <section class="section section-services" id="servicesGrid">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tag_services">خدمات متكاملة ومنظومة متطورة</span>
+        <h2 class="section-title">
+          <span data-i18n="serv_title_1">حلول متخصصة لكل قناة تحصيل:</span>
+          <span class="gradient-text" data-i18n="serv_title_2">من المتاجر التقليدية</span>
+          <span data-i18n="serv_title_3">إلى المصارف والتجارة الإلكترونية</span>
+        </h2>
+        <p class="section-desc" data-i18n="serv_subtitle">
+          مستوحاة من أحدث تقنيات الدفع العالمية ومتوافقة بالكامل مع بيئة الأعمال اليمنية المعتمدة.
+        </p>
+      </div>
+
+      <div class="services-cards-grid">
+        <!-- Service 1: Soft POS -->
+        <article class="service-card glass-card">
+          <div class="card-icon-header">
+            <div class="serv-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <span class="serv-badge badge-cyan" data-i18n="s1_badge">الأكثر ابتكاراً</span>
+          </div>
+          <h3 class="serv-name" data-i18n="s1_name">نقاط البيع عبر الهاتف (Soft POS)</h3>
+          <p class="serv-desc" data-i18n="s1_desc">
+            حوّل أي هاتف ذكي يعمل بنظام أندرويد ويدعم NFC إلى جهاز نقطة بيع متكامل. يقبل الدفع بالبطاقات والمحافظ
+            اللاتلامسية دون الحاجة لشراء أو استئجار أجهزة نقاط بيع مادية باهظة.
+          </p>
+          <ul class="serv-features">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f1">صفر تكلفة أجهزة إضافية</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f2">مثالي لخدمات التوصيل والمندوبين والمتاجر
+                الصغيرة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f3">معتمد ومحمي بأعلى معايير تشفير البطاقات</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Service 2: Smart Android POS -->
+        <article class="service-card glass-card">
+          <div class="card-icon-header">
+            <div class="serv-icon"><i class="fa-solid fa-cash-register"></i></div>
+            <span class="serv-badge badge-green" data-i18n="s2_badge">للفروع الكبرى</span>
+          </div>
+          <h3 class="serv-name" data-i18n="s2_name">أجهزة نقاط البيع الذكية (Android POS)</h3>
+          <p class="serv-desc" data-i18n="s2_desc">
+            أجهزة مخصصة متينة، مزودة بشاشة لمس سريعة، طابعة إيصالات حرارية مدمجة، قارئ بطاقات شريحية ومغناطيسية، وكاميرا
+            مسح أكواد QR.
+          </p>
+          <ul class="serv-features">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f1">اتصال دائم عبر 4G و Wi-Fi</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f2">طباعة إيصالات ورقية فورية وتقارير مبيعات
+                تفصيلية</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f3">بطارية قوية تصمد طوال ساعات العمل
+                الشاقة</span></li>
+          </ul>
+        </article>
+
+        <!-- Service 3: Dynamic QR Code -->
+        <article class="service-card glass-card">
+          <div class="card-icon-header">
+            <div class="serv-icon"><i class="fa-solid fa-qrcode"></i></div>
+            <span class="serv-badge badge-gold" data-i18n="s3_badge">سريع وبدون تلامس</span>
+          </div>
+          <h3 class="serv-name" data-i18n="s3_name">رموز الدفع والاستجابة السريعة (QR Code)</h3>
+          <p class="serv-desc" data-i18n="s3_desc">
+            رموز QR ديناميكية تظهر على شاشة الكاشير متضمنة قيمة الفاتورة ورقمها، أو رموز ثابتة مطبوعة على طاولات المطاعم
+            ونقاط التحصيل.
+          </p>
+          <ul class="serv-features">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f1">يلغي خطأ كتابة المبلغ من قبل المشتري
+                نهائياً</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f2">يدعم تطبيقات كافة البنوك والمحافظ
+                الإلكترونية</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f3">إشعار صوتي ومرئي فوري عند اكتمال الدفع</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Service 4: Payment Links -->
+        <article class="service-card glass-card">
+          <div class="card-icon-header">
+            <div class="serv-icon"><i class="fa-solid fa-link"></i></div>
+            <span class="serv-badge badge-purple" data-i18n="s4_badge">للبيع عن بعد</span>
+          </div>
+          <h3 class="serv-name" data-i18n="s4_name">روابط الدفع (Payment Links)</h3>
+          <p class="serv-desc" data-i18n="s4_desc">
+            خدمة تتيح لك إنشاء رابط دفع مخصص وإرساله للعميل ليقوم بالدفع مباشرة خلال ثوانٍ، دون أن تتطلب وجود موقع
+            إلكتروني.
+          </p>
+          <ul class="serv-features">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">تحديد المبلغ ووصف الفاتورة وتاريخ
+                الصلاحية</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">صفحة دفع احترافية تحمل هوية وشعار متجرك</span>
+            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">تحصيل فوري لطلبات التوصيل والمبيعات
+                الهاتفية</span></li>
+          </ul>
+        </article>
+
+        <!-- Service 5: E-Commerce Gateway -->
+        <article class="service-card glass-card">
+          <div class="card-icon-header">
+            <div class="serv-icon"><i class="fa-solid fa-globe"></i></div>
+            <span class="serv-badge badge-blue" data-i18n="s5_badge">للمتاجر الإلكترونية</span>
+          </div>
+          <h3 class="serv-name" data-i18n="s5_name">بوابة الدفع الإلكتروني (Online Gateway)</h3>
+          <p class="serv-desc" data-i18n="s5_desc">
+            تكامل برمجي سهل مع مواقع المتاجر والتطبيقات الذكية عبر REST APIs وإضافات جاهزة لمنصات (WooCommerce, Shopify,
+            وغيرها).
+          </p>
+          <ul class="serv-features">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f1">تجربة Checkout سلسة بدون إعادة توجيه
+                معقدة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f2">حماية تلقائية 3D-Secure لكافة المعاملات</span>
+            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f3">وثائق برمجية ودعم فني مخصص للمطورين</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Service 6: Merchant Portal & Onyx Sync -->
+        <article class="service-card glass-card">
+          <div class="card-icon-header">
+            <div class="serv-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <span class="serv-badge badge-emerald" data-i18n="s6_badge">العمود الفقري</span>
+          </div>
+          <h3 class="serv-name" data-i18n="s6_name">لوحة التحكم والتكامل المحاسبي (Onyx ERP)</h3>
+          <p class="serv-desc" data-i18n="s6_desc">
+            متابعة حية لكل المبيعات عبر الفروع والكاشيرات، مع ترحيل محاسبي فوري إلى نظام أونكس ERP ودفاتر الحسابات دون
+            أي تدخل يدوي.
+          </p>
+          <ul class="serv-features">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f1">توليد سندات القبض والقيود اليومية آلياً</span>
+            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f2">تقارير لحظية للمطابقة والتسوية البنكية</span>
+            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f3">إدارة الصلاحيات والفروع من لوحة تحكم سحابية
+                موحدة</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Specialized Bank Partnership Deep-Dive (Visible prominently in Bank Track) -->
+  <section class="section section-bank-details" id="bankPartnership">
+    <div class="container">
+      <div class="bank-partnership-box glass-card">
+        <div class="b-grid">
+          <div class="b-text">
+            <span class="section-tag" data-i18n="bank_section_tag">حلول الاستحواذ والتمكين المصرفي</span>
+            <h2 class="section-title">
+              <span data-i18n="bank_title_1">لماذا تُعد Ultimate Pay</span><br>
+              <span class="gradient-text" data-i18n="bank_title_2">الشريك التقني الأنسب للبنوك؟</span>
+            </h2>
+            <p class="b-lead" data-i18n="bank_lead">
+              بدلاً من استنزاف ميزانيات البنك في شراء وتوزيع وصيانة أجهزة نقاط البيع وتدريب فرق التفتيش، تقدم Ultimate
+              Pay منظومة متكاملة تمنحكم عوائد الاستحواذ دون الصداع التشغيلي:
+            </p>
+
+            <div class="bank-features-list">
+              <div class="b-feat-item">
+                <div class="b-feat-icon"><i class="fa-solid fa-vault"></i></div>
+                <div>
+                  <h4 data-i18n="bf_1_t">نمو مباشر للودائع المصرفية (CASA Deposits)</h4>
+                  <p data-i18n="bf_1_d">تصب حصائل مبيعات التجار في حسابات تسوية لدى مصرفكم، مما يعزز السيولة وقاعدة
+                    العملاء النشطين.</p>
+                </div>
+              </div>
+
+              <div class="b-feat-item">
+                <div class="b-feat-icon"><i class="fa-solid fa-code-compare"></i></div>
+                <div>
+                  <h4 data-i18n="bf_2_t">ربط موحد وتكامل مصرفي قياسي</h4>
+                  <p data-i18n="bf_2_d">دعم بروتوكولات الربط المالي (ISO 8583 / REST API / Webhooks) وتوافق سلس مع Core
+                    Banking.</p>
+                </div>
+              </div>
+
+              <div class="b-feat-item">
+                <div class="b-feat-icon"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+                <div>
+                  <h4 data-i18n="bf_3_t">مقاصة وتسوية آلية للمطابقة اليومية</h4>
+                  <p data-i18n="bf_3_d">ملفات تسوية قياسية يومية (Settlement Files) وتقارير تفصيلية تمنع الفروقات وتسهل
+                    التدقيق المالي.</p>
+                </div>
+              </div>
+
+              <div class="b-feat-item">
+                <div class="b-feat-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <div>
+                  <h4 data-i18n="bf_4_t">رقابة صارمة وكشف احتيال متقدم</h4>
+                  <p data-i18n="bf_4_d">مراقبة المعاملات الشاذة في الوقت الفعلي وحظر العمليات المشبوهة لحماية أموال
+                    المودعين والمصرف.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="b-stats-card">
+            <div class="b-stats-header">
+              <i class="fa-solid fa-building-columns"></i>
+              <span data-i18n="bank_box_kpi">مؤشرات الأداء والجاهزية</span>
+            </div>
+            <div class="kpi-metric">
+              <div class="kpi-val">99.9%</div>
+              <div class="kpi-lbl" data-i18n="kpi_uptime">جاهزية تشغيلية مستمرة (High Availability)</div>
+            </div>
+            <div class="kpi-metric">
+              <div class="kpi-val">&lt; 1.5s</div>
+              <div class="kpi-lbl" data-i18n="kpi_latency">متوسط زمن معالجة وتوجيه الحركة (Latency)</div>
+            </div>
+            <div class="kpi-metric">
+              <div class="kpi-val">PCI-DSS</div>
+              <div class="kpi-lbl" data-i18n="kpi_pci">معتمد من مجلس معايير أمان بطاقات الدفع</div>
+            </div>
+            <div class="kpi-metric">
+              <div class="kpi-val">CBY Licensed</div>
+              <div class="kpi-lbl" data-i18n="kpi_cby">مرخص رسمياً من البنك المركزي اليمني</div>
+            </div>
+
+            <div class="bank-cta-inner">
+              <a href="#ctaSection" class="btn-primary btn-block">
+                <i class="fa-solid fa-file-signature"></i> <span data-i18n="bank_cta_btn">طلب وثيقة التكامل
+                  والشراكة</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Onboarding Journey (4 Clear, Fast Steps) -->
+  <section class="section section-onboarding" id="onboardingSteps">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tag_onboarding">الانضمام أسهل مما تتخيل</span>
+        <h2 class="section-title">
+          <span data-i18n="step_title_1">4 خطوات سريعة فقط</span>
+          <span class="gradient-text" data-i18n="step_title_2">لبدء استقبال المدفوعات</span>
+          <span data-i18n="step_title_3">في فروعك</span>
+        </h2>
+        <p class="section-desc" data-i18n="step_subtitle">
+          لا حاجة لإجراءات ورقية معقدة؛ فريقنا التقني والميداني يرافقك خطوة بخطوة حتى تكتمل أول عملية دفع.
+        </p>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="timeline-step">
+          <div class="step-badge">1</div>
+          <div class="step-icon"><i class="fa-solid fa-id-card"></i></div>
+          <h3 class="step-title" data-i18n="st1_title">التسجيل وتقديم البيانات</h3>
+          <p class="step-desc" data-i18n="st1_desc">
+            تزويدنا ببيانات السجل التجاري والنشاط وحسابك المصرفي المعتمد لتلقي التسويات.
+          </p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-badge">2</div>
+          <div class="step-icon"><i class="fa-solid fa-signature"></i></div>
+          <h3 class="step-title" data-i18n="st2_title">التفعيل وضبط الحساب</h3>
+          <p class="step-desc" data-i18n="st2_desc">
+            تجهيز حساب المنشأة في المحول المالي، وتحديد الفروع وأسماء الكاشيرات والصلاحيات.
+          </p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-badge">3</div>
+          <div class="step-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3 class="step-title" data-i18n="st3_title">الربط والتهيئة الميدانية</h3>
+          <p class="step-desc" data-i18n="st3_desc">
+            تحميل تطبيق Soft POS على هواتف فريقك أو تسليم أجهزة نقاط البيع وربطها بنظام الأونكس.
+          </p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-badge">4</div>
+          <div class="step-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+          <h3 class="step-title" data-i18n="st4_title">بدء التحصيل والتسوية</h3>
+          <p class="step-desc" data-i18n="st4_desc">
+            استقبل مدفوعات زبائنك على الفور، وشاهد مبيعاتك تتدفق مباشرة لحسابك وتقاريرك المحاسبية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Interactive Presentation Brochure Viewer (PDF Booklet Lightbox) -->
+  <section class="section section-brochure" id="brochureSection">
+    <div class="container">
+      <div class="brochure-feature-card glass-card">
+        <div class="bf-content">
+          <span class="section-tag" data-i18n="tag_brochure">المصدر الرسمي والكتيب التعريفي المعتمد</span>
+          <h2 class="bf-title">
+            <span data-i18n="bf_title_1">تصفح العرض التقديمي الأصلي</span><br>
+            <span class="gradient-text" data-i18n="bf_title_2">لشركة Ultimate Pay</span>
+          </h2>
+          <p class="bf-desc" data-i18n="bf_desc">
+            يمكنك استعراض صفحات الملف التعريفي الرقمي المعتمد لشركة Ultimate Pay (16 صفحة بدقة عالية وتصميم رقمي أصيل)،
+            مع إمكانية التصفح التفاعلي الكامل أثناء اجتماعاتك مع كبار العملاء ومديري البنوك.
+          </p>
+          <div class="bf-actions">
+            <button class="btn-primary" id="btnLaunchBrochureModal">
+              <i class="fa-solid fa-images"></i> <span data-i18n="bf_btn_open">فتح كتيب الشرائح التفاعلي</span>
+            </button>
+            <span class="bf-meta"><i class="fa-solid fa-circle-check text-success"></i> مرخص ومطابق لبيانات الشركة
+              الرسمية</span>
+          </div>
+        </div>
+
+        <div class="bf-preview-slider" id="brochurePreviewThumb">
+          <div class="slide-mini-stack">
+            <img src="slides/slide_01.jpg" alt="Slide 1 Cover" class="stack-img img-1">
+            <img src="slides/slide_02.jpg" alt="Slide 2 About" class="stack-img img-2">
+            <img src="slides/slide_10.jpg" alt="Slide 10 Soft POS" class="stack-img img-3">
+          </div>
+          <span class="stack-hint" data-i18n="bf_hint">انقر للتكبير والتصفح الكامل</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: CTA & Commercial Pitch Form -->
+  <!-- Section: Direct Contact via WhatsApp (المراسلة الفورية المعتمدة) -->
+  <section class="section section-cta" id="ctaSection">
+    <div class="container">
+      <div class="cta-wrapper glass-card">
+        <div class="whatsapp-hero-box">
+          <div class="whatsapp-hero-icon-wrap">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+
+          <span class="section-tag" data-i18n="wa_cta_tag">تواصل فوري ومباشر</span>
+
+          <h2 class="cta-title">
+            <span data-i18n="wa_cta_t1">ابدأ الآن وتواصل معنا مباشرة</span><br>
+            <span class="gradient-text" data-i18n="wa_cta_t2">عبر محادثة واتساب فورية</span>
+          </h2>
+
+          <p class="cta-subtitle" data-i18n="wa_cta_sub">
+            سواء كنت تاجراً ترغب بتفعيل نقاط البيع والربط مع نظام الأونكس، أو بنكاً يسعى لتوسيع شبكة الاستحواذ؛ اضغط
+            وتحدث مباشرة مع مسؤول المبيعات والتفعيل على الرقم: <strong
+              style="color: #25D366; font-size: 1.15rem;">782665485</strong>
+          </p>
+
+          <a href="https://wa.me/967782665485?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%87%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20Ultimate%20Pay%20%D9%88%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D9%86%D9%82%D8%A7%D8%B7%20%D8%A7%D9%84%D8%AF%D9%81%D8%B9"
+            target="_blank" class="btn-whatsapp-hero" id="btnHeroWhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-i18n="wa_hero_btn">راسلنا الآن عبر واتساب (782665485)</span>
+          </a>
+
+          <div class="wa-features-chips">
+            <div class="wa-chip"><i class="fa-solid fa-bolt text-accent"></i> <span data-i18n="wa_chip_1">رد فوري
+                ومباشر</span></div>
+            <div class="wa-chip"><i class="fa-solid fa-headset text-success"></i> <span data-i18n="wa_chip_2">استشارة
+                وتفعيل نقاط البيع</span></div>
+            <div class="wa-chip"><i class="fa-solid fa-shield-halved text-cyan"></i> <span data-i18n="wa_chip_3">دعم فني
+                وتشغيلي 24/7</span></div>
+          </div>
+        </div>
+
+        <!-- [كود واجهة نموذج البيانات مجمّد حالياً بناءً على طلبك - Frozen Form Code]
+        <div class="cta-form-container" style="display: none;">
+          <form id="contactPitchForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientType">أنت تمثل:</label>
+                <select id="clientType">
+                  <option value="merchant">تاجر / صاحب منشأة تجارية</option>
+                  <option value="bank">بنك / مصرف / مؤسسة مالية</option>
+                  <option value="pos_partner">شريك نقاط بيع وتقنية</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="clientName">الاسم / اسم المنشأة:</label>
+                <input type="text" id="clientName">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientPhone">رقم الهاتف للتواصل:</label>
+                <input type="tel" id="clientPhone">
+              </div>
+              <div class="form-group">
+                <label for="clientCity">المدينة / المنطقة:</label>
+                <input type="text" id="clientCity">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="clientNeed">الخدمات أو الاحتياج المطلوب:</label>
+              <textarea id="clientNeed" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn-whatsapp-submit btn-large btn-block" id="btnSubmitForm">
+              <i class="fa-brands fa-whatsapp"></i> <span>إرسال الطلب مباشرة عبر واتساب (782665485)</span>
+            </button>
+          </form>
+        </div>
+        -->
+
+        <div class="official-contact-channels">
+          <a href="https://wa.me/967782665485" target="_blank" class="contact-pill whatsapp-pill">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واتساب المبيعات: <strong>782665485</strong></span>
+          </a>
+          <div class="contact-pill">
+            <i class="fa-solid fa-globe"></i>
+            <span>ultimate-pay.com</span>
+          </div>
+          <div class="contact-pill">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span data-i18n="c_licensed">شركة يمنية مرخصة من البنك المركزي</span>
+          </div>
+          <div class="contact-pill">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@ultimate-pay.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo-mark"><i class="fa-solid fa-bolt-lightning"></i></div>
+        <div class="brand-info">
+          <div class="logo-primary">ULTIMATE <span class="logo-accent">PAY</span></div>
+          <p data-i18n="footer_desc">المنظومة الوطنية الرائدة لخدمات الدفع والتحصيل الذكي ونقاط البيع في الجمهورية
+            اليمنية.</p>
+        </div>
+      </div>
+
+      <div class="footer-badges">
+        <div class="f-badge"><i class="fa-solid fa-lock"></i> PCI-DSS Compliant</div>
+        <div class="f-badge"><i class="fa-solid fa-certificate"></i> CBY Licensed</div>
+        <div class="f-badge"><i class="fa-solid fa-arrows-split-up-and-left"></i> Multi-Channel Switch</div>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Ultimate Pay. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Official Booklet Slides (16 Master Pages) -->
+  <div class="modal-overlay" id="brochureModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog brochure-dialog">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-book-open"></i>
+          <span data-i18n="modal_b_title">الكتيب التقديمي المعتمد لشركة Ultimate Pay</span>
+          <span class="slide-indicator" id="slideIndicator">صفحة 1 من 16</span>
+        </div>
+        <div class="modal-controls">
+          <button class="btn-ctrl" id="btnPrevSlide" title="الشريحة السابقة"><i
+              class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-ctrl" id="btnNextSlide" title="الشريحة التالية"><i
+              class="fa-solid fa-arrow-left"></i></button>
+          <button class="btn-ctrl" id="btnCloseModal" title="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="modal-body brochure-body">
+        <div class="brochure-viewer">
+          <img id="activeSlideImg" src="slides/slide_01.jpg" alt="Slide Preview" class="current-slide-img">
+        </div>
+        <div class="slide-thumbnails-strip" id="thumbnailsStrip">
+          <!-- Populated dynamically via JS for all 23 slides -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Action Button (Direct: 782665485) -->
+  <a href="https://wa.me/967782665485?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%87%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20Ultimate%20Pay"
+    target="_blank" class="floating-whatsapp-btn" id="floatingWhatsAppBtn" title="تواصل مباشر عبر واتساب: 782665485"
+    aria-label="تواصل فوري عبر واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-wa-label" data-i18n="floating_wa_label">راسلنا واتساب <strong>782665485</strong></span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
