@@ -22,3 +22,15 @@ test_export/
 test_pres.pptx
 test_rtl.pptx
 test_rtl_export/
+
+# Confidential / Internal Presentation (Reserved for Opening Ceremony)
+Ultimate_Pay_Presentation.pptx
+powerboint.docx
+extracted_docx_slides/
+generated_slides_review/
+generate_deck.py
+export_slides.ps1
+logo_crop_*.png
+photo_*.png
+logo_*_trans.png
+fonts/

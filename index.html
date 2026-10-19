@@ -34,10 +34,6 @@
       <button id="btnToggleTheme" class="btn-tool" title="تبديل الوضع الليلي / النهاري" aria-label="تبديل الوضع">
         <i class="fa-solid fa-sun" id="themeIcon"></i> <span id="themeLabel">نهاري</span>
       </button>
-      <button id="btnOpenBrochure" class="btn-tool" title="تصفح الكتيب المعتمد للشركة" aria-label="الكتيب الرسمي">
-        <i class="fa-solid fa-book-open"></i> <span class="hide-mobile" data-i18n="toolbar_brochure">الكتيب
-          الرسمي</span>
-      </button>
       <button id="btnToggleLang" class="btn-tool" title="تبديل اللغة / Switch Language" aria-label="تبديل اللغة">
         <i class="fa-solid fa-globe"></i> <span id="currentLangLabel">EN</span>
       </button>
@@ -123,8 +119,6 @@
             data-i18n="nav_simulator">المحاكي التفاعلي</span></a></li>
       <li><a href="#onboardingSteps" class="drawer-link"><i class="fa-solid fa-list-check"></i> <span
             data-i18n="nav_steps">خطوات الانضمام</span></a></li>
-      <li><a href="#brochureModal" class="drawer-link open-brochure-link"><i class="fa-solid fa-book"></i> <span
-            data-i18n="nav_brochure">العرض المعتمد (16 صفحة)</span></a></li>
       <li><button id="btnDrawerTheme" class="drawer-link"
           style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: inherit; font-size: inherit; font-family: inherit;"><i
             class="fa-solid fa-sun" id="drawerThemeIcon"></i> <span id="drawerThemeLabel">المظهر النهاري (أخضر
@@ -250,7 +244,7 @@
         </h1>
         <p class="hero-desc" data-i18n="ps_hero_desc">
           حلول دفع ذكية متعددة القنوات: تحويل هواتف أندرويد لأجهزة دفع لا تلامسية (Tap to Phone)، أجهزة أندرويد المتنقلة
-          مع طابعات حرارية مدمجة، ورموز QR الديناميكية وروابط الدفع السريع.
+          مع طابعات حرارية مدمجة، ورموز QR الديناميكية المرتبطة بالفواتير مباشرة.
         </p>
         <div class="hero-actions">
           <a href="#servicesGrid" class="btn-primary btn-large">
@@ -278,8 +272,8 @@
           <div class="trust-item">
             <i class="fa-solid fa-qrcode"></i>
             <div>
-              <strong data-i18n="ps_trust_3_title">QR & Payment Links</strong>
-              <span data-i18n="ps_trust_3_sub">دفع آمن بالرمز وروابط الدفع المخصصة</span>
+              <strong data-i18n="ps_trust_3_title">رموز QR الديناميكية</strong>
+              <span data-i18n="ps_trust_3_sub">دفع آمن بالرمز التفاعلي المباشر</span>
             </div>
           </div>
         </div>
@@ -309,7 +303,7 @@
             <div class="supported-channels-mini">
               <div class="channel-chip active"><i class="fa-solid fa-nfc-symbol"></i> NFC البطاقات</div>
               <div class="channel-chip active"><i class="fa-solid fa-qrcode"></i> QR المحافظ</div>
-              <div class="channel-chip active"><i class="fa-solid fa-link"></i> روابط الدفع</div>
+              <div class="channel-chip active"><i class="fa-solid fa-print"></i> أجهزة POS</div>
             </div>
 
             <div class="device-action-preview">
@@ -954,10 +948,6 @@
             <i class="fa-solid fa-qrcode"></i>
             <span data-i18n="sim_tab_qr">الدفع عبر رمز QR</span>
           </button>
-          <button class="sim-tab" data-mode="link">
-            <i class="fa-solid fa-link"></i>
-            <span data-i18n="sim_tab_link">روابط الدفع (Payment Links)</span>
-          </button>
           <button class="sim-tab" data-mode="pos">
             <i class="fa-solid fa-print"></i>
             <span data-i18n="sim_tab_pos">جهاز أندرويد POS الذكي</span>
@@ -1178,24 +1168,22 @@
           </ul>
         </article>
 
-        <!-- Service 4: Payment Links -->
+        <!-- Service 4: APIs & Webhooks Integration -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-link"></i></div>
-            <span class="serv-badge badge-purple" data-i18n="s4_badge">للبيع عن بعد</span>
+            <div class="serv-icon"><i class="fa-solid fa-code"></i></div>
+            <span class="serv-badge badge-purple" data-i18n="s4_badge">ربط تقني متقدم</span>
           </div>
-          <h3 class="serv-name" data-i18n="s4_name">روابط الدفع (Payment Links)</h3>
+          <h3 class="serv-name" data-i18n="s4_name">واجهات الربط البرمجي (APIs & Webhooks)</h3>
           <p class="serv-desc" data-i18n="s4_desc">
-            خدمة تتيح لك إنشاء رابط دفع مخصص وإرساله للعميل ليقوم بالدفع مباشرة خلال ثوانٍ، دون أن تتطلب وجود موقع
-            إلكتروني.
+            واجهات RESTful APIs موثقة لإصدار طلبات الدفع واستعلام الفواتير، مع إشعارات Webhooks مشفرة ولحظية لربط أي متجر أو نظام كاشير بمنظومة التحصيل الموحدة.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">تحديد المبلغ ووصف الفاتورة وتاريخ
-                الصلاحية</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">صفحة دفع احترافية تحمل هوية وشعار متجرك</span>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">استعلام الفواتير وتأكيد الدفع لحظياً</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">إشعارات Webhooks مشفرة مع إعادة المحاولة (Retry)</span>
             </li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">تحصيل فوري لطلبات التوصيل والمبيعات
-                الهاتفية</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">وثائق برمجية قياسية سهلة الربط للمطورين</span>
+            </li>
           </ul>
         </article>
 
@@ -1388,41 +1376,6 @@
     </div>
   </section>
 
-  <!-- Section: Interactive Presentation Brochure Viewer (PDF Booklet Lightbox) -->
-  <section class="section section-brochure" id="brochureSection">
-    <div class="container">
-      <div class="brochure-feature-card glass-card">
-        <div class="bf-content">
-          <span class="section-tag" data-i18n="tag_brochure">المصدر الرسمي والكتيب التعريفي المعتمد</span>
-          <h2 class="bf-title">
-            <span data-i18n="bf_title_1">تصفح العرض التقديمي الأصلي</span><br>
-            <span class="gradient-text" data-i18n="bf_title_2">لشركة Ultimate Pay</span>
-          </h2>
-          <p class="bf-desc" data-i18n="bf_desc">
-            يمكنك استعراض صفحات الملف التعريفي الرقمي المعتمد لشركة Ultimate Pay (16 صفحة بدقة عالية وتصميم رقمي أصيل)،
-            مع إمكانية التصفح التفاعلي الكامل أثناء اجتماعاتك مع كبار العملاء ومديري البنوك.
-          </p>
-          <div class="bf-actions">
-            <button class="btn-primary" id="btnLaunchBrochureModal">
-              <i class="fa-solid fa-images"></i> <span data-i18n="bf_btn_open">فتح كتيب الشرائح التفاعلي</span>
-            </button>
-            <span class="bf-meta"><i class="fa-solid fa-circle-check text-success"></i> مرخص ومطابق لبيانات الشركة
-              الرسمية</span>
-          </div>
-        </div>
-
-        <div class="bf-preview-slider" id="brochurePreviewThumb">
-          <div class="slide-mini-stack">
-            <img src="slides/slide_01.jpg" alt="Slide 1 Cover" class="stack-img img-1">
-            <img src="slides/slide_02.jpg" alt="Slide 2 About" class="stack-img img-2">
-            <img src="slides/slide_10.jpg" alt="Slide 10 Soft POS" class="stack-img img-3">
-          </div>
-          <span class="stack-hint" data-i18n="bf_hint">انقر للتكبير والتصفح الكامل</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Section: CTA & Commercial Pitch Form -->
   <!-- Section: Direct Contact via WhatsApp (المراسلة الفورية المعتمدة) -->
   <section class="section section-cta" id="ctaSection">
@@ -1545,35 +1498,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Lightbox Modal for Official Booklet Slides (16 Master Pages) -->
-  <div class="modal-overlay" id="brochureModal" aria-hidden="true" role="dialog">
-    <div class="modal-dialog brochure-dialog">
-      <div class="modal-header">
-        <div class="modal-title">
-          <i class="fa-solid fa-book-open"></i>
-          <span data-i18n="modal_b_title">الكتيب التقديمي المعتمد لشركة Ultimate Pay</span>
-          <span class="slide-indicator" id="slideIndicator">صفحة 1 من 16</span>
-        </div>
-        <div class="modal-controls">
-          <button class="btn-ctrl" id="btnPrevSlide" title="الشريحة السابقة"><i
-              class="fa-solid fa-arrow-right"></i></button>
-          <button class="btn-ctrl" id="btnNextSlide" title="الشريحة التالية"><i
-              class="fa-solid fa-arrow-left"></i></button>
-          <button class="btn-ctrl" id="btnCloseModal" title="إغلاق"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-      </div>
-
-      <div class="modal-body brochure-body">
-        <div class="brochure-viewer">
-          <img id="activeSlideImg" src="slides/slide_01.jpg" alt="Slide Preview" class="current-slide-img">
-        </div>
-        <div class="slide-thumbnails-strip" id="thumbnailsStrip">
-          <!-- Populated dynamically via JS for all 23 slides -->
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="app.js"></script>
 </body>
