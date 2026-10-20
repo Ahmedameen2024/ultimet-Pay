@@ -4112,3 +4112,385 @@ body.theme-light .governance-banner {
   color: #065F46;
 }
 
+/* ==========================================================================
+   Executive Pitch Enhancements (Speech & Hierarchy Integration)
+   ========================================================================== */
+.speech-quote-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 10px 18px;
+  border-radius: var(--radius-lg);
+  font-size: 0.92rem;
+  color: #D1FAE5;
+  line-height: 1.5;
+  margin-top: 14px;
+  margin-bottom: 22px;
+}
+
+.speech-quote-pill i {
+  color: var(--emerald-400);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.speech-quote-pill.bank-quote {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  color: #CFFAFE;
+}
+
+.speech-quote-pill.bank-quote i {
+  color: var(--cyan-400);
+}
+
+body.theme-light .speech-quote-pill {
+  background: rgba(16, 185, 129, 0.12);
+  color: #065F46;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+body.theme-light .speech-quote-pill.bank-quote {
+  background: rgba(6, 182, 212, 0.12);
+  color: #155E75;
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* 3 Core Stages Banner */
+.three-stages-banner {
+  background: rgba(13, 20, 36, 0.7);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.three-stages-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.three-stages-header i {
+  color: var(--emerald-400);
+  font-size: 1.25rem;
+}
+
+.three-stages-header h3 {
+  font-size: 1.15rem;
+  color: #FFFFFF;
+}
+
+.three-stages-header span {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.three-stages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 860px) {
+  .three-stages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stage-pill-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.stage-pill-box:hover {
+  transform: translateY(-2px);
+}
+
+.stage-pill-box .stage-num {
+  font-family: var(--font-latin);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.stage-pill-box.stage-confirm {
+  border-top: 3px solid var(--amber-400);
+}
+.stage-pill-box.stage-confirm .stage-num {
+  background: rgba(245, 158, 11, 0.2);
+  color: #FBBF24;
+}
+
+.stage-pill-box.stage-account {
+  border-top: 3px solid var(--emerald-400);
+}
+.stage-pill-box.stage-account .stage-num {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+}
+
+.stage-pill-box.stage-settle {
+  border-top: 3px solid var(--cyan-400);
+}
+.stage-pill-box.stage-settle .stage-num {
+  background: rgba(6, 182, 212, 0.2);
+  color: #22D3EE;
+}
+
+.stage-pill-box h4 {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.stage-pill-box p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Financial Waterfall Breakdown Box */
+.financial-waterfall-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.wf-header-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin-bottom: 14px;
+}
+
+.wf-header-mini i {
+  color: var(--emerald-400);
+}
+
+.wf-steps-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wf-mini-step {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  min-width: 150px;
+  flex: 1;
+}
+
+.wf-mini-step span {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.wf-mini-step strong {
+  font-family: var(--font-latin);
+  font-size: 1.15rem;
+  color: #FFFFFF;
+}
+
+.wf-mini-step.highlight-net {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: var(--emerald-500);
+}
+
+.wf-mini-step.highlight-net strong {
+  color: var(--emerald-400);
+}
+
+.wf-mini-arrow {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.wf-rule-tag {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Journey Map Banner in Services */
+.journey-map-banner {
+  background: linear-gradient(135deg, rgba(13, 20, 36, 0.9) 0%, rgba(7, 11, 20, 0.95) 100%);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  margin-bottom: 36px;
+}
+
+.journey-map-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.journey-map-title i {
+  color: var(--cyan-400);
+  font-size: 1.3rem;
+}
+
+.journey-map-title h3 {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+}
+
+.journey-map-lead {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.journey-map-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 1080px) {
+  .journey-map-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .journey-map-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.j-node-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.j-node-item:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.j-node-num {
+  font-family: var(--font-latin);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--cyan-400);
+  background: rgba(6, 182, 212, 0.15);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.j-node-item strong {
+  font-size: 0.88rem;
+  color: #FFFFFF;
+}
+
+.j-node-item p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+/* Bank Collab Framework Steps */
+.bank-collab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+.bank-collab-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.bank-collab-item .collab-badge {
+  font-family: var(--font-latin);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cyan-400);
+  background: rgba(6, 182, 212, 0.15);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.bank-collab-item h4 {
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+  color: #FFFFFF;
+}
+
+.bank-collab-item p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Light Theme overrides for additions */
+body.theme-light .three-stages-banner,
+body.theme-light .journey-map-banner {
+  background: #FFFFFF;
+  border-color: #E2E8F0;
+  box-shadow: var(--shadow-sm);
+}
+
+body.theme-light .stage-pill-box,
+body.theme-light .j-node-item,
+body.theme-light .bank-collab-item,
+body.theme-light .wf-mini-step {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+}
+
+body.theme-light .three-stages-header h3,
+body.theme-light .stage-pill-box h4,
+body.theme-light .journey-map-title h3,
+body.theme-light .j-node-item strong,
+body.theme-light .bank-collab-item h4,
+body.theme-light .wf-mini-step strong {
+  color: #0F172A;
+}
+
+body.theme-light .financial-waterfall-box {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+

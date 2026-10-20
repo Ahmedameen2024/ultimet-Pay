@@ -34,3 +34,11 @@ logo_crop_*.png
 photo_*.png
 logo_*_trans.png
 fonts/
+
+# Confidential Internal Diagrams & Flowcharts (Trade Secrets)
+مجلد مخططات انسيابية/
+assets/
+من نحن.txt
+
+# Backup files
+*_backup.*
