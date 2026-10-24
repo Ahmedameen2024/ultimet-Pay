@@ -123,10 +123,16 @@
           style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: inherit; font-size: inherit; font-family: inherit;"><i
             class="fa-solid fa-sun" id="drawerThemeIcon"></i> <span id="drawerThemeLabel">المظهر النهاري (أخضر
             وأبيض)</span></button></li>
+      <li><button id="btnDrawerLang" class="drawer-link"
+          style="width: 100%; border: none; background: transparent; cursor: pointer; text-align: inherit; font-size: inherit; font-family: inherit;"><i
+            class="fa-solid fa-globe"></i> <span id="drawerLangLabel">English (Switch to English)</span></button></li>
       <li><a href="#ctaSection" class="drawer-link highlight"><i class="fa-solid fa-paper-plane"></i> <span
             data-i18n="nav_contact">تواصل معنا</span></a></li>
     </ul>
   </div>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
   <!-- Hero Section (Dynamic by Track) -->
   <section class="hero-section" id="hero">
@@ -226,7 +232,7 @@
             <i class="fa-solid fa-coins"></i>
             <div>
               <strong data-i18n="b_trust_2_title">تسويات ومقاصة دقيقة</strong>
-              <span data-i18n="b_trust_2_sub">ملفات تسوية قياسية دورية ومطابقة ثلاثية</span>
+              <span data-i18n="b_trust_2_sub">مطابقة بالمرجع الموحد وتقارير عمليات دقيقة</span>
             </div>
           </div>
           <div class="trust-item">
@@ -323,7 +329,7 @@
 
             <div class="settlement-preview-badge">
               <i class="fa-solid fa-check-double"></i>
-              <span data-i18n="sim_instant_sync">ترحيل فوري إلى أونكس ERP • تسوية بنكية مؤكدة</span>
+              <span data-i18n="sim_instant_sync">تسجيل تلقائي في أونكس ERP • إشعار فوري بالسداد</span>
             </div>
           </div>
         </div>
@@ -495,9 +501,9 @@
             <li>
               <div class="icon-wrap danger"><i class="fa-solid fa-xmark"></i></div>
               <div>
-                <strong data-i18n="pain_3_t">كابوس المطابقة وإدخال القيود</strong>
-                <p data-i18n="pain_3_d">ساعات طويلة تضيع بعد الإغلاق لمطابقة إشعارات المحافظ مع فواتير الكاشير، وإدخال
-                  السندات يدوياً.</p>
+                <strong data-i18n="pain_3_t">كابوس المطابقة والإدخال اليدوي</strong>
+                <p data-i18n="pain_3_d">ساعات طويلة تضيع بعد الإغلاق لمطابقة إشعارات المحافظ مع الفواتير، وإدخال
+                  بيانات السداد يدويًا.</p>
               </div>
             </li>
             <li>
@@ -543,7 +549,7 @@
             <li>
               <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
               <div>
-                <strong data-i18n="gain_4_t">حساب تسوية موحد ولوحة تحكم حية</strong>
+                <strong data-i18n="gain_4_t">إشعار فوري وتأكيد موثق للعمليات</strong>
                 <p data-i18n="gain_4_d">كل مبيعات فروعك تصب في حسابك المصرفي المعتمد، مع إشعارات تسوية فورية ورؤية شاملة
                   للسيولة.</p>
               </div>
@@ -620,9 +626,9 @@
             <div class="why-icon"><i class="fa-solid fa-arrows-spin"></i></div>
             <span class="why-badge" data-i18n="why_b4">أتمتة محاسبية حقيقية</span>
           </div>
-          <h3 class="why-card-title" data-i18n="why_c4_t">تكامل محاسبي مباشر مع Onyx ERP</h3>
+          <h3 class="why-card-title" data-i18n="why_c4_t">تكامل محاسبي مع أنظمة التاجر (Onyx ERP)</h3>
           <p class="why-card-desc" data-i18n="why_c4_d">
-            كل حركة دفع مؤكدة تُغلق الفاتورة آلياً وتولّد سند قبض وقيد يومية في شجرتك المحاسبية برقم مرجع موحد (RRN) دون أي إدخال يدوي.
+            ربط بيانات الدفع بعملية البيع برقم مرجع موحد (RRN)، بما يدعم وضوح التحصيل ومتابعة السجلات المحاسبية ومطابقة العمليات وفق التكامل المعتمد.
           </p>
           <div class="why-card-footer">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c4_f">مطابقة تامة ومنع عجز الصناديق</span>
@@ -635,9 +641,9 @@
             <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
             <span class="why-badge" data-i18n="why_b5">صفر احتيال</span>
           </div>
-          <h3 class="why-card-title" data-i18n="why_c5_t">إشعارات لحظية وقضاء على الاحتيال</h3>
+          <h3 class="why-card-title" data-i18n="why_c5_t">تأكيد فوري للعمليات وحماية المبيعات</h3>
           <p class="why-card-desc" data-i18n="why_c5_d">
-            إشعار برمجي مشفر (Webhook) يصل مباشرة لشاشة الكاشير في أقل من ثانيتين؛ يقضي نهائياً على احتيال لقطات الشاشة المفبركة ورسائل SMS المزيفة.
+            تأكيد موثوق لنتيجة الدفع يظهر مباشرة على شاشة الكاشير برقم مرجع معتمد؛ يقضي على الاعتماد على لقطات الشاشة ورسائل SMS غير الموثقة.
           </p>
           <div class="why-card-footer">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c5_f">الكاشير يعتمد على شاشته فقط</span>
@@ -669,215 +675,256 @@
         <span class="section-tag" data-i18n="tag_cycle">سير العمل الفعلي والدورة المحاسبية</span>
         <h2 class="section-title">
           <span data-i18n="cycle_title_1">من إصدار الفاتورة</span>
-          <span class="gradient-text" data-i18n="cycle_title_2">إلى التسوية المصرفية</span>
+          <span class="gradient-text" data-i18n="cycle_title_2">إلى التسجيل المحاسبي</span>
           <span data-i18n="cycle_title_3">رحلة العملية بوضوح تام</span>
         </h2>
         <p class="section-desc" data-i18n="cycle_subtitle">
-          لا غموض بعد اليوم. نوضح للتاجر والمحاسب والبنك ما يحدث في كل خطوة، والفرق الجوهري بين إشعار السداد اللحظي، والتسجيل المحاسبي، والتسوية المصرفية.
+          مع Ultimate Pay، ترتبط عملية الدفع بفاتورتك ونظامك المحاسبي. عندما يسدد العميل قيمة الفاتورة، تصل نتيجة الدفع إلى المنصة، ويُسجَّل المبلغ تلقائيًا في نظامك المحاسبي عند تأكيد العملية وتفعيل التكامل، كما يصلك إشعار يوضح رقم الفاتورة والمبلغ المسدد. بذلك تقل الحاجة إلى إدخال بيانات السداد يدويًا، وتصبح متابعة الفواتير المسددة أوضح وأسهل.
         </p>
       </div>
 
-      <!-- The 3 Core Stages Distinction (التمييز بين المراحل الثلاث) -->
-      <div class="three-stages-banner">
-        <div class="three-stages-header">
-          <i class="fa-solid fa-code-branch"></i>
-          <div>
-            <h3>الفصل الجوهري بين المراحل الثلاث للعملية</h3>
-            <span>مراحل مترابطة لكنها ليست شيئاً واحداً — وضوح تام لكل طرف:</span>
+      <!-- 2-Track Visual Flow Diagram (المخطط البصري للمسارين: المسار المالي ومسار المعلومات) -->
+      <div class="accounting-flow-diagram">
+        <!-- Track 1: Financial Flow -->
+        <div class="flow-track track-sales">
+          <div class="flow-track-header">
+            <span class="track-tag"><i class="fa-solid fa-money-bill-transfer"></i> المسار المالي المباشر</span>
+            <h4 data-i18n="flow_financial_title">المسار المالي (انتقال الأموال المباشر)</h4>
+            <span class="track-desc" data-i18n="flow_financial_desc">الأموال تنتقل مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع المعتمدة دون وساطة في النقد</span>
+          </div>
+          <div class="flow-steps-chain">
+            <div class="chain-step">
+              <div class="chain-num">1</div>
+              <div class="chain-icon"><i class="fa-solid fa-file-invoice"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="f_step_1_t">بيع لدى التاجر وإصدار فاتورة</div>
+                <div class="chain-desc" data-i18n="f_step_1_d">تسجيل الفاتورة في نظام التاجر</div>
+              </div>
+            </div>
+            <div class="chain-step">
+              <div class="chain-num">2</div>
+              <div class="chain-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="f_step_2_t">العميل يسدد قيمة الفاتورة</div>
+                <div class="chain-desc" data-i18n="f_step_2_d">سداد عبر وسيلة الدفع المتاحة</div>
+              </div>
+            </div>
+            <div class="chain-step highlight-direct-transfer">
+              <div class="chain-num">3</div>
+              <div class="chain-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="f_step_3_t">انتقال الأموال مباشرة</div>
+                <div class="chain-desc" data-i18n="f_step_3_d">من حساب العميل إلى حساب التاجر مباشرة</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="three-stages-grid">
-          <div class="stage-pill-box stage-confirm">
-            <span class="stage-num">المرحلة 1</span>
-            <h4>1. تأكيد نتيجة الدفع</h4>
-            <p>إشعار تقني موثق (Webhook) برقم مرجع موحد (RRN) يثبت نجاح خصم المبلغ من العميل، مما يسمح بتسليم السلعة فوراً دون انتظار رسائل SMS.</p>
+
+        <!-- Track Divider / Connection -->
+        <div class="flow-track-divider">
+          <div class="divider-line"></div>
+          <div class="divider-badge">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <span data-i18n="flow_divider_note">تأكيد نجاح السداد ينقل المعاملة فورًا إلى مسار المعلومات والتكامل</span>
           </div>
-          <div class="stage-pill-box stage-account">
-            <span class="stage-num">المرحلة 2</span>
-            <h4>2. التسجيل في دفاتر التاجر</h4>
-            <p>يوضح كيف تنعكس العملية في سجلات التاجر؛ تحديث الفاتورة إلى «مدفوعة» وتوليد سند القبض في Onyx ERP بحسب ما يدعمه التكامل.</p>
+          <div class="divider-line"></div>
+        </div>
+
+        <!-- Track 2: Information & Notification Flow -->
+        <div class="flow-track track-settlement">
+          <div class="flow-track-header">
+            <span class="track-tag tag-settle"><i class="fa-solid fa-network-wired"></i> مسار المعلومات والتكامل</span>
+            <h4 data-i18n="flow_info_title">مسار المعلومات والإشعار والتكامل المحاسبي</h4>
+            <span class="track-desc" data-i18n="flow_info_desc">وصول نتيجة الدفع إلى المنصة ثم ربطها بالفاتورة وتسجيلها محاسبيًا وإشعار التاجر</span>
           </div>
-          <div class="stage-pill-box stage-settle">
-            <span class="stage-num">المرحلة 3</span>
-            <h4>3. التسوية المصرفية (Payout)</h4>
-            <p>مرحلة مصرفية مستقلة: تحويل حصائل المبيعات الصافية كدفعة مجمعة للحساب المصرفي المعتمد للتاجر وفق الترتيبات المصرفية المقررة.</p>
+          <div class="flow-steps-chain">
+            <div class="chain-step">
+              <div class="chain-num">4</div>
+              <div class="chain-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="i_step_1_t">وصول نتيجة الدفع للمنصة</div>
+                <div class="chain-desc" data-i18n="i_step_1_d">استلام تأكيد السداد من جهة الدفع</div>
+              </div>
+            </div>
+            <div class="chain-step">
+              <div class="chain-num">5</div>
+              <div class="chain-icon"><i class="fa-solid fa-hashtag"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="i_step_2_t">مطابقة النتيجة مع الفاتورة</div>
+                <div class="chain-desc" data-i18n="i_step_2_d">مطابقة رقم الفاتورة والمرجع والمبلغ</div>
+              </div>
+            </div>
+            <div class="chain-step">
+              <div class="chain-num">6</div>
+              <div class="chain-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="i_step_3_t">تسجيل المبلغ تلقائيًا بالمحاسبة</div>
+                <div class="chain-desc" data-i18n="i_step_3_d">في نظام التاجر وفق التكامل المفعّل</div>
+              </div>
+            </div>
+            <div class="chain-step">
+              <div class="chain-num">7</div>
+              <div class="chain-icon"><i class="fa-solid fa-bell"></i></div>
+              <div>
+                <div class="chain-title" data-i18n="i_step_4_t">إرسال إشعار السداد للتاجر</div>
+                <div class="chain-desc" data-i18n="i_step_4_d">رقم الفاتورة، المبلغ المسدد، والحالة</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Live Practical Example Banner -->
+      <!-- Live Practical Example Card (Section 9: INV-1025) -->
       <div class="cycle-hero-banner">
         <div class="banner-text">
           <i class="fa-solid fa-receipt"></i>
           <div>
-            <strong data-i18n="cycle_ex_title">نموذج عملي توضيحي لعملية بيع تجزئة:</strong>
-            <span data-i18n="cycle_ex_sub">فاتورة مبيعات نقدية بقيمة 5,000 ريال يمني (#INV-5001)</span>
+            <strong data-i18n="cycle_ex_title">مثال توضيحي افتراضي لدورة سداد الفاتورة:</strong>
+            <span data-i18n="cycle_ex_sub">فاتورة مبيعات رقم INV-1025 بقيمة 5,000 ريال (حالة الدفع: مؤكدة وناجحة)</span>
           </div>
         </div>
-        <div class="example-badge" data-i18n="cycle_ex_badge">5,000 YER • مثال عملي واقعي</div>
+        <div class="example-badge" data-i18n="cycle_ex_badge">INV-1025 • مثال توضيحي افتراضي</div>
       </div>
 
-      <!-- Financial Distribution for 5,000 YER Practical Example -->
-      <div class="financial-waterfall-box">
+      <!-- Practical Steps Box for INV-1025 -->
+      <div class="financial-waterfall-box" style="padding: 24px;">
         <div class="wf-header-mini">
-          <i class="fa-solid fa-coins"></i>
-          <span>مسار التوزيع المالي لفاتورة الـ 5,000 ريال (شفافية كاملة للمفوتر والمصرف):</span>
+          <i class="fa-solid fa-list-check"></i>
+          <span>ما يحدث عملياً بعد تأكيد سداد الفاتورة رقم INV-1025 وتطابقها:</span>
         </div>
-        <div class="wf-steps-flex">
-          <div class="wf-mini-step">
-            <span>إجمالي سداد العميل</span>
-            <strong>5,000 YER</strong>
+        <div class="wf-steps-flex" style="justify-content: space-around;">
+          <div class="wf-mini-step" style="flex: 1; text-align: right; background: rgba(255,255,255,0.03); padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+            <span style="color: var(--accent-green); font-weight: 700; display: block; margin-bottom: 6px;">1. وصول نتيجة الدفع</span>
+            <strong>تصل نتيجة الدفع لمنصة Ultimate Pay بالمرجع المعتمد</strong>
           </div>
-          <div class="wf-mini-arrow"><i class="fa-solid fa-minus"></i></div>
-          <div class="wf-mini-step">
-            <span>عمولة خدمة الربط</span>
-            <strong style="color: #FBBF24;">- 50 YER</strong>
+          <div class="wf-mini-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="wf-mini-step" style="flex: 1; text-align: right; background: rgba(255,255,255,0.03); padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+            <span style="color: #22D3EE; font-weight: 700; display: block; margin-bottom: 6px;">2. تسجيل المبلغ تلقائيًا</span>
+            <strong>يُسجَّل مبلغ 5,000 ريال تلقائيًا في النظام المحاسبي للتاجر وفق التكامل المفعّل</strong>
           </div>
-          <div class="wf-mini-arrow"><i class="fa-solid fa-minus"></i></div>
-          <div class="wf-mini-step">
-            <span>رسوم المعالجة البنكية</span>
-            <strong style="color: #22D3EE;">- 25 YER</strong>
-          </div>
-          <div class="wf-mini-arrow"><i class="fa-solid fa-equals"></i></div>
-          <div class="wf-mini-step highlight-net">
-            <span>صافي المحول للتاجر</span>
-            <strong>4,925 YER</strong>
+          <div class="wf-mini-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="wf-mini-step highlight-net" style="flex: 1; text-align: right; padding: 16px; border-radius: 12px;">
+            <span style="color: #FBBF24; font-weight: 700; display: block; margin-bottom: 6px;">3. إشعار التاجر بالسداد</span>
+            <strong style="font-size: 0.95rem;">«تم سداد الفاتورة رقم INV-1025 بمبلغ 5,000 ريال»</strong>
           </div>
         </div>
-        <p class="wf-rule-tag">
-          <i class="fa-solid fa-circle-info text-accent"></i> <strong>مبدأ العدالة التشغيلية:</strong> العميل يدفع فقط 5,000 ريال دون أي زيادة، والعمولة المعتمدة تخصم تلقائياً من المفوتر (التاجر) عند دورة التسوية المصرفية دون أي أعباء مسبقة.
+        <p class="wf-rule-tag" style="margin-top: 18px;">
+          <i class="fa-solid fa-circle-info text-accent"></i> <strong>تنبيه توضيحي:</strong> هذا المثال افتراضي لبيان وظيفة الخدمة المحددة. لا يتضمن أية وساطة مالية أو تحويل أموال بين حسابات أخرى من قبل المنصة؛ فالأموال انتقلت مباشرة بين العميل والتاجر، واقتصر دور المنصة على الربط والتسجيل المحاسبي التلقائي والإشعار.
         </p>
       </div>
 
-      <!-- 7 Steps Sequence Grid -->
+      <!-- The 6 Detailed Stages Grid -->
       <div class="cycle-steps-grid">
-        <!-- Step 1 -->
+        <!-- Stage 1 -->
         <div class="cycle-step-card">
           <div class="cycle-step-top">
             <div class="step-number-badge">1</div>
-            <span class="step-role-tag" data-i18n="c_step_1_role">نظام التاجر المحاسبي</span>
+            <span class="step-role-tag" data-i18n="c_step_1_role">الخطوة 1</span>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-file-invoice"></i> <span data-i18n="c_step_1_t">إنشاء الفاتورة في ERP</span></h3>
+          <h3 class="cycle-step-title"><i class="fa-solid fa-file-invoice"></i> <span data-i18n="c_step_1_t">البيع وإصدار الفاتورة</span></h3>
           <p class="cycle-step-desc" data-i18n="c_step_1_d">
-            يُنشئ الكاشير فاتورة بيع في نظامه المحاسبي (مثل Onyx ERP) بقيمة 5,000 ريال، وتأخذ الفاتورة رقماً مرجعياً فريداً (#INV-5001).
+            ينفذ التاجر عملية البيع ويسجل بياناتها في نظامه المعتمد، ثم يطلب تحصيل قيمة المشتريات من العميل عبر وسيلة الدفع المتاحة له.
           </p>
           <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسؤول:</span> <span class="meta-val" data-i18n="c_step_1_actor">كاشير المتجر / ERP</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">حالة الفاتورة:</span> <span class="meta-val highlight-amber" data-i18n="c_step_1_st">بانتظار السداد (Pending)</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">ما يراه الكاشير:</span> <span class="meta-val" data-i18n="c_step_1_view">إجمالي الفاتورة 5,000 ريال</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسار:</span> <span class="meta-val" data-i18n="c_step_1_actor">نظام التاجر أو واجهة البيع</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">الحالة:</span> <span class="meta-val highlight-amber" data-i18n="c_step_1_st">بانتظار السداد</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">المستند:</span> <span class="meta-val" data-i18n="c_step_1_view">فاتورة برقم مرجعي محدد</span></div>
           </div>
         </div>
 
-        <!-- Step 2 -->
+        <!-- Stage 2 -->
         <div class="cycle-step-card">
           <div class="cycle-step-top">
             <div class="step-number-badge">2</div>
-            <span class="step-role-tag" data-i18n="c_step_2_role">منصة Ultimate Pay</span>
+            <span class="step-role-tag" data-i18n="c_step_2_role">الخطوة 2</span>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-qrcode"></i> <span data-i18n="c_step_2_t">بدء الدفع وطلب السداد</span></h3>
+          <h3 class="cycle-step-title"><i class="fa-solid fa-money-bill-transfer"></i> <span data-i18n="c_step_2_t">سداد العميل وانتقال الأموال</span></h3>
           <p class="cycle-step-desc" data-i18n="c_step_2_d">
-            تولّد المنصة رمز QR ديناميكياً يحمل بدقة قيمة الفاتورة (5,000 ريال) ورقمها، أو يقرّب العميل بطاقته المصرفية عبر تقنية Soft POS.
+            يسدد العميل قيمة الفاتورة عبر وسيلته المعتمدة، وتنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر وفق نموذج الدفع المعتمد دون وساطة المنصة.
           </p>
           <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسؤول:</span> <span class="meta-val" data-i18n="c_step_2_actor">المنصة + جهاز الكاشير</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">قناة السداد:</span> <span class="meta-val" data-i18n="c_step_2_st">QR ديناميكي / Soft POS</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">ما يراه المشتري:</span> <span class="meta-val" data-i18n="c_step_2_view">طلب دفع بمبلغ 5,000 ريال بالضبط</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسار المالي:</span> <span class="meta-val highlight-green" data-i18n="c_step_2_actor">تحويل مباشر بين الحسابين</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">دور المنصة:</span> <span class="meta-val highlight-amber" data-i18n="c_step_2_st">لا تستلم ولا تحتفظ بالنقد</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">الجهة المنفذة:</span> <span class="meta-val" data-i18n="c_step_2_view">المؤسسة المالية المعتمدة</span></div>
           </div>
         </div>
 
-        <!-- Step 3 -->
+        <!-- Stage 3 -->
         <div class="cycle-step-card">
           <div class="cycle-step-top">
             <div class="step-number-badge">3</div>
-            <span class="step-role-tag" data-i18n="c_step_3_role">المحفظة / البنك المصدر</span>
+            <span class="step-role-tag" data-i18n="c_step_3_role">الخطوة 3</span>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="c_step_3_t">المعالجة وفحص الأمان</span></h3>
+          <h3 class="cycle-step-title"><i class="fa-solid fa-satellite-dish"></i> <span data-i18n="c_step_3_t">وصول نتيجة الدفع للمنصة</span></h3>
           <p class="cycle-step-desc" data-i18n="c_step_3_d">
-            يمسح العميل الرمز ويؤكد السداد. تُخصم 5,000 ريال من حسابه، وتمر العملية بمحرك الفحص: منع تكرار العمليات (Idempotency) وفحص الاحتيال.
+            تصل نتيجة عملية الدفع المؤكدة إلى منصة Ultimate Pay من خلال الربط المعتمد مع جهة الدفع، محملة ببيانات المرجع الموحد.
           </p>
           <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسؤول:</span> <span class="meta-val" data-i18n="c_step_3_actor">المؤسسة المالية + محرك المنصة</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">زمن الاستجابة:</span> <span class="meta-val highlight-green" data-i18n="c_step_3_st">أقل من ثانيتين (&lt; 2s)</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">المخرجات:</span> <span class="meta-val" data-i18n="c_step_3_view">مرجع مصرفي موحد RRN</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسار:</span> <span class="meta-val" data-i18n="c_step_3_actor">مسار المعلومات والتأكيد</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">حالة السداد:</span> <span class="meta-val highlight-green" data-i18n="c_step_3_st">مؤكدة لدى جهة الدفع</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">المعرف:</span> <span class="meta-val" data-i18n="c_step_3_view">مرجع العملية المعتمد (RRN)</span></div>
           </div>
         </div>
 
-        <!-- Step 4 -->
-        <div class="cycle-step-card step-critical">
+        <!-- Stage 4 -->
+        <div class="cycle-step-card">
           <div class="cycle-step-top">
             <div class="step-number-badge">4</div>
-            <span class="step-role-tag" style="background: rgba(245, 158, 11, 0.2); color: #F59E0B;" data-i18n="c_step_4_role">إشعار تقني فوري</span>
+            <span class="step-role-tag" data-i18n="c_step_4_role">الخطوة 4</span>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-bolt"></i> <span data-i18n="c_step_4_t">تأكيد العملية (Webhook)</span></h3>
+          <h3 class="cycle-step-title"><i class="fa-solid fa-hashtag"></i> <span data-i18n="c_step_4_t">مطابقة النتيجة مع الفاتورة</span></h3>
           <p class="cycle-step-desc" data-i18n="c_step_4_d">
-            يصل إشعار Webhook مشفر لنظام التاجر فور نجاح الخصم. يتيح تسليم البضاعة فوراً بأمان تام دون انتظار رسائل SMS أو لقطات شاشة.
+            يتم التحقق من نجاح العملية وربطها بالفاتورة الصحيحة باستخدام البيانات المرجعية المتاحة، والتأكد من مطابقة المبلغ المطلوب بدقة.
           </p>
           <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">طبيعة الخطوة:</span> <span class="meta-val highlight-amber" data-i18n="c_step_4_actor">إشعار معلوماتي بالنتيجة</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">الأثر على البضاعة:</span> <span class="meta-val highlight-green" data-i18n="c_step_4_st">تسليم فوري وآمن للعميل</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">تنبيه محاسبي:</span> <span class="meta-val" data-i18n="c_step_4_view">الـ Webhook ليس تحويلاً نقدياً</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">الإجراء:</span> <span class="meta-val" data-i18n="c_step_4_actor">مطابقة بيانات العملية بالفاتورة</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">حالة الفحص:</span> <span class="meta-val highlight-green" data-i18n="c_step_4_st">متطابقة وصحيحة</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">النتيجة:</span> <span class="meta-val" data-i18n="c_step_4_view">ربط مؤكد بحركة البيع</span></div>
           </div>
         </div>
 
-        <!-- Step 5 -->
+        <!-- Stage 5 -->
         <div class="cycle-step-card">
           <div class="cycle-step-top">
             <div class="step-number-badge">5</div>
-            <span class="step-role-tag" data-i18n="c_step_5_role">نظام Onyx ERP</span>
+            <span class="step-role-tag" data-i18n="c_step_5_role">الخطوة 5</span>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-receipt"></i> <span data-i18n="c_step_5_t">التسجيل وسند القبض</span></h3>
+          <h3 class="cycle-step-title"><i class="fa-solid fa-book-bookmark"></i> <span data-i18n="c_step_5_t">التسجيل المحاسبي التلقائي</span></h3>
           <p class="cycle-step-desc" data-i18n="c_step_5_d">
-            يستقبل ERP إشعار النتيجة، فيُحدّث الفاتورة تلقائياً إلى «مدفوعة PAID»، ويُولّد سند قبض وقيد يومية آلياً وفق إعدادات التكامل المعتمدة لدى التاجر.
+            عند تأكيد العملية وتطابقها، يتكامل النظام مع النظام المحاسبي للتاجر (مثل Onyx ERP) بحيث يُسجّل المبلغ تلقائيًا بدلًا من الإدخال اليدوي.
           </p>
           <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسؤول:</span> <span class="meta-val" data-i18n="c_step_5_actor">التكامل البرمجي مع Onyx ERP</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">حالة الفاتورة:</span> <span class="meta-val highlight-green" data-i18n="c_step_5_st">مدفوعة ومقفلة (PAID)</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">السجل المحاسبي:</span> <span class="meta-val" data-i18n="c_step_5_view">سند قبض برقم المرجع RRN</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">الأثر:</span> <span class="meta-val highlight-green" data-i18n="c_step_5_actor">تسجيل المبلغ تلقائيًا بالسجلات</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">شرط التفعيل:</span> <span class="meta-val highlight-amber" data-i18n="c_step_5_st">وفق التكامل المعتمد المفعّل</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">الفائدة:</span> <span class="meta-val" data-i18n="c_step_5_view">تقليل الإدخال اليدوي والسهو</span></div>
           </div>
         </div>
 
-        <!-- Step 6 -->
+        <!-- Stage 6 -->
         <div class="cycle-step-card">
           <div class="cycle-step-top">
             <div class="step-number-badge">6</div>
-            <span class="step-role-tag" data-i18n="c_step_6_role">بوابة التاجر والحسابات</span>
+            <span class="step-role-tag" data-i18n="c_step_6_role">الخطوة 6</span>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-scale-balanced"></i> <span data-i18n="c_step_6_t">المطابقة الثلاثية</span></h3>
+          <h3 class="cycle-step-title"><i class="fa-solid fa-bell"></i> <span data-i18n="c_step_6_t">إرسال إشعار السداد للتاجر</span></h3>
           <p class="cycle-step-desc" data-i18n="c_step_6_d">
-            تطابق بوابة التاجر آلياً بين: [سجل المنصة] × [فاتورة ERP #INV-5001] × [مرجع الحركة RRN] لضمان عدم وجود أي فروقات أو عجز بالصناديق.
+            يصل إشعار واضح للتاجر يوضح أن العميل سدد الفاتورة، مع بيان رقم الفاتورة والمبلغ المسدد ونتيجة العملية، مما يجعل المتابعة أسرع وأوضح.
           </p>
           <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسؤول:</span> <span class="meta-val" data-i18n="c_step_6_actor">بوابة التاجر (Merchant Portal)</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">معادلة المطابقة:</span> <span class="meta-val highlight-green" data-i18n="c_step_6_st">مطابقة تامة 100% برقم RRN</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">ما يراه المحاسب:</span> <span class="meta-val" data-i18n="c_step_6_view">تقرير مطابقة يومي مفصل</span></div>
-          </div>
-        </div>
-
-        <!-- Step 7 -->
-        <div class="cycle-step-card step-settlement">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">7</div>
-            <span class="step-role-tag" style="background: rgba(6, 182, 212, 0.2); color: #22D3EE;" data-i18n="c_step_7_role">المصرف المعتمد</span>
-          </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-vault"></i> <span data-i18n="c_step_7_t">التسوية المصرفية (Payout)</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_7_d">
-            مرحلة مالية مستقلة: تتجمع المبيعات في ملف تسوية معتمد، وتُحوّل المبالغ الصافية مجمعة لحساب التاجر البنكي وفق الاتفاقية المصرفية ودورة التسوية المحددة.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسؤول:</span> <span class="meta-val" data-i18n="c_step_7_actor">المؤسسة المالية (البنك)</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">آلية التحويل:</span> <span class="meta-val highlight-green" data-i18n="c_step_7_st">دفعة مجمعة بالحساب المصرفي</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">المستند النهائي:</span> <span class="meta-val" data-i18n="c_step_7_view">كشف تسوية بنكي وإشعار إيداع</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المستلم:</span> <span class="meta-val" data-i18n="c_step_6_actor">التاجر / الكاشير / المحاسب</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">محتوى الإشعار:</span> <span class="meta-val highlight-green" data-i18n="c_step_6_st">رقم الفاتورة والمبلغ المسدد والحالة</span></div>
+            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">النتيجة:</span> <span class="meta-val" data-i18n="c_step_6_view">تسليم السلعة بثقة دون انتظار</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Critical Accounting Callout Banner -->
+      <!-- Critical Callout: Two Tracks Separation -->
       <div class="cycle-warning-box">
-        <i class="fa-solid fa-triangle-exclamation"></i>
+        <i class="fa-solid fa-shield-halved text-accent"></i>
         <div>
-          <h4 data-i18n="c_warn_title">تنبيه محاسبي جوهري — الفرق بين تأكيد الدفع والتسوية المصرفية:</h4>
+          <h4 data-i18n="c_warn_title">تنبيه جوهري حول فصل المسارات وحوكمة العمليات:</h4>
           <p data-i18n="c_warn_desc">
-            تأكيد نجاح الدفع (إشعار Webhook) هو <strong>إثبات تقني لحظي بنجاح خصم المبلغ من العميل</strong> يتيح تسليم السلعة وتحديث الفاتورة فوراً. أما <strong>التسوية المصرفية (Payout)</strong> فهي مرحلة مصرفية منفصلة تُحوّل فيها حصائل المبيعات الصافية كدفعة مجمعة إلى حساب التاجر البنكي المعتمد، وفق الجدول الزمني المتفق عليه في الاتفاقية المصرفية.
+            الأموال تنتقل <strong>مباشرة من حساب العميل إلى حساب التاجر</strong> عبر جهة الدفع المعتمدة وفق نموذج الدفع المقرر. منصة Ultimate Pay <strong>لا تستلم أموال العميل ولا تحتفظ بها ولا تحولها إلى التاجر</strong>؛ وتسجيل المبلغ تلقائيًا في النظام المحاسبي للتاجر هو انعكاس لمعلومات الدفع المؤكدة لتسهيل العمل وتفادي الإدخال اليدوي، وليس دليلاً على قيام المنصة بأي تحويل نقدي.
           </p>
         </div>
       </div>
@@ -885,8 +932,8 @@
       <!-- Terminology Disambiguation Grid -->
       <div class="disambiguation-wrapper">
         <div class="disambiguation-title-box">
-          <h3 data-i18n="dis_title">دليل المصطلحات: وضوح تام لكل وثيقة وإجراء</h3>
-          <p data-i18n="dis_subtitle">لتجنب أي خلط بين المفاهيم التقنية والمحاسبية في بيئة العمل اليومية:</p>
+          <h3 data-i18n="dis_title">دليل المصطلحات: وضوح تام لكل مفهوم وإجراء</h3>
+          <p data-i18n="dis_subtitle">توضيح المفاهيم التشغيلية لخدمة Payment Aggregator لضمان الفهم المشترك:</p>
         </div>
 
         <div class="disambiguation-grid">
@@ -895,55 +942,55 @@
               <div class="term-icon"><i class="fa-solid fa-file-lines"></i></div>
               <h4 data-i18n="term_1_t">فاتورة البيع</h4>
             </div>
-            <p data-i18n="term_1_d">مستند بيع البضاعة الصادر من كاشير التاجر يحدد الأصناف والمبلغ الإجمالي المستحق.</p>
+            <p data-i18n="term_1_d">مستند بيع البضاعة الصادر من نظام التاجر يحدد الأصناف والمبلغ الإجمالي المستحق.</p>
           </div>
 
           <div class="disambiguation-card">
             <div class="disambiguation-header">
               <div class="term-icon"><i class="fa-solid fa-paper-plane"></i></div>
-              <h4 data-i18n="term_2_t">طلب الدفع (R2P)</h4>
+              <h4 data-i18n="term_2_t">طلب الدفع</h4>
             </div>
-            <p data-i18n="term_2_d">رمز QR أو رابط رقمي يُرسل للعميل لطلب سداد المبلغ المطابق لقيمة الفاتورة بدقة.</p>
+            <p data-i18n="term_2_d">رمز QR أو أمر دفع رقمي يُعرض للعميل لتحصيل المبلغ المطابق لقيمة المشتريات.</p>
+          </div>
+
+          <div class="disambiguation-card">
+            <div class="disambiguation-header">
+              <div class="term-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h4 data-i18n="term_3_t">نتيجة الدفع المؤكدة</h4>
+            </div>
+            <p data-i18n="term_3_d">معلومات معتمدة من جهة الدفع تثبت نجاح العملية وخصم المبلغ من حساب العميل.</p>
+          </div>
+
+          <div class="disambiguation-card">
+            <div class="disambiguation-header">
+              <div class="term-icon"><i class="fa-solid fa-hashtag"></i></div>
+              <h4 data-i18n="term_4_t">المرجع الموحد (RRN)</h4>
+            </div>
+            <p data-i18n="term_4_d">الرقم المرجعي المشترك الذي يربط نتيجة الدفع بالفاتورة المحددة لدى التاجر.</p>
+          </div>
+
+          <div class="disambiguation-card">
+            <div class="disambiguation-header">
+              <div class="term-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h4 data-i18n="term_5_t">التسجيل المحاسبي التلقائي</h4>
+            </div>
+            <p data-i18n="term_5_d">تسجيل مبلغ الفاتورة المسددة في نظام التاجر المحاسبي تلقائيًا عند تفعيل التكامل بدلًا من الإدخال اليدوي.</p>
           </div>
 
           <div class="disambiguation-card">
             <div class="disambiguation-header">
               <div class="term-icon"><i class="fa-solid fa-bell"></i></div>
-              <h4 data-i18n="term_3_t">تأكيد الدفع (Webhook)</h4>
+              <h4 data-i18n="term_6_t">إشعار السداد</h4>
             </div>
-            <p data-i18n="term_3_d">رسالة مشفرة من المنصة تثبت نجاح الخصم وتمنح الكاشير الإذن بتسليم البضاعة للعميل.</p>
+            <p data-i18n="term_6_d">إشعار واضح يصل للتاجر يوضح رقم الفاتورة والمبلغ المسدد ونتيجة العملية فور اكتمالها.</p>
           </div>
 
           <div class="disambiguation-card">
             <div class="disambiguation-header">
-              <div class="term-icon"><i class="fa-solid fa-receipt"></i></div>
-              <h4 data-i18n="term_4_t">سند القبض</h4>
+              <div class="term-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h4 data-i18n="term_7_t">المسار المالي vs مسار المعلومات</h4>
             </div>
-            <p data-i18n="term_4_d">مستند محاسبي رسمي داخل نظام التاجر يثبت استلام قيمة الفاتورة لحساب المنشأة.</p>
-          </div>
-
-          <div class="disambiguation-card">
-            <div class="disambiguation-header">
-              <div class="term-icon"><i class="fa-solid fa-book-journal-whills"></i></div>
-              <h4 data-i18n="term_5_t">القيد المحاسبي</h4>
-            </div>
-            <p data-i18n="term_5_d">حركة اليومية في دفاتر التاجر (من حـ/ وسيط الدفع Ultimate Pay إلى حـ/ المبيعات).</p>
-          </div>
-
-          <div class="disambiguation-card">
-            <div class="disambiguation-header">
-              <div class="term-icon"><i class="fa-solid fa-list-check"></i></div>
-              <h4 data-i18n="term_6_t">كشف المطابقة</h4>
-            </div>
-            <p data-i18n="term_6_d">تقرير يقارن بين إجمالي فواتير التاجر وإشعارات المنصة وأرقام الـ RRN لمنع أي فروقات.</p>
-          </div>
-
-          <div class="disambiguation-card">
-            <div class="disambiguation-header">
-              <div class="term-icon"><i class="fa-solid fa-building-columns"></i></div>
-              <h4 data-i18n="term_7_t">التسوية المصرفية (Payout)</h4>
-            </div>
-            <p data-i18n="term_7_d">التحويل الفعلي لصافي الأموال النقدية من البنك إلى الحساب المصرفي المعتمد للتاجر.</p>
+            <p data-i18n="term_7_d">الأموال تتحرك مباشرة بين الحسابات البنكية؛ والمنصة مسؤولة فقط عن نقل المعلومات والمطابقة والإشعار.</p>
           </div>
         </div>
       </div>
@@ -965,19 +1012,19 @@
           <div class="arch-node center-hub">
             <i class="fa-solid fa-bolt-lightning text-accent"></i>
             <h4 data-i18n="node_2_t">Ultimate Pay (منصة الربط)</h4>
-            <p data-i18n="node_2_d">التحقق اللحظي، فحص الاحتيال، إشعار Webhook، ومطابقة السجلات.</p>
+            <p data-i18n="node_2_d">التحقق اللحظي، حماية المعاملات، تأكيد النتيجة، وتنسيق المطابقة.</p>
           </div>
 
           <div class="arch-node">
             <i class="fa-solid fa-building-columns"></i>
             <h4 data-i18n="node_3_t">البنك / المحفظة</h4>
-            <p data-i18n="node_3_d">خصم المبلغ، الاحتفاظ بالأموال، وتنفيذ أوامر التسوية المصرفية.</p>
+            <p data-i18n="node_3_d">خصم المبلغ، والتحويل المباشر لحساب التاجر (المسار المالي المستقل).</p>
           </div>
 
           <div class="arch-node">
             <i class="fa-solid fa-store"></i>
             <h4 data-i18n="node_4_t">التاجر ونظام Onyx ERP</h4>
-            <p data-i18n="node_4_d">إصدار الفاتورة، استلام التأكيد، توليد سند القبض وإقفال الدفاتر.</p>
+            <p data-i18n="node_4_d">إصدار الفاتورة، استلام التأكيد، وتسجيل مبلغ الفاتورة تلقائيًا في النظام المحاسبي.</p>
           </div>
         </div>
 
@@ -1069,7 +1116,7 @@
                 <div class="sim-processing-box">
                   <div class="spinner-ring"></div>
                   <h4 data-i18n="sim_processing_title">جاري التوجيه عبر المحول المالي...</h4>
-                  <p data-i18n="sim_processing_sub">فحص الأمان PCI-DSS والتسوية المباشرة</p>
+                  <p data-i18n="sim_processing_sub">فحص الأمان وتأكيد نتيجة العملية</p>
                   <div class="switch-routing-badge">
                     <span>Ultimate Payment Switch</span>
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
@@ -1090,8 +1137,8 @@
                     <div class="r-row"><span>وسيلة الدفع:</span> <strong id="receiptMethod">Soft POS (NFC
                         Contactless)</strong></div>
                     <div class="r-row"><span>التاريخ والوقت:</span> <strong id="receiptTime">الآن</strong></div>
-                    <div class="r-row highlight"><span>ترحيل الأونكس ERP:</span> <strong class="text-success"><i
-                          class="fa-solid fa-check"></i> تم توليد سند القيد آلياً</strong></div>
+                    <div class="r-row highlight"><span>تكامل الأونكس ERP:</span> <strong class="text-success"><i
+                          class="fa-solid fa-check"></i> تم تسجيل مبلغ الفاتورة تلقائيًا</strong></div>
                   </div>
 
                   <div class="receipt-actions">
@@ -1134,16 +1181,15 @@
               <div class="b-step">
                 <div class="b-num">3</div>
                 <div>
-                  <h4 data-i18n="b_step_3_t">الترحيل الآلي لنظام التاجر (Onyx ERP Sync)</h4>
-                  <p data-i18n="b_step_3_d">توليد قيد يومية فوري (من حـ/ وسيط Ultimate Pay إلى حـ/ الصندوق أو المبيعات)
-                    وإغلاق الفاتورة.</p>
+                  <h4 data-i18n="b_step_3_t">التكامل مع النظام المحاسبي (Onyx ERP)</h4>
+                  <p data-i18n="b_step_3_d">تسجيل مبلغ الفاتورة تلقائيًا في النظام المحاسبي للتاجر عند تأكيد نجاح العملية وتفعيل التكامل المعتمد.</p>
                 </div>
               </div>
               <div class="b-step">
                 <div class="b-num">4</div>
                 <div>
-                  <h4 data-i18n="b_step_4_t">التسوية المصرفية المجمعة</h4>
-                  <p data-i18n="b_step_4_d">إيداع المبالغ في حسابك البنكي المعتمد مع تقرير تفصيلي وإشعار تسوية فوري.</p>
+                  <h4 data-i18n="b_step_4_t">إشعار السداد والمطابقة</h4>
+                  <p data-i18n="b_step_4_d">استلام إشعار سداد الفاتورة ومطابقة السجلات بالمرجع الموحد بدقة تامة.</p>
                 </div>
               </div>
             </div>
@@ -1200,18 +1246,18 @@
           </div>
           <div class="j-node-item">
             <span class="j-node-num">4</span>
-            <strong>APIs & Webhooks</strong>
-            <p>آليات تقنية لتبادل البيانات وتأكيد إشعارات نتائج العمليات لحظياً.</p>
+            <strong>قنوات الربط المعتمدة</strong>
+            <p>آليات موثوقة لتبادل بيانات العمليات وتأكيد نتائج السداد لحظياً.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">5</span>
             <strong>نظام Onyx ERP</strong>
-            <p>النظام المحاسبي لربط نتيجة الدفع بالفاتورة وتوليد سند القبض بحسب التكامل.</p>
+            <p>النظام المحاسبي لربط بيانات الدفع بالفاتورة وتوثيق التحصيل وفق التكامل المعتمد.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">6</span>
             <strong>Merchant Portal</strong>
-            <p>بوابة التاجر لمتابعة العمليات وكشوفات التسوية والتقارير الرقابية.</p>
+            <p>بوابة التاجر لمتابعة العمليات والفواتير المسددة والتقارير الرقابية.</p>
           </div>
         </div>
       </div>
@@ -1278,22 +1324,20 @@
           </ul>
         </article>
 
-        <!-- Service 4: APIs & Webhooks Integration -->
+        <!-- Service 4: Smart Integration & Connection -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-code"></i></div>
-            <span class="serv-badge badge-purple" data-i18n="s4_badge">ربط تقني متقدم</span>
+            <div class="serv-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <span class="serv-badge badge-purple" data-i18n="s4_badge">ربط موحد وتكامل سلس</span>
           </div>
-          <h3 class="serv-name" data-i18n="s4_name">واجهات الربط البرمجي (APIs & Webhooks)</h3>
+          <h3 class="serv-name" data-i18n="s4_name">حلول الربط والتكامل الذكي</h3>
           <p class="serv-desc" data-i18n="s4_desc">
-            واجهات RESTful APIs موثقة لإصدار طلبات الدفع واستعلام الفواتير، مع إشعارات Webhooks مشفرة ولحظية لربط أي متجر أو نظام كاشير بمنظومة التحصيل الموحدة.
+            آليات ربط معتمدة لإصدار طلبات الدفع وتأكيد العمليات ومطابقتها، لربط أي متجر أو نظام كاشير بمنظومة التحصيل الموحدة بيسر وموثوقية عالية.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">استعلام الفواتير وتأكيد الدفع لحظياً</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">إشعارات Webhooks مشفرة مع إعادة المحاولة (Retry)</span>
-            </li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">وثائق برمجية قياسية سهلة الربط للمطورين</span>
-            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">إصدار طلبات التحصيل وتأكيد العمليات لحظياً</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">تأكيد موثوق لنتيجة الدفع مع آليات متابعة منتظمة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">أدلة إرشادية ودعم فني مخصص للتكامل</span></li>
           </ul>
         </article>
 
@@ -1305,8 +1349,7 @@
           </div>
           <h3 class="serv-name" data-i18n="s5_name">بوابة الدفع الإلكتروني (Online Gateway)</h3>
           <p class="serv-desc" data-i18n="s5_desc">
-            تكامل برمجي سهل مع مواقع المتاجر والتطبيقات الذكية عبر REST APIs وإضافات جاهزة لمنصات (WooCommerce, Shopify,
-            وغيرها).
+            تكامل سهل مع مواقع المتاجر والتطبيقات الذكية مع إضافات جاهزة لمنصات التجارة الإلكترونية المعتمدة.
           </p>
           <ul class="serv-features">
             <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f1">تجربة Checkout سلسة بدون إعادة توجيه
@@ -1326,13 +1369,12 @@
           </div>
           <h3 class="serv-name" data-i18n="s6_name">لوحة التحكم والتكامل المحاسبي (Onyx ERP)</h3>
           <p class="serv-desc" data-i18n="s6_desc">
-            متابعة حية لكل المبيعات عبر الفروع والكاشيرات، مع ترحيل محاسبي فوري إلى نظام أونكس ERP ودفاتر الحسابات دون
-            أي تدخل يدوي.
+            متابعة حية لحالة الفواتير والعمليات، مع تسجيل مبالغ الفواتير تلقائيًا في نظام Onyx ERP عند تأكيد السداد وتفعيل التكامل.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f1">توليد سندات القبض والقيود اليومية آلياً</span>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f1">تسجيل مبالغ الفواتير المسددة تلقائيًا في النظام المحاسبي</span>
             </li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f2">تقارير لحظية للمطابقة والتسوية البنكية</span>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f2">تقارير لحظية لمطابقة الفواتير والعمليات</span>
             </li>
             <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f3">إدارة الصلاحيات والفروع من لوحة تحكم سحابية
                 موحدة</span></li>
@@ -1371,18 +1413,18 @@
               </div>
               <div class="bank-collab-item">
                 <span class="collab-badge">3. تأكيد العمليات</span>
-                <h4>إشعارات لحظية Webhook</h4>
-                <p>بروتوكولات التأكيد المشفر مع ضوابط إعادة المحاولة (Retry Logic).</p>
+                <h4>تأكيد موثق للنتيجة</h4>
+                <p>آليات معتمدة لنقل نتيجة الدفع فوراً ومطابقتها بالمرجع الموحد.</p>
               </div>
               <div class="bank-collab-item">
                 <span class="collab-badge">4. حماية العمليات</span>
-                <h4>منع التكرار (Idempotency)</h4>
-                <p>فحص أمني يمنع ازدواجية الخصم ويحمي كل حركة مالية قبل اعتمادها.</p>
+                <h4>ضوابط منع التكرار</h4>
+                <p>إجراءات تحقق تمنع ازدواجية المعالجة وتحمي كل حركة مالية قبل اعتمادها.</p>
               </div>
               <div class="bank-collab-item">
-                <span class="collab-badge">5. التسوية والمطابقة</span>
-                <h4>دورات التسوية المعتمدة</h4>
-                <p>ملفات مطابقة دورية وإيداع الصافي بالحساب المصرفي وفق الاتفاقية.</p>
+                <span class="collab-badge">5. مطابقة الفواتير</span>
+                <h4>مطابقة موثقة برقم المرجع</h4>
+                <p>مطابقة دقيقة بين نتيجة الدفع والفواتير المسددة لتقليل النزاعات ومتابعة التحصيل.</p>
               </div>
             </div>
 
@@ -1390,9 +1432,8 @@
               <div class="b-feat-item">
                 <div class="b-feat-icon"><i class="fa-solid fa-vault"></i></div>
                 <div>
-                  <h4 data-i18n="bf_1_t">نمو مباشر للودائع المصرفية (CASA Deposits)</h4>
-                  <p data-i18n="bf_1_d">تصب حصائل مبيعات التجار في حسابات تسوية لدى مصرفكم، مما يعزز السيولة وقاعدة
-                    العملاء النشطين.</p>
+                  <h4 data-i18n="bf_1_t">نمو مباشر للحركات المالية المصرفية</h4>
+                  <p data-i18n="bf_1_d">تنتقل أموال المبيعات مباشرة لحسابات التجار المصرفية لدى مصرفكم، مما يعزز حجم النشاط وقاعدة العملاء النشطين.</p>
                 </div>
               </div>
 
@@ -1400,16 +1441,15 @@
                 <div class="b-feat-icon"><i class="fa-solid fa-code-compare"></i></div>
                 <div>
                   <h4 data-i18n="bf_2_t">ربط موحد وتكامل مصرفي قياسي</h4>
-                  <p data-i18n="bf_2_d">دعم بروتوكولات الربط المالي (ISO 8583 / REST API / Webhooks) وتوافق سلس مع Core
-                    Banking.</p>
+                  <p data-i18n="bf_2_d">آليات تكامل معتمدة ومتوافقة بسلاسة مع المتطلبات والإجراءات المصرفية المقررة.</p>
                 </div>
               </div>
 
               <div class="b-feat-item">
                 <div class="b-feat-icon"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
                 <div>
-                  <h4 data-i18n="bf_3_t">مقاصة وتسوية آلية للمطابقة الدورية</h4>
-                  <p data-i18n="bf_3_d">ملفات تسوية قياسية وتقارير تفصيلية تمنع الفروقات وتسهل التدقيق المالي.</p>
+                  <h4 data-i18n="bf_3_t">مطابقة واضحة وتدقيق دقيق للفواتير</h4>
+                  <p data-i18n="bf_3_d">تقارير مطابقة بالمرجع الموحد تمنع الفروقات وتسهل المراجعة والتدقيق المالي لدى التجار.</p>
                 </div>
               </div>
 
@@ -1503,7 +1543,7 @@
         <div class="timeline-step">
           <div class="step-badge">4</div>
           <div class="step-icon"><i class="fa-solid fa-sack-dollar"></i></div>
-          <h3 class="step-title" data-i18n="st4_title">بدء التحصيل والتسوية</h3>
+          <h3 class="step-title" data-i18n="st4_title">بدء التحصيل والإشعار</h3>
           <p class="step-desc" data-i18n="st4_desc">
             استقبل مدفوعات زبائنك على الفور، وشاهد مبيعاتك تتدفق مباشرة لحسابك وتقاريرك المحاسبية.
           </p>

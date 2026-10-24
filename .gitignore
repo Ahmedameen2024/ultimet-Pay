@@ -28,12 +28,14 @@ Ultimate_Pay_Presentation.pptx
 powerboint.docx
 extracted_docx_slides/
 generated_slides_review/
-generate_deck.py
+exported_slides/
+slides/*.png
 export_slides.ps1
 logo_crop_*.png
 photo_*.png
 logo_*_trans.png
 fonts/
+scratch/
 
 # Confidential Internal Diagrams & Flowcharts (Trade Secrets)
 مجلد مخططات انسيابية/

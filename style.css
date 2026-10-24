@@ -407,12 +407,33 @@ a {
   cursor: pointer;
 }
 
+/* Mobile Drawer Backdrop */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 7, 18, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Mobile Drawer */
 .mobile-drawer {
   position: fixed;
   top: 0;
-  right: -320px;
-  width: 300px;
+  right: -340px;
+  width: min(85vw, 320px);
   height: 100vh;
   background: #0B111E;
   border-left: 1px solid var(--border-subtle);
@@ -420,14 +441,16 @@ a {
   z-index: 1000;
   transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.7);
 }
 
 [dir="ltr"] .mobile-drawer {
   right: auto;
-  left: -320px;
+  left: -340px;
   border-left: none;
   border-right: 1px solid var(--border-subtle);
   transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 10px 0 35px rgba(0, 0, 0, 0.7);
 }
 
 .mobile-drawer.open {
@@ -4494,3 +4517,1251 @@ body.theme-light .financial-waterfall-box {
   border-color: #CBD5E1;
 }
 
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Design System
+   نظام التنسيق المتكامل للهواتف الذكية والأجهزة اللوحية
+   ========================================================================== */
+
+/* --- Tablets & Medium Screens (<= 992px) --- */
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 36px;
+  }
+  .hero-eyebrow, .hero-actions, .hero-trust-bar {
+    justify-content: center;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+  }
+  .hero-visual {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .calc-grid, .b-grid, .brochure-feature-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* --- Smartphones & Mobile Screens (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling & wobble */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    position: relative;
+  }
+
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Section Spacing */
+  section,
+  .hero-section,
+  .section-accounting-cycle,
+  .calculator-section,
+  .cta-section {
+    padding: 44px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 26px !important;
+    text-align: center !important;
+  }
+
+  .section-title {
+    font-size: 1.6rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .section-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+  }
+
+  .section-badge {
+    font-size: 0.78rem !important;
+    padding: 4px 12px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Presentation Toolbar: Hidden on mobile phones to free the entire bottom of screen */
+  .pitch-toolbar {
+    display: none !important;
+  }
+
+  /* WhatsApp Floating Button */
+  .floating-whatsapp-btn {
+    bottom: 18px !important;
+    left: 18px !important;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0 !important;
+    font-size: 1.45rem !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 990 !important;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45) !important;
+  }
+
+  [dir="ltr"] .floating-whatsapp-btn {
+    left: auto !important;
+    right: 18px !important;
+  }
+
+  .floating-wa-label {
+    display: none !important;
+  }
+
+  /* Sub-Navigation & Sticky Track Banner: Non-sticky on mobile to save vertical viewport */
+  .track-switch-banner {
+    position: relative !important;
+    top: auto !important;
+    padding: 10px 0 !important;
+    z-index: 10 !important;
+    backdrop-filter: none !important;
+  }
+
+  .banner-flex {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+
+  .track-pills {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .track-pill {
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .quick-nav-bar {
+    position: relative !important;
+    top: auto !important;
+    padding: 8px 0 !important;
+    z-index: 10 !important;
+  }
+
+  .quick-nav-container {
+    padding: 4px 14px !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x proximity !important;
+  }
+
+  .quick-nav-link {
+    scroll-snap-align: start !important;
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Header Controls */
+  .main-header {
+    padding: 10px 0 !important;
+  }
+
+  .header-container {
+    padding: 0 16px !important;
+    gap: 10px !important;
+  }
+
+  .brand-logo {
+    gap: 8px !important;
+  }
+
+  .logo-mark {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.1rem !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .logo-primary {
+    font-size: 1.12rem !important;
+  }
+
+  .logo-tagline {
+    font-size: 0.68rem !important;
+    max-width: 165px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .track-selector {
+    display: none !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .header-actions {
+    gap: 8px !important;
+  }
+
+  .header-actions .btn-primary {
+    padding: 8px 14px !important;
+    font-size: 0.84rem !important;
+    height: 38px !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+  }
+
+  #btnHeaderTheme {
+    width: 38px !important;
+    height: 38px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: var(--radius-full) !important;
+    border: 1px solid var(--border-subtle) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-primary) !important;
+    font-size: 0.95rem !important;
+  }
+
+  .mobile-menu-btn {
+    width: 38px !important;
+    height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border-subtle) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-primary) !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+  }
+
+  /* Mobile Drawer */
+  .mobile-drawer {
+    width: min(85vw, 320px) !important;
+    padding: 22px 18px !important;
+  }
+
+  .drawer-track-nav {
+    margin-bottom: 16px !important;
+  }
+
+  .drawer-track-btn {
+    padding: 10px 12px !important;
+    font-size: 0.88rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .drawer-links li {
+    margin-bottom: 4px !important;
+  }
+
+  .drawer-link {
+    padding: 10px 14px !important;
+    font-size: 0.92rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 38px 0 24px !important;
+  }
+
+  .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    text-align: center !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem !important;
+    padding: 6px 14px !important;
+    margin-bottom: 16px !important;
+    line-height: 1.4 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    text-align: center !important;
+  }
+
+  .hero-title {
+    font-size: 1.75rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 16px !important;
+    word-break: break-word !important;
+  }
+
+  .hero-title br {
+    display: none !important;
+  }
+
+  .hero-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.65 !important;
+    margin: 0 auto 18px auto !important;
+    max-width: 100% !important;
+  }
+
+  .speech-quote-pill {
+    padding: 12px 16px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+    margin: 16px auto 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary,
+  .hero-actions .btn-ghost {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 13px 20px !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-trust-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    padding-top: 16px !important;
+  }
+
+  .trust-item {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: var(--radius-md) !important;
+    box-sizing: border-box !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+  }
+
+  [dir="ltr"] .trust-item {
+    text-align: left !important;
+  }
+
+  .hero-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .pos-device-card {
+    padding: 18px 14px !important;
+    border-radius: var(--radius-xl) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .live-amount-display {
+    font-size: 2.2rem !important;
+  }
+
+  .payment-methods-strip {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  /* About Us Section */
+  .about-card-hero {
+    padding: 24px 16px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .about-hero-title {
+    font-size: 1.45rem !important;
+  }
+
+  .about-hero-p {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .about-meta-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+  }
+
+  .meta-pill {
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+    justify-content: center !important;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .pillar-card {
+    padding: 20px 16px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .values-tags-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .stats-counter-banner {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 18px 14px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .stat-number {
+    font-size: 1.8rem !important;
+  }
+
+  /* Problems vs Solutions */
+  .comparison-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .comparison-col {
+    padding: 20px 16px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .comparison-header h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .prob-item, .sol-item {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    font-size: 0.88rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  /* Why Us */
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .why-card {
+    padding: 22px 16px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .why-metric-number {
+    font-size: 2.1rem !important;
+  }
+
+  /* Accounting Cycle */
+  .cycle-hero-banner {
+    padding: 14px 16px !important;
+    text-align: center !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .cycle-steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .cycle-step-card {
+    padding: 18px 16px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .cycle-step-num {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    font-size: 1.15rem !important;
+  }
+
+  .architecture-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .disambiguation-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .three-stages-banner {
+    padding: 20px 16px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .three-stages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .stage-pill-box {
+    padding: 14px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .financial-waterfall-box {
+    padding: 16px 14px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .wf-steps-flex {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .wf-mini-step {
+    width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px !important;
+  }
+
+  .wf-mini-arrow {
+    transform: rotate(90deg) !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    display: block !important;
+  }
+
+  /* Interactive Simulator */
+  .sim-container {
+    padding: 22px 14px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .sim-tabs {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .sim-tab {
+    padding: 10px 8px !important;
+    font-size: 0.8rem !important;
+    text-align: center !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .sim-tab i {
+    font-size: 1.05rem !important;
+  }
+
+  .sim-stage {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .sim-device-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 18px 12px 22px !important;
+    border-radius: 28px !important;
+    box-sizing: border-box !important;
+  }
+
+  .phone-screen-content {
+    min-height: auto !important;
+  }
+
+  .sim-processing-box, .sim-receipt-box {
+    min-height: 320px !important;
+  }
+
+  .sim-explanation {
+    padding: 0 !important;
+    margin-top: 12px !important;
+  }
+
+  [dir="ltr"] .sim-explanation {
+    padding-right: 0 !important;
+  }
+
+  .exp-title {
+    font-size: 1.3rem !important;
+  }
+
+  .backend-steps {
+    gap: 10px !important;
+  }
+
+  .b-step {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    font-size: 0.88rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  /* Services Grid */
+  .services-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .service-card {
+    padding: 20px 16px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .journey-map-banner {
+    padding: 20px 14px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .journey-map-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .j-node-item {
+    padding: 12px !important;
+  }
+
+  .brochure-feature-card {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 22px 16px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .brochure-feature-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .brochure-feature-actions .btn-primary,
+  .brochure-feature-actions .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Bank Partnership */
+  .b-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 22px 14px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .partner-logos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .bank-collab-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .bank-collab-item {
+    padding: 12px !important;
+  }
+
+  /* Onboarding Steps */
+  .steps-timeline {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .timeline-step-card {
+    padding: 18px 14px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .step-marker {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+
+  /* Calculator / ROI */
+  .calc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: 22px 14px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .calc-title {
+    font-size: 1.45rem !important;
+  }
+
+  .calc-results-side {
+    padding: 18px 14px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .res-value {
+    font-size: 2rem !important;
+  }
+
+  /* CTA Section */
+  .cta-box {
+    padding: 24px 14px !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .cta-title {
+    font-size: 1.5rem !important;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px !important;
+    font-size: 0.95rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .direct-whatsapp-banner {
+    padding: 16px 14px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 14px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .wa-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px !important;
+  }
+
+  .whatsapp-hero-box {
+    padding: 22px 14px !important;
+    text-align: center !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .whatsapp-hero-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Footer */
+  .main-footer {
+    padding: 32px 0 24px !important;
+  }
+
+  .footer-container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 18px !important;
+    align-items: center !important;
+  }
+
+  .footer-brand {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    max-width: 100% !important;
+  }
+
+  .footer-badges {
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .f-badge {
+    font-size: 0.78rem !important;
+    padding: 4px 10px !important;
+  }
+
+  /* Slide Modal */
+  .modal-overlay {
+    padding: 8px !important;
+  }
+
+  .brochure-dialog {
+    max-height: 96vh !important;
+    border-radius: var(--radius-md) !important;
+    width: 100% !important;
+  }
+
+  .modal-header {
+    padding: 10px 14px !important;
+  }
+
+  .modal-title {
+    font-size: 0.88rem !important;
+    gap: 6px !important;
+  }
+
+  .brochure-viewer {
+    min-height: 200px !important;
+    padding: 6px !important;
+  }
+
+  .current-slide-img {
+    max-height: 38vh !important;
+  }
+
+  .slide-thumb {
+    width: 60px !important;
+    height: 38px !important;
+    min-width: 60px !important;
+  }
+}
+
+/* --- Compact Mobile Screens (<= 480px) --- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  section,
+  .hero-section,
+  .section-accounting-cycle,
+  .calculator-section,
+  .cta-section {
+    padding: 36px 0 !important;
+  }
+
+  /* Header Optimization */
+  .header-container {
+    padding: 0 12px !important;
+  }
+
+  .logo-mark {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1rem !important;
+  }
+
+  .logo-primary {
+    font-size: 1rem !important;
+    letter-spacing: 0 !important;
+  }
+
+  .logo-tagline {
+    display: none !important;
+  }
+
+  .header-actions .btn-primary {
+    padding: 6px 10px !important;
+    font-size: 0.78rem !important;
+    height: 35px !important;
+  }
+
+  .header-actions .btn-primary i {
+    font-size: 0.75rem !important;
+  }
+
+  #btnHeaderTheme,
+  .mobile-menu-btn {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* Hero Section */
+  .hero-title {
+    font-size: 1.48rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.74rem !important;
+    padding: 5px 10px !important;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .live-amount-display {
+    font-size: 1.95rem !important;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 1.38rem !important;
+  }
+
+  .section-desc {
+    font-size: 0.86rem !important;
+  }
+
+  /* Simulator */
+  .sim-container {
+    padding: 16px 10px !important;
+  }
+
+  .sim-tab {
+    font-size: 0.74rem !important;
+    padding: 8px 4px !important;
+  }
+
+  .sim-device-frame {
+    padding: 14px 10px 18px !important;
+    border-radius: 22px !important;
+    border-width: 2px !important;
+  }
+
+  /* Stats Counter */
+  .stats-counter-banner {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .stat-number {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* --- Extra Small Screens (<= 360px) --- */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.32rem !important;
+  }
+
+  .section-title {
+    font-size: 1.25rem !important;
+  }
+
+  .header-actions .btn-primary span {
+    font-size: 0.75rem !important;
+  }
+
+  .calc-grid,
+  .cta-box,
+  .pos-device-card {
+    padding: 14px 10px !important;
+  }
+}
+
+
+
+/* ==========================================================================
+   2-Track Visual Flow Diagram for Commercial & Accounting Cycle
+   ========================================================================== */
+.accounting-flow-diagram {
+  background: rgba(13, 20, 36, 0.75);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-xl);
+  padding: 30px 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.flow-track {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.flow-track-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.track-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-green);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.track-tag.tag-settle {
+  background: rgba(6, 182, 212, 0.15);
+  color: #22D3EE;
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.flow-track-header h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.track-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-right: auto;
+}
+
+.flow-steps-chain {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  position: relative;
+  align-items: stretch;
+}
+
+.track-settlement .flow-steps-chain {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.chain-step {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 16px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.chain-step:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+}
+
+.track-settlement .chain-step:hover {
+  border-color: #22D3EE;
+}
+
+.chain-num {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #064E3B;
+  border: 2px solid var(--accent-green);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-settlement .chain-num {
+  background: #0E3B43;
+  border-color: #22D3EE;
+}
+
+.chain-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-top: 4px;
+}
+
+.track-settlement .chain-icon {
+  background: rgba(6, 182, 212, 0.12);
+  color: #22D3EE;
+}
+
+.chain-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+.chain-desc {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.flow-track-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+}
+
+.divider-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px dashed rgba(16, 185, 129, 0.3);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: #E2E8F0;
+  font-weight: 600;
+}
+
+.divider-badge i {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 992px) {
+  .flow-steps-chain,
+  .track-settlement .flow-steps-chain {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .accounting-flow-diagram {
+    padding: 20px 14px;
+  }
+  .flow-steps-chain,
+  .track-settlement .flow-steps-chain {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .track-desc {
+    margin-right: 0;
+    width: 100%;
+  }
+  .chain-step {
+    flex-direction: row;
+    text-align: right;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .chain-num {
+    top: auto;
+    right: auto;
+    position: static;
+    flex-shrink: 0;
+  }
+  .chain-icon {
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+  .chain-step > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+body.theme-light .accounting-flow-diagram {
+  background: #FFFFFF;
+  border-color: #E2E8F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.theme-light .flow-track-header h4,
+body.theme-light .chain-title {
+  color: #0F172A;
+}
+
+body.theme-light .chain-step {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+}
+
+body.theme-light .divider-badge {
+  background: #F1F5F9;
+  color: #334155;
+}
+
+/* Responsive adjustment for 2-Track Flow in Payment Aggregator scope */
+.track-sales .flow-steps-chain {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.track-settlement .flow-steps-chain {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.chain-step.highlight-direct-transfer {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+@media (max-width: 992px) {
+  .track-sales .flow-steps-chain,
+  .track-settlement .flow-steps-chain {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .track-sales .flow-steps-chain,
+  .track-settlement .flow-steps-chain {
+    grid-template-columns: 1fr !important;
+  }
+}
