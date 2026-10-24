@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_steps: "خطوات الانضمام",
       nav_brochure: "العرض المعتمد (PDF)",
       nav_contact: "تواصل معنا",
+      nav_aggregator: "Payment Aggregator و R2P",
+      nav_ps: "نظام PS ونقاط البيع",
 
       // Merchant Hero
       m_eyebrow: "منظومة التحصيل الأولى للتجار في اليمن — مرخصة من البنك المركزي",
@@ -275,7 +277,17 @@ document.addEventListener('DOMContentLoaded', () => {
       c_licensed: "شركة يمنية مرخصة من البنك المركزي",
       footer_desc: "المنظومة الوطنية الرائدة لخدمات الدفع والتحصيل الذكي ونقاط البيع في الجمهورية اليمنية.",
 
-      // Accounting Cycle & Workflow (الدورة المحاسبية)
+      // Accounting Cycle & Workflow
+      tag_aggregator: "Payment Aggregator Service",
+      agg_title_1: "Ultimate Pay Links Payment Transactions",
+      agg_title_2: "To Merchant Invoices & Accounting System",
+      agg_title_3: "Payment Confirmation, ERP Integration & Merchant Alert",
+      agg_subtitle: "Ultimate Pay links payment transactions to merchant invoices and accounting systems. Through Request to Pay (R2P), customers review and approve payment requests via supported payment methods. Upon confirmation, the result links to the invoice, the amount is automatically logged in the accounting system upon integration, and a clear notification is delivered to the merchant stating invoice number and paid amount. Funds transfer directly from customer to merchant account according to the approved payment mechanism.", (الدورة المحاسبية)
+      tag_aggregator: "خدمة تجميع المدفوعات (Payment Aggregator)",
+      agg_title_1: "تربط Ultimate Pay عملية الدفع",
+      agg_title_2: "بفاتورة التاجر ونظامه المحاسبي",
+      agg_title_3: "تأكيد الدفع، والتكامل المحاسبي، وإشعار التاجر",
+      agg_subtitle: "تربط Ultimate Pay عملية الدفع بفاتورة التاجر ونظامه المحاسبي. من خلال طلب الدفع R2P، يمكن للعميل مراجعة طلب السداد والموافقة عليه عبر وسيلة الدفع المدعومة. وعند تأكيد نجاح العملية، تُربط النتيجة بالفاتورة، ويُسجَّل المبلغ تلقائيًا في النظام المحاسبي عند تفعيل التكامل، ويصل إشعار للتاجر يوضح رقم الفاتورة والمبلغ المسدد. وتنتقل الأموال مباشرةً من حساب العميل إلى حساب التاجر وفق آلية الدفع المعتمدة.",
       nav_cycle: "الدورة المحاسبية",
       tag_cycle: "سير العمل الفعلي لخدمة Payment Aggregator",
       cycle_title_1: "من إصدار الفاتورة",
@@ -392,6 +404,8 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_steps: "4-Step Onboarding",
       nav_brochure: "Official PDF Slides",
       nav_contact: "Contact Us",
+      nav_aggregator: "Payment Aggregator & R2P",
+      nav_ps: "PS System & POS",
 
       // Merchant Hero
       m_eyebrow: "Yemen's Leading Merchant Acquiring Platform — Licensed by the Central Bank",
@@ -809,6 +823,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Highlight bank section if bank track selected
     if (trackId === 'banks' && bankSection) {
       bankSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else if (trackId === 'ps') {
+      const psSection = document.getElementById('psSection');
+      if (psSection) {
+        psSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 

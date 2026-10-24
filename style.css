@@ -5765,3 +5765,499 @@ body.theme-light .divider-badge {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ==========================================================================
+   Payment Aggregator, R2P Workflow & Transaction Statuses Styles
+   ========================================================================== */
+.r2p-workflow-container {
+  background: rgba(13, 20, 36, 0.75);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  margin: 36px 0;
+  backdrop-filter: blur(12px);
+}
+
+.r2p-header-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 28px auto;
+}
+
+.r2p-header-box h3 {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  margin: 10px 0 8px 0;
+}
+
+.r2p-header-box p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.r2p-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.r2p-step-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.r2p-step-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+}
+
+.r2p-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #064E3B;
+  border: 2px solid var(--accent-green);
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.r2p-step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.r2p-step-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.r2p-step-card.highlight-financial {
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.r2p-step-card.highlight-financial .r2p-step-num {
+  background: var(--accent-green);
+  color: #042F2E;
+}
+
+.r2p-financial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  background: rgba(16, 185, 129, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.r2p-disclaimer-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-size: 0.88rem;
+  color: #F1F5F9;
+  line-height: 1.5;
+}
+
+.r2p-disclaimer-box i {
+  color: var(--accent-gold);
+  font-size: 1.25rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Transaction Status Grid */
+.status-section-box {
+  margin: 36px 0;
+}
+
+.status-header-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 24px auto;
+}
+
+.status-header-box h3 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin: 10px 0 6px 0;
+}
+
+.status-header-box p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.transaction-status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.status-card {
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all var(--transition-base);
+}
+
+.status-card:hover {
+  transform: translateY(-3px);
+}
+
+.status-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.status-card.confirmed {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.04);
+}
+.status-card.confirmed .status-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-green);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-card.pending {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.04);
+}
+.status-card.pending .status-badge {
+  background: rgba(245, 158, 11, 0.15);
+  color: #FBBF24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-card.failed {
+  border-color: rgba(244, 63, 94, 0.35);
+  background: rgba(244, 63, 94, 0.04);
+}
+.status-card.failed .status-badge {
+  background: rgba(244, 63, 94, 0.15);
+  color: #FB7185;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.status-card.mismatch {
+  border-color: rgba(168, 85, 247, 0.35);
+  background: rgba(168, 85, 247, 0.04);
+}
+.status-card.mismatch .status-badge {
+  background: rgba(168, 85, 247, 0.15);
+  color: #C084FC;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.status-card h4 {
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.status-card p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.status-note-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+/* Merchant Benefits Grid */
+.merchant-benefits-box {
+  margin: 36px 0;
+}
+
+.merchant-benefits-box h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.merchant-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.m-benefit-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all var(--transition-base);
+}
+
+.m-benefit-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+}
+
+.m-benefit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.m-benefit-item h4 {
+  font-size: 0.98rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.m-benefit-item p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Dedicated PS (Payment Switch & POS) Section Styles */
+.section-ps-ecosystem {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(10, 25, 47, 0.95) 50%, var(--bg-primary) 100%);
+  padding: 90px 0;
+  border-top: 1px solid rgba(14, 165, 233, 0.2);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.ps-standalone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 36px 0;
+}
+
+.ps-feature-card {
+  background: rgba(14, 165, 233, 0.03);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  border-radius: var(--radius-xl);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition-base);
+}
+
+.ps-feature-card:hover {
+  border-color: rgba(14, 165, 233, 0.4);
+  background: rgba(14, 165, 233, 0.07);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(14, 165, 233, 0.2);
+}
+
+.ps-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ps-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(14, 165, 233, 0.15);
+  color: #38BDF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.ps-feature-card h3 {
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.ps-feature-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ps-feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ps-feature-card ul li {
+  font-size: 0.84rem;
+  color: #CBD5E1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ps-feature-card ul li i {
+  color: #38BDF8;
+  font-size: 0.8rem;
+}
+
+.ps-settlement-callout {
+  background: rgba(14, 165, 233, 0.08);
+  border: 2px solid rgba(14, 165, 233, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ps-settlement-callout-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ps-settlement-callout-header i {
+  font-size: 1.8rem;
+  color: #38BDF8;
+}
+
+.ps-settlement-callout-header h4 {
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.ps-settlement-callout p {
+  font-size: 0.92rem;
+  color: #E2E8F0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ps-settlement-flow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.ps-s-step {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 0.82rem;
+  color: #CBD5E1;
+}
+
+.ps-s-step strong {
+  display: block;
+  color: #38BDF8;
+  margin-bottom: 4px;
+  font-size: 0.88rem;
+}
+
+/* Light Theme Overrides for New Components */
+body.theme-light .r2p-workflow-container,
+body.theme-light .ps-settlement-callout,
+body.theme-light .ps-feature-card,
+body.theme-light .status-card,
+body.theme-light .m-benefit-item {
+  background: #FFFFFF;
+  border-color: #E2E8F0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.theme-light .r2p-header-box h3,
+body.theme-light .status-header-box h3,
+body.theme-light .merchant-benefits-box h3,
+body.theme-light .ps-feature-card h3,
+body.theme-light .ps-settlement-callout-header h4,
+body.theme-light .status-card h4,
+body.theme-light .m-benefit-item h4 {
+  color: #0F172A;
+}
+
+body.theme-light .r2p-step-card {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+}
+
+body.theme-light .r2p-step-title {
+  color: #0F172A;
+}
+
+body.theme-light .r2p-disclaimer-box {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+body.theme-light .ps-s-step {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+  color: #475569;
+}

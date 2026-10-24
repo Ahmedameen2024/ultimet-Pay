@@ -108,7 +108,8 @@
             data-i18n="nav_home">الرئيسية</span></a></li>
       <li><a href="#aboutUs" class="drawer-link"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav_about">من
             نحن (الملف الرسمي)</span></a></li>
-      <li><a href="#accountingCycle" class="drawer-link"><i class="fa-solid fa-file-invoice-dollar"></i> <span data-i18n="nav_cycle">الدورة المحاسبية</span></a></li>
+      <li><a href="#paymentAggregatorSection" class="drawer-link"><i class="fa-solid fa-receipt"></i> <span data-i18n="nav_aggregator">Payment Aggregator و R2P</span></a></li>
+      <li><a href="#psSection" class="drawer-link"><i class="fa-solid fa-microchip"></i> <span data-i18n="nav_ps">نظام PS ونقاط البيع</span></a></li>
       <li><a href="#whyUs" class="drawer-link"><i class="fa-solid fa-star"></i> <span data-i18n="nav_why">لماذا نحن
             (ركائز التميز)</span></a></li>
       <li><a href="#problemsSolutions" class="drawer-link"><i class="fa-solid fa-shield-check"></i> <span
@@ -159,8 +160,8 @@
           <span>«عملية الدفع لا تنبغي أن تنتهي عند خصم المبلغ من حساب العميل فقط؛ بل بوصول نتيجتها بوضوح للتاجر وتتبعها وربطها بفاتورة البيع وسجلاته المحاسبية وفق نطاق التكامل المعتمد.»</span>
         </div>
         <div class="hero-actions">
-          <a href="#accountingCycle" class="btn-primary btn-large">
-            <i class="fa-solid fa-file-invoice-dollar"></i> <span data-i18n="m_hero_btn_cycle">استكشف الدورة المحاسبية</span>
+          <a href="#paymentAggregatorSection" class="btn-primary btn-large">
+            <i class="fa-solid fa-receipt"></i> <span data-i18n="m_hero_btn_cycle">تأكيد الدفع و R2P</span>
           </a>
           <a href="#demoSimulator" class="btn-secondary btn-large">
             <i class="fa-solid fa-circle-play"></i> <span data-i18n="m_hero_btn_demo">جرّب الدفع التفاعلي</span>
@@ -260,9 +261,13 @@
           حلول دفع ذكية متعددة القنوات: تحويل هواتف أندرويد لأجهزة دفع لا تلامسية (Tap to Phone)، أجهزة أندرويد المتنقلة
           مع طابعات حرارية مدمجة، ورموز QR الديناميكية المرتبطة بالفواتير مباشرة.
         </p>
+        <div class="speech-quote-pill ps-quote" style="margin-bottom: 20px;">
+          <i class="fa-solid fa-microchip"></i>
+          <span>«منظومة PS ونقاط البيع الذكية والمحول المالي متخصصة في العتاد والأجهزة والتوجيه وحركات الدفع والتسويات المصرفية، وهي مستقلة تمامًا عن خدمة Payment Aggregator لتجميع ومطابقة بيانات الفواتير.»</span>
+        </div>
         <div class="hero-actions">
-          <a href="#servicesGrid" class="btn-primary btn-large">
-            <i class="fa-solid fa-microchip"></i> <span data-i18n="ps_hero_btn_devices">استكشف الأجهزة والتقنيات</span>
+          <a href="#psSection" class="btn-primary btn-large">
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="ps_hero_btn_devices">استكشف منظومة PS المستقلة</span>
           </a>
           <a href="#demoSimulator" class="btn-secondary btn-large">
             <i class="fa-solid fa-play"></i> <span data-i18n="ps_hero_btn_sim">جرّب محاكاة Soft POS</span>
@@ -366,9 +371,13 @@
         <i class="fa-solid fa-circle-info"></i>
         <span data-i18n="nav_about">من نحن</span>
       </a>
-      <a href="#accountingCycle" class="quick-nav-link" style="border-color: rgba(16, 185, 129, 0.5); background: rgba(16, 185, 129, 0.1);">
-        <i class="fa-solid fa-file-invoice-dollar"></i>
-        <span data-i18n="nav_cycle">الدورة المحاسبية</span>
+      <a href="#paymentAggregatorSection" class="quick-nav-link" style="border-color: rgba(16, 185, 129, 0.5); background: rgba(16, 185, 129, 0.1);">
+        <i class="fa-solid fa-receipt"></i>
+        <span data-i18n="nav_aggregator">Payment Aggregator و R2P</span>
+      </a>
+      <a href="#psSection" class="quick-nav-link" style="border-color: rgba(14, 165, 233, 0.5); background: rgba(14, 165, 233, 0.1);">
+        <i class="fa-solid fa-microchip"></i>
+        <span data-i18n="nav_ps">نظام PS ونقاط البيع</span>
       </a>
       <a href="#whyUs" class="quick-nav-link">
         <i class="fa-solid fa-star"></i>
@@ -668,53 +677,54 @@
     </div>
   </section>
 
-  <!-- Section: The Accounting Cycle & Payment Journey (الدورة المحاسبية وسير العمل الفعلي) -->
-  <section class="section section-accounting-cycle" id="accountingCycle">
+    <!-- Section: Payment Aggregator & R2P (خدمة تجميع المدفوعات وتأكيد الدفع) -->
+  <section class="section section-accounting-cycle" id="paymentAggregatorSection">
+    <div id="accountingCycle"></div>
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag" data-i18n="tag_cycle">سير العمل الفعلي والدورة المحاسبية</span>
+        <span class="section-tag" data-i18n="tag_aggregator"><i class="fa-solid fa-receipt"></i> خدمة تجميع المدفوعات (Payment Aggregator)</span>
         <h2 class="section-title">
-          <span data-i18n="cycle_title_1">من إصدار الفاتورة</span>
-          <span class="gradient-text" data-i18n="cycle_title_2">إلى التسجيل المحاسبي</span>
-          <span data-i18n="cycle_title_3">رحلة العملية بوضوح تام</span>
+          <span data-i18n="agg_title_1">تربط Ultimate Pay عملية الدفع</span><br>
+          <span class="gradient-text" data-i18n="agg_title_2">بفاتورة التاجر ونظامه المحاسبي</span><br>
+          <span class="sub-headline" data-i18n="agg_title_3" style="font-size: 1.35rem; font-weight: 600; color: #94A3B8;">تأكيد الدفع، والتكامل المحاسبي، وإشعار التاجر</span>
         </h2>
-        <p class="section-desc" data-i18n="cycle_subtitle">
-          مع Ultimate Pay، ترتبط عملية الدفع بفاتورتك ونظامك المحاسبي. عندما يسدد العميل قيمة الفاتورة، تصل نتيجة الدفع إلى المنصة، ويُسجَّل المبلغ تلقائيًا في نظامك المحاسبي عند تأكيد العملية وتفعيل التكامل، كما يصلك إشعار يوضح رقم الفاتورة والمبلغ المسدد. بذلك تقل الحاجة إلى إدخال بيانات السداد يدويًا، وتصبح متابعة الفواتير المسددة أوضح وأسهل.
+        <p class="section-desc" data-i18n="agg_subtitle" style="max-width: 860px; margin: 0 auto 30px auto; line-height: 1.8;">
+          تربط Ultimate Pay عملية الدفع بفاتورة التاجر ونظامه المحاسبي. من خلال طلب الدفع R2P، يمكن للعميل مراجعة طلب السداد والموافقة عليه عبر وسيلة الدفع المدعومة. وعند تأكيد نجاح العملية، تُربط النتيجة بالفاتورة، ويُسجَّل المبلغ تلقائيًا في النظام المحاسبي عند تفعيل التكامل، ويصل إشعار للتاجر يوضح رقم الفاتورة والمبلغ المسدد. وتنتقل الأموال مباشرةً من حساب العميل إلى حساب التاجر وفق آلية الدفع المعتمدة.
         </p>
       </div>
 
-      <!-- 2-Track Visual Flow Diagram (المخطط البصري للمسارين: المسار المالي ومسار المعلومات) -->
+      <!-- 2-Track Visual Flow Diagram (المساران المنفصلان بصريًا: المسار المالي vs مسار المعلومات) -->
       <div class="accounting-flow-diagram">
         <!-- Track 1: Financial Flow -->
         <div class="flow-track track-sales">
           <div class="flow-track-header">
             <span class="track-tag"><i class="fa-solid fa-money-bill-transfer"></i> المسار المالي المباشر</span>
-            <h4 data-i18n="flow_financial_title">المسار المالي (انتقال الأموال المباشر)</h4>
-            <span class="track-desc" data-i18n="flow_financial_desc">الأموال تنتقل مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع المعتمدة دون وساطة في النقد</span>
+            <h4 data-i18n="flow_financial_title">المسار المالي (انتقال الأموال المباشر بين الحسابين)</h4>
+            <span class="track-desc" data-i18n="flow_financial_desc">الأموال تنتقل مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع المعتمدة دون وساطة مالية من المنصة</span>
           </div>
           <div class="flow-steps-chain">
             <div class="chain-step">
               <div class="chain-num">1</div>
               <div class="chain-icon"><i class="fa-solid fa-file-invoice"></i></div>
               <div>
-                <div class="chain-title" data-i18n="f_step_1_t">بيع لدى التاجر وإصدار فاتورة</div>
-                <div class="chain-desc" data-i18n="f_step_1_d">تسجيل الفاتورة في نظام التاجر</div>
+                <div class="chain-title" data-i18n="f_step_1_t">1. إصدار الفاتورة</div>
+                <div class="chain-desc" data-i18n="f_step_1_d">يصدر التاجر فاتورة للعميل محددة الرقم والمبلغ في نظامه</div>
               </div>
             </div>
             <div class="chain-step">
               <div class="chain-num">2</div>
               <div class="chain-icon"><i class="fa-solid fa-mobile-screen"></i></div>
               <div>
-                <div class="chain-title" data-i18n="f_step_2_t">العميل يسدد قيمة الفاتورة</div>
-                <div class="chain-desc" data-i18n="f_step_2_d">سداد عبر وسيلة الدفع المتاحة</div>
+                <div class="chain-title" data-i18n="f_step_2_t">2. سداد العميل</div>
+                <div class="chain-desc" data-i18n="f_step_2_d">يسدد العميل قيمة الفاتورة عبر وسيلة الدفع المعتمدة</div>
               </div>
             </div>
             <div class="chain-step highlight-direct-transfer">
               <div class="chain-num">3</div>
               <div class="chain-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
               <div>
-                <div class="chain-title" data-i18n="f_step_3_t">انتقال الأموال مباشرة</div>
-                <div class="chain-desc" data-i18n="f_step_3_d">من حساب العميل إلى حساب التاجر مباشرة</div>
+                <div class="chain-title" data-i18n="f_step_3_t">3. انتقال الأموال مباشرة</div>
+                <div class="chain-desc" data-i18n="f_step_3_d">من حساب العميل إلى حساب التاجر مباشرة لدى جهة الدفع</div>
               </div>
             </div>
           </div>
@@ -725,7 +735,7 @@
           <div class="divider-line"></div>
           <div class="divider-badge">
             <i class="fa-solid fa-bolt-lightning"></i>
-            <span data-i18n="flow_divider_note">تأكيد نجاح السداد ينقل المعاملة فورًا إلى مسار المعلومات والتكامل</span>
+            <span data-i18n="flow_divider_note">تأكيد نجاح السداد ينقل نتيجة العملية فورًا إلى مسار المعلومات والتكامل المحاسبي</span>
           </div>
           <div class="divider-line"></div>
         </div>
@@ -742,52 +752,43 @@
               <div class="chain-num">4</div>
               <div class="chain-icon"><i class="fa-solid fa-satellite-dish"></i></div>
               <div>
-                <div class="chain-title" data-i18n="i_step_1_t">وصول نتيجة الدفع للمنصة</div>
-                <div class="chain-desc" data-i18n="i_step_1_d">استلام تأكيد السداد من جهة الدفع</div>
+                <div class="chain-title" data-i18n="i_step_1_t">4. وصول نتيجة الدفع للمنصة</div>
+                <div class="chain-desc" data-i18n="i_step_1_d">استلام نتيجة العملية المؤكدة بالمرجع المعتمد من جهة الدفع</div>
               </div>
             </div>
             <div class="chain-step">
               <div class="chain-num">5</div>
-              <div class="chain-icon"><i class="fa-solid fa-hashtag"></i></div>
+              <div class="chain-icon"><i class="fa-solid fa-book-bookmark"></i></div>
               <div>
-                <div class="chain-title" data-i18n="i_step_2_t">مطابقة النتيجة مع الفاتورة</div>
-                <div class="chain-desc" data-i18n="i_step_2_d">مطابقة رقم الفاتورة والمرجع والمبلغ</div>
+                <div class="chain-title" data-i18n="i_step_2_t">5. التسجيل المحاسبي التلقائي</div>
+                <div class="chain-desc" data-i18n="i_step_2_d">يُسجَّل مبلغ الفاتورة تلقائيًا في نظام التاجر المحاسبي بدل الإدخال اليدوي</div>
               </div>
             </div>
             <div class="chain-step">
               <div class="chain-num">6</div>
-              <div class="chain-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-              <div>
-                <div class="chain-title" data-i18n="i_step_3_t">تسجيل المبلغ تلقائيًا بالمحاسبة</div>
-                <div class="chain-desc" data-i18n="i_step_3_d">في نظام التاجر وفق التكامل المفعّل</div>
-              </div>
-            </div>
-            <div class="chain-step">
-              <div class="chain-num">7</div>
               <div class="chain-icon"><i class="fa-solid fa-bell"></i></div>
               <div>
-                <div class="chain-title" data-i18n="i_step_4_t">إرسال إشعار السداد للتاجر</div>
-                <div class="chain-desc" data-i18n="i_step_4_d">رقم الفاتورة، المبلغ المسدد، والحالة</div>
+                <div class="chain-title" data-i18n="i_step_3_t">6. إشعار التاجر بالسداد</div>
+                <div class="chain-desc" data-i18n="i_step_3_d">يصل إشعار فوري للتاجر يوضح رقم الفاتورة والمبلغ المسدد والنتيجة</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Live Practical Example Card (Section 9: INV-1025) -->
+      <!-- Practical Example Box: INV-1025 -->
       <div class="cycle-hero-banner">
         <div class="banner-text">
           <i class="fa-solid fa-receipt"></i>
           <div>
-            <strong data-i18n="cycle_ex_title">مثال توضيحي افتراضي لدورة سداد الفاتورة:</strong>
+            <strong data-i18n="cycle_ex_title">مثال توضيحي افتراضي لسير سداد الفاتورة:</strong>
             <span data-i18n="cycle_ex_sub">فاتورة مبيعات رقم INV-1025 بقيمة 5,000 ريال (حالة الدفع: مؤكدة وناجحة)</span>
           </div>
         </div>
         <div class="example-badge" data-i18n="cycle_ex_badge">INV-1025 • مثال توضيحي افتراضي</div>
       </div>
 
-      <!-- Practical Steps Box for INV-1025 -->
-      <div class="financial-waterfall-box" style="padding: 24px;">
+      <div class="financial-waterfall-box" style="padding: 24px; margin-bottom: 36px;">
         <div class="wf-header-mini">
           <i class="fa-solid fa-list-check"></i>
           <span>ما يحدث عملياً بعد تأكيد سداد الفاتورة رقم INV-1025 وتطابقها:</span>
@@ -813,107 +814,183 @@
         </p>
       </div>
 
-      <!-- The 6 Detailed Stages Grid -->
-      <div class="cycle-steps-grid">
-        <!-- Stage 1 -->
-        <div class="cycle-step-card">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">1</div>
-            <span class="step-role-tag" data-i18n="c_step_1_role">الخطوة 1</span>
+      <!-- R2P Section: Request to Pay Workflow (10 Steps) -->
+      <div class="r2p-workflow-container">
+        <div class="r2p-header-box">
+          <span class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-green);"><i class="fa-solid fa-paper-plane"></i> مخطط طلب الدفع (R2P — Request to Pay)</span>
+          <h3>كيف تعمل خدمة طلب الدفع R2P؟</h3>
+          <p>شرح مبسط للتاجر يوضح التسلسل الكامل لطلب الدفع من إنشاء الفاتورة وحتى وصول الإشعار والتسجيل التلقائي:</p>
+        </div>
+
+        <div class="r2p-steps-grid">
+          <!-- Step 1 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">1</div>
+            <div class="r2p-step-title">إنشاء الفاتورة</div>
+            <div class="r2p-step-desc">ينشئ التاجر فاتورة في نظامه المحاسبي، ولها رقم ومبلغ محددان.</div>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-file-invoice"></i> <span data-i18n="c_step_1_t">البيع وإصدار الفاتورة</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_1_d">
-            ينفذ التاجر عملية البيع ويسجل بياناتها في نظامه المعتمد، ثم يطلب تحصيل قيمة المشتريات من العميل عبر وسيلة الدفع المتاحة له.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسار:</span> <span class="meta-val" data-i18n="c_step_1_actor">نظام التاجر أو واجهة البيع</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">الحالة:</span> <span class="meta-val highlight-amber" data-i18n="c_step_1_st">بانتظار السداد</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">المستند:</span> <span class="meta-val" data-i18n="c_step_1_view">فاتورة برقم مرجعي محدد</span></div>
+
+          <!-- Step 2 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">2</div>
+            <div class="r2p-step-title">بدء طلب الدفع</div>
+            <div class="r2p-step-desc">يُنشأ طلب دفع مرتبط بالفاتورة، ويتضمن المبلغ والبيانات اللازمة لتمييز العملية.</div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">3</div>
+            <div class="r2p-step-title">تحديد العميل</div>
+            <div class="r2p-step-desc">يقدّم العميل رمز حساب محفظته أو المعرّف المعتمد لطلب الدفع، وفق الآلية التي يدعمها النظام.</div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">4</div>
+            <div class="r2p-step-title">إرسال الطلب للعميل</div>
+            <div class="r2p-step-desc">يصل طلب دفع إلى العميل داخل تطبيق المحفظة، موضحًا المبلغ والجهة المستفيدة، إذا كانت هذه الآلية مدعومة في التكامل المعتمد.</div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">5</div>
+            <div class="r2p-step-title">المراجعة والموافقة</div>
+            <div class="r2p-step-desc">يراجع العميل بيانات الطلب ويوافق عليه من خلال تطبيق المحفظة المعتمد.</div>
+          </div>
+
+          <!-- Step 6: Financial Highlight -->
+          <div class="r2p-step-card highlight-financial">
+            <span class="r2p-financial-tag"><i class="fa-solid fa-money-bill-transfer"></i> المسار المالي المباشر</span>
+            <div class="r2p-step-num">6</div>
+            <div class="r2p-step-title" style="color: var(--accent-green);">تنفيذ الدفع المالي</div>
+            <div class="r2p-step-desc">تنفذ جهة الدفع العملية، وينتقل المبلغ مباشرةً من حساب العميل إلى حساب التاجر وفق آلية الدفع المعتمدة.</div>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">7</div>
+            <div class="r2p-step-title">استلام نتيجة العملية</div>
+            <div class="r2p-step-desc">تصل نتيجة الدفع إلى منصة Ultimate Pay، مع مرجع يسمح بتحديد العملية بدقة.</div>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">8</div>
+            <div class="r2p-step-title">مطابقة الدفع بالفاتورة</div>
+            <div class="r2p-step-desc">تربط المنصة نتيجة العملية بالفاتورة الصحيحة، اعتمادًا على رقم المرجع والبيانات المتاحة.</div>
+          </div>
+
+          <!-- Step 9 -->
+          <div class="r2p-step-card">
+            <div class="r2p-step-num">9</div>
+            <div class="r2p-step-title">التحديث المحاسبي التلقائي</div>
+            <div class="r2p-step-desc">عند تأكيد نجاح الدفع ومطابقته مع الفاتورة، يُسجَّل المبلغ تلقائيًا في النظام المحاسبي للتاجر عبر التكامل المفعّل، بدلًا من إدخاله يدويًا.</div>
+          </div>
+
+          <!-- Step 10 -->
+          <div class="r2p-step-card" style="border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.04);">
+            <div class="r2p-step-num" style="background: #78350F; border-color: #FBBF24;">10</div>
+            <div class="r2p-step-title" style="color: #FBBF24;">إشعار التاجر</div>
+            <div class="r2p-step-desc">يصل إشعار واضح للتاجر، مثل: «تم سداد الفاتورة رقم INV-1025 بمبلغ 5,000 ريال».</div>
           </div>
         </div>
 
-        <!-- Stage 2 -->
-        <div class="cycle-step-card">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">2</div>
-            <span class="step-role-tag" data-i18n="c_step_2_role">الخطوة 2</span>
+        <div class="r2p-disclaimer-box">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div>
+            <strong>تنبيه توضيحي واعتماد التكامل:</strong> هذا وصف لمسار R2P المطلوب توضيحه، وليس دليلًا وحده على أن كل خطوة مطبقة حاليًا في البيئة الفعلية. يعتمد تطبيق أي خطوة على نطاق التكامل المعتمد والمتاح مع جهة الدفع ونظام التاجر.
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-money-bill-transfer"></i> <span data-i18n="c_step_2_t">سداد العميل وانتقال الأموال</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_2_d">
-            يسدد العميل قيمة الفاتورة عبر وسيلته المعتمدة، وتنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر وفق نموذج الدفع المعتمد دون وساطة المنصة.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسار المالي:</span> <span class="meta-val highlight-green" data-i18n="c_step_2_actor">تحويل مباشر بين الحسابين</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">دور المنصة:</span> <span class="meta-val highlight-amber" data-i18n="c_step_2_st">لا تستلم ولا تحتفظ بالنقد</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">الجهة المنفذة:</span> <span class="meta-val" data-i18n="c_step_2_view">المؤسسة المالية المعتمدة</span></div>
+        </div>
+      </div>
+
+      <!-- Transaction Statuses (حالات العملية) -->
+      <div class="status-section-box">
+        <div class="status-header-box">
+          <span class="section-tag"><i class="fa-solid fa-list-check"></i> حالات العملية (Transaction Statuses)</span>
+          <h3>كيف يتعامل النظام مع حالات الدفع المختلفة؟</h3>
+          <p>توضيح صريح لكيفية التعامل مع كل نتيجة دفع لضمان الدقة وتفادي أي التباس في الفواتير والسجلات:</p>
+        </div>
+
+        <div class="transaction-status-grid">
+          <!-- Status 1: Confirmed -->
+          <div class="status-card confirmed">
+            <div class="status-card-header">
+              <span class="status-badge"><i class="fa-solid fa-circle-check"></i> ناجحة ومؤكدة</span>
+              <i class="fa-solid fa-check-double text-success"></i>
+            </div>
+            <h4>تأكيد ومطابقة وتسجيل فوري</h4>
+            <p>يمكن مطابقة العملية بالفاتورة وتحديث النظام المحاسبي للتاجر تلقائيًا وفق التكامل المعتمد وإرسال إشعار السداد فورًا.</p>
+          </div>
+
+          <!-- Status 2: Pending -->
+          <div class="status-card pending">
+            <div class="status-card-header">
+              <span class="status-badge"><i class="fa-solid fa-clock"></i> قيد الانتظار</span>
+              <i class="fa-solid fa-hourglass-half text-warning"></i>
+            </div>
+            <h4>لا تُعامل كمسددة حتى التأكيد</h4>
+            <p>لا تُعامل الفاتورة باعتبارها مسددة حتى تصل نتيجة موثوقة تؤكد نجاح العملية من جهة الدفع، وتبقى قيد المتابعة.</p>
+          </div>
+
+          <!-- Status 3: Failed -->
+          <div class="status-card failed">
+            <div class="status-card-header">
+              <span class="status-badge"><i class="fa-solid fa-circle-xmark"></i> مرفوضة أو ملغاة أو فاشلة</span>
+              <i class="fa-solid fa-ban text-danger"></i>
+            </div>
+            <h4>لا تسجيل مالي ولا تسليم للبضاعة</h4>
+            <p>لا يُسجّل المبلغ على أنه تحصيل ناجح ولا يُربط بالفاتورة؛ ويتم إشعار الكاشير بعدم اكتمال السداد لحماية المتجر.</p>
+          </div>
+
+          <!-- Status 4: Mismatch -->
+          <div class="status-card mismatch">
+            <div class="status-card-header">
+              <span class="status-badge"><i class="fa-solid fa-triangle-exclamation"></i> نتيجة غير مطابقة</span>
+              <i class="fa-solid fa-code-compare text-info"></i>
+            </div>
+            <h4>مراجعة معتمدة دون ربط عشوائي</h4>
+            <p>لا تُربط العملية تلقائيًا بفاتورة غير مؤكدة؛ وتُترك للمراجعة والتدقيق وفق الإجراءات التشغيلية المعتمدة.</p>
           </div>
         </div>
 
-        <!-- Stage 3 -->
-        <div class="cycle-step-card">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">3</div>
-            <span class="step-role-tag" data-i18n="c_step_3_role">الخطوة 3</span>
-          </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-satellite-dish"></i> <span data-i18n="c_step_3_t">وصول نتيجة الدفع للمنصة</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_3_d">
-            تصل نتيجة عملية الدفع المؤكدة إلى منصة Ultimate Pay من خلال الربط المعتمد مع جهة الدفع، محملة ببيانات المرجع الموحد.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المسار:</span> <span class="meta-val" data-i18n="c_step_3_actor">مسار المعلومات والتأكيد</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">حالة السداد:</span> <span class="meta-val highlight-green" data-i18n="c_step_3_st">مؤكدة لدى جهة الدفع</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">المعرف:</span> <span class="meta-val" data-i18n="c_step_3_view">مرجع العملية المعتمد (RRN)</span></div>
-          </div>
+        <div class="status-note-bar">
+          <i class="fa-solid fa-circle-info text-accent"></i>
+          <span><strong>ملاحظة تشغيلية:</strong> لا تفترض أن كل نتيجة دفع تصل فورًا أو أن كل حالة تتم معالجتها تلقائيًا دون استثناء؛ وتخضع كافة المعاملات لبروتوكولات التحقق والمطابقة المقررة.</span>
         </div>
+      </div>
 
-        <!-- Stage 4 -->
-        <div class="cycle-step-card">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">4</div>
-            <span class="step-role-tag" data-i18n="c_step_4_role">الخطوة 4</span>
+      <!-- Merchant Benefits (ما الذي يستفيده التاجر؟) -->
+      <div class="merchant-benefits-box">
+        <h3>ما الذي يستفيده التاجر من خدمة Payment Aggregator؟</h3>
+        <div class="merchant-benefits-grid">
+          <div class="m-benefit-item">
+            <div class="m-benefit-icon"><i class="fa-solid fa-keyboard"></i></div>
+            <h4>تقليل الإدخال اليدوي</h4>
+            <p>الاستغناء عن إدخال مبالغ الفواتير المسددة يدويًا في النظام المحاسبي بعد كل عملية بيع.</p>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-hashtag"></i> <span data-i18n="c_step_4_t">مطابقة النتيجة مع الفاتورة</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_4_d">
-            يتم التحقق من نجاح العملية وربطها بالفاتورة الصحيحة باستخدام البيانات المرجعية المتاحة، والتأكد من مطابقة المبلغ المطلوب بدقة.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">الإجراء:</span> <span class="meta-val" data-i18n="c_step_4_actor">مطابقة بيانات العملية بالفاتورة</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">حالة الفحص:</span> <span class="meta-val highlight-green" data-i18n="c_step_4_st">متطابقة وصحيحة</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">النتيجة:</span> <span class="meta-val" data-i18n="c_step_4_view">ربط مؤكد بحركة البيع</span></div>
-          </div>
-        </div>
 
-        <!-- Stage 5 -->
-        <div class="cycle-step-card">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">5</div>
-            <span class="step-role-tag" data-i18n="c_step_5_role">الخطوة 5</span>
+          <div class="m-benefit-item">
+            <div class="m-benefit-icon"><i class="fa-solid fa-link"></i></div>
+            <h4>ربط بالرقم الصحيح</h4>
+            <p>ربط نتيجة الدفع برقم الفاتورة الصحيح والمرجع المعتمد تلقائيًا دون خلط بين العمليات.</p>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-book-bookmark"></i> <span data-i18n="c_step_5_t">التسجيل المحاسبي التلقائي</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_5_d">
-            عند تأكيد العملية وتطابقها، يتكامل النظام مع النظام المحاسبي للتاجر (مثل Onyx ERP) بحيث يُسجّل المبلغ تلقائيًا بدلًا من الإدخال اليدوي.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">الأثر:</span> <span class="meta-val highlight-green" data-i18n="c_step_5_actor">تسجيل المبلغ تلقائيًا بالسجلات</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">شرط التفعيل:</span> <span class="meta-val highlight-amber" data-i18n="c_step_5_st">وفق التكامل المعتمد المفعّل</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">الفائدة:</span> <span class="meta-val" data-i18n="c_step_5_view">تقليل الإدخال اليدوي والسهو</span></div>
-          </div>
-        </div>
 
-        <!-- Stage 6 -->
-        <div class="cycle-step-card">
-          <div class="cycle-step-top">
-            <div class="step-number-badge">6</div>
-            <span class="step-role-tag" data-i18n="c_step_6_role">الخطوة 6</span>
+          <div class="m-benefit-item">
+            <div class="m-benefit-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h4>معرفة الفواتير المسددة</h4>
+            <p>وضوح فوري ودقيق لحالة الفواتير التي سُددت وتلك المتبقية لضبط المبيعات والتحصيل.</p>
           </div>
-          <h3 class="cycle-step-title"><i class="fa-solid fa-bell"></i> <span data-i18n="c_step_6_t">إرسال إشعار السداد للتاجر</span></h3>
-          <p class="cycle-step-desc" data-i18n="c_step_6_d">
-            يصل إشعار واضح للتاجر يوضح أن العميل سدد الفاتورة، مع بيان رقم الفاتورة والمبلغ المسدد ونتيجة العملية، مما يجعل المتابعة أسرع وأوضح.
-          </p>
-          <div class="cycle-meta-list">
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_actor">المستلم:</span> <span class="meta-val" data-i18n="c_step_6_actor">التاجر / الكاشير / المحاسب</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_status">محتوى الإشعار:</span> <span class="meta-val highlight-green" data-i18n="c_step_6_st">رقم الفاتورة والمبلغ المسدد والحالة</span></div>
-            <div class="meta-row"><span class="meta-label" data-i18n="c_lbl_view">النتيجة:</span> <span class="meta-val" data-i18n="c_step_6_view">تسليم السلعة بثقة دون انتظار</span></div>
+
+          <div class="m-benefit-item">
+            <div class="m-benefit-icon"><i class="fa-solid fa-bell"></i></div>
+            <h4>إشعار فوري وموثق</h4>
+            <p>وصول إشعار فوري واضح يوضح رقم الفاتورة والمبلغ المسدد ونتيجة العملية المعتمدة.</p>
+          </div>
+
+          <div class="m-benefit-item">
+            <div class="m-benefit-icon"><i class="fa-solid fa-shield-check"></i></div>
+            <h4>تقليل الالتباس المحاسبي</h4>
+            <p>القضاء على التضارب والالتباس بين تأكيد الدفع وتسجيله الفعلي في النظام المحاسبي للتاجر.</p>
           </div>
         </div>
       </div>
@@ -992,45 +1069,6 @@
             </div>
             <p data-i18n="term_7_d">الأموال تتحرك مباشرة بين الحسابات البنكية؛ والمنصة مسؤولة فقط عن نقل المعلومات والمطابقة والإشعار.</p>
           </div>
-        </div>
-      </div>
-
-      <!-- Architecture & Governance Hub (Slide 3 & 11) -->
-      <div class="architecture-hub-card">
-        <div class="text-center">
-          <span class="section-tag" data-i18n="arch_tag">معمارية الربط والحوكمة المالية</span>
-          <h3 style="font-size: 1.35rem; color: #FFFFFF; margin: 8px 0;" data-i18n="arch_title">أطراف العملية الأربعة — تدفق محكوم دون التباس</h3>
-        </div>
-
-        <div class="architecture-grid">
-          <div class="arch-node">
-            <i class="fa-solid fa-user"></i>
-            <h4 data-i18n="node_1_t">العميل</h4>
-            <p data-i18n="node_1_d">يدفع عبر تطبيق محفظته أو حسابه البنكي المعتمد.</p>
-          </div>
-
-          <div class="arch-node center-hub">
-            <i class="fa-solid fa-bolt-lightning text-accent"></i>
-            <h4 data-i18n="node_2_t">Ultimate Pay (منصة الربط)</h4>
-            <p data-i18n="node_2_d">التحقق اللحظي، حماية المعاملات، تأكيد النتيجة، وتنسيق المطابقة.</p>
-          </div>
-
-          <div class="arch-node">
-            <i class="fa-solid fa-building-columns"></i>
-            <h4 data-i18n="node_3_t">البنك / المحفظة</h4>
-            <p data-i18n="node_3_d">خصم المبلغ، والتحويل المباشر لحساب التاجر (المسار المالي المستقل).</p>
-          </div>
-
-          <div class="arch-node">
-            <i class="fa-solid fa-store"></i>
-            <h4 data-i18n="node_4_t">التاجر ونظام Onyx ERP</h4>
-            <p data-i18n="node_4_d">إصدار الفاتورة، استلام التأكيد، وتسجيل مبلغ الفاتورة تلقائيًا في النظام المحاسبي.</p>
-          </div>
-        </div>
-
-        <div class="governance-banner">
-          <i class="fa-solid fa-shield-halved"></i>
-          <span data-i18n="arch_gov_rule"><strong>مبدأ أساسي في الحوكمة:</strong> المنصة لا تحتفظ بأموال العملاء ولا تنفّذ التحويل — الحركة المالية من مسؤولية المؤسسة المالية حصرًا، ولا تُفعّل أي قناة دفع دون اعتماد المؤسسة المالية صاحبة الحساب.</span>
         </div>
       </div>
 
@@ -1380,6 +1418,113 @@
                 موحدة</span></li>
           </ul>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Dedicated PS (Payment Switch & POS) Standalone Ecosystem -->
+  <section class="section section-ps-ecosystem" id="psSection">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" style="background: rgba(14, 165, 233, 0.15); color: #38BDF8; border-color: rgba(14, 165, 233, 0.3);">
+          <i class="fa-solid fa-microchip"></i> منظومة المحول المالي ونقاط البيع (PS & Smart POS)
+        </span>
+        <h2 class="section-title">
+          <span>منظومة PS ونقاط البيع الذكية</span><br>
+          <span class="gradient-text">نطاق تقني وميداني مستقل</span><br>
+          <span class="sub-headline" style="font-size: 1.35rem; font-weight: 600; color: #94A3B8;">أجهزة نقاط البيع، التوجيه المالي، ودورة التسوية المصرفية</span>
+        </h2>
+        <p class="section-desc" style="max-width: 860px; margin: 0 auto 30px auto; line-height: 1.8;">
+          منظومة PS متخصصة في الأجهزة ونقاط البيع وعمليات التوجيه المالي (Payment Switching) بين شبكات البطاقات والمحافظ والبنوك، مع إدارة دورات التسوية المصرفية التابعة لها. هذه المنظومة مستقلة تمامًا عن خدمة Payment Aggregator.
+        </p>
+      </div>
+
+      <div class="ps-standalone-grid">
+        <!-- Feature 1: Smart POS Hardware -->
+        <div class="ps-feature-card">
+          <div class="ps-feature-header">
+            <div class="ps-icon-wrap"><i class="fa-solid fa-cash-register"></i></div>
+            <div>
+              <h3>أجهزة Android POS الذكية</h3>
+              <span style="font-size: 0.8rem; color: #38BDF8;">عتاد مادي متطور للشركات والفروع</span>
+            </div>
+          </div>
+          <p>أجهزة متينة مزودة بشاشة لمس سريعة، طابعة إيصالات حرارية مدمجة، قارئ بطاقات شريحية ومغناطيسية، وكاميرا مسح رموز QR مع بطارية تدوم طويلًا.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> اتصال مزدوج مستمر عبر شريحة 4G وشبكة Wi-Fi</li>
+            <li><i class="fa-solid fa-check"></i> طباعة فورية لإيصالات البيع الورقية والتقارير اليومية</li>
+            <li><i class="fa-solid fa-check"></i> جاهزية ميدانية للعمل الشاق في المتاجر والمطاعم</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2: Soft POS -->
+        <div class="ps-feature-card">
+          <div class="ps-feature-header">
+            <div class="ps-icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div>
+              <h3>تقنية Soft POS (Tap to Phone)</h3>
+              <span style="font-size: 0.8rem; color: #38BDF8;">تحصيل لا تلامسي عبر الهاتف</span>
+            </div>
+          </div>
+          <p>تحويل أي هاتف أندرويد يدعم خاصية NFC إلى جهاز نقطة بيع متكامل؛ يقبل الدفع بالبطاقات والمحافظ عبر تمرير الهاتف أو البطاقة فوق الجهاز مباشرة.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> صفر تكلفة شراء أو استئجار أجهزة نقاط بيع مادية</li>
+            <li><i class="fa-solid fa-check"></i> خيار مثالي لمندوبي التوصيل والخدمات الميدانية والمتاجر الصغيرة</li>
+            <li><i class="fa-solid fa-check"></i> أمان مصرفي وتشفير كامل وفق معايير PCI-DSS اللاتلامسية</li>
+          </ul>
+        </div>
+
+        <!-- Feature 3: Switching Engine -->
+        <div class="ps-feature-card">
+          <div class="ps-feature-header">
+            <div class="ps-icon-wrap"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+            <div>
+              <h3>المحول المالي (Payment Switching)</h3>
+              <span style="font-size: 0.8rem; color: #38BDF8;">توجيه سريع ومعالجة فائقة</span>
+            </div>
+          </div>
+          <p>محرك التوجيه الذكي الذي يربط نقاط البيع بشبكات البطاقات المصرفية والمحافظ والبنوك بسرعة معالجة تقل عن 1.5 ثانية لكل حركة.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> توجيه ذكي للحركة إلى البنك أو المحفظة المصدرة</li>
+            <li><i class="fa-solid fa-check"></i> فحص لحظي للأمان ومنع تكرار أو ازدواجية العمليات</li>
+            <li><i class="fa-solid fa-check"></i> جاهزية تشغيلية مستمرة ومراقبة فنية على مدار الساعة</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Standalone Bank Settlement Callout for PS -->
+      <div class="ps-settlement-callout">
+        <div class="ps-settlement-callout-header">
+          <i class="fa-solid fa-building-columns"></i>
+          <div>
+            <h4>دورة التسوية المصرفية (Bank Settlement Cycle) — تخص منظومة PS والمؤسسات المالية</h4>
+            <span style="font-size: 0.85rem; color: #94A3B8;">توضيح حدود واختصاص المسؤولية المصرفية</span>
+          </div>
+        </div>
+        <p>
+          دورة التسوية البنكية الطويلة (التي تشمل البنك والمطابقة المصرفية وتوليد ملفات المقاصة الدورية وإيداع الصافي في حسابات التجار البنكية) هي <strong>من اختصاص ومسؤولية منظومة PS بالتعاون مع المؤسسات المالية والبنوك المرخصة، وليست ضمن نطاق خدمة Payment Aggregator</strong>.
+        </p>
+        <p>
+          فخدمة Payment Aggregator تقتصر بدقة على ربط بيانات الدفع بالفاتورة والتسجيل المحاسبي التلقائي وإشعار التاجر فور السداد؛ بينما تتولى منظومة PS والمصارف مسار التوجيه المالي وحسابات التسوية المصرفية الرسمية وفق الاتفاقيات المقررة.
+        </p>
+        <div class="ps-settlement-flow-steps">
+          <div class="ps-s-step">
+            <strong>1. نقطة البيع (POS / Soft POS)</strong>
+            <span>تنفيذ حركة الدفع بالبطاقة أو الرمز عبر الجهاز.</span>
+          </div>
+          <div class="ps-s-step">
+            <strong>2. المحول المالي (PS Switch)</strong>
+            <span>توجيه المعاملة والتحقق الأمني اللحظي من الحساب.</span>
+          </div>
+          <div class="ps-s-step">
+            <strong>3. المؤسسة المالية (البنك)</strong>
+            <span>خصم المبلغ من العميل والتحويل المباشر لحساب التاجر.</span>
+          </div>
+          <div class="ps-s-step">
+            <strong>4. دورة التسوية المصرفية</strong>
+            <span>ملفات المطابقة الدورية وإيداع الصافي بحساب التاجر البنكي.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
