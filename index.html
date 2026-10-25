@@ -63,9 +63,9 @@
           <i class="fa-solid fa-building-columns"></i>
           <span data-i18n="track_banks">للبنوك والمؤسسات المالية</span>
         </button>
-        <a href="ps.html" class="track-btn" style="text-decoration:none;">
+        <a href="ps.html" class="track-btn ps-link-btn" style="text-decoration:none;">
           <i class="fa-solid fa-microchip"></i>
-          <span>نظام PS ونقاط البيع ←</span>
+          <span data-i18n="track_ps_standalone">نظام PS ونقاط البيع المستقل ←</span>
         </a>
       </nav>
 
@@ -100,8 +100,8 @@
           data-i18n="track_merchants">للتجار وأصحاب الأعمال</span></button>
       <button class="drawer-track-btn" data-target="banks"><i class="fa-solid fa-building-columns"></i> <span
           data-i18n="track_banks">للبنوك والمؤسسات</span></button>
-      <button class="drawer-track-btn" data-target="ps"><i class="fa-solid fa-microchip"></i> <span
-          data-i18n="track_ps">نظام PS ونقاط البيع</span></button>
+      <a href="ps.html" class="drawer-track-btn" style="text-decoration:none;"><i class="fa-solid fa-microchip"></i> <span
+          data-i18n="track_ps_standalone">نظام PS المستقل ←</span></a>
     </div>
     <ul class="drawer-links">
       <li><a href="#hero" class="drawer-link"><i class="fa-solid fa-house"></i> <span
@@ -109,13 +109,13 @@
       <li><a href="#aboutUs" class="drawer-link"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav_about">من
             نحن (الملف الرسمي)</span></a></li>
       <li><a href="#paymentAggregatorSection" class="drawer-link"><i class="fa-solid fa-receipt"></i> <span data-i18n="nav_aggregator">Payment Aggregator و R2P</span></a></li>
-      <li><a href="#psSection" class="drawer-link"><i class="fa-solid fa-microchip"></i> <span data-i18n="nav_ps">نظام PS ونقاط البيع</span></a></li>
+      <li><a href="ps.html" class="drawer-link"><i class="fa-solid fa-microchip"></i> <span>نظام PS ونقاط البيع (صفحة مستقلة)</span></a></li>
       <li><a href="#whyUs" class="drawer-link"><i class="fa-solid fa-star"></i> <span data-i18n="nav_why">لماذا نحن
             (ركائز التميز)</span></a></li>
       <li><a href="#problemsSolutions" class="drawer-link"><i class="fa-solid fa-shield-check"></i> <span
             data-i18n="nav_solutions">الحلول والمزايا</span></a></li>
       <li><a href="#servicesGrid" class="drawer-link"><i class="fa-solid fa-cubes"></i> <span
-            data-i18n="nav_services">الخدمات والأجهزة</span></a></li>
+            data-i18n="nav_services">خدمات المنصة والتكامل</span></a></li>
       <li><a href="#demoSimulator" class="drawer-link"><i class="fa-solid fa-mobile-screen"></i> <span
             data-i18n="nav_simulator">المحاكي التفاعلي</span></a></li>
       <li><a href="#onboardingSteps" class="drawer-link"><i class="fa-solid fa-list-check"></i> <span
@@ -145,29 +145,28 @@
       <div class="hero-content track-content-merchants" id="heroMerchants">
         <div class="hero-eyebrow">
           <span class="badge-pulse"></span>
-          <span data-i18n="m_eyebrow">منظومة ربط المدفوعات الأولى للتجار في اليمن — مرخصة من البنك المركزي</span>
+          <span data-i18n="m_eyebrow">منصة ربط وتأكيد نتائج الدفع للتجار — مرخصة رسمياً من البنك المركزي</span>
         </div>
         <h1 class="hero-title">
-          <span data-i18n="m_hero_title_1">منظومة واحدة تربط الدفع</span><br>
-          <span class="gradient-text" data-i18n="m_hero_title_2">بتجارتك ودفاترك المحاسبية</span>
-          <span data-i18n="m_hero_title_3">وربط نتيجة العملية بالفاتورة بمرجع موحد</span>
+          <span data-i18n="m_hero_title_1">Ultimate Pay — من تأكيد الدفع</span><br>
+          <span class="gradient-text" data-i18n="m_hero_title_2">إلى تحديث الفاتورة وإشعار التاجر</span>
         </h1>
         <p class="hero-desc" data-i18n="m_hero_desc">
-          <strong>Ultimate Pay</strong> تربط منظومة الدفع بالتاجر، وتساعد على توضيح نتيجة عملية الدفع وربطها بالفاتورة والسجل المحاسبي فوراً، وفق التكاملات المعتمدة. ودّع إدخال القيود اليدوي وفوضى الشاشات المتعددة، واستقبل مدفوعات زبائنك من كافة البنوك والمحافظ بنقطة بيع واحدة ومرجع موحد.
+          تربط <strong>Ultimate Pay</strong> نتائج الدفع بالفواتير والأنظمة المحاسبية للتجار. وعند تأكيد نجاح السداد، تُحدَّث بيانات الفاتورة محاسبيًا تلقائيًا، ويصل إشعار واضح للتاجر بعملية الدفع، بينما تنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع.
         </p>
         <div class="speech-quote-pill">
           <i class="fa-solid fa-quote-right"></i>
-          <span>«عملية الدفع لا تنبغي أن تنتهي عند خصم المبلغ من حساب العميل فقط؛ بل بوصول نتيجتها بوضوح للتاجر وتتبعها وربطها بفاتورة البيع وسجلاته المحاسبية وفق نطاق التكامل المعتمد.»</span>
+          <span data-i18n="m_hero_quote">«عند تأكيد نجاح سداد الفاتورة، تستقبل Ultimate Pay نتيجة الدفع وتربطها بالفاتورة الصحيحة، ثم تُحدَّث بيانات السداد تلقائيًا في النظام المحاسبي المرتبط، ويصل إشعار للتاجر يوضح رقم الفاتورة والمبلغ وحالة العملية.»</span>
         </div>
         <div class="hero-actions">
           <a href="#paymentAggregatorSection" class="btn-primary btn-large">
-            <i class="fa-solid fa-receipt"></i> <span data-i18n="m_hero_btn_cycle">تأكيد الدفع و R2P</span>
+            <i class="fa-solid fa-receipt"></i> <span data-i18n="m_hero_btn_cycle">كيف تعمل الخدمة و R2P</span>
           </a>
           <a href="#demoSimulator" class="btn-secondary btn-large">
-            <i class="fa-solid fa-circle-play"></i> <span data-i18n="m_hero_btn_demo">جرّب الدفع التفاعلي</span>
+            <i class="fa-solid fa-circle-play"></i> <span data-i18n="m_hero_btn_demo">محاكاة مسار المعلومات</span>
           </a>
-          <a href="#whyUs" class="btn-ghost btn-large hide-mobile">
-            <i class="fa-solid fa-star"></i> <span data-i18n="nav_why">لماذا نحن؟</span>
+          <a href="#merchantPortalSection" class="btn-ghost btn-large hide-mobile">
+            <i class="fa-solid fa-gauge-high"></i> <span data-i18n="m_hero_btn_portal">بوابة التاجر</span>
           </a>
         </div>
         <div class="hero-trust-bar">
@@ -179,17 +178,17 @@
             </div>
           </div>
           <div class="trust-item">
-            <i class="fa-solid fa-lock"></i>
+            <i class="fa-solid fa-money-bill-transfer"></i>
             <div>
-              <strong data-i18n="m_trust_2_title">أعلى معايير الأمان</strong>
-              <span data-i18n="m_trust_2_sub">تشفير وحماية البيانات المصرفية</span>
+              <strong data-i18n="m_trust_2_title">أموالك في حسابك مباشرة</strong>
+              <span data-i18n="m_trust_2_sub">المنصة لا تستلم ولا تحتفظ بأموال</span>
             </div>
           </div>
           <div class="trust-item">
             <i class="fa-solid fa-arrows-rotate"></i>
             <div>
-              <strong data-i18n="m_trust_3_title">تكامل محاسبي مرن</strong>
-              <span data-i18n="m_trust_3_sub">ربط وإقفال الفواتير في Onyx ERP</span>
+              <strong data-i18n="m_trust_3_title">تكامل محاسبي معتمد</strong>
+              <span data-i18n="m_trust_3_sub">تحديث الفواتير في Onyx ERP تلقائياً</span>
             </div>
           </div>
         </div>
@@ -199,143 +198,112 @@
       <div class="hero-content track-content-banks" id="heroBanks" style="display: none;">
         <div class="hero-eyebrow">
           <span class="badge-pulse"></span>
-          <span data-i18n="b_eyebrow">بوابة التمكين المصرفي وتوسيع شبكة الاستحواذ (Merchant Acquiring)</span>
+          <span data-i18n="b_eyebrow">طبقة ربط تقني للمؤسسات المالية والبنوك والمحافظ</span>
         </div>
         <h1 class="hero-title">
-          <span data-i18n="b_hero_title_1">وسّع قبول خدماتك المالية لدى التجار</span><br>
-          <span class="gradient-text" data-i18n="b_hero_title_2">بمنصة ربط موحدة ومطابقة آلية</span>
-          <span data-i18n="b_hero_title_3">دون احتجاز أرصدة أو أعباء تشغيلية</span>
+          <span data-i18n="b_hero_title_1">إيصال نتائج الدفع للتجار</span><br>
+          <span class="gradient-text" data-i18n="b_hero_title_2">وربطها بالفواتير والأنظمة المحاسبية</span>
         </h1>
         <p class="hero-desc" data-i18n="b_hero_desc">
-          شريككم التقني لربط شبكات التجار بمصرفكم عبر منصة تجميع مدفوعات موحدة (Payment Aggregator). المنصة تدير الربط التقني والمطابقة، بينما تبقى الأموال وحركات الخصم والتسوية تحت السيطرة المصرفية الكاملة وفق تعليمات البنك المركزي.
+          توفر Ultimate Pay طبقة ربط تقني موحدة بين نتائج الدفع لدى مصرفكم أو محفظتكم وفواتير التجار وأنظمتهم المحاسبية. نسهل على تجاركم مطابقة العمليات وتحديث سجلاتهم فوراً، بينما تبقى حركات الأموال والخصم والإيداع والتسويات تحت السيطرة المصرفية الكاملة لمصرفكم.
         </p>
         <div class="speech-quote-pill bank-quote">
           <i class="fa-solid fa-handshake"></i>
-          <span>«إتاحة نموذج تكامل تقني يساعد المؤسسات المالية على توسيع نطاق وصول خدماتها إلى التجار، مع وضوح حركة العمليات وإمكانية تتبعها ومطابقتها المصرفية.»</span>
+          <span data-i18n="b_hero_quote">«طبقة ربط تقني تسد الفجوة بين نتيجة عملية الدفع لدى البنك ونظام التاجر المحاسبي، لتقليل الإدخال اليدوي وتسهيل تتبع الفواتير المسددة.»</span>
         </div>
         <div class="hero-actions">
           <a href="#bankPartnership" class="btn-primary btn-large">
-            <i class="fa-solid fa-network-wired"></i> <span data-i18n="b_hero_btn_arch">نموذج الشراكة والرقابة</span>
+            <i class="fa-solid fa-network-wired"></i> <span data-i18n="b_hero_btn_arch">نموذج الربط التقني</span>
           </a>
           <a href="#ctaSection" class="btn-secondary btn-large">
-            <i class="fa-solid fa-file-contract"></i> <span data-i18n="b_hero_btn_req">طلب جلسة شراكة مصرفية</span>
+            <i class="fa-solid fa-file-contract"></i> <span data-i18n="b_hero_btn_req">طلب جلسة شراكة تقنية</span>
           </a>
         </div>
         <div class="hero-trust-bar">
           <div class="trust-item">
-            <i class="fa-solid fa-scale-balanced"></i>
+            <i class="fa-solid fa-satellite-dish"></i>
             <div>
-              <strong data-i18n="b_trust_1_title">امتثال ورقابة صارمة</strong>
-              <span data-i18n="b_trust_1_sub">فحص لحظي للعمليات ومنع الازدواجية والاحتيال</span>
+              <strong data-i18n="b_trust_1_title">إيصال فوري لنتائج الدفع</strong>
+              <span data-i18n="b_trust_1_sub">إشعار التاجر بنتيجة السداد برقم مرجع موحد</span>
             </div>
           </div>
           <div class="trust-item">
-            <i class="fa-solid fa-coins"></i>
+            <i class="fa-solid fa-hashtag"></i>
             <div>
-              <strong data-i18n="b_trust_2_title">تسويات ومقاصة دقيقة</strong>
-              <span data-i18n="b_trust_2_sub">مطابقة بالمرجع الموحد وتقارير عمليات دقيقة</span>
+              <strong data-i18n="b_trust_2_title">مطابقة الفواتير بدقة</strong>
+              <span data-i18n="b_trust_2_sub">ربط نتيجة العملية بالفاتورة الصحيحة</span>
             </div>
           </div>
           <div class="trust-item">
-            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-code-merge"></i>
             <div>
-              <strong data-i18n="b_trust_3_title">إدارة تقنية وميدانية</strong>
-              <span data-i18n="b_trust_3_sub">تأهيل التجار وربط نقاط الدفع بالكامل</span>
+              <strong data-i18n="b_trust_3_title">دعم التكامل المحاسبي</strong>
+              <span data-i18n="b_trust_3_sub">تحديث سجلات التاجر وتسهيل تتبع السداد</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- HERO: PS (Payment Switch & POS) Track -->
-      <div class="hero-content track-content-ps" id="heroPS" style="display: none;">
-        <div class="hero-eyebrow">
-          <span class="badge-pulse"></span>
-          <span data-i18n="ps_eyebrow">منظومة المحول المالي ونقاط البيع الذكية (PS & Smart POS Ecosystem)</span>
-        </div>
-        <h1 class="hero-title">
-          <span data-i18n="ps_hero_title_1">جيل جديد من أجهزة نقاط البيع</span><br>
-          <span class="gradient-text" data-i18n="ps_hero_title_2">من تقنية Soft POS بهاتفك</span>
-          <span data-i18n="ps_hero_title_3">إلى أجهزة أندرويد الذكية وشبكات البطاقات</span>
-        </h1>
-        <p class="hero-desc" data-i18n="ps_hero_desc">
-          حلول دفع ذكية متعددة القنوات: تحويل هواتف أندرويد لأجهزة دفع لا تلامسية (Tap to Phone)، أجهزة أندرويد المتنقلة
-          مع طابعات حرارية مدمجة، ورموز QR الديناميكية المرتبطة بالفواتير مباشرة.
-        </p>
-        <div class="speech-quote-pill ps-quote" style="margin-bottom: 20px;">
-          <i class="fa-solid fa-microchip"></i>
-          <span>«منظومة PS ونقاط البيع الذكية والمحول المالي متخصصة في العتاد والأجهزة والتوجيه وحركات الدفع والتسويات المصرفية، وهي مستقلة تمامًا عن خدمة Payment Aggregator لتجميع ومطابقة بيانات الفواتير.»</span>
-        </div>
-        <div class="hero-actions">
-          <a href="#psSection" class="btn-primary btn-large">
-            <i class="fa-solid fa-microchip"></i> <span data-i18n="ps_hero_btn_devices">استكشف منظومة PS المستقلة</span>
-          </a>
-          <a href="#demoSimulator" class="btn-secondary btn-large">
-            <i class="fa-solid fa-play"></i> <span data-i18n="ps_hero_btn_sim">جرّب محاكاة Soft POS</span>
-          </a>
-        </div>
-        <div class="hero-trust-bar">
-          <div class="trust-item">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <div>
-              <strong data-i18n="ps_trust_1_title">Soft POS (Tap to Phone)</strong>
-              <span data-i18n="ps_trust_1_sub">دون تكاليف أجهزة إضافية</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <i class="fa-solid fa-print"></i>
-            <div>
-              <strong data-i18n="ps_trust_2_title">Smart Android POS</strong>
-              <span data-i18n="ps_trust_2_sub">طباعة فواتير، 4G، بطاقات ومحافظ</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <i class="fa-solid fa-qrcode"></i>
-            <div>
-              <strong data-i18n="ps_trust_3_title">رموز QR الديناميكية</strong>
-              <span data-i18n="ps_trust_3_sub">دفع آمن بالرمز التفاعلي المباشر</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Visual Interactive Mockup Card -->
+      <!-- Hero Visual: Clean Two-Track Architecture (Money Flow vs Information Flow) -->
       <div class="hero-visual">
-        <div class="pos-device-card glass-card">
-          <div class="device-status-bar">
-            <span><i class="fa-solid fa-wifi"></i> 4G / Wi-Fi</span>
-            <span class="device-brand">ULTIMATE POS</span>
-            <span><i class="fa-solid fa-battery-full"></i> 98%</span>
+        <div class="flow-architecture-card glass-card">
+          <div class="arch-card-header">
+            <div class="arch-badge"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="arch_title">نموذج عمل Payment Aggregator</span></div>
+            <span class="arch-sub-badge" data-i18n="arch_sub">فصل مسار الأموال عن مسار المعلومات</span>
           </div>
-          <div class="device-screen">
-            <div class="device-header-mini">
-              <span class="status-indicator online"></span>
-              <span data-i18n="sim_device_ready">الجهاز متصل وجاهز للتحصيل</span>
-            </div>
 
-            <div class="quick-amount-box">
-              <span class="currency-label" data-i18n="currency_yer">ريال يمني</span>
-              <div class="live-amount-display" id="heroLiveAmount">25,000</div>
-              <span class="invoice-ref">#INV-9482 • سوبرماركت النخبة</span>
+          <!-- Track 1: Money Flow -->
+          <div class="arch-track arch-money-track">
+            <div class="arch-track-title">
+              <span class="track-tag green"><i class="fa-solid fa-money-bill-transfer"></i> <strong data-i18n="arch_m_tag">مسار الأموال المباشر</strong></span>
+              <span class="track-status" data-i18n="arch_m_sub">الأموال تنتقل مباشرة بين الحسابين</span>
             </div>
-
-            <!-- Dynamic Channels Icons -->
-            <div class="supported-channels-mini">
-              <div class="channel-chip active"><i class="fa-solid fa-nfc-symbol"></i> NFC البطاقات</div>
-              <div class="channel-chip active"><i class="fa-solid fa-qrcode"></i> QR المحافظ</div>
-              <div class="channel-chip active"><i class="fa-solid fa-print"></i> أجهزة POS</div>
-            </div>
-
-            <div class="device-action-preview">
-              <div class="nfc-wave">
-                <i class="fa-solid fa-wave-square"></i>
-                <span data-i18n="sim_tap_hint">مرّر البطاقة أو الهاتف فوق الشاشة</span>
+            <div class="arch-flow-nodes">
+              <div class="arch-node">
+                <i class="fa-solid fa-user"></i>
+                <span data-i18n="arch_n1">حساب العميل</span>
+              </div>
+              <div class="arch-arrow green"><i class="fa-solid fa-arrow-left"></i></div>
+              <div class="arch-node highlight-bank">
+                <i class="fa-solid fa-building-columns"></i>
+                <span data-i18n="arch_n2">جهة الدفع (البنك / المحفظة)</span>
+              </div>
+              <div class="arch-arrow green"><i class="fa-solid fa-arrow-left"></i></div>
+              <div class="arch-node">
+                <i class="fa-solid fa-store"></i>
+                <span data-i18n="arch_n3">حساب التاجر المصرفي</span>
               </div>
             </div>
+          </div>
 
-            <div class="settlement-preview-badge">
-              <i class="fa-solid fa-check-double"></i>
-              <span data-i18n="sim_instant_sync">تسجيل تلقائي في أونكس ERP • إشعار فوري بالسداد</span>
+          <!-- Track 2: Information Flow -->
+          <div class="arch-track arch-info-track">
+            <div class="arch-track-title">
+              <span class="track-tag blue"><i class="fa-solid fa-network-wired"></i> <strong data-i18n="arch_i_tag">مسار المعلومات والتكامل</strong></span>
+              <span class="track-status" data-i18n="arch_i_sub">منصة Ultimate Pay</span>
             </div>
+            <div class="arch-flow-nodes">
+              <div class="arch-node">
+                <i class="fa-solid fa-satellite-dish"></i>
+                <span data-i18n="arch_n4">استلام نتيجة السداد</span>
+              </div>
+              <div class="arch-arrow blue"><i class="fa-solid fa-arrow-left"></i></div>
+              <div class="arch-node highlight-up">
+                <i class="fa-solid fa-bolt"></i>
+                <span data-i18n="arch_n5">Ultimate Pay: مطابقة الفاتورة</span>
+              </div>
+              <div class="arch-arrow blue"><i class="fa-solid fa-arrow-left"></i></div>
+              <div class="arch-node">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span data-i18n="arch_n6">تحديث Onyx ERP + إشعار التاجر</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Matching Preview Banner -->
+          <div class="arch-live-pill">
+            <span class="pulse-dot"></span>
+            <span data-i18n="arch_live">فاتورة <strong>#INV-1025</strong> • تم تأكيد السداد بمبلغ <strong>5,000 ريال</strong> • تحديث السجل المحاسبي تلقائياً</span>
           </div>
         </div>
       </div>
@@ -357,7 +325,7 @@
             <i class="fa-solid fa-building-columns"></i> <span data-i18n="track_banks">البنوك والمصارف</span>
           </button>
           <a href="ps.html" class="track-pill" style="text-decoration:none;">
-            <i class="fa-solid fa-microchip"></i> <span data-i18n="track_ps">نظام PS المستقل ←</span>
+            <i class="fa-solid fa-microchip"></i> <span data-i18n="track_ps_standalone">نظام PS المستقل ←</span>
           </a>
         </div>
       </div>
@@ -407,7 +375,7 @@
             </div>
             <h3 class="pillar-title" data-i18n="abt_role_t">الدور المحوري (Our Role)</h3>
             <p class="pillar-desc" data-i18n="abt_role_d">
-              قناة ربط وتكامل مركزية للمدفوعات ونقاط البيع، تجمع كافة المحافظ والبنوك في نقطة واحدة وتُعلم نظامك المحاسبي بنتيجة كل عملية لحظياً بمرجع موحد.
+              تربط Ultimate Pay نتائج الدفع بالفواتير والأنظمة المحاسبية للتجار. وعند تأكيد نجاح السداد، تُحدَّث بيانات الفاتورة محاسبيًا تلقائيًا، ويصل إشعار واضح للتاجر بعملية الدفع، بينما تنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع.
             </p>
           </div>
 
@@ -418,7 +386,7 @@
             </div>
             <h3 class="pillar-title" data-i18n="abt_sol_t">ما تعالجه المنصة</h3>
             <p class="pillar-desc" data-i18n="abt_sol_d">
-              القضاء على تشتت قنوات السداد، وتعدد العقود والحسابات المنفصلة، وكابوس المطابقة اليدوية وإدخال القيود والسندات في نهاية كل وردية.
+              القضاء على تشتت متابعة إشعارات السداد، وتجنب الإدخال اليدوي لبيانات الدفعات، والحد من أخطاء مطابقة الفواتير في النظام المحاسبي.
             </p>
           </div>
 
@@ -506,25 +474,22 @@
             <li>
               <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
               <div>
-                <strong data-i18n="gain_1_t">نقطة بيع واحدة تقبل الجميع</strong>
-                <p data-i18n="gain_1_d">استقبل كافة المحافظ (كريمي، جيب، جوال باي، كاش، إم فلوس...) والبطاقات المصرفية
-                  عبر جهاز أو جوال واحد.</p>
+                <strong data-i18n="gain_1_t">إدارة بيانات وسائل الدفع واعتمادها</strong>
+                <p data-i18n="gain_1_d">يستطيع التاجر عبر بوابته إدارة بيانات نقاط الدفع والمحافظ وحسابات البنوك التي يمتلكها وتقديم طلبات تفعيلها ومتابعة نتائجها في واجهة منظمة.</p>
               </div>
             </li>
             <li>
               <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
               <div>
-                <strong data-i18n="gain_2_t">تحصيل فوري بضغطة زر</strong>
-                <p data-i18n="gain_2_d">عبر تمرير البطاقة بالهاتف (Soft POS) أو مسح QR ديناميكي بقيمة الفاتورة المحددة
-                  دون أي خطأ في إدخال المبلغ.</p>
+                <strong data-i18n="gain_2_t">مطابقة فورية برقم الفاتورة</strong>
+                <p data-i18n="gain_2_d">عبر مسح رمز QR الفاتورة أو طلب الدفع المعتمد، لربط نتيجة العملية بالفاتورة الصحيحة دون أخطاء كتابة المبالغ يدوياً.</p>
               </div>
             </li>
             <li>
               <div class="icon-wrap success"><i class="fa-solid fa-check"></i></div>
               <div>
-                <strong data-i18n="gain_3_t">ترحيل آلي مباشر لنظام Onyx ERP</strong>
-                <p data-i18n="gain_3_d">كل عملية دفع تولّد قيداً محاسبياً تلقائياً في شجرتك المحاسبية؛ رصيدك مطابق
-                  فورياً بدون تدخل يدوي.</p>
+                <strong data-i18n="gain_3_t">تحديث محاسبي تلقائي في Onyx ERP</strong>
+                <p data-i18n="gain_3_d">عند تأكيد نجاح سداد الفاتورة، تستقبل Ultimate Pay نتيجة الدفع وتربطها بالفاتورة الصحيحة، ثم تُحدَّث بيانات السداد تلقائيًا في النظام المحاسبي المرتبط.</p>
               </div>
             </li>
             <li>
@@ -564,7 +529,7 @@
           </div>
           <h3 class="why-card-title" data-i18n="why_c1_t">منظومة ربط موحدة</h3>
           <p class="why-card-desc" data-i18n="why_c1_d">
-            واجهة واحدة لربط كافة المحافظ والبنوك وأنظمة ERP بدل قنوات متفرقة وعقود متعددة ومطابقة يدوية مرهقة في نهاية كل وردية.
+            واجهة تقنية واحدة لربط نتائج الدفع بالفواتير وأنظمة ERP للتاجر، بدل المتابعة اليدوية المتفرقة والإدخال اليدوي المرهق.
           </p>
           <div class="why-card-footer">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c1_f">توفير إداري وقانوني فوري</span>
@@ -579,7 +544,7 @@
           </div>
           <h3 class="why-card-title" data-i18n="why_c2_t">شركة مالية مرخصة رسمياً</h3>
           <p class="why-card-desc" data-i18n="why_c2_d">
-            تعمل تحت إشراف وترخيص البنك المركزي اليمني، ومعتمدة بأعلى معايير الأمان الدولية (شهادة PCI-DSS العالمية) لحماية أموالك وبياناتك.
+            تعمل تحت إشراف وتنظيم البنك المركزي اليمني، ملتزمة بضوابط حماية البيانات وسرية المعاملات المالية المعتمدة.
           </p>
           <div class="why-card-footer">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c2_f">أمان وموثوقية مصرفية كاملة</span>
@@ -592,9 +557,9 @@
             <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <span class="why-badge" data-i18n="why_b3">حوكمة منضبطة</span>
           </div>
-          <h3 class="why-card-title" data-i18n="why_c3_t">ربط محكوم مصرفياً</h3>
+          <h3 class="why-card-title" data-i18n="why_c3_t">إدارة بيانات وسائل الدفع واعتمادها</h3>
           <p class="why-card-desc" data-i18n="why_c3_d">
-            لا تُفعّل أي قناة دفع لدى التاجر إلا باعتماد وتدقيق المؤسسة المالية صاحبة الحساب المصرفي لضمان الانضباط التام ومنع أي تجاوز.
+            يقدّم التاجر بيانات نقاط الدفع والمحافظ عبر بوابته، وتخضع للمراجعة والاعتماد وفق الصلاحيات والإجراءات المعتمدة لدى الجهة المالية.
           </p>
           <div class="why-card-footer">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c3_f">تدفق اعتماد رسمي ومنضبط</span>
@@ -607,9 +572,9 @@
             <div class="why-icon"><i class="fa-solid fa-arrows-spin"></i></div>
             <span class="why-badge" data-i18n="why_b4">أتمتة محاسبية حقيقية</span>
           </div>
-          <h3 class="why-card-title" data-i18n="why_c4_t">تكامل محاسبي مع أنظمة التاجر (Onyx ERP)</h3>
+          <h3 class="why-card-title" data-i18n="why_c4_t">تكامل محاسبي مع أنظمة التاجر (مثل Onyx ERP)</h3>
           <p class="why-card-desc" data-i18n="why_c4_d">
-            ربط بيانات الدفع بعملية البيع برقم مرجع موحد (RRN)، بما يدعم وضوح التحصيل ومتابعة السجلات المحاسبية ومطابقة العمليات وفق التكامل المعتمد.
+            عند تأكيد نجاح السداد، تُحدَّث بيانات الفاتورة محاسبيًا تلقائيًا، لتقليل الإدخال اليدوي وضمان وضوح حالة الفواتير.
           </p>
           <div class="why-card-footer">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="why_c4_f">مطابقة تامة ومنع عجز الصناديق</span>
@@ -1052,14 +1017,14 @@
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag" style="background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.35);color:var(--emerald-400);">
-          <i class="fa-solid fa-diagram-project"></i> المخطط التشغيلي والمالي المعتمد
+          <i class="fa-solid fa-diagram-project"></i> <span data-i18n="wf_tag">رحلة معلومات الدفع والتكامل المحاسبي</span>
         </span>
         <h2 class="section-title">
-          <span>مخطط عمل المنصة والدورة الكاملة</span><br>
-          <span class="gradient-text">للدفع والمطابقة والتسويات البنكية</span>
+          <span data-i18n="wf_title_1">مخطط رحلة معلومات الدفع</span><br>
+          <span class="gradient-text" data-i18n="wf_title_2">من تأكيد السداد إلى التحديث المحاسبي وإشعار التاجر</span>
         </h2>
-        <p class="section-desc">
-          المخطط الانسيابي الرسمي الذي يوضح رحلة العملية المالية والمعلوماتية بين العميل، نظام Onyx ERP، المحفظة الإلكترونية، منصة Ultimate Pay، والحساب البنكي المعتمد للتاجر.
+        <p class="section-desc" data-i18n="wf_subtitle">
+          المخطط التوضيحي الذي يبيّن تدفق معلومات العملية بين نظام التاجر المحاسبي (مثل Onyx ERP)، جهة الدفع المعتمدة، ومنصة Ultimate Pay، مع بيان فصل مسار الأموال المباشر عن مسار المعلومات.
         </p>
       </div>
 
@@ -1068,19 +1033,19 @@
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
           <div>
             <h3 style="color:#F8FAFC;font-size:1.25rem;font-weight:700;margin:0 0 4px 0;">
-              <i class="fa-solid fa-sitemap" style="color:#10B981;margin-left:8px;"></i>مخطط دورة الدفع والتسويات البنكية (Onyx ERP ↔ Ultimate Pay)
+              <i class="fa-solid fa-sitemap" style="color:#10B981;margin-left:8px;"></i><span data-i18n="wf_flow_title">مخطط تدفق معلومات الدفع والتكامل المحاسبي (Onyx ERP ↔ Ultimate Pay)</span>
             </h3>
-            <p style="color:#94A3B8;font-size:0.85rem;margin:0;">انقر على المخطط لتكبيره واستعراض كافة المسارات والتفرعات بدقة فائقة 100%</p>
+            <p style="color:#94A3B8;font-size:0.85rem;margin:0;" data-i18n="wf_flow_sub">تنبيه توضيحي: Ultimate Pay منصة تقنية لمعالجة بيانات الدفع والتكامل المحاسبي؛ انتقال الأموال يتم مباشرة بين حساب العميل وحساب التاجر لدى المؤسسة المالية المعنية.</p>
           </div>
-          <button class="btn-ghost" onclick="openImageModal('assets/diagrams/full_payment_cycle_flowchart.jpeg', 'الدورة الكاملة للدفع والتسويات البنكية — Ultimate Pay')" style="padding:8px 16px;border-radius:12px;font-size:0.88rem;cursor:pointer;">
-            <i class="fa-solid fa-expand"></i> <span>تكبير المخطط بالكامل</span>
+          <button class="btn-ghost" onclick="openImageModal('assets/diagrams/full_payment_cycle_flowchart.jpeg', 'مخطط تدفق معلومات الدفع والتكامل المحاسبي — Ultimate Pay')" style="padding:8px 16px;border-radius:12px;font-size:0.88rem;cursor:pointer;">
+            <i class="fa-solid fa-expand"></i> <span data-i18n="wf_btn_zoom">تكبير المخطط بالكامل</span>
           </button>
         </div>
 
-        <div class="workflow-img-container" onclick="openImageModal('assets/diagrams/full_payment_cycle_flowchart.jpeg', 'الدورة الكاملة للدفع والتسويات البنكية — Ultimate Pay')">
-          <img src="assets/diagrams/full_payment_cycle_flowchart.jpeg" alt="مخطط الدورة الكاملة للدفع والتسويات البنكية Ultimate Pay">
+        <div class="workflow-img-container" onclick="openImageModal('assets/diagrams/full_payment_cycle_flowchart.jpeg', 'مخطط تدفق معلومات الدفع والتكامل المحاسبي — Ultimate Pay')">
+          <img src="assets/diagrams/full_payment_cycle_flowchart.jpeg" alt="مخطط تدفق معلومات الدفع والتكامل المحاسبي Ultimate Pay">
           <div class="zoom-overlay-hint">
-            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير والتفاصيل الكاملة
+            <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="wf_hint_zoom">انقر للتكبير والتفاصيل الكاملة</span>
           </div>
         </div>
 
@@ -1089,40 +1054,40 @@
           <div class="phase-card">
             <div class="phase-card-header">
               <div class="phase-badge-num">1</div>
-              <h4 class="phase-title">طلب الدفع R2P (نظام Onyx ERP)</h4>
+              <h4 class="phase-title" data-i18n="p1_title">1. طلب الدفع R2P (نظام Onyx ERP)</h4>
             </div>
-            <p class="phase-desc">
-              إنشاء الفاتورة في نظام التاجر (مثل 10,000 ريال)، وبدء طلب الدفع R2P مع توليد بيانات ورمز QR موحد ومحدد المبلغ.
+            <p class="phase-desc" data-i18n="p1_desc">
+              إنشاء الفاتورة في نظام التاجر بمبلغ محدد، وبدء طلب الدفع R2P مع توليد بيانات ورمز QR موحد ومحدد بمبلغ الفاتورة.
             </p>
           </div>
 
           <div class="phase-card">
             <div class="phase-card-header">
               <div class="phase-badge-num">2</div>
-              <h4 class="phase-title">الدفع ومسح الرمز (المحفظة / البنك)</h4>
+              <h4 class="phase-title" data-i18n="p2_title">2. سداد العميل عبر جهة الدفع</h4>
             </div>
-            <p class="phase-desc">
-              مسح الرمز عبر تطبيق العميل، مراجعة وتأكيد السداد، خصم المبلغ، وتوليد رقم مرجع العملية المعتمد (Transaction Reference).
+            <p class="phase-desc" data-i18n="p2_desc">
+              يسدد العميل عبر محفظته أو تطبيقه البنكي المعتمد، وتنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع مع توليد رقم المرجع.
             </p>
           </div>
 
           <div class="phase-card">
             <div class="phase-card-header">
               <div class="phase-badge-num">3</div>
-              <h4 class="phase-title">المطابقة والـ Webhook (منصة Ultimate Pay)</h4>
+              <h4 class="phase-title" data-i18n="p3_title">3. استلام النتيجة ومطابقة الفاتورة (Ultimate Pay)</h4>
             </div>
-            <p class="phase-desc">
-              التحقق الآلي من تطابق المرجع والمبلغ، إرسال إشعار Webhook فوري لنظام Onyx لتحديث الفاتورة (مدفوعة) وقيدها محاسبياً دون تدخل بشري.
+            <p class="phase-desc" data-i18n="p3_desc">
+              تستقبل منصة Ultimate Pay نتيجة العملية المؤكدة من جهة الدفع، وتطابقها بالفاتورة الصحيحة باستخدام بيانات المرجع والمبلغ المتاحة.
             </p>
           </div>
 
           <div class="phase-card">
             <div class="phase-card-header">
               <div class="phase-badge-num">4</div>
-              <h4 class="phase-title">التسوية البنكية والمطابقة المصرفية</h4>
+              <h4 class="phase-title" data-i18n="p4_title">4. التحديث المحاسبي التلقائي وإشعار التاجر</h4>
             </div>
-            <p class="phase-desc">
-              إعداد ملف التسوية اليومي، فحص وتغذية السيولة، وتنفيذ التحويل المباشر لحساب التاجر البنكي مع إغلاق ومطابقة التسوية المنفذة.
+            <p class="phase-desc" data-i18n="p4_desc">
+              تُحدَّث بيانات السداد تلقائياً في النظام المحاسبي المرتبط (مثل Onyx ERP)، ويصل إشعار فوري للتاجر يوضح رقم الفاتورة والمبلغ وحالة العملية.
             </p>
           </div>
         </div>
@@ -1134,37 +1099,41 @@
   <section class="section section-simulator" id="demoSimulator">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag" data-i18n="tag_simulator">تجربة حية تفاعلية</span>
+        <span class="section-tag" data-i18n="tag_simulator">محاكاة تعليمية لمسار المعلومات</span>
         <h2 class="section-title">
-          <span data-i18n="sim_title_1">جرّب بنفسك:</span>
-          <span class="gradient-text" data-i18n="sim_title_2">كيف تتم عمليات الدفع</span>
-          <span data-i18n="sim_title_3">في ثوانٍ معدودة؟</span>
+          <span data-i18n="sim_title_1">محاكاة تفاعلية:</span>
+          <span class="gradient-text" data-i18n="sim_title_2">كيف تصل نتيجة السداد</span>
+          <span data-i18n="sim_title_3">وتُحدَّث الفاتورة تلقائياً؟</span>
         </h2>
         <p class="section-desc" data-i18n="sim_subtitle">
-          اختر وسيلة الدفع أدناه، واضغط لتنفيذ عملية تحصيل حقيقية ومتابعة الترحيل المالي الفوري.
+          اختر قناة الدفع أدناه، وشاهد كيف تستقبل Ultimate Pay نتيجة العملية وتطابقها بالفاتورة وتُحدّث النظام المحاسبي.
         </p>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25);color:#FBBF24;padding:6px 16px;border-radius:20px;font-size:0.8rem;margin-top:10px;">
+          <i class="fa-solid fa-circle-info"></i>
+          <span data-i18n="sim_disclaimer">محاكاة توضيحية تعليمية لمسار معلومات الدفع والتكامل المحاسبي، وليست معاملة مالية حقيقية</span>
+        </div>
       </div>
 
       <div class="simulator-wrapper glass-card">
         <!-- Simulator Mode Selector Tabs -->
         <div class="sim-tabs">
-          <button class="sim-tab active" data-mode="softpos">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <span data-i18n="sim_tab_softpos">Soft POS (Tap to Phone)</span>
+          <button class="sim-tab active" data-mode="wallet">
+            <i class="fa-solid fa-wallet"></i>
+            <span data-i18n="sim_tab_wallet">سداد عبر المحفظة الإلكترونية</span>
+          </button>
+          <button class="sim-tab" data-mode="bank_app">
+            <i class="fa-solid fa-building-columns"></i>
+            <span data-i18n="sim_tab_bank">سداد عبر التطبيق البنكي</span>
           </button>
           <button class="sim-tab" data-mode="qr">
             <i class="fa-solid fa-qrcode"></i>
-            <span data-i18n="sim_tab_qr">الدفع عبر رمز QR</span>
-          </button>
-          <button class="sim-tab" data-mode="pos">
-            <i class="fa-solid fa-print"></i>
-            <span data-i18n="sim_tab_pos">جهاز أندرويد POS الذكي</span>
+            <span data-i18n="sim_tab_qr">مسح رمز QR الفاتورة</span>
           </button>
         </div>
 
         <!-- Simulator Interactive Area -->
         <div class="sim-stage">
-          <!-- Left: The Merchant Phone / Terminal Screen -->
+          <!-- Left: Information Flow Simulation Screen -->
           <div class="sim-device-frame">
             <div class="phone-notch"></div>
 
@@ -1172,14 +1141,14 @@
               <!-- Step 1: Input -->
               <div class="sim-step" id="simStepInput">
                 <div class="sim-app-header">
-                  <div class="sim-brand"><i class="fa-solid fa-bolt"></i> Ultimate Pay POS</div>
-                  <span class="badge-branch">فرع حدة • كاشير 1</span>
+                  <div class="sim-brand"><i class="fa-solid fa-bolt"></i> Ultimate Pay Simulator</div>
+                  <span class="badge-branch" data-i18n="sim_badge_info">مسار معلومات الدفع</span>
                 </div>
 
                 <div class="sim-amount-container">
-                  <label data-i18n="sim_enter_amount">أدخل مبلغ الفاتورة:</label>
+                  <label data-i18n="sim_enter_amount">مبلغ الفاتورة الصادرة:</label>
                   <div class="sim-amount-input-group">
-                    <input type="number" id="simInputAmount" value="18500" min="500" step="500">
+                    <input type="number" id="simInputAmount" value="5000" min="500" step="500">
                     <span class="currency">YER</span>
                   </div>
                 </div>
@@ -1187,11 +1156,11 @@
                 <div class="sim-order-info">
                   <div class="info-row">
                     <span data-i18n="sim_inv_no">رقم الفاتورة:</span>
-                    <strong id="simInvNo">#UP-2026-8819</strong>
+                    <strong id="simInvNo">#INV-1025</strong>
                   </div>
                   <div class="info-row">
-                    <span data-i18n="sim_customer">العميل:</span>
-                    <span data-i18n="sim_walkin">عميل تجزئة / نقدي</span>
+                    <span data-i18n="sim_customer">نظام التاجر المرتبط:</span>
+                    <span data-i18n="sim_erp_target">Onyx ERP Pro</span>
                   </div>
                 </div>
 
@@ -1200,7 +1169,7 @@
                 </div>
 
                 <button class="btn-primary btn-block sim-action-btn" id="btnExecuteSim">
-                  <i class="fa-solid fa-circle-check"></i> <span id="simBtnLabel">تنفيذ عملية التحصيل الآن</span>
+                  <i class="fa-solid fa-paper-plane"></i> <span id="simBtnLabel" data-i18n="sim_btn_trigger">محاكاة وصول تأكيد السداد من جهة الدفع</span>
                 </button>
               </div>
 
@@ -1208,35 +1177,38 @@
               <div class="sim-step" id="simStepProcessing" style="display: none;">
                 <div class="sim-processing-box">
                   <div class="spinner-ring"></div>
-                  <h4 data-i18n="sim_processing_title">جاري التوجيه عبر المحول المالي...</h4>
-                  <p data-i18n="sim_processing_sub">فحص الأمان وتأكيد نتيجة العملية</p>
+                  <h4 data-i18n="sim_processing_title">جاري استلام نتيجة السداد ومطابقة الفاتورة...</h4>
+                  <p data-i18n="sim_processing_sub">التحقق من رقم المرجع والمبلغ وتحديث النظام المحاسبي</p>
                   <div class="switch-routing-badge">
-                    <span>Ultimate Payment Switch</span>
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    <span>البنك المركزي / محفظة العميل</span>
+                    <span data-i18n="sim_route_src">جهة الدفع (البنك / المحفظة)</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Ultimate Pay</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span data-i18n="sim_route_dst">نظام Onyx ERP</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Step 3: Success Receipt -->
+              <!-- Step 3: Success Result -->
               <div class="sim-step" id="simStepSuccess" style="display: none;">
                 <div class="sim-receipt-box">
                   <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-                  <h4 data-i18n="sim_success_title">تمت العملية بنجاح!</h4>
-                  <div class="receipt-amount" id="receiptAmountDisplay">18,500 YER</div>
+                  <h4 data-i18n="sim_success_title">تم تأكيد السداد وتحديث الفاتورة بنجاح!</h4>
+                  <div class="receipt-amount" id="receiptAmountDisplay">5,000 YER</div>
 
                   <div class="receipt-details">
-                    <div class="r-row"><span>رقم المرجع (RRN):</span> <strong id="receiptRrn">9823471029</strong></div>
-                    <div class="r-row"><span>وسيلة الدفع:</span> <strong id="receiptMethod">Soft POS (NFC
-                        Contactless)</strong></div>
-                    <div class="r-row"><span>التاريخ والوقت:</span> <strong id="receiptTime">الآن</strong></div>
-                    <div class="r-row highlight"><span>تكامل الأونكس ERP:</span> <strong class="text-success"><i
-                          class="fa-solid fa-check"></i> تم تسجيل مبلغ الفاتورة تلقائيًا</strong></div>
+                    <div class="r-row"><span data-i18n="sim_r_status">حالة العملية:</span> <strong class="text-success" data-i18n="sim_r_status_val">ناجحة ومؤكدة</strong></div>
+                    <div class="r-row"><span data-i18n="sim_r_inv">رقم الفاتورة:</span> <strong id="receiptInvDisplay">#INV-1025</strong></div>
+                    <div class="r-row"><span data-i18n="sim_r_rrn">رقم المرجع (RRN):</span> <strong id="receiptRrn">9823471029</strong></div>
+                    <div class="r-row"><span data-i18n="sim_r_channel">قناة السداد:</span> <strong id="receiptMethod">المحفظة الإلكترونية</strong></div>
+                    <div class="r-row highlight"><span data-i18n="sim_r_money">مسار الأموال:</span> <strong style="color:#34D399;"><i class="fa-solid fa-check"></i> مباشر لحساب التاجر</strong></div>
+                    <div class="r-row highlight"><span data-i18n="sim_r_erp">التكامل المحاسبي:</span> <strong class="text-success"><i class="fa-solid fa-check"></i> تم تحديث سجل الفاتورة في Onyx ERP</strong></div>
+                    <div class="r-row"><span data-i18n="sim_r_notif">إشعار التاجر:</span> <strong style="color:#FBBF24;"><i class="fa-solid fa-bell"></i> تم تسليم إشعار السداد فوراً</strong></div>
                   </div>
 
                   <div class="receipt-actions">
                     <button class="btn-ghost btn-sm" id="btnSimReset">
-                      <i class="fa-solid fa-rotate-left"></i> <span data-i18n="sim_new_txn">عملية تجريبية جديدة</span>
+                      <i class="fa-solid fa-rotate-left"></i> <span data-i18n="sim_new_txn">محاكاة عملية جديدة</span>
                     </button>
                   </div>
                 </div>
@@ -1247,50 +1219,47 @@
           <!-- Right: Live Behind-the-Scenes Ledger & Value Explanation -->
           <div class="sim-explanation">
             <h3 class="exp-title">
-              <i class="fa-solid fa-bolt text-accent"></i>
-              <span data-i18n="sim_exp_title">ماذا يحدث في خلفية العملية؟</span>
+              <i class="fa-solid fa-network-wired text-accent"></i>
+              <span data-i18n="sim_exp_title">تسلسل تدفق المعلومات في Ultimate Pay</span>
             </h3>
             <p class="exp-desc" data-i18n="sim_exp_desc">
-              تتحول العملية المعقدة تقنياً إلى تجربة فورية وسلسة تمنح التاجر أماناً مصرفياً كاملاً:
+              توضيح الخطوات التي تحدث عند تأكيد الدفع لربط النتيجة بالفاتورة وإشعار التاجر:
             </p>
 
             <div class="backend-steps">
               <div class="b-step">
                 <div class="b-num">1</div>
                 <div>
-                  <h4 data-i18n="b_step_1_t">التحقق الأمني اللحظي</h4>
-                  <p data-i18n="b_step_1_d">تشفير كامل وفق معيار PCI-DSS، مع فحص سريع لمنع الاحتيال وازدواجية العمليات.
-                  </p>
+                  <h4 data-i18n="b_step_1_t">1. سداد العميل لدى جهة الدفع</h4>
+                  <p data-i18n="b_step_1_d">يدفع العميل عبر محفظته أو بنكه، وتنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر لدى جهة الدفع.</p>
                 </div>
               </div>
               <div class="b-step">
                 <div class="b-num">2</div>
                 <div>
-                  <h4 data-i18n="b_step_2_t">التوجيه الذكي بالمحول المالي (Switching)</h4>
-                  <p data-i18n="b_step_2_d">إرسال طلب الخصم مباشرة للبنك أو المحفظة المصدرة بزمن استجابة أقل من ثانيتين.
-                  </p>
+                  <h4 data-i18n="b_step_2_t">2. وصول نتيجة الدفع للمنصة</h4>
+                  <p data-i18n="b_step_2_d">تستقبل Ultimate Pay نتيجة العملية المؤكدة مع رقم المرجع المعتمد عبر آلية الربط التقني المعتمدة.</p>
                 </div>
               </div>
               <div class="b-step">
                 <div class="b-num">3</div>
                 <div>
-                  <h4 data-i18n="b_step_3_t">التكامل مع النظام المحاسبي (Onyx ERP)</h4>
-                  <p data-i18n="b_step_3_d">تسجيل مبلغ الفاتورة تلقائيًا في النظام المحاسبي للتاجر عند تأكيد نجاح العملية وتفعيل التكامل المعتمد.</p>
+                  <h4 data-i18n="b_step_3_t">3. مطابقة الفاتورة والتحديث المحاسبي</h4>
+                  <p data-i18n="b_step_3_d">تُطابق المنصة النتيجة بالفاتورة الصحيحة، ثم تُحدَّث بيانات السداد تلقائيًا في النظام المحاسبي المرتبط (مثل Onyx ERP).</p>
                 </div>
               </div>
               <div class="b-step">
                 <div class="b-num">4</div>
                 <div>
-                  <h4 data-i18n="b_step_4_t">إشعار السداد والمطابقة</h4>
-                  <p data-i18n="b_step_4_d">استلام إشعار سداد الفاتورة ومطابقة السجلات بالمرجع الموحد بدقة تامة.</p>
+                  <h4 data-i18n="b_step_4_t">4. إشعار التاجر الفوري</h4>
+                  <p data-i18n="b_step_4_d">يصل إشعار واضح وموثق للتاجر يوضح رقم الفاتورة والمبلغ وحالة العملية فور اكتمال السداد.</p>
                 </div>
               </div>
             </div>
 
             <div class="merchant-badge-highlight">
               <i class="fa-solid fa-shield-halved"></i>
-              <span><strong>ضمان الاستقرار:</strong> نسبة نجاح عمليات تفوق 99.8% مع جاهزية تشغيلية مستمرة على مدار
-                الساعة.</span>
+              <span data-i18n="sim_foot_badge"><strong>مبدأ تشغيلي أساسي:</strong> Ultimate Pay تتعامل مع بيانات العملية والنتيجة والتكامل المحاسبي، ولا تستلم أموال العملاء ولا تحتفظ بأرصدتهم.</span>
             </div>
           </div>
         </div>
@@ -1302,175 +1271,161 @@
   <section class="section section-services" id="servicesGrid">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag" data-i18n="tag_services">خدمات متكاملة ومنظومة متطورة</span>
+        <span class="section-tag" data-i18n="tag_services">خدمات منصة Payment Aggregator</span>
         <h2 class="section-title">
-          <span data-i18n="serv_title_1">حلول متخصصة لكل قناة تحصيل:</span>
-          <span class="gradient-text" data-i18n="serv_title_2">من المتاجر التقليدية</span>
-          <span data-i18n="serv_title_3">إلى المصارف والتجارة الإلكترونية</span>
+          <span data-i18n="serv_title_1">خدمات الربط والمطابقة والتكامل:</span><br>
+          <span class="gradient-text" data-i18n="serv_title_2">من تأكيد نتيجة الدفع</span>
+          <span data-i18n="serv_title_3">إلى التحديث المحاسبي وإشعار التاجر</span>
         </h2>
         <p class="section-desc" data-i18n="serv_subtitle">
-          مستوحاة من أحدث تقنيات الدفع العالمية ومتوافقة بالكامل مع بيئة الأعمال اليمنية المعتمدة.
+          حلول تقنية متخصصة لربط فواتير التجار بنتائج الدفع لدى البنوك والمحافظ وأتمتة المطابقة المحاسبية.
         </p>
-      <!-- Unified Journey Map: One Single Flow, Not Disjointed Services -->
+      </div>
+
+      <!-- Unified Journey Map: One Single Flow -->
       <div class="journey-map-banner">
         <div class="journey-map-title">
           <i class="fa-solid fa-route"></i>
-          <h3>خريطة المنظومة: أجزاء من رحلة واحدة وليست خدمات منفصلة</h3>
+          <h3 data-i18n="j_map_title">تسلسل تدفق خدمة Payment Aggregator</h3>
         </div>
-        <p class="journey-map-lead">
-          «ما نريد تحقيقه هو أن تكون عملية الدفع واضحة ومترابطة من لحظة طلبها، مرورًا بتأكيد نتيجتها، وصولًا إلى ربطها بسجلات التاجر ومطابقتها المصرفية:»
+        <p class="journey-map-lead" data-i18n="j_map_lead">
+          «عملية الدفع تكون واضحة ومترابطة من لحظة طلبها، مرورًا بتأكيد نتيجتها، وصولًا إلى ربطها بسجلات التاجر المحاسبية وإشعاره بالنتيجة:»
         </p>
 
         <div class="journey-map-grid">
           <div class="j-node-item">
             <span class="j-node-num">1</span>
-            <strong>Payment Aggregator</strong>
-            <p>منصة تجميع وربط قنوات الدفع المتعددة بالتجار عبر واجهة موحدة.</p>
+            <strong data-i18n="jn_1_t">فاتورة التاجر</strong>
+            <p data-i18n="jn_1_d">إصدار فاتورة محددة الرقم والمبلغ في نظام التاجر.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">2</span>
-            <strong>PS ونقاط البيع</strong>
-            <p>منظومة الدفع والأجهزة المادية والذكية المستخدمة لتنفيذ المعاملة.</p>
+            <strong data-i18n="jn_2_t">سداد العميل</strong>
+            <p data-i18n="jn_2_d">سداد مباشر عبر وسيلة الدفع لدى البنك أو المحفظة.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">3</span>
-            <strong>رموز QR Code</strong>
-            <p>وسيلة لعرض طلب الدفع ومبلغه بدقة لتمكين العميل من السداد السريع.</p>
+            <strong data-i18n="jn_3_t">تأكيد النتيجة</strong>
+            <p data-i18n="jn_3_d">وصول نتيجة العملية المؤكدة إلى Ultimate Pay.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">4</span>
-            <strong>قنوات الربط المعتمدة</strong>
-            <p>آليات موثوقة لتبادل بيانات العمليات وتأكيد نتائج السداد لحظياً.</p>
+            <strong data-i18n="jn_4_t">مطابقة الفاتورة</strong>
+            <p data-i18n="jn_4_d">ربط نتيجة الدفع بالفاتورة الصحيحة بالمرجع والمبلغ.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">5</span>
-            <strong>نظام Onyx ERP</strong>
-            <p>النظام المحاسبي لربط بيانات الدفع بالفاتورة وتوثيق التحصيل وفق التكامل المعتمد.</p>
+            <strong data-i18n="jn_5_t">التحديث المحاسبي</strong>
+            <p data-i18n="jn_5_d">تحديث بيانات السداد تلقائياً في Onyx ERP.</p>
           </div>
           <div class="j-node-item">
             <span class="j-node-num">6</span>
-            <strong>Merchant Portal</strong>
-            <p>بوابة التاجر لمتابعة العمليات والفواتير المسددة والتقارير الرقابية.</p>
+            <strong data-i18n="jn_6_t">إشعار التاجر</strong>
+            <p data-i18n="jn_6_d">إشعار فوري يوضح رقم الفاتورة والمبلغ وحالة العملية.</p>
           </div>
         </div>
       </div>
 
       <div class="services-cards-grid">
-        <!-- Service 1: Soft POS -->
+        <!-- Service 1: Payment Result Matching -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-            <span class="serv-badge badge-cyan" data-i18n="s1_badge">الأكثر ابتكاراً</span>
+            <div class="serv-icon"><i class="fa-solid fa-code-compare"></i></div>
+            <span class="serv-badge badge-cyan" data-i18n="s1_badge">جوهر المنصة</span>
           </div>
-          <h3 class="serv-name" data-i18n="s1_name">نقاط البيع عبر الهاتف (Soft POS)</h3>
+          <h3 class="serv-name" data-i18n="s1_name">ربط ومطابقة نتائج الدفع بالفواتير</h3>
           <p class="serv-desc" data-i18n="s1_desc">
-            حوّل أي هاتف ذكي يعمل بنظام أندرويد ويدعم NFC إلى جهاز نقطة بيع متكامل. يقبل الدفع بالبطاقات والمحافظ
-            اللاتلامسية دون الحاجة لشراء أو استئجار أجهزة نقاط بيع مادية باهظة.
+            استقبال نتائج السداد المعتمدة من البنوك والمحافظ ومطابقتها آلياً برقم الفاتورة الصحيح ومرجع العملية المعتمد دون خلط أو ازدواجية.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f1">صفر تكلفة أجهزة إضافية</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f2">مثالي لخدمات التوصيل والمندوبين والمتاجر
-                الصغيرة</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f3">معتمد ومحمي بأعلى معايير تشفير البطاقات</span>
-            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f1">ربط فوري برقم الفاتورة والمرجع المعتمد</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f2">مطابقة آلية تقضي على التضارب والنزاعات</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1_f3">متابعة مركزية لكافة نتائج السداد</span></li>
           </ul>
         </article>
 
-        <!-- Service 2: Smart Android POS -->
+        <!-- Service 2: Automated ERP Sync -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-cash-register"></i></div>
-            <span class="serv-badge badge-green" data-i18n="s2_badge">للفروع الكبرى</span>
+            <div class="serv-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+            <span class="serv-badge badge-green" data-i18n="s2_badge">تكامل جوهري</span>
           </div>
-          <h3 class="serv-name" data-i18n="s2_name">أجهزة نقاط البيع الذكية (Android POS)</h3>
+          <h3 class="serv-name" data-i18n="s2_name">التكامل المحاسبي مع Onyx ERP</h3>
           <p class="serv-desc" data-i18n="s2_desc">
-            أجهزة مخصصة متينة، مزودة بشاشة لمس سريعة، طابعة إيصالات حرارية مدمجة، قارئ بطاقات شريحية ومغناطيسية، وكاميرا
-            مسح أكواد QR.
+            تحديث بيانات السداد تلقائياً في النظام المحاسبي للتاجر فور وصول تأكيد نجاح العملية، لتقليل الإدخال اليدوي وتسهيل تتبع الفواتير.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f1">اتصال دائم عبر 4G و Wi-Fi</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f2">طباعة إيصالات ورقية فورية وتقارير مبيعات
-                تفصيلية</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f3">بطارية قوية تصمد طوال ساعات العمل
-                الشاقة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f1">تسجيل بيانات السداد تلقائياً بدل الإدخال اليدوي</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f2">مطابقة مستمرة تمنع الفروقات وعجز الصناديق</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2_f3">دعم التكامل مع Onyx Pro والمتميز</span></li>
           </ul>
         </article>
 
-        <!-- Service 3: Dynamic QR Code -->
+        <!-- Service 3: Dynamic QR Code & R2P -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
             <div class="serv-icon"><i class="fa-solid fa-qrcode"></i></div>
-            <span class="serv-badge badge-gold" data-i18n="s3_badge">سريع وبدون تلامس</span>
+            <span class="serv-badge badge-gold" data-i18n="s3_badge">طلب الدفع R2P</span>
           </div>
-          <h3 class="serv-name" data-i18n="s3_name">رموز الدفع والاستجابة السريعة (QR Code)</h3>
+          <h3 class="serv-name" data-i18n="s3_name">خدمة طلب الدفع ورموز QR الديناميكية</h3>
           <p class="serv-desc" data-i18n="s3_desc">
-            رموز QR ديناميكية تظهر على شاشة الكاشير متضمنة قيمة الفاتورة ورقمها، أو رموز ثابتة مطبوعة على طاولات المطاعم
-            ونقاط التحصيل.
+            إصدار طلبات دفع ورموز QR محددة برقم الفاتورة والمبلغ الدقيق لتسهيل سداد العميل عبر محفظته أو تطبيقه البنكي دون خطأ في إدخال المبلغ.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f1">يلغي خطأ كتابة المبلغ من قبل المشتري
-                نهائياً</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f2">يدعم تطبيقات كافة البنوك والمحافظ
-                الإلكترونية</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f3">إشعار صوتي ومرئي فوري عند اكتمال الدفع</span>
-            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f1">يلغي خطأ كتابة المبلغ من قبل المشتري نهائياً</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f2">يدعم تطبيقات البنوك والمحافظ المعتمدة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3_f3">ربط مباشر برقم الفاتورة في النظام المحاسبي</span></li>
           </ul>
         </article>
 
-        <!-- Service 4: Smart Integration & Connection -->
+        <!-- Service 4: Merchant Portal -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-network-wired"></i></div>
-            <span class="serv-badge badge-purple" data-i18n="s4_badge">ربط موحد وتكامل سلس</span>
+            <div class="serv-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <span class="serv-badge badge-purple" data-i18n="s4_badge">إدارة ومتابعة</span>
           </div>
-          <h3 class="serv-name" data-i18n="s4_name">حلول الربط والتكامل الذكي</h3>
+          <h3 class="serv-name" data-i18n="s4_name">بوابة التاجر وإدارة بيانات وسائل الدفع</h3>
           <p class="serv-desc" data-i18n="s4_desc">
-            آليات ربط معتمدة لإصدار طلبات الدفع وتأكيد العمليات ومطابقتها، لربط أي متجر أو نظام كاشير بمنظومة التحصيل الموحدة بيسر وموثوقية عالية.
+            واجهة للتاجر لإدارة بيانات نقاط الدفع والمحافظ وحسابات البنوك التي يمتلكها، وتقديم طلبات اعتمادها، ومتابعة الفواتير المسددة.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">إصدار طلبات التحصيل وتأكيد العمليات لحظياً</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">تأكيد موثوق لنتيجة الدفع مع آليات متابعة منتظمة</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">أدلة إرشادية ودعم فني مخصص للتكامل</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f1">إدارة نقاط الدفع ورموز المحافظ الخاصة بالتاجر</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f2">متابعة حالة اعتماد وسائل الدفع من الجهات المالية</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4_f3">سجل تاريخي للمدفوعات واستعراض حالات الفواتير</span></li>
           </ul>
         </article>
 
-        <!-- Service 5: E-Commerce Gateway -->
+        <!-- Service 5: Notification Delivery & Webhook -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-globe"></i></div>
-            <span class="serv-badge badge-blue" data-i18n="s5_badge">للمتاجر الإلكترونية</span>
+            <div class="serv-icon"><i class="fa-solid fa-bell"></i></div>
+            <span class="serv-badge badge-blue" data-i18n="s5_badge">إشعار فوري</span>
           </div>
-          <h3 class="serv-name" data-i18n="s5_name">بوابة الدفع الإلكتروني (Online Gateway)</h3>
+          <h3 class="serv-name" data-i18n="s5_name">إعدادات تسليم الإشعارات (Webhook)</h3>
           <p class="serv-desc" data-i18n="s5_desc">
-            تكامل سهل مع مواقع المتاجر والتطبيقات الذكية مع إضافات جاهزة لمنصات التجارة الإلكترونية المعتمدة.
+            توصيل إشعارات فورية موثقة بنتيجة العملية للتاجر مع بيانات الفاتورة والمبلغ والحالة المعتمدة لحظة تأكيد السداد.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f1">تجربة Checkout سلسة بدون إعادة توجيه
-                معقدة</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f2">حماية تلقائية 3D-Secure لكافة المعاملات</span>
-            </li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f3">وثائق برمجية ودعم فني مخصص للمطورين</span>
-            </li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f1">إشعار فوري يوضح رقم الفاتورة والمبلغ والنتيجة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f2">دعم الـ Webhook و Callback المعتمد</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s5_f3">مصادقة آمنة وحماية لبيانات الإشعارات</span></li>
           </ul>
         </article>
 
-        <!-- Service 6: Merchant Portal & Onyx Sync -->
+        <!-- Service 6: Payment Inquiry & Match -->
         <article class="service-card glass-card">
           <div class="card-icon-header">
-            <div class="serv-icon"><i class="fa-solid fa-chart-pie"></i></div>
-            <span class="serv-badge badge-emerald" data-i18n="s6_badge">العمود الفقري</span>
+            <div class="serv-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <span class="serv-badge badge-emerald" data-i18n="s6_badge">معالجة الاستثناءات</span>
           </div>
-          <h3 class="serv-name" data-i18n="s6_name">لوحة التحكم والتكامل المحاسبي (Onyx ERP)</h3>
+          <h3 class="serv-name" data-i18n="s6_name">الاستفسار عن الدفع ومطابقة الفاتورة</h3>
           <p class="serv-desc" data-i18n="s6_desc">
-            متابعة حية لحالة الفواتير والعمليات، مع تسجيل مبالغ الفواتير تلقائيًا في نظام Onyx ERP عند تأكيد السداد وتفعيل التكامل.
+            أداة للاستعلام الفوري عن حالة العمليات ومطابقة الفواتير عند حدوث أي انقطاع بالإنترنت لضمان الانضباط التام وتفادي أي التباس.
           </p>
           <ul class="serv-features">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f1">تسجيل مبالغ الفواتير المسددة تلقائيًا في النظام المحاسبي</span>
-            </li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f2">تقارير لحظية لمطابقة الفواتير والعمليات</span>
-            </li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f3">إدارة الصلاحيات والفروع من لوحة تحكم سحابية
-                موحدة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f1">بحث واستعلام مباشر بمعرف المعاملة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f2">مطابقة الدفعة بالفاتورة الصحيحة عند الحاجة</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="s6_f3">عدم معاملة الفواتير كمدفوعة إلا بعد التأكيد</span></li>
           </ul>
         </article>
       </div>
@@ -1500,112 +1455,7 @@
   <!-- Placeholder to keep anchor -->
   <div id="psSection"></div>
 
-  <!-- Section: Dedicated PS (Payment Switch & POS) Standalone Ecosystem -->
-  <section class="section section-ps-ecosystem" id="psSectionDEPRECATED" style="display:none;"><div style="display:none;"><!-- moved to ps.html -->
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag" style="background: rgba(14, 165, 233, 0.15); color: #38BDF8; border-color: rgba(14, 165, 233, 0.3);">
-          <i class="fa-solid fa-microchip"></i> منظومة المحول المالي ونقاط البيع (PS & Smart POS)
-        </span>
-        <h2 class="section-title">
-          <span>منظومة PS ونقاط البيع الذكية</span><br>
-          <span class="gradient-text">نطاق تقني وميداني مستقل</span><br>
-          <span class="sub-headline" style="font-size: 1.35rem; font-weight: 600; color: #94A3B8;">أجهزة نقاط البيع، التوجيه المالي، ودورة التسوية المصرفية</span>
-        </h2>
-        <p class="section-desc" style="max-width: 860px; margin: 0 auto 30px auto; line-height: 1.8;">
-          منظومة PS متخصصة في الأجهزة ونقاط البيع وعمليات التوجيه المالي (Payment Switching) بين شبكات البطاقات والمحافظ والبنوك، مع إدارة دورات التسوية المصرفية التابعة لها. هذه المنظومة مستقلة تمامًا عن خدمة Payment Aggregator.
-        </p>
-      </div>
-
-      <div class="ps-standalone-grid">
-        <!-- Feature 1: Smart POS Hardware -->
-        <div class="ps-feature-card">
-          <div class="ps-feature-header">
-            <div class="ps-icon-wrap"><i class="fa-solid fa-cash-register"></i></div>
-            <div>
-              <h3>أجهزة Android POS الذكية</h3>
-              <span style="font-size: 0.8rem; color: #38BDF8;">عتاد مادي متطور للشركات والفروع</span>
-            </div>
-          </div>
-          <p>أجهزة متينة مزودة بشاشة لمس سريعة، طابعة إيصالات حرارية مدمجة، قارئ بطاقات شريحية ومغناطيسية، وكاميرا مسح رموز QR مع بطارية تدوم طويلًا.</p>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> اتصال مزدوج مستمر عبر شريحة 4G وشبكة Wi-Fi</li>
-            <li><i class="fa-solid fa-check"></i> طباعة فورية لإيصالات البيع الورقية والتقارير اليومية</li>
-            <li><i class="fa-solid fa-check"></i> جاهزية ميدانية للعمل الشاق في المتاجر والمطاعم</li>
-          </ul>
-        </div>
-
-        <!-- Feature 2: Soft POS -->
-        <div class="ps-feature-card">
-          <div class="ps-feature-header">
-            <div class="ps-icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
-            <div>
-              <h3>تقنية Soft POS (Tap to Phone)</h3>
-              <span style="font-size: 0.8rem; color: #38BDF8;">تحصيل لا تلامسي عبر الهاتف</span>
-            </div>
-          </div>
-          <p>تحويل أي هاتف أندرويد يدعم خاصية NFC إلى جهاز نقطة بيع متكامل؛ يقبل الدفع بالبطاقات والمحافظ عبر تمرير الهاتف أو البطاقة فوق الجهاز مباشرة.</p>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> صفر تكلفة شراء أو استئجار أجهزة نقاط بيع مادية</li>
-            <li><i class="fa-solid fa-check"></i> خيار مثالي لمندوبي التوصيل والخدمات الميدانية والمتاجر الصغيرة</li>
-            <li><i class="fa-solid fa-check"></i> أمان مصرفي وتشفير كامل وفق معايير PCI-DSS اللاتلامسية</li>
-          </ul>
-        </div>
-
-        <!-- Feature 3: Switching Engine -->
-        <div class="ps-feature-card">
-          <div class="ps-feature-header">
-            <div class="ps-icon-wrap"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
-            <div>
-              <h3>المحول المالي (Payment Switching)</h3>
-              <span style="font-size: 0.8rem; color: #38BDF8;">توجيه سريع ومعالجة فائقة</span>
-            </div>
-          </div>
-          <p>محرك التوجيه الذكي الذي يربط نقاط البيع بشبكات البطاقات المصرفية والمحافظ والبنوك بسرعة معالجة تقل عن 1.5 ثانية لكل حركة.</p>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> توجيه ذكي للحركة إلى البنك أو المحفظة المصدرة</li>
-            <li><i class="fa-solid fa-check"></i> فحص لحظي للأمان ومنع تكرار أو ازدواجية العمليات</li>
-            <li><i class="fa-solid fa-check"></i> جاهزية تشغيلية مستمرة ومراقبة فنية على مدار الساعة</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Standalone Bank Settlement Callout for PS -->
-      <div class="ps-settlement-callout">
-        <div class="ps-settlement-callout-header">
-          <i class="fa-solid fa-building-columns"></i>
-          <div>
-            <h4>دورة التسوية المصرفية (Bank Settlement Cycle) — تخص منظومة PS والمؤسسات المالية</h4>
-            <span style="font-size: 0.85rem; color: #94A3B8;">توضيح حدود واختصاص المسؤولية المصرفية</span>
-          </div>
-        </div>
-        <p>
-          دورة التسوية البنكية الطويلة (التي تشمل البنك والمطابقة المصرفية وتوليد ملفات المقاصة الدورية وإيداع الصافي في حسابات التجار البنكية) هي <strong>من اختصاص ومسؤولية منظومة PS بالتعاون مع المؤسسات المالية والبنوك المرخصة، وليست ضمن نطاق خدمة Payment Aggregator</strong>.
-        </p>
-        <p>
-          فخدمة Payment Aggregator تقتصر بدقة على ربط بيانات الدفع بالفاتورة والتسجيل المحاسبي التلقائي وإشعار التاجر فور السداد؛ بينما تتولى منظومة PS والمصارف مسار التوجيه المالي وحسابات التسوية المصرفية الرسمية وفق الاتفاقيات المقررة.
-        </p>
-        <div class="ps-settlement-flow-steps">
-          <div class="ps-s-step">
-            <strong>1. نقطة البيع (POS / Soft POS)</strong>
-            <span>تنفيذ حركة الدفع بالبطاقة أو الرمز عبر الجهاز.</span>
-          </div>
-          <div class="ps-s-step">
-            <strong>2. المحول المالي (PS Switch)</strong>
-            <span>توجيه المعاملة والتحقق الأمني اللحظي من الحساب.</span>
-          </div>
-          <div class="ps-s-step">
-            <strong>3. المؤسسة المالية (البنك)</strong>
-            <span>خصم المبلغ من العميل والتحويل المباشر لحساب التاجر.</span>
-          </div>
-          <div class="ps-s-step">
-            <strong>4. دورة التسوية المصرفية</strong>
-            <span>ملفات المطابقة الدورية وإيداع الصافي بحساب التاجر البنكي.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Section: Specialized Bank Partnership Deep-Dive (Visible prominently in Bank Track) -->
   <section class="section section-bank-details" id="bankPartnership">
@@ -1750,7 +1600,7 @@
           <div class="step-icon"><i class="fa-solid fa-signature"></i></div>
           <h3 class="step-title" data-i18n="st2_title">التفعيل وضبط الحساب</h3>
           <p class="step-desc" data-i18n="st2_desc">
-            تجهيز حساب المنشأة في المحول المالي، وتحديد الفروع وأسماء الكاشيرات والصلاحيات.
+            تجهيز حساب المنشأة في بوابة التاجر، وتحديد الفروع ومستخدمي النظام والصلاحيات.
           </p>
         </div>
 
@@ -1759,7 +1609,7 @@
           <div class="step-icon"><i class="fa-solid fa-mobile-screen"></i></div>
           <h3 class="step-title" data-i18n="st3_title">الربط والتهيئة الميدانية</h3>
           <p class="step-desc" data-i18n="st3_desc">
-            تحميل تطبيق Soft POS على هواتف فريقك أو تسليم أجهزة نقاط البيع وربطها بنظام الأونكس.
+            الربط التقني وضبط مسار الإشعارات (Webhook) والتكامل مع نظام التاجر المحاسبي (مثل Onyx ERP).
           </p>
         </div>
 

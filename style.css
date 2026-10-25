@@ -6651,3 +6651,185 @@ body.theme-light .ps-s-step {
   border-color: #EF4444;
   transform: rotate(90deg);
 }
+
+
+/* ==========================================================================
+   Flow Architecture Hero Visual Card (Two-Track Architecture)
+   ========================================================================== */
+.flow-architecture-card {
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(10, 15, 29, 0.98));
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(16, 185, 129, 0.15);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.arch-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.arch-badge {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arch-sub-badge {
+  font-size: 0.74rem;
+  color: var(--emerald-400);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+
+.arch-track {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.arch-money-track {
+  border-color: rgba(16, 185, 129, 0.28);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), transparent);
+}
+
+.arch-info-track {
+  border-color: rgba(34, 211, 238, 0.28);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.06), transparent);
+}
+
+.arch-track-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.track-tag {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.track-tag.green {
+  color: #34D399;
+}
+
+.track-tag.blue {
+  color: #38BDF8;
+}
+
+.track-status {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.arch-flow-nodes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.arch-node {
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.arch-node i {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.arch-node span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  line-height: 1.25;
+}
+
+.arch-node.highlight-bank {
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.arch-node.highlight-bank i {
+  color: #34D399;
+}
+
+.arch-node.highlight-up {
+  border-color: rgba(34, 211, 238, 0.6);
+  background: rgba(34, 211, 238, 0.14);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.18);
+}
+
+.arch-node.highlight-up i {
+  color: #38BDF8;
+}
+
+.arch-arrow {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.arch-arrow.green {
+  color: #10B981;
+}
+
+.arch-arrow.blue {
+  color: #0EA5E9;
+}
+
+[dir="ltr"] .arch-arrow i {
+  transform: rotate(180deg);
+}
+
+.arch-live-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #F8FAFC;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  flex-shrink: 0;
+}
