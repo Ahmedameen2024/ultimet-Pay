@@ -1137,3 +1137,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// ==========================================
+// Merchant Portal Tabs & Lightbox Modal
+// ==========================================
+window.switchMerchantTab = function(tabId, btn) {
+  document.querySelectorAll('.merchant-tab-btn').forEach(b => b.classList.remove('active'));
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    const targetBtn = document.querySelector(.merchant-tab-btn[data-tab=" + tabId + "]);
+    if (targetBtn) targetBtn.classList.add('active');
+  }
+
+  document.querySelectorAll('.merchant-service-panel').forEach(p => p.classList.remove('active'));
+  const targetPanel = document.getElementById(tabId);
+  if (targetPanel) {
+    targetPanel.classList.add('active');
+  }
+};
+
+window.openImageModal = function(src, caption) {
+  const modal = document.getElementById('imageLightboxModal');
+  const modalImg = document.getElementById('lightboxModalImg');
+  const modalCaption = document.getElementById('lightboxModalCaption');
+  if (modal && modalImg) {
+    modalImg.src = src;
+    if (modalCaption) modalCaption.textContent = caption || '';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeImageModal = function() {
+  const modal = document.getElementById('imageLightboxModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
