@@ -1017,35 +1017,25 @@
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag" style="background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.35);color:var(--emerald-400);">
-          <i class="fa-solid fa-bell"></i> <span data-i18n="wf_tag">إشعار التاجر والتكامل المحاسبي</span>
+          <i class="fa-solid fa-diagram-project"></i> <span data-i18n="wf_tag">رحلة معلومات الدفع والتكامل المحاسبي</span>
         </span>
         <h2 class="section-title">
-          <span data-i18n="wf_title_1">إشعار التاجر بنتيجة الدفع</span><br>
-          <span class="gradient-text" data-i18n="wf_title_2">من تأكيد السداد إلى التحديث المحاسبي وإشعار التاجر الفوري</span>
+          <span data-i18n="wf_title_1">مخطط رحلة معلومات الدفع</span><br>
+          <span class="gradient-text" data-i18n="wf_title_2">من تأكيد السداد إلى التحديث المحاسبي وإشعار التاجر</span>
         </h2>
         <p class="section-desc" data-i18n="wf_subtitle">
-          الشاشة المعتمدة والآلية التي تبيّن وصول إشعار السداد الموثق لمتجر التاجر، مع ربط نتيجة العملية بالفاتورة ونظامه المحاسبي تلقائياً دون إدخال يدوي.
+          المسار التشغيلي المعتمد الذي يبيّن تدفق معلومات العملية بين نظام التاجر المحاسبي (مثل Onyx ERP)، جهة الدفع المعتمدة، ومنصة Ultimate Pay، مع بيان فصل مسار الأموال المباشر عن مسار المعلومات.
         </p>
       </div>
 
       <!-- Main Flowchart Card -->
       <div class="workflow-card-main">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;">
           <div>
             <h3 style="color:#F8FAFC;font-size:1.25rem;font-weight:700;margin:0 0 4px 0;">
-              <i class="fa-solid fa-bell" style="color:#10B981;margin-left:8px;"></i><span data-i18n="wf_flow_title">شاشة ونظام تسليم إشعارات الدفع الفوري للتاجر (Notification Delivery)</span>
+              <i class="fa-solid fa-sitemap" style="color:#10B981;margin-left:8px;"></i><span data-i18n="wf_flow_title">مخطط تدفق معلومات الدفع والتكامل المحاسبي (Onyx ERP ↔ Ultimate Pay)</span>
             </h3>
-            <p style="color:#94A3B8;font-size:0.85rem;margin:0;" data-i18n="wf_flow_sub">تنبيه توضيحي: يصل إشعار فوري لحظي موثق للتاجر ونظامه المحاسبي فور تأكيد كل عملية سداد بنجاح، مع توثيق المرجع والمبلغ ورقم الفاتورة.</p>
-          </div>
-          <button class="btn-ghost" onclick="openImageModal('assets/merchant_screens/screen_7.jpg', 'شاشة إعدادات وتسليم إشعارات الدفع الفوري — بوابة التاجر')" style="padding:8px 16px;border-radius:12px;font-size:0.88rem;cursor:pointer;">
-            <i class="fa-solid fa-expand"></i> <span data-i18n="wf_btn_zoom">تكبير الشاشة</span>
-          </button>
-        </div>
-
-        <div class="workflow-img-container" onclick="openImageModal('assets/merchant_screens/screen_7.jpg', 'شاشة إعدادات وتسليم إشعارات الدفع الفوري — بوابة التاجر')">
-          <img src="assets/merchant_screens/screen_7.jpg" alt="شاشة إعدادات وتسليم إشعارات الدفع الفوري بوابة التاجر Ultimate Pay">
-          <div class="zoom-overlay-hint">
-            <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="wf_hint_zoom">انقر للتكبير والتفاصيل الكاملة</span>
+            <p style="color:#94A3B8;font-size:0.85rem;margin:0;" data-i18n="wf_flow_sub">تنبيه توضيحي: Ultimate Pay منصة تقنية لمعالجة بيانات الدفع والتكامل المحاسبي؛ انتقال الأموال يتم مباشرة بين حساب العميل وحساب التاجر لدى المؤسسة المالية المعنية.</p>
           </div>
         </div>
 
@@ -1663,10 +1653,6 @@
           <i class="fa-solid fa-magnifying-glass"></i>
           <span>5. الاستفسار ومطابقة الفاتورة</span>
         </button>
-        <button class="merchant-tab-btn" data-tab="tabNotifications" onclick="switchMerchantTab('tabNotifications', this)">
-          <i class="fa-solid fa-bell"></i>
-          <span>6. إعدادات تسليم الإشعارات</span>
-        </button>
       </div>
 
       <!-- Tab 1: Dashboard Panel -->
@@ -1835,40 +1821,6 @@
               <span class="mock-title">portal.ultimate-pay.com/payment-inquiry</span>
             </div>
             <img src="assets/merchant_screens/screen_6.jpg" alt="الاستفسار عن الدفع ومطابقة الفاتورة">
-            <div class="frame-zoom-cta">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab 6: Notification Delivery Panel -->
-      <div class="merchant-service-panel" id="tabNotifications">
-        <div class="service-card-layout">
-          <div class="service-info-col">
-            <span class="service-tagline"><i class="fa-solid fa-satellite-dish"></i> الربط البرمجي والإشعار التلقائي</span>
-            <h3><i class="fa-solid fa-bell"></i> إعدادات تسليم الإشعارات (Webhook)</h3>
-            <p style="color:#94A3B8;font-size:0.92rem;line-height:1.6;">
-              تتيح للتاجر أو فريقه التقني ضبط إعدادات استقبال نتائج السداد آلياً (Callback URL) ليصل الإشعار فورياً إلى شاشات الكاشير وأنظمة التاجر.
-            </p>
-            <ul class="service-details-list">
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>رابط الاستدعاء (Callback URL):</strong> تحديد مسار الـ Webhook الخاص بنظام التاجر أو متجره.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>نوع المصادقة (Authentication Type):</strong> دعم التشفير والمصادقة المعتمدة (Basic Auth).</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>اسم المستخدم وكلمة السر:</strong> أمان مصرفي كامل لضمان استقبال الإشعارات من المنصة المعتمدة فقط.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>إرسال للمراجعة:</strong> اعتماد الإعدادات وحمايتها من أي تعديل غير مصرح به.</span></li>
-            </ul>
-            <button class="btn-primary" onclick="openImageModal('assets/merchant_screens/screen_7.jpg', 'إعدادات تسليم الإشعارات — بوابة التاجر العربية')" style="padding:10px 20px;font-size:0.9rem;border-radius:12px;margin-top:10px;cursor:pointer;">
-              <i class="fa-solid fa-expand"></i> تكبير لقطة الشاشة العربية
-            </button>
-          </div>
-          <div class="service-screenshot-frame" onclick="openImageModal('assets/merchant_screens/screen_7.jpg', 'إعدادات تسليم الإشعارات — بوابة التاجر العربية')">
-            <div class="browser-mock-header">
-              <span class="mock-dot red"></span>
-              <span class="mock-dot yellow"></span>
-              <span class="mock-dot green"></span>
-              <span class="mock-title">portal.ultimate-pay.com/notification-delivery</span>
-            </div>
-            <img src="assets/merchant_screens/screen_7.jpg" alt="إعدادات تسليم الإشعارات بوابة التاجر">
             <div class="frame-zoom-cta">
               <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
             </div>
