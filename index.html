@@ -1966,17 +1966,27 @@
 
         <!-- Screen 1: Merchant Registration Form -->
         <div style="background:rgba(15,23,42,0.85);border:1px solid rgba(34,211,238,0.25);border-radius:20px;overflow:hidden;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(34,211,238,0.6)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.25)';this.style.transform='translateY(0)'">
-          <div style="cursor:pointer;" onclick="openImageModal('assets/merchant_creation/create_10.jpg', 'شاشة تسجيل تاجر جديد — النظام الداخلي لـ Ultimate Pay')">
+          <div>
             <div class="browser-mock-header">
               <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
               <span class="mock-title">admin.ultimate-pay.com/merchants/create</span>
             </div>
-            <img src="assets/merchant_creation/create_10.jpg" alt="نموذج تسجيل تاجر جديد" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;">
+            <div style="background:linear-gradient(180deg,#0B1120,#0F172A);padding:24px;min-height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;border-bottom:1px solid rgba(34,211,238,0.15);">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span style="background:rgba(34,211,238,0.15);color:#22D3EE;padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:700;"><i class="fa-solid fa-file-signature"></i> Intake Form</span>
+                <span style="background:rgba(16,185,129,0.15);color:#10B981;padding:3px 8px;border-radius:6px;font-size:0.72rem;">Active Schema</span>
+              </div>
+              <div style="background:rgba(15,23,42,0.8);border:1px dashed rgba(34,211,238,0.3);border-radius:10px;padding:12px;font-size:0.78rem;color:#94A3B8;line-height:1.7;">
+                <span style="color:#38BDF8;">• Legal Name:</span> الاسم القانوني للمنشأة<br>
+                <span style="color:#38BDF8;">• Commercial Reg:</span> رقم السجل التجاري والتوثيق<br>
+                <span style="color:#38BDF8;">• ERP Binding:</span> Onyx Pro / Almotamayez 12
+              </div>
+            </div>
           </div>
           <div style="padding:18px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
               <h4 style="color:#E2E8F0;font-size:1rem;font-weight:700;margin:0;"><i class="fa-solid fa-user-plus" style="color:#22D3EE;margin-left:8px;"></i>نموذج تسجيل تاجر جديد</h4>
-              <button class="btn-ghost" onclick="openImageModal('assets/merchant_creation/create_10.jpg', 'شاشة تسجيل تاجر جديد')" style="padding:4px 10px;font-size:0.75rem;border-radius:8px;cursor:pointer;"><i class="fa-solid fa-expand"></i> تكبير</button>
+              <span style="color:#22D3EE;font-size:0.78rem;font-weight:600;"><i class="fa-solid fa-shield-halved"></i> التحقق الرقمي</span>
             </div>
             <p style="color:#94A3B8;font-size:0.82rem;margin:0;">الحقول المعتمدة: الاسم القانوني للمنشأة، رقم السجل التجاري، مسؤول التواصل، الهاتف، ونظام ERP.</p>
           </div>
@@ -1984,35 +1994,55 @@
 
         <!-- Screen 2: Merchant Management List -->
         <div style="background:rgba(15,23,42,0.85);border:1px solid rgba(34,211,238,0.25);border-radius:20px;overflow:hidden;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(34,211,238,0.6)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.25)';this.style.transform='translateY(0)'">
-          <div style="cursor:pointer;" onclick="openImageModal('assets/merchant_creation/create_8.jpg', 'شاشة إدارة التجار وقائمة التجار المسجلين')">
+          <div>
             <div class="browser-mock-header">
               <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
               <span class="mock-title">admin.ultimate-pay.com/merchants/list</span>
             </div>
-            <img src="assets/merchant_creation/create_8.jpg" alt="قائمة إدارة التجار" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;">
+            <div style="background:linear-gradient(180deg,#0B1120,#0F172A);padding:24px;min-height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;border-bottom:1px solid rgba(34,211,238,0.15);">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span style="background:rgba(34,211,238,0.15);color:#22D3EE;padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:700;"><i class="fa-solid fa-table-list"></i> Directory</span>
+                <span style="background:rgba(56,189,248,0.15);color:#38BDF8;padding:3px 8px;border-radius:6px;font-size:0.72rem;">Multi-Merchant</span>
+              </div>
+              <div style="background:rgba(15,23,42,0.8);border:1px dashed rgba(34,211,238,0.3);border-radius:10px;padding:12px;font-size:0.78rem;color:#94A3B8;line-height:1.7;">
+                <span style="color:#10B981;">✔ Verified:</span> صيدلية السوسوة — تم الربط المحاسبي<br>
+                <span style="color:#F59E0B;">⏳ In Audit:</span> مركز الأمل التجاري — فحص السجل<br>
+                <span style="color:#38BDF8;">⚙ Endpoints:</span> Webhooks & POS Sync Status
+              </div>
+            </div>
           </div>
           <div style="padding:18px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
               <h4 style="color:#E2E8F0;font-size:1rem;font-weight:700;margin:0;"><i class="fa-solid fa-list-check" style="color:#22D3EE;margin-left:8px;"></i>قائمة إدارة ومراجعة التجار</h4>
-              <button class="btn-ghost" onclick="openImageModal('assets/merchant_creation/create_8.jpg', 'شاشة إدارة التجار وقائمة التجار المسجلين')" style="padding:4px 10px;font-size:0.75rem;border-radius:8px;cursor:pointer;"><i class="fa-solid fa-expand"></i> تكبير</button>
+              <span style="color:#22D3EE;font-size:0.78rem;font-weight:600;"><i class="fa-solid fa-user-check"></i> جاهزية الربط</span>
             </div>
-            <p style="color:#94A3B8;font-size:0.82rem;margin:0;">عرض التجار المسجلين (مثل Alsoswa Pharmacy) مع رقم السجل وحالة النشاط وتاريخ التقديم وزر المراجعة.</p>
+            <p style="color:#94A3B8;font-size:0.82rem;margin:0;">عرض التجار المسجلين مع رقم السجل وحالة النشاط وتاريخ التقديم ومتابعة حالات التفعيل المباشر.</p>
           </div>
         </div>
 
         <!-- Screen 3: Supported ERP Systems (Onyx Pro) -->
         <div style="background:rgba(15,23,42,0.85);border:1px solid rgba(34,211,238,0.25);border-radius:20px;overflow:hidden;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(34,211,238,0.6)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.25)';this.style.transform='translateY(0)'">
-          <div style="cursor:pointer;" onclick="openImageModal('assets/merchant_creation/create_4.jpg', 'شاشة قائمة أنظمة الـ ERP المعتمدة — Onyx Pro')">
+          <div>
             <div class="browser-mock-header">
               <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
               <span class="mock-title">admin.ultimate-pay.com/erp-systems</span>
             </div>
-            <img src="assets/merchant_creation/create_4.jpg" alt="أنظمة الـ ERP المعتمدة" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;">
+            <div style="background:linear-gradient(180deg,#0B1120,#0F172A);padding:24px;min-height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;border-bottom:1px solid rgba(34,211,238,0.15);">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span style="background:rgba(34,211,238,0.15);color:#22D3EE;padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:700;"><i class="fa-solid fa-plug"></i> Connectors</span>
+                <span style="background:rgba(168,85,247,0.15);color:#C084FC;padding:3px 8px;border-radius:6px;font-size:0.72rem;">Certified ERP</span>
+              </div>
+              <div style="background:rgba(15,23,42,0.8);border:1px dashed rgba(34,211,238,0.3);border-radius:10px;padding:12px;font-size:0.78rem;color:#94A3B8;line-height:1.7;">
+                <span style="color:#38BDF8;">• Onyx Pro ERP:</span> Yemen Soft (Direct API Engine)<br>
+                <span style="color:#38BDF8;">• Almotamayez 12:</span> InfoSoft (Auto Posting)<br>
+                <span style="color:#10B981;">• Protocol:</span> HTTPS REST & ISO 20022 Messages
+              </div>
+            </div>
           </div>
           <div style="padding:18px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
               <h4 style="color:#E2E8F0;font-size:1rem;font-weight:700;margin:0;"><i class="fa-solid fa-gears" style="color:#22D3EE;margin-left:8px;"></i>ربط أنظمة الـ ERP (أونكس برو)</h4>
-              <button class="btn-ghost" onclick="openImageModal('assets/merchant_creation/create_4.jpg', 'شاشة قائمة أنظمة الـ ERP المعتمدة — Onyx Pro')" style="padding:4px 10px;font-size:0.75rem;border-radius:8px;cursor:pointer;"><i class="fa-solid fa-expand"></i> تكبير</button>
+              <span style="color:#22D3EE;font-size:0.78rem;font-weight:600;"><i class="fa-solid fa-network-wired"></i> تكامل آلي</span>
             </div>
             <p style="color:#94A3B8;font-size:0.82rem;margin:0;">قائمة الأنظمة المعتمدة فقط في تسجيل التاجر: Onyx Pro لشركة Yemen Soft، والمتميز 12 لشركة أنفو سوفت.</p>
           </div>
@@ -2020,17 +2050,27 @@
 
         <!-- Screen 4: Financial Institutions Registration -->
         <div style="background:rgba(15,23,42,0.85);border:1px solid rgba(34,211,238,0.25);border-radius:20px;overflow:hidden;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(34,211,238,0.6)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.25)';this.style.transform='translateY(0)'">
-          <div style="cursor:pointer;" onclick="openImageModal('assets/merchant_creation/create_3.jpg', 'شاشة تسجيل المؤسسات المالية وترخيص البنك المركزي CBY')">
+          <div>
             <div class="browser-mock-header">
               <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
               <span class="mock-title">admin.ultimate-pay.com/financial-institutions</span>
             </div>
-            <img src="assets/merchant_creation/create_3.jpg" alt="تسجيل مؤسسة مالية جديدة" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;">
+            <div style="background:linear-gradient(180deg,#0B1120,#0F172A);padding:24px;min-height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;border-bottom:1px solid rgba(34,211,238,0.15);">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span style="background:rgba(34,211,238,0.15);color:#22D3EE;padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:700;"><i class="fa-solid fa-building-columns"></i> CBY Regulated</span>
+                <span style="background:rgba(16,185,129,0.15);color:#10B981;padding:3px 8px;border-radius:6px;font-size:0.72rem;">Licensed Partners</span>
+              </div>
+              <div style="background:rgba(15,23,42,0.8);border:1px dashed rgba(34,211,238,0.3);border-radius:10px;padding:12px;font-size:0.78rem;color:#94A3B8;line-height:1.7;">
+                <span style="color:#38BDF8;">• CBY Licensing:</span> ترخيص البنك المركزي المعتمد<br>
+                <span style="color:#38BDF8;">• Settlement Accts:</span> حسابات التسوية البنكية المباشرة<br>
+                <span style="color:#10B981;">• Wallets:</span> المحافظ الإلكترونية وشبكات الدفع الفوري
+              </div>
+            </div>
           </div>
           <div style="padding:18px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
               <h4 style="color:#E2E8F0;font-size:1rem;font-weight:700;margin:0;"><i class="fa-solid fa-building-columns" style="color:#22D3EE;margin-left:8px;"></i>ربط البنوك والمحافظ (ترخيص CBY)</h4>
-              <button class="btn-ghost" onclick="openImageModal('assets/merchant_creation/create_3.jpg', 'شاشة تسجيل المؤسسات المالية وترخيص البنك المركزي CBY')" style="padding:4px 10px;font-size:0.75rem;border-radius:8px;cursor:pointer;"><i class="fa-solid fa-expand"></i> تكبير</button>
+              <span style="color:#22D3EE;font-size:0.78rem;font-weight:600;"><i class="fa-solid fa-handshake"></i> بنوك مرخصة</span>
             </div>
             <p style="color:#94A3B8;font-size:0.82rem;margin:0;">توثيق الحسابات البنكية والمحافظ الرقمية برقم ترخيص البنك المركزي (CBY-BANK) وشروط العقد.</p>
           </div>
