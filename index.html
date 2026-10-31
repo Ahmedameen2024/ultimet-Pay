@@ -321,11 +321,11 @@
     <div class="container quick-nav-container">
       <a href="#hero" class="quick-nav-link"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>
       <a href="#aboutUs" class="quick-nav-link"><i class="fa-solid fa-circle-info"></i><span>من نحن</span></a>
-      <a href="#paymentAggregatorSection" class="quick-nav-link" style="border-color:rgba(16,185,129,0.5);background:rgba(16,185,129,0.1);"><i class="fa-solid fa-receipt"></i><span>خدمة Payment Aggregator</span></a>
-      <a href="#platformWorkflowSection" class="quick-nav-link" style="border-color:rgba(16,185,129,0.5);background:rgba(16,185,129,0.1);"><i class="fa-solid fa-diagram-project"></i><span>آلية العمل</span></a>
+      <a href="#paymentAggregatorSection" class="quick-nav-link highlight"><i class="fa-solid fa-receipt"></i><span>خدمة Payment Aggregator</span></a>
+      <a href="#platformWorkflowSection" class="quick-nav-link"><i class="fa-solid fa-diagram-project"></i><span>آلية العمل</span></a>
       <a href="#servicesGrid" class="quick-nav-link"><i class="fa-solid fa-cubes"></i><span>خدمات التجار</span></a>
       <a href="#bankPartnership" class="quick-nav-link"><i class="fa-solid fa-building-columns"></i><span>خدمات البنوك</span></a>
-      <a href="#merchantPortalSection" class="quick-nav-link" style="border-color:rgba(251,191,36,0.5);background:rgba(251,191,36,0.07);"><i class="fa-solid fa-gauge-high"></i><span>بوابة التاجر</span></a>
+      <a href="#merchantPortalSection" class="quick-nav-link portal-link"><i class="fa-solid fa-gauge-high"></i><span>بوابة التاجر</span></a>
       <a href="#ctaSection" class="quick-nav-link highlight"><i class="fa-brands fa-whatsapp"></i><span>تواصل معنا</span></a>
     </div>
   </nav>
@@ -347,7 +347,7 @@
           <span class="gradient-text" data-i18n="abt_title_2">تعمل في قلب منظومة الدفع الرقمي</span>
         </h2>
 
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25);color:var(--emerald-400);padding:6px 18px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-bottom:20px;">
+        <div class="about-ambition-badge">
           <i class="fa-solid fa-bullseye"></i>
           <span data-i18n="abt_ambition">طموحنا: منظومة مالية موحدة وآمنة وسهلة الوصول</span>
         </div>
@@ -395,7 +395,7 @@
           </div>
         </div>
 
-        <div style="margin-top:24px;padding:12px 20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;gap:12px;color:#94A3B8;font-size:0.9rem;">
+        <div class="about-beneficiaries-pill">
           <i class="fa-solid fa-users" style="color:#38BDF8;"></i>
           <span data-i18n="abt_beneficiaries"><strong>المستفيدون:</strong> التجار وعملاؤهم، والمؤسسات المالية والبنوك</span>
         </div>
@@ -489,7 +489,7 @@
           </ul>
         </div>
       </div>
-      <div style="text-align:center;margin-top:20px;color:#94A3B8;font-size:0.88rem;">
+      <div class="about-bottom-note">
         <i class="fa-solid fa-circle-info" style="color:var(--emerald-400);"></i>
         <span data-i18n="prob_note">يُفعَّل التسجيل التلقائي عند إعداد التكامل مع النظام المحاسبي للتاجر.</span>
       </div>
@@ -610,26 +610,26 @@
       </div>
 
       <!-- Slide 3: 4 Parties Flow Grid -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:36px;">
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;text-align:right;">
-          <div style="width:40px;height:40px;border-radius:10px;background:rgba(16,185,129,0.12);color:var(--emerald-400);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px;"><i class="fa-solid fa-user"></i></div>
-          <h4 style="color:#F8FAFC;font-size:1rem;margin-bottom:6px;">👤 العميل</h4>
-          <p style="color:#94A3B8;font-size:0.85rem;margin:0;">يسدد قيمة الفاتورة عن طريق المحفظة أو التطبيق البنكي.</p>
+      <div class="parties-flow-grid">
+        <div class="party-card">
+          <div class="party-icon-wrap user-wrap"><i class="fa-solid fa-user"></i></div>
+          <h4 class="party-title">👤 العميل</h4>
+          <p class="party-desc">يسدد قيمة الفاتورة عن طريق المحفظة أو التطبيق البنكي.</p>
         </div>
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(16,185,129,0.25);border-radius:16px;padding:20px;text-align:right;">
-          <div style="width:40px;height:40px;border-radius:10px;background:rgba(16,185,129,0.15);color:#34D399;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px;"><i class="fa-solid fa-building-columns"></i></div>
-          <h4 style="color:#34D399;font-size:1rem;margin-bottom:6px;">💳 المحفظة / التطبيق البنكي</h4>
-          <p style="color:#94A3B8;font-size:0.85rem;margin:0;">تنقل المبلغ مباشرة من حساب العميل إلى حساب التاجر.</p>
+        <div class="party-card highlight-bank">
+          <div class="party-icon-wrap bank-wrap"><i class="fa-solid fa-building-columns"></i></div>
+          <h4 class="party-title highlight-text">💳 المحفظة / التطبيق البنكي</h4>
+          <p class="party-desc">تنقل المبلغ مباشرة من حساب العميل إلى حساب التاجر.</p>
         </div>
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;text-align:right;">
-          <div style="width:40px;height:40px;border-radius:10px;background:rgba(56,189,248,0.12);color:#38BDF8;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px;"><i class="fa-solid fa-store"></i></div>
-          <h4 style="color:#F8FAFC;font-size:1rem;margin-bottom:6px;">🏬 التاجر</h4>
-          <p style="color:#94A3B8;font-size:0.85rem;margin:0;">يصدر الفاتورة ويصله إشعار بنتيجة السداد.</p>
+        <div class="party-card">
+          <div class="party-icon-wrap merchant-wrap"><i class="fa-solid fa-store"></i></div>
+          <h4 class="party-title">🏬 التاجر</h4>
+          <p class="party-desc">يصدر الفاتورة ويصله إشعار بنتيجة السداد.</p>
         </div>
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;text-align:right;">
-          <div style="width:40px;height:40px;border-radius:10px;background:rgba(251,191,36,0.12);color:#FBBF24;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px;"><i class="fa-solid fa-chart-line"></i></div>
-          <h4 style="color:#F8FAFC;font-size:1rem;margin-bottom:6px;">📊 النظام المحاسبي</h4>
-          <p style="color:#94A3B8;font-size:0.85rem;margin:0;">تُحدَّث الفواتير وسندات القبض آليًا عند تفعيل التكامل.</p>
+        <div class="party-card">
+          <div class="party-icon-wrap erp-wrap"><i class="fa-solid fa-chart-line"></i></div>
+          <h4 class="party-title">📊 النظام المحاسبي</h4>
+          <p class="party-desc">تُحدَّث الفواتير وسندات القبض آليًا عند تفعيل التكامل.</p>
         </div>
       </div>
 
@@ -647,7 +647,7 @@
             <div class="r2p-step-num">1</div>
             <div class="r2p-step-title">إصدار طلب الدفع (R2P)</div>
             <div class="r2p-step-desc">يقوم التاجر بإنشاء فاتورة في نظامه برقم ومبلغ محدد.</div>
-            <div style="margin-top:10px;font-size:0.78rem;color:var(--emerald-400);background:rgba(16,185,129,0.1);padding:4px 10px;border-radius:6px;display:inline-block;">تم الإنشاء • بانتظار السداد</div>
+            <div class="r2p-step-badge created">تم الإنشاء • بانتظار السداد</div>
           </div>
 
           <!-- Step 2 -->
@@ -655,7 +655,7 @@
             <div class="r2p-step-num">2</div>
             <div class="r2p-step-title">السداد</div>
             <div class="r2p-step-desc">يقوم العميل بإتمام عملية الدفع عبر المحفظة أو التطبيق البنكي.</div>
-            <div style="margin-top:10px;font-size:0.78rem;color:#38BDF8;background:rgba(56,189,248,0.1);padding:4px 10px;border-radius:6px;display:inline-block;">انتقال الأموال مباشرة لحساب التاجر</div>
+            <div class="r2p-step-badge direct-transfer">انتقال الأموال مباشرة لحساب التاجر</div>
           </div>
 
           <!-- Step 3 -->
@@ -663,7 +663,7 @@
             <div class="r2p-step-num">3</div>
             <div class="r2p-step-title">تأكيد لحظي</div>
             <div class="r2p-step-desc">بعد إتمام عملية الدفع عبر المحفظة يتم إرسال الإشعار للمنصة عبر Ultimate Pay.</div>
-            <div style="margin-top:10px;font-size:0.78rem;color:#FBBF24;background:rgba(251,191,36,0.1);padding:4px 10px;border-radius:6px;display:inline-block;">قيد الفحص • ربط بالفاتورة</div>
+            <div class="r2p-step-badge pending">قيد الفحص • ربط بالفاتورة</div>
           </div>
 
           <!-- Step 4 -->
@@ -671,11 +671,11 @@
             <div class="r2p-step-num" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-400);">4</div>
             <div class="r2p-step-title" style="color: var(--emerald-400);">تحديث فوري</div>
             <div class="r2p-step-desc">تُربط النتيجة بالفاتورة، وتنعكس على نظام الأونكس (ERP).</div>
-            <div style="margin-top:10px;font-size:0.78rem;color:#34D399;background:rgba(16,185,129,0.15);padding:4px 10px;border-radius:6px;display:inline-block;">مدفوعة • مرتبطة بالفاتورة</div>
+            <div class="r2p-step-badge paid">مدفوعة • مرتبطة بالفاتورة</div>
           </div>
         </div>
 
-        <div style="margin-top:18px;padding:12px 18px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:10px;color:#FCA5A5;font-size:0.88rem;display:flex;align-items:center;gap:10px;">
+        <div class="financial-warning-callout">
           <i class="fa-solid fa-circle-exclamation"></i>
           <span>🔴 <strong>تنبيه توضيحي:</strong> لم تكتمل العملية — وتظهر حالتها بوضوح للتاجر دون اعتبارها مدفوعة.</span>
         </div>
@@ -685,7 +685,7 @@
       <div class="merchant-benefits-box" style="margin-top: 36px;">
         <span class="section-tag" style="background: rgba(16, 185, 129, 0.12); color: var(--emerald-400); margin-bottom: 8px;"><i class="fa-solid fa-star"></i> ▬ القيمة للتاجر • Slide 06</span>
         <h3 style="margin-top: 6px;">ماذا تكسب منشأتك يوميًا مع Ultimate Pay؟</h3>
-        <p style="color:#94A3B8; font-size:0.92rem; margin-bottom: 22px;">«الخدمة ليست أداة تقنية إضافية — إنها جزء من دورة البيع: فاتورة، رمز، إشعار، وقيد محاسبي صحيح.»</p>
+        <p class="merchant-benefits-quote">«الخدمة ليست أداة تقنية إضافية — إنها جزء من دورة البيع: فاتورة، رمز، إشعار، وقيد محاسبي صحيح.»</p>
         <div class="merchant-benefits-grid">
           <div class="m-benefit-item">
             <div class="m-benefit-icon"><i class="fa-solid fa-link"></i></div>
@@ -720,66 +720,66 @@
       </div>
 
       <!-- Slide 10: Clear Roles & Collaboration Model -->
-      <div style="margin: 40px 0; background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(10, 15, 29, 0.95)); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 20px; padding: 28px;">
-        <div style="text-align: center; margin-bottom: 24px;">
+      <div class="roles-cooperation-box">
+        <div class="roles-header">
           <span class="section-tag" style="background: rgba(16, 185, 129, 0.12); color: var(--emerald-400);"><i class="fa-solid fa-handshake"></i> ▬ نموذج التعاون والتكامل • Slide 10</span>
-          <h3 style="color: #F8FAFC; font-size: 1.35rem; font-weight: 700; margin: 8px 0;">أدوار واضحة بين الأطراف</h3>
-          <p style="color: #94A3B8; font-size: 0.9rem; margin: 0;">حدود مسؤوليات واضحة تضمن انضباط وسلاسة العمليات المالية والتقنية</p>
+          <h3 class="roles-title">أدوار واضحة بين الأطراف</h3>
+          <p class="roles-subtitle">حدود مسؤوليات واضحة تضمن انضباط وسلاسة العمليات المالية والتقنية</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div class="roles-three-cols">
           <!-- Party 1: Financial Institution -->
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(56,189,248,0.2); border-radius: 14px; padding: 22px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
-              <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(56,189,248,0.15); color: #38BDF8; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fa-solid fa-building-columns"></i></div>
-              <h4 style="color: #38BDF8; margin: 0; font-size: 1.05rem;">المؤسسة المالية (البنك / المحفظة)</h4>
+          <div class="role-col-card role-box-bank">
+            <div class="role-col-header">
+              <div class="role-col-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <h4 class="role-col-title">المؤسسة المالية (البنك / المحفظة)</h4>
             </div>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; color: #CBD5E1; font-size: 0.88rem;">
-              <li><i class="fa-solid fa-circle-check" style="color:#38BDF8; margin-left:6px;"></i> توفير وسائل الدفع للعميل</li>
-              <li><i class="fa-solid fa-circle-check" style="color:#38BDF8; margin-left:6px;"></i> تنفيذ الدفع وفق آليته المعتمدة</li>
-              <li><i class="fa-solid fa-circle-check" style="color:#38BDF8; margin-left:6px;"></i> اعتماد طلبات التفعيل لدى التاجر</li>
-              <li><i class="fa-solid fa-circle-check" style="color:#38BDF8; margin-left:6px;"></i> إتاحة نتيجة الدفع للمنصة</li>
+            <ul class="role-list-items">
+              <li><i class="fa-solid fa-circle-check"></i> توفير وسائل الدفع للعميل</li>
+              <li><i class="fa-solid fa-circle-check"></i> تنفيذ الدفع وفق آليته المعتمدة</li>
+              <li><i class="fa-solid fa-circle-check"></i> اعتماد طلبات التفعيل لدى التاجر</li>
+              <li><i class="fa-solid fa-circle-check"></i> إتاحة نتيجة الدفع للمنصة</li>
             </ul>
           </div>
 
           <!-- Party 2: Ultimate Pay -->
-          <div style="background: rgba(16,185,129,0.04); border: 1.5px solid rgba(16,185,129,0.35); border-radius: 14px; padding: 22px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
-              <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(16,185,129,0.2); color: var(--emerald-400); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fa-solid fa-bolt"></i></div>
-              <h4 style="color: var(--emerald-400); margin: 0; font-size: 1.05rem;">Ultimate Pay — منصة الربط</h4>
+          <div class="role-col-card role-box-up">
+            <div class="role-col-header">
+              <div class="role-col-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h4 class="role-col-title">Ultimate Pay — منصة الربط</h4>
             </div>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; color: #CBD5E1; font-size: 0.88rem;">
-              <li><i class="fa-solid fa-circle-check" style="color:var(--emerald-400); margin-left:6px;"></i> تأكيد نتيجة الدفع</li>
-              <li><i class="fa-solid fa-circle-check" style="color:var(--emerald-400); margin-left:6px;"></i> ربط النتيجة بالفاتورة الصحيحة</li>
-              <li><i class="fa-solid fa-circle-check" style="color:var(--emerald-400); margin-left:6px;"></i> التكامل مع النظام المحاسبي للتاجر</li>
-              <li><i class="fa-solid fa-circle-check" style="color:var(--emerald-400); margin-left:6px;"></i> إشعار التاجر بنتيجة السداد</li>
+            <ul class="role-list-items">
+              <li><i class="fa-solid fa-circle-check"></i> تأكيد نتيجة الدفع</li>
+              <li><i class="fa-solid fa-circle-check"></i> ربط النتيجة بالفاتورة الصحيحة</li>
+              <li><i class="fa-solid fa-circle-check"></i> التكامل مع النظام المحاسبي للتاجر</li>
+              <li><i class="fa-solid fa-circle-check"></i> إشعار التاجر بنتيجة السداد</li>
             </ul>
           </div>
 
           <!-- Party 3: Merchant -->
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(251,191,36,0.2); border-radius: 14px; padding: 22px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
-              <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(251,191,36,0.15); color: #FBBF24; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fa-solid fa-store"></i></div>
-              <h4 style="color: #FBBF24; margin: 0; font-size: 1.05rem;">التاجر</h4>
+          <div class="role-col-card role-box-merchant">
+            <div class="role-col-header">
+              <div class="role-col-icon"><i class="fa-solid fa-store"></i></div>
+              <h4 class="role-col-title">التاجر</h4>
             </div>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; color: #CBD5E1; font-size: 0.88rem;">
-              <li><i class="fa-solid fa-circle-check" style="color:#FBBF24; margin-left:6px;"></i> إصدار الفواتير وطلبات الدفع</li>
-              <li><i class="fa-solid fa-circle-check" style="color:#FBBF24; margin-left:6px;"></i> استلام إشعار نتيجة السداد</li>
-              <li><i class="fa-solid fa-circle-check" style="color:#FBBF24; margin-left:6px;"></i> متابعة الفواتير المسددة</li>
+            <ul class="role-list-items">
+              <li><i class="fa-solid fa-circle-check"></i> إصدار الفواتير وطلبات الدفع</li>
+              <li><i class="fa-solid fa-circle-check"></i> استلام إشعار نتيجة السداد</li>
+              <li><i class="fa-solid fa-circle-check"></i> متابعة الفواتير المسددة</li>
             </ul>
           </div>
         </div>
 
-        <div style="margin-top: 20px; padding: 14px 20px; background: rgba(0,0,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 0.88rem;">
-          <div style="display: flex; align-items: center; gap: 8px; color: #E2E8F0;">
-            <strong style="color: var(--emerald-400);">تدفق التفعيل:</strong>
+        <div class="role-activation-bar">
+          <div class="activation-steps-flow">
+            <strong>تدفق التفعيل:</strong>
             <span>طلب التاجر</span>
-            <i class="fa-solid fa-arrow-left" style="color: var(--emerald-400); font-size: 0.75rem;"></i>
+            <i class="fa-solid fa-arrow-left"></i>
             <span>اعتماد المؤسسة المالية</span>
-            <i class="fa-solid fa-arrow-left" style="color: var(--emerald-400); font-size: 0.75rem;"></i>
-            <span style="color: #38BDF8; font-weight: 700;">تفعيل وسيلة الدفع</span>
+            <i class="fa-solid fa-arrow-left"></i>
+            <span class="active-step">تفعيل وسيلة الدفع</span>
           </div>
-          <div style="color: #FBBF24; display: flex; align-items: center; gap: 6px;">
+          <div class="principle-callout">
             <i class="fa-solid fa-shield-halved"></i>
             <span><strong>🛡 مبدأ أساسي:</strong> Ultimate Pay لا تحتفظ بأموال العملاء ولا تحوّلها — الأموال تنتقل مباشرة من حساب العميل إلى حساب التاجر.</span>
           </div>
@@ -996,7 +996,7 @@
               </div>
             </div>
 
-            <div style="margin-top: 20px; padding: 12px 18px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 10px; color: #7DD3FC; font-size: 0.88rem;">
+            <div class="bank-collab-note">
               <i class="fa-solid fa-scale-balanced" style="margin-left: 6px;"></i>
               <strong>نموذج تعاون مؤسسي بحدود مسؤوليات واضحة:</strong> البنك/المحفظة يتولى تنفيذ الدفع ونقل الأموال مباشرة بين الحسابات، والمنصة تتولى الربط التقني ومطابقة الفواتير وإشعار التاجر.
             </div>
@@ -1039,37 +1039,37 @@
         <h2 class="section-title">
           <span data-i18n="step_title_1">لنبدأ بخطوة واحدة</span><br>
           <span class="gradient-text" data-i18n="step_title_2">— ورشة عمل مشتركة</span><br>
-          <span data-i18n="step_title_3" style="font-size: 1.3rem; font-weight:600; color:#94A3B8;">لمستقبل مالي أفضل</span>
+          <span data-i18n="step_title_3" class="onboarding-lead-subtitle">لمستقبل مالي أفضل</span>
         </h2>
         <p class="section-desc" data-i18n="step_subtitle">
           شكرًا لكم — ويسعدنا الآن الإجابة عن أسئلتكم ومناقشة خطوة البداية:
         </p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:960px;margin:0 auto 30px auto;">
+      <div class="onboarding-dual-grid">
         <!-- Merchants Next Steps -->
-        <div style="background:rgba(16,185,129,0.05);border:1.5px solid rgba(16,185,129,0.3);border-radius:18px;padding:26px;text-align:right;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(16,185,129,0.2);color:var(--emerald-400);display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><i class="fa-solid fa-store"></i></div>
-            <h3 style="color:#F8FAFC;font-size:1.15rem;margin:0;">للتجار وأصحاب الأنشطة التجارية 🏬</h3>
+        <div class="onboarding-track-card merchant">
+          <div class="onboarding-card-header">
+            <div class="onboarding-card-icon"><i class="fa-solid fa-store"></i></div>
+            <h3 class="onboarding-card-title">للتجار وأصحاب الأنشطة التجارية 🏬</h3>
           </div>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;color:#CBD5E1;font-size:0.92rem;">
-            <li style="display:flex;align-items:flex-start;gap:8px;"><i class="fa-solid fa-circle-check" style="color:var(--emerald-400);margin-top:3px;"></i> <span>تجهيز بيانات النشاط التجاري والحساب المعتمد.</span></li>
-            <li style="display:flex;align-items:flex-start;gap:8px;"><i class="fa-solid fa-circle-check" style="color:var(--emerald-400);margin-top:3px;"></i> <span>تحديد النظام المحاسبي المراد ربطه.</span></li>
-            <li style="display:flex;align-items:flex-start;gap:8px;"><i class="fa-solid fa-circle-check" style="color:var(--emerald-400);margin-top:3px;"></i> <span>إضافة المحفظة وبدء استقبال الإشعارات بعد الاعتماد.</span></li>
+          <ul class="onboarding-list">
+            <li><i class="fa-solid fa-circle-check"></i> <span>تجهيز بيانات النشاط التجاري والحساب المعتمد.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>تحديد النظام المحاسبي المراد ربطه.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>إضافة المحفظة وبدء استقبال الإشعارات بعد الاعتماد.</span></li>
           </ul>
         </div>
 
         <!-- Financial Institutions Next Steps -->
-        <div style="background:rgba(56,189,248,0.05);border:1.5px solid rgba(56,189,248,0.3);border-radius:18px;padding:26px;text-align:right;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(56,189,248,0.2);color:#38BDF8;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><i class="fa-solid fa-building-columns"></i></div>
-            <h3 style="color:#F8FAFC;font-size:1.15rem;margin:0;">للمؤسسات المالية (المحافظ) 🏛</h3>
+        <div class="onboarding-track-card bank">
+          <div class="onboarding-card-header">
+            <div class="onboarding-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <h3 class="onboarding-card-title">للمؤسسات المالية (المحافظ) 🏛</h3>
           </div>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;color:#CBD5E1;font-size:0.92rem;">
-            <li style="display:flex;align-items:flex-start;gap:8px;"><i class="fa-solid fa-circle-check" style="color:#38BDF8;margin-top:3px;"></i> <span>مراجعة آلية التكامل المتاحة وتبادل الوثائق اللازمة.</span></li>
-            <li style="display:flex;align-items:flex-start;gap:8px;"><i class="fa-solid fa-circle-check" style="color:#38BDF8;margin-top:3px;"></i> <span>الاتفاق على نطاق الخدمة ونموذج التعاون.</span></li>
-            <li style="display:flex;align-items:flex-start;gap:8px;"><i class="fa-solid fa-circle-check" style="color:#38BDF8;margin-top:3px;"></i> <span>تجهيز بيئة تجريبية لبدء التجربة عمليًا.</span></li>
+          <ul class="onboarding-list">
+            <li><i class="fa-solid fa-circle-check"></i> <span>مراجعة آلية التكامل المتاحة وتبادل الوثائق اللازمة.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>الاتفاق على نطاق الخدمة ونموذج التعاون.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>تجهيز بيئة تجريبية لبدء التجربة عمليًا.</span></li>
           </ul>
         </div>
       </div>
@@ -1077,7 +1077,7 @@
   </section>
 
   <!-- Section: Merchant Portal (Slide 07) -->
-  <section class="section" id="merchantPortalSection" style="padding:85px 0; background:rgba(251,191,36,0.03); border-top:1px solid rgba(251,191,36,0.15);">
+  <section class="section section-merchant-portal" id="merchantPortalSection">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag" style="background:rgba(251,191,36,0.12);border-color:rgba(251,191,36,0.35);color:#FBBF24;">
@@ -1090,7 +1090,7 @@
         <p class="section-desc">
           عند تسجيل التاجر، يحصل على حساب رسمي في بوابة التاجر (Merchant Portal) — نظام متكامل يمنحه تحكماً كاملاً في نقاط البيع، سجل العمليات، الاستفسار عن الدفع، ومطابقة الفواتير لحظياً.
         </p>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25);color:#FBBF24;padding:8px 20px;border-radius:20px;font-size:0.88rem;margin-top:12px;">
+        <div class="portal-badge-pill">
           <i class="fa-solid fa-circle-info"></i>
           <span>الوظائف التالية قد تختلف بحسب إعدادات التاجر والتكامل المعتمد.</span>
         </div>
@@ -1126,7 +1126,7 @@
           <div class="service-info-col">
             <span class="service-tagline"><i class="fa-solid fa-shield-check"></i> واجهة الإدارة والرقابة اللحظية</span>
             <h3><i class="fa-solid fa-chart-pie"></i> لوحة المعلومات (Dashboard)</h3>
-            <p style="color:#94A3B8;font-size:0.92rem;line-height:1.6;">
+            <p>
               تمنح التاجر رؤية شاملة وحية لكافة فروع ومنافذ البيع التابعة له، مع فلترة زمنية دقيقة وإحصائيات فورية عن حالة نقاط البيع ومطابقة الفواتير.
             </p>
             <ul class="service-details-list">
@@ -1159,7 +1159,7 @@
           <div class="service-info-col">
             <span class="service-tagline"><i class="fa-solid fa-store"></i> إدارة الحسابات والمحافظ المربوطة</span>
             <h3><i class="fa-solid fa-wallet"></i> نقاط الدفع الخاصة بي</h3>
-            <p style="color:#94A3B8;font-size:0.92rem;line-height:1.6;">
+            <p>
               تتيح للتاجر متابعة كافة نقاط البيع وأرقام المحافظ وحسابات البنوك المربوطة بفروعه، والاطلاع على حالة اعتماد كل نقطة من البنك أو المحفظة.
             </p>
             <ul class="service-details-list">
@@ -1193,7 +1193,7 @@
           <div class="service-info-col">
             <span class="service-tagline"><i class="fa-solid fa-plus-circle"></i> توسيع منافذ التحصيل</span>
             <h3><i class="fa-solid fa-plus"></i> إضافة نقطة دفع / محفظة جديدة</h3>
-            <p style="color:#94A3B8;font-size:0.92rem;line-height:1.6;">
+            <p>
               شاشة سلسة تمكّن التاجر من تقديم طلب ربط محفظة رقمية أو حساب بنكي جديد لنقاط البيع الخاصة به للمراجعة والاعتماد المصرفي السريع.
             </p>
             <ul class="service-details-list">
@@ -1226,7 +1226,7 @@
           <div class="service-info-col">
             <span class="service-tagline"><i class="fa-solid fa-file-invoice-dollar"></i> توثيق مالي شامل ودقيق</span>
             <h3><i class="fa-solid fa-clock-rotate-left"></i> سجل المدفوعات التاريخي</h3>
-            <p style="color:#94A3B8;font-size:0.92rem;line-height:1.6;">
+            <p>
               كشف حساب حي ومفصل لكل دفعة مقبولة ومرتبطة بحساب التاجر عبر جميع البنوك والمحافظ المعتمدة، بالوقت والتاريخ والمبلغ الدقيق.
             </p>
             <ul class="service-details-list">
@@ -1261,7 +1261,7 @@
           <div class="service-info-col">
             <span class="service-tagline"><i class="fa-solid fa-magnifying-glass"></i> تحقق ومطابقة في حالات الاستثناء</span>
             <h3><i class="fa-solid fa-code-compare"></i> الاستفسار عن الدفع ومطابقة الفاتورة</h3>
-            <p style="color:#94A3B8;font-size:0.92rem;line-height:1.6;">
+            <p>
               أداة قوية تتيح للتاجر والكاشير البحث الفوري عن أي معاملة للتأكد من وصولها، أو مطابقة دفعة يدوياً برقم الفاتورة في نظام ERP حال حدوث أي انقطاع للإنترنت.
             </p>
             <ul class="service-details-list">

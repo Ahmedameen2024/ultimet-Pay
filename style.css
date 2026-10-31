@@ -6646,3 +6646,1306 @@ body.theme-light .divider-badge {
   box-shadow: 0 0 8px #10B981;
   flex-shrink: 0;
 }
+
+
+/* ==========================================================================
+   Semantic Component Styles (Both Dark & Light Modes)
+   ========================================================================== */
+
+/* Slide 3: Parties Grid */
+.parties-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.party-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: right;
+  transition: all var(--transition-base);
+}
+
+.party-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+.party-card.highlight-bank {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.party-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.party-icon-wrap.user-wrap { background: rgba(16, 185, 129, 0.12); color: var(--emerald-400); }
+.party-icon-wrap.bank-wrap { background: rgba(16, 185, 129, 0.15); color: #34D399; }
+.party-icon-wrap.merchant-wrap { background: rgba(56, 189, 248, 0.12); color: #38BDF8; }
+.party-icon-wrap.erp-wrap { background: rgba(251, 191, 36, 0.12); color: #FBBF24; }
+
+.party-title {
+  color: #F8FAFC;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.party-title.highlight-text {
+  color: #34D399;
+}
+
+.party-desc {
+  color: #94A3B8;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* R2P Step Badges & Warning */
+.r2p-step-badge {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.r2p-step-badge.created { background: rgba(16, 185, 129, 0.1); color: var(--emerald-400); }
+.r2p-step-badge.direct-transfer { background: rgba(56, 189, 248, 0.1); color: #38BDF8; }
+.r2p-step-badge.pending { background: rgba(251, 191, 36, 0.1); color: #FBBF24; }
+.r2p-step-badge.paid { background: rgba(16, 185, 129, 0.15); color: #34D399; }
+
+.financial-warning-callout {
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 10px;
+  color: #FCA5A5;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.financial-warning-callout i {
+  color: #EF4444;
+}
+
+/* Slide 10: Roles Cooperation Box */
+.roles-cooperation-box {
+  margin: 40px 0;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(10, 15, 29, 0.95));
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.roles-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.roles-title {
+  color: #F8FAFC;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.roles-subtitle {
+  color: #94A3B8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.roles-three-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.role-col-card {
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.role-box-bank {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.role-box-bank .role-col-title { color: #38BDF8; margin: 0; font-size: 1.05rem; }
+
+.role-box-up {
+  background: rgba(16, 185, 129, 0.04);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+}
+
+.role-box-up .role-col-title { color: var(--emerald-400); margin: 0; font-size: 1.05rem; }
+
+.role-box-merchant {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.role-box-merchant .role-col-title { color: #FBBF24; margin: 0; font-size: 1.05rem; }
+
+.role-col-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.role-col-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.role-box-bank .role-col-icon { background: rgba(56, 189, 248, 0.15); color: #38BDF8; }
+.role-box-up .role-col-icon { background: rgba(16, 185, 129, 0.2); color: var(--emerald-400); }
+.role-box-merchant .role-col-icon { background: rgba(251, 191, 36, 0.15); color: #FBBF24; }
+
+.role-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #CBD5E1;
+  font-size: 0.88rem;
+}
+
+.role-box-bank .role-list-items i { color: #38BDF8; margin-left: 6px; }
+.role-box-up .role-list-items i { color: var(--emerald-400); margin-left: 6px; }
+.role-box-merchant .role-list-items i { color: #FBBF24; margin-left: 6px; }
+
+.role-activation-bar {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.88rem;
+  color: #E2E8F0;
+}
+
+.activation-steps-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.activation-steps-flow strong {
+  color: var(--emerald-400);
+}
+
+.activation-steps-flow i {
+  color: var(--emerald-400);
+  font-size: 0.75rem;
+}
+
+.activation-steps-flow .active-step {
+  color: #38BDF8;
+  font-weight: 700;
+}
+
+.principle-callout {
+  color: #FBBF24;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Onboarding Dual Cards */
+.onboarding-dual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto 30px auto;
+}
+
+.onboarding-track-card {
+  border-radius: 18px;
+  padding: 26px;
+  text-align: right;
+  transition: all var(--transition-base);
+}
+
+.onboarding-track-card.merchant {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1.5px solid rgba(16, 185, 129, 0.3);
+}
+
+.onboarding-track-card.bank {
+  background: rgba(56, 189, 248, 0.05);
+  border: 1.5px solid rgba(56, 189, 248, 0.3);
+}
+
+.onboarding-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.onboarding-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.onboarding-track-card.merchant .onboarding-card-icon {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--emerald-400);
+}
+
+.onboarding-track-card.bank .onboarding-card-icon {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38BDF8;
+}
+
+.onboarding-card-title {
+  color: #F8FAFC;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.onboarding-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #CBD5E1;
+  font-size: 0.92rem;
+}
+
+.onboarding-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.onboarding-track-card.merchant .onboarding-list i {
+  color: var(--emerald-400);
+  margin-top: 3px;
+}
+
+.onboarding-track-card.bank .onboarding-list i {
+  color: #38BDF8;
+  margin-top: 3px;
+}
+
+/* About Us Beneficiaries Pill & Ambition */
+.about-ambition-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--emerald-400);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-beneficiaries-pill {
+  margin-top: 24px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.about-bottom-note {
+  text-align: center;
+  margin-top: 20px;
+  color: #94A3B8;
+  font-size: 0.88rem;
+}
+
+/* Bank Collab Note */
+.bank-collab-note {
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 10px;
+  color: #7DD3FC;
+  font-size: 0.88rem;
+}
+
+/* Section Merchant Portal */
+.section-merchant-portal {
+  padding: 85px 0;
+  background: rgba(251, 191, 36, 0.03);
+  border-top: 1px solid rgba(251, 191, 36, 0.15);
+}
+
+.portal-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  color: #FBBF24;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  margin-top: 12px;
+}
+
+
+/* ==========================================================================
+   Comprehensive Institutional Light Mode Overrides (الوضع النهاري الكامل)
+   White & Emerald Green — Clean, Crisp, High-Contrast & Booklet Compliant
+   ========================================================================== */
+
+body.theme-light {
+  --bg-primary: #F8FAF9;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F0FDF4;
+  --bg-glass: rgba(255, 255, 255, 0.95);
+  
+  --border-subtle: #E2E8F0;
+  --border-focus: #059669;
+  --border-highlight: rgba(5, 150, 105, 0.35);
+  
+  --emerald-500: #059669;
+  --emerald-400: #10B981;
+  --emerald-600: #047857;
+  --emerald-glow: rgba(5, 150, 105, 0.15);
+  
+  --cyan-400: #0284C7;
+  --cyan-500: #0369A1;
+  --cyan-glow: rgba(2, 132, 199, 0.12);
+  
+  --amber-400: #D97706;
+  --amber-500: #B45309;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-on-accent: #FFFFFF;
+
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+body.theme-light h1,
+body.theme-light h2,
+body.theme-light h3,
+body.theme-light h4,
+body.theme-light h5,
+body.theme-light h6,
+body.theme-light strong {
+  color: #0F172A !important;
+}
+
+body.theme-light p {
+  color: #334155 !important;
+}
+
+body.theme-light .gradient-text {
+  background: linear-gradient(135deg, #059669 0%, #0D9488 50%, #0284C7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.theme-light .section-tag {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #047857 !important;
+}
+
+/* Header & Nav */
+body.theme-light .main-header {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .logo-primary {
+  color: #0F172A !important;
+}
+
+body.theme-light .logo-accent {
+  color: #059669 !important;
+}
+
+body.theme-light .logo-tagline {
+  color: #64748B !important;
+}
+
+body.theme-light .track-selector {
+  background: #F1F5F9 !important;
+  border-color: #E2E8F0 !important;
+}
+
+body.theme-light .track-btn {
+  color: #475569 !important;
+}
+
+body.theme-light .track-btn:hover {
+  color: #0F172A !important;
+}
+
+body.theme-light .track-btn.active {
+  background: #059669 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.3) !important;
+}
+
+body.theme-light .quick-nav-bar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #CBD5E1 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+}
+
+body.theme-light .quick-nav-link {
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+body.theme-light .quick-nav-link:hover {
+  background: #F0FDF4 !important;
+  border-color: #059669 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .quick-nav-link.highlight {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .quick-nav-link.portal-link {
+  background: #FFFBEB !important;
+  border-color: #FDE68A !important;
+  color: #92400E !important;
+}
+
+body.theme-light .quick-nav-link.portal-link:hover {
+  background: #FEF3C7 !important;
+  border-color: #D97706 !important;
+  color: #78350F !important;
+}
+
+/* Sticky Switch Banner */
+body.theme-light .track-switch-banner {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-top-color: #E2E8F0 !important;
+  border-bottom-color: #E2E8F0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.theme-light .banner-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .track-pill {
+  background: #F1F5F9 !important;
+  border-color: #CBD5E1 !important;
+  color: #334155 !important;
+}
+
+body.theme-light .track-pill:hover {
+  background: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+body.theme-light .track-pill.active {
+  background: #059669 !important;
+  color: #FFFFFF !important;
+  border-color: #059669 !important;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.3) !important;
+}
+
+/* Hero Section & Visual Card */
+body.theme-light .hero-eyebrow {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+}
+
+body.theme-light .speech-quote-pill {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+}
+
+body.theme-light .speech-quote-pill.bank-quote {
+  background: #F0F9FF !important;
+  border-color: #BAE6FD !important;
+  color: #075985 !important;
+}
+
+body.theme-light .trust-item strong {
+  color: #0F172A !important;
+}
+
+body.theme-light .trust-item span {
+  color: #64748B !important;
+}
+
+body.theme-light .trust-item i {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #059669 !important;
+}
+
+body.theme-light .flow-architecture-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06), 0 0 24px rgba(5, 150, 105, 0.06) !important;
+}
+
+body.theme-light .arch-card-header {
+  border-bottom-color: #E2E8F0 !important;
+}
+
+body.theme-light .arch-badge {
+  color: #0F172A !important;
+}
+
+body.theme-light .arch-badge i {
+  color: #059669 !important;
+}
+
+body.theme-light .arch-sub-badge {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .arch-track {
+  background: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+body.theme-light .arch-money-track {
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 100%) !important;
+  border-color: #BBF7D0 !important;
+}
+
+body.theme-light .arch-money-track .track-tag.green {
+  color: #047857 !important;
+}
+
+body.theme-light .arch-info-track {
+  background: linear-gradient(135deg, #F0F9FF 0%, #FFFFFF 100%) !important;
+  border-color: #BAE6FD !important;
+}
+
+body.theme-light .arch-info-track .track-tag.blue {
+  color: #0369A1 !important;
+}
+
+body.theme-light .track-status {
+  color: #64748B !important;
+}
+
+body.theme-light .arch-node {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .arch-node i {
+  color: #475569 !important;
+}
+
+body.theme-light .arch-node span {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+}
+
+body.theme-light .arch-node.highlight-bank {
+  background: #ECFDF5 !important;
+  border-color: #059669 !important;
+}
+
+body.theme-light .arch-node.highlight-bank i {
+  color: #047857 !important;
+}
+
+body.theme-light .arch-node.highlight-bank span {
+  color: #064E3B !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .arch-node.highlight-up {
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
+  box-shadow: 0 0 16px rgba(2, 132, 199, 0.14) !important;
+}
+
+body.theme-light .arch-node.highlight-up i {
+  color: #0284C7 !important;
+}
+
+body.theme-light .arch-node.highlight-up span {
+  color: #0C4A6E !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .arch-arrow.green {
+  color: #059669 !important;
+}
+
+body.theme-light .arch-arrow.blue {
+  color: #0284C7 !important;
+}
+
+body.theme-light .arch-live-pill {
+  background: #F1F5F9 !important;
+  border-color: #CBD5E1 !important;
+  color: #1E293B !important;
+}
+
+/* About Us (Slide 02) */
+body.theme-light .about-card-hero {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+
+body.theme-light .about-headline {
+  color: #0F172A !important;
+}
+
+body.theme-light .about-lead-text {
+  color: #334155 !important;
+}
+
+body.theme-light .about-ambition-badge {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .about-pillar-box {
+  background: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+body.theme-light .about-pillar-box:hover {
+  background: #F0FDF4 !important;
+  border-color: #059669 !important;
+}
+
+body.theme-light .pillar-icon-wrap {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #059669 !important;
+}
+
+body.theme-light .pillar-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .pillar-desc {
+  color: #475569 !important;
+}
+
+body.theme-light .value-tag {
+  background: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #1E293B !important;
+}
+
+body.theme-light .about-beneficiaries-pill {
+  background: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+body.theme-light .about-beneficiaries-pill i {
+  color: #0284C7 !important;
+}
+
+body.theme-light .about-bottom-note {
+  color: #475569 !important;
+}
+
+/* Slide 09 Comparison */
+body.theme-light .card-pain {
+  background: #FFF5F5 !important;
+  border-color: #FED7D7 !important;
+}
+
+body.theme-light .card-pain h3 {
+  color: #9B2C2C !important;
+}
+
+body.theme-light .card-pain li p {
+  color: #4A5568 !important;
+}
+
+body.theme-light .card-gain {
+  background: #F0FDF4 !important;
+  border-color: #BBF7D0 !important;
+}
+
+body.theme-light .card-gain h3 {
+  color: #065F46 !important;
+}
+
+body.theme-light .card-gain li p {
+  color: #1F2937 !important;
+}
+
+/* Slide 04 Why Us */
+body.theme-light .why-card {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .why-card:hover {
+  border-color: #059669 !important;
+  background: #F0FDF4 !important;
+  box-shadow: 0 12px 28px rgba(5, 150, 105, 0.1) !important;
+}
+
+body.theme-light .why-card-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .why-card-desc {
+  color: #475569 !important;
+}
+
+/* Slide 03 Parties Grid */
+body.theme-light .party-card {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .party-card:hover {
+  border-color: #059669 !important;
+  background: #F0FDF4 !important;
+}
+
+body.theme-light .party-card.highlight-bank {
+  border-color: #A7F3D0 !important;
+  background: #F0FDF4 !important;
+}
+
+body.theme-light .party-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .party-title.highlight-text {
+  color: #047857 !important;
+}
+
+body.theme-light .party-desc {
+  color: #475569 !important;
+}
+
+/* Slide 05 R2P Steps & Warning */
+body.theme-light .r2p-workflow-container {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .r2p-step-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03) !important;
+}
+
+body.theme-light .r2p-step-card:hover {
+  border-color: #059669 !important;
+  background: #F0FDF4 !important;
+}
+
+body.theme-light .r2p-step-num {
+  background: #ECFDF5 !important;
+  border-color: #059669 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .r2p-step-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .r2p-step-desc {
+  color: #475569 !important;
+}
+
+body.theme-light .r2p-step-card.highlight-financial {
+  background: #F0F9FF !important;
+  border-color: #BAE6FD !important;
+}
+
+body.theme-light .r2p-step-card.highlight-financial .r2p-step-num {
+  background: #E0F2FE !important;
+  border-color: #0284C7 !important;
+  color: #0369A1 !important;
+}
+
+body.theme-light .r2p-step-badge.created {
+  background: #ECFDF5 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .r2p-step-badge.direct-transfer {
+  background: #F0F9FF !important;
+  color: #0369A1 !important;
+}
+
+body.theme-light .r2p-step-badge.pending {
+  background: #FFFBEB !important;
+  color: #B45309 !important;
+}
+
+body.theme-light .r2p-step-badge.paid {
+  background: #ECFDF5 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .financial-warning-callout {
+  background: #FEF2F2 !important;
+  border: 1px solid #FECACA !important;
+  color: #991B1B !important;
+}
+
+body.theme-light .financial-warning-callout i {
+  color: #DC2626 !important;
+}
+
+/* Slide 06 Merchant Benefits */
+body.theme-light .merchant-benefits-box h3 {
+  color: #0F172A !important;
+}
+
+body.theme-light .m-benefit-item {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .m-benefit-item:hover {
+  border-color: #059669 !important;
+  background: #F0FDF4 !important;
+  box-shadow: 0 12px 28px rgba(5, 150, 105, 0.1) !important;
+}
+
+body.theme-light .m-benefit-icon {
+  background: #ECFDF5 !important;
+  border: 1px solid #A7F3D0 !important;
+  color: #059669 !important;
+}
+
+body.theme-light .m-benefit-item h4 {
+  color: #0F172A !important;
+}
+
+body.theme-light .m-benefit-item p {
+  color: #475569 !important;
+}
+
+/* Slide 10 Roles and Cooperation Box */
+body.theme-light .roles-cooperation-box {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+
+body.theme-light .roles-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .roles-subtitle {
+  color: #475569 !important;
+}
+
+body.theme-light .role-box-bank {
+  background: #F0F9FF !important;
+  border: 1px solid #BAE6FD !important;
+}
+
+body.theme-light .role-box-bank .role-col-title {
+  color: #0369A1 !important;
+}
+
+body.theme-light .role-box-up {
+  background: #F0FDF4 !important;
+  border: 1.5px solid #A7F3D0 !important;
+}
+
+body.theme-light .role-box-up .role-col-title {
+  color: #047857 !important;
+}
+
+body.theme-light .role-box-merchant {
+  background: #FFFBEB !important;
+  border: 1px solid #FDE68A !important;
+}
+
+body.theme-light .role-box-merchant .role-col-title {
+  color: #B45309 !important;
+}
+
+body.theme-light .role-list-items {
+  color: #334155 !important;
+}
+
+body.theme-light .role-list-items li {
+  color: #334155 !important;
+}
+
+body.theme-light .role-activation-bar {
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #1E293B !important;
+}
+
+body.theme-light .activation-steps-flow strong {
+  color: #047857 !important;
+}
+
+body.theme-light .activation-steps-flow .active-step {
+  color: #0284C7 !important;
+}
+
+body.theme-light .principle-callout {
+  color: #92400E !important;
+}
+
+/* Slide 11 Platform Workflow Grid */
+body.theme-light .phase-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .phase-card:hover {
+  border-color: #059669 !important;
+  background: #F0FDF4 !important;
+  box-shadow: 0 12px 28px rgba(5, 150, 105, 0.1) !important;
+}
+
+body.theme-light .phase-badge-num {
+  background: linear-gradient(135deg, #059669 0%, #0D9488 100%) !important;
+  color: #FFFFFF !important;
+}
+
+body.theme-light .phase-role-tag {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .phase-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .phase-desc {
+  color: #475569 !important;
+}
+
+/* Bank Deep-Dive & Collaboration */
+body.theme-light .bank-partnership-box {
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 100%) !important;
+  border-color: #A7F3D0 !important;
+  box-shadow: 0 15px 35px rgba(5, 150, 105, 0.06) !important;
+}
+
+body.theme-light .bank-collab-item {
+  background: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+body.theme-light .bank-collab-item:hover {
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
+}
+
+body.theme-light .bank-collab-item h4 {
+  color: #0F172A !important;
+}
+
+body.theme-light .bank-collab-item p {
+  color: #475569 !important;
+}
+
+body.theme-light .bank-collab-note {
+  background: #F0F9FF !important;
+  border: 1px solid #BAE6FD !important;
+  color: #0369A1 !important;
+}
+
+body.theme-light .b-stats-card {
+  background: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.theme-light .b-stats-header {
+  color: #0F172A !important;
+  border-bottom-color: #E2E8F0 !important;
+}
+
+body.theme-light .b-stats-header i {
+  color: #059669 !important;
+}
+
+body.theme-light .kpi-metric {
+  border-bottom-color: #E2E8F0 !important;
+}
+
+body.theme-light .kpi-lbl {
+  color: #475569 !important;
+}
+
+body.theme-light .kpi-val {
+  color: #059669 !important;
+}
+
+/* Onboarding Dual Track Cards */
+body.theme-light .onboarding-track-card.merchant {
+  background: #F0FDF4 !important;
+  border: 1.5px solid #A7F3D0 !important;
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.05) !important;
+}
+
+body.theme-light .onboarding-track-card.bank {
+  background: #F0F9FF !important;
+  border: 1.5px solid #BAE6FD !important;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.05) !important;
+}
+
+body.theme-light .onboarding-card-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .onboarding-list {
+  color: #334155 !important;
+}
+
+body.theme-light .onboarding-list li {
+  color: #334155 !important;
+}
+
+/* Slide 07 Merchant Portal */
+body.theme-light #merchantPortalSection {
+  background: #FAFDFB !important;
+  border-top-color: #E2E8F0 !important;
+}
+
+body.theme-light .portal-badge-pill {
+  background: #FFFBEB !important;
+  border: 1px solid #FDE68A !important;
+  color: #92400E !important;
+}
+
+body.theme-light .merchant-tab-btn {
+  background: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #475569 !important;
+}
+
+body.theme-light .merchant-tab-btn i {
+  color: #64748B !important;
+}
+
+body.theme-light .merchant-tab-btn:hover {
+  background: #FFFBEB !important;
+  border-color: #D97706 !important;
+  color: #B45309 !important;
+}
+
+body.theme-light .merchant-tab-btn.active {
+  background: #FEF3C7 !important;
+  border-color: #D97706 !important;
+  color: #92400E !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.15) !important;
+}
+
+body.theme-light .merchant-tab-btn.active i {
+  color: #D97706 !important;
+}
+
+body.theme-light .service-card-layout {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+
+body.theme-light .service-info-col h3 {
+  color: #0F172A !important;
+}
+
+body.theme-light .service-info-col h3 i {
+  color: #D97706 !important;
+}
+
+body.theme-light .service-tagline {
+  color: #0284C7 !important;
+}
+
+body.theme-light .service-info-col p {
+  color: #475569 !important;
+}
+
+body.theme-light .service-details-list li {
+  color: #334155 !important;
+}
+
+body.theme-light .service-details-list li i {
+  color: #059669 !important;
+}
+
+body.theme-light .service-screenshot-frame {
+  background: #F8FAFC !important;
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
+}
+
+body.theme-light .browser-mock-header {
+  background: #F1F5F9 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+body.theme-light .mock-title {
+  color: #64748B !important;
+}
+
+/* Slide 12 Contact & CTA */
+body.theme-light .whatsapp-hero-box {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.06) !important;
+}
+
+body.theme-light .whatsapp-hero-icon-wrap {
+  background: #DCFCE7 !important;
+  border-color: #86EFAC !important;
+  color: #16A34A !important;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.2) !important;
+}
+
+body.theme-light .whatsapp-hero-box .cta-title {
+  color: #0F172A !important;
+}
+
+body.theme-light .whatsapp-hero-box .cta-subtitle {
+  color: #475569 !important;
+}
+
+body.theme-light .contact-pill {
+  background: #F8FAFC !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #1E293B !important;
+}
+
+body.theme-light .contact-pill:hover {
+  background: #F0FDF4 !important;
+  border-color: #059669 !important;
+  color: #047857 !important;
+}
+
+body.theme-light .contact-pill i {
+  color: #059669 !important;
+}
+
+body.theme-light .contact-pill.whatsapp-pill {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+}
+
+/* Footer in Light Mode */
+body.theme-light .main-footer {
+  background: #FFFFFF !important;
+  border-top: 1px solid #E2E8F0 !important;
+}
+
+body.theme-light .brand-info .logo-primary {
+  color: #0F172A !important;
+}
+
+body.theme-light .brand-info p {
+  color: #475569 !important;
+}
+
+body.theme-light .f-badge {
+  background: #F1F5F9 !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+body.theme-light .f-badge i {
+  color: #059669 !important;
+}
+
+body.theme-light .footer-copy p {
+  color: #64748B !important;
+}
+
+
+.merchant-benefits-quote {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 22px;
+}
+body.theme-light .merchant-benefits-quote {
+  color: #475569 !important;
+}
+
+.onboarding-lead-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+body.theme-light .onboarding-lead-subtitle {
+  color: #475569 !important;
+}
