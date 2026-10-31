@@ -24,8 +24,12 @@ test_rtl.pptx
 test_rtl_export/
 
 # Confidential / Internal Presentation (Reserved for Opening Ceremony)
+*.pptx
 Ultimate_Pay_Presentation.pptx
 Ultimate_Pay_Payment_Aggregator.pptx
+assets/diagrams/
+merchant-onboarding-screens/
+internal_review_checklist.md
 powerboint.docx
 extracted_docx_slides/
 generated_slides_review/
