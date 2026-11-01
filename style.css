@@ -7949,3 +7949,113 @@ body.theme-light .merchant-benefits-quote {
 body.theme-light .onboarding-lead-subtitle {
   color: #475569 !important;
 }
+
+
+/* Payment Cycle Selectors (replacing legacy r2p naming) */
+.payment-cycle-container { position: relative; margin-top: 32px; }
+.payment-cycle-header { text-align: center; margin-bottom: 24px; }
+.payment-cycle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.payment-cycle-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: all var(--transition-base);
+}
+.payment-cycle-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+}
+.payment-cycle-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #064E3B;
+  border: 2px solid var(--accent-green);
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.payment-cycle-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.payment-cycle-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+.payment-cycle-badge {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 600;
+}
+.payment-cycle-badge.created { background: rgba(16, 185, 129, 0.1); color: var(--emerald-400); }
+.payment-cycle-badge.direct-transfer { background: rgba(56, 189, 248, 0.1); color: #38BDF8; }
+.payment-cycle-badge.pending { background: rgba(251, 191, 36, 0.1); color: #FBBF24; }
+.payment-cycle-badge.paid { background: rgba(16, 185, 129, 0.15); color: #34D399; }
+
+/* Light Theme for payment-cycle */
+body.theme-light .payment-cycle-container {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+}
+body.theme-light .payment-cycle-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03) !important;
+}
+body.theme-light .payment-cycle-card:hover {
+  border-color: #059669 !important;
+  background: #F0FDF4 !important;
+}
+body.theme-light .payment-cycle-num {
+  background: #ECFDF5 !important;
+  border-color: #059669 !important;
+  color: #047857 !important;
+}
+body.theme-light .payment-cycle-title {
+  color: #0F172A !important;
+}
+body.theme-light .payment-cycle-desc {
+  color: #475569 !important;
+}
+body.theme-light .payment-cycle-card.highlight-financial {
+  background: #F0F9FF !important;
+  border-color: #BAE6FD !important;
+}
+body.theme-light .payment-cycle-card.highlight-financial .payment-cycle-num {
+  background: #E0F2FE !important;
+  border-color: #0284C7 !important;
+  color: #0369A1 !important;
+}
+body.theme-light .payment-cycle-badge.created {
+  background: #ECFDF5 !important;
+  color: #047857 !important;
+}
+body.theme-light .payment-cycle-badge.direct-transfer {
+  background: #F0F9FF !important;
+  color: #0369A1 !important;
+}
+body.theme-light .payment-cycle-badge.pending {
+  background: #FFFBEB !important;
+  color: #B45309 !important;
+}
+body.theme-light .payment-cycle-badge.paid {
+  background: #ECFDF5 !important;
+  color: #047857 !important;
+}
