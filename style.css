@@ -8059,3 +8059,31 @@ body.theme-light .payment-cycle-badge.paid {
   background: #ECFDF5 !important;
   color: #047857 !important;
 }
+
+
+/* ==========================================================================
+   LTR Alignment Fixes for New Semantic Sections (English Mode)
+   ========================================================================== */
+[dir="ltr"] .party-card,
+[dir="ltr"] .onboarding-track-card {
+  text-align: left;
+}
+
+[dir="ltr"] .role-list-items i {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+[dir="ltr"] .activation-steps-flow i.fa-arrow-left {
+  transform: rotate(180deg);
+}
+
+[dir="ltr"] .bank-collab-note i {
+  margin-left: 0 !important;
+  margin-right: 6px;
+}
+
+[dir="ltr"] .frame-zoom-cta {
+  left: auto;
+  right: 16px;
+}

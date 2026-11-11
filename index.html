@@ -332,19 +332,14 @@
   <!-- Quick Sections Sub-Navigation Bar (8 Approved Sections) -->
   <nav class="quick-nav-bar" id="quickNavBar" aria-label="أقسام الموقع الرئيسية">
     <div class="container quick-nav-container">
-      <a href="#hero" class="quick-nav-link"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>
-      <a href="#aboutUs" class="quick-nav-link"><i class="fa-solid fa-circle-info"></i><span>من نحن</span></a>
-      <a href="#paymentAggregatorSection" class="quick-nav-link highlight"><i class="fa-solid fa-receipt"></i><span>خدمة
-          Payment Aggregator</span></a>
-      <a href="#platformWorkflowSection" class="quick-nav-link"><i class="fa-solid fa-diagram-project"></i><span>آلية
-          العمل</span></a>
-      <a href="#servicesGrid" class="quick-nav-link"><i class="fa-solid fa-cubes"></i><span>خدمات التجار</span></a>
-      <a href="#bankPartnership" class="quick-nav-link"><i class="fa-solid fa-building-columns"></i><span>خدمات
-          البنوك</span></a>
-      <a href="#merchantPortalSection" class="quick-nav-link portal-link"><i
-          class="fa-solid fa-gauge-high"></i><span>بوابة التاجر</span></a>
-      <a href="#ctaSection" class="quick-nav-link highlight"><i class="fa-brands fa-whatsapp"></i><span>تواصل
-          معنا</span></a>
+      <a href="#hero" class="quick-nav-link"><i class="fa-solid fa-house"></i><span data-i18n="nav_home">الرئيسية</span></a>
+      <a href="#aboutUs" class="quick-nav-link"><i class="fa-solid fa-circle-info"></i><span data-i18n="nav_about">من نحن</span></a>
+      <a href="#paymentAggregatorSection" class="quick-nav-link highlight"><i class="fa-solid fa-receipt"></i><span data-i18n="nav_aggregator">خدمة Payment Aggregator</span></a>
+      <a href="#platformWorkflowSection" class="quick-nav-link"><i class="fa-solid fa-diagram-project"></i><span data-i18n="nav_workflow">آلية العمل</span></a>
+      <a href="#servicesGrid" class="quick-nav-link"><i class="fa-solid fa-cubes"></i><span data-i18n="nav_services">خدمات التجار</span></a>
+      <a href="#bankPartnership" class="quick-nav-link"><i class="fa-solid fa-building-columns"></i><span data-i18n="nav_banks">خدمات البنوك</span></a>
+      <a href="#merchantPortalSection" class="quick-nav-link portal-link"><i class="fa-solid fa-gauge-high"></i><span data-i18n="nav_portal">بوابة التاجر</span></a>
+      <a href="#ctaSection" class="quick-nav-link highlight"><i class="fa-brands fa-whatsapp"></i><span data-i18n="nav_contact">تواصل معنا</span></a>
     </div>
   </nav>
 
@@ -647,23 +642,23 @@
       <div class="parties-flow-grid">
         <div class="party-card">
           <div class="party-icon-wrap user-wrap"><i class="fa-solid fa-user"></i></div>
-          <h4 class="party-title">👤 العميل</h4>
-          <p class="party-desc">يسدد قيمة الفاتورة عن طريق المحفظة أو التطبيق البنكي.</p>
+          <h4 class="party-title" data-i18n="p1_t">👤 العميل</h4>
+          <p class="party-desc" data-i18n="p1_d">يسدد قيمة الفاتورة عن طريق المحفظة أو التطبيق البنكي.</p>
         </div>
         <div class="party-card highlight-bank">
           <div class="party-icon-wrap bank-wrap"><i class="fa-solid fa-building-columns"></i></div>
-          <h4 class="party-title highlight-text">💳 المحفظة / التطبيق البنكي</h4>
-          <p class="party-desc">تنقل المبلغ مباشرة من حساب العميل إلى حساب التاجر.</p>
+          <h4 class="party-title highlight-text" data-i18n="p2_t">💳 المحفظة / التطبيق البنكي</h4>
+          <p class="party-desc" data-i18n="p2_d">تنقل المبلغ مباشرة من حساب العميل إلى حساب التاجر.</p>
         </div>
         <div class="party-card">
           <div class="party-icon-wrap merchant-wrap"><i class="fa-solid fa-store"></i></div>
-          <h4 class="party-title">🏬 التاجر</h4>
-          <p class="party-desc">يصدر الفاتورة ويصله إشعار بنتيجة السداد.</p>
+          <h4 class="party-title" data-i18n="p3_t">🏬 التاجر</h4>
+          <p class="party-desc" data-i18n="p3_d">يصدر الفاتورة ويصله إشعار بنتيجة السداد.</p>
         </div>
         <div class="party-card">
           <div class="party-icon-wrap erp-wrap"><i class="fa-solid fa-chart-line"></i></div>
-          <h4 class="party-title">📊 النظام المحاسبي</h4>
-          <p class="party-desc">تُحدَّث الفواتير وسندات القبض آليًا عند تفعيل التكامل.</p>
+          <h4 class="party-title" data-i18n="p4_t">📊 النظام المحاسبي</h4>
+          <p class="party-desc" data-i18n="p4_d">تُحدَّث الفواتير وسندات القبض آليًا عند تفعيل التكامل.</p>
         </div>
       </div>
 
@@ -671,52 +666,49 @@
       <div class="payment-cycle-container">
         <div class="payment-cycle-header">
           <span class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-green);"><i
-              class="fa-solid fa-paper-plane"></i> ▬ دورة السداد والمطابقة • Slide 05</span>
-          <h3>من إصدار الفاتورة إلى إقفالها — في أربع خطوات واضحة</h3>
-          <p>شرح مبسط يوضح تسلسل دورة الدفع بدقة:</p>
+              class="fa-solid fa-paper-plane"></i> <span data-i18n="cyc_tag">▬ دورة السداد والمطابقة • Slide 05</span></span>
+          <h3 data-i18n="cyc_title">من إصدار الفاتورة إلى إقفالها — في أربع خطوات واضحة</h3>
+          <p data-i18n="cyc_sub">شرح مبسط يوضح تسلسل دورة الدفع بدقة:</p>
         </div>
 
         <div class="payment-cycle-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
           <!-- Step 1 -->
           <div class="payment-cycle-card">
             <div class="payment-cycle-num">1</div>
-            <div class="payment-cycle-title">إصدار الفاتورة لدى التاجر</div>
-            <div class="payment-cycle-desc">يُنشئ التاجر الفاتورة في نظامه المحاسبي برقم ومبلغ محدد.</div>
-            <div class="payment-cycle-badge created">تم إصدار الفاتورة • بانتظار السداد</div>
+            <div class="payment-cycle-title" data-i18n="cyc_s1_t">إصدار الفاتورة لدى التاجر</div>
+            <div class="payment-cycle-desc" data-i18n="cyc_s1_d">يُنشئ التاجر الفاتورة في نظامه المحاسبي برقم ومبلغ محدد.</div>
+            <div class="payment-cycle-badge created" data-i18n="cyc_s1_b">تم إصدار الفاتورة • بانتظار السداد</div>
           </div>
 
           <!-- Step 2 -->
           <div class="payment-cycle-card">
             <div class="payment-cycle-num">2</div>
-            <div class="payment-cycle-title">سداد العميل المباشر</div>
-            <div class="payment-cycle-desc">يسدد العميل عبر محفظته أو تطبيقه البنكي بحسب الآلية المعتمدة لدى المحفظة؛ وتنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر.</div>
-            <div class="payment-cycle-badge direct-transfer">انتقال الأموال مباشرة لحساب التاجر</div>
+            <div class="payment-cycle-title" data-i18n="cyc_s2_t">سداد العميل المباشر</div>
+            <div class="payment-cycle-desc" data-i18n="cyc_s2_d">يسدد العميل عبر محفظته أو تطبيقه البنكي بحسب الآلية المعتمدة لدى المحفظة؛ وتنتقل الأموال مباشرة من حساب العميل إلى حساب التاجر.</div>
+            <div class="payment-cycle-badge direct-transfer" data-i18n="cyc_s2_b">انتقال الأموال مباشرة لحساب التاجر</div>
           </div>
 
           <!-- Step 3 -->
           <div class="payment-cycle-card">
             <div class="payment-cycle-num">3</div>
-            <div class="payment-cycle-title">استقبال تأكيد السداد</div>
-            <div class="payment-cycle-desc">تستقبل منصة Ultimate Pay إشعار التحصيل المؤكد ونتيجة العملية مباشرة من جهة الدفع (البنك أو المحفظة).
-            </div>
-            <div class="payment-cycle-badge pending">تأكيد النتيجة • ربط بالفاتورة</div>
+            <div class="payment-cycle-title" data-i18n="cyc_s3_t">استقبال تأكيد السداد</div>
+            <div class="payment-cycle-desc" data-i18n="cyc_s3_d">تستقبل منصة Ultimate Pay إشعار التحصيل المؤكد ونتيجة العملية مباشرة من جهة الدفع (البنك أو المحفظة).</div>
+            <div class="payment-cycle-badge pending" data-i18n="cyc_s3_b">تأكيد النتيجة • ربط بالفاتورة</div>
           </div>
 
           <!-- Step 4 -->
           <div class="payment-cycle-card"
             style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.04);">
-            <div class="payment-cycle-num" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-400);">4
-            </div>
-            <div class="payment-cycle-title" style="color: var(--emerald-400);">ربط الفاتورة والتحديث المحاسبي</div>
-            <div class="payment-cycle-desc">تُربط النتيجة بالفاتورة الصحيحة، وتنعكس آلياً على النظام المحاسبي (مثل Onyx ERP) مع إشعار التاجر فوراً.</div>
-            <div class="payment-cycle-badge paid">مدفوعة • تم التحديث المحاسبي</div>
+            <div class="payment-cycle-num" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-400);">4</div>
+            <div class="payment-cycle-title" style="color: var(--emerald-400);" data-i18n="cyc_s4_t">ربط الفاتورة والتحديث المحاسبي</div>
+            <div class="payment-cycle-desc" data-i18n="cyc_s4_d">تُربط النتيجة بالفاتورة الصحيحة، وتنعكس آلياً على النظام المحاسبي (مثل Onyx ERP) مع إشعار التاجر فوراً.</div>
+            <div class="payment-cycle-badge paid" data-i18n="cyc_s4_b">مدفوعة • تم التحديث المحاسبي</div>
           </div>
         </div>
 
         <div class="financial-warning-callout">
           <i class="fa-solid fa-circle-exclamation"></i>
-          <span>🔴 <strong>تنبيه توضيحي:</strong> لم تكتمل العملية — وتظهر حالتها بوضوح للتاجر دون اعتبارها
-            مدفوعة.</span>
+          <span data-i18n="cyc_warn">🔴 <strong>تنبيه توضيحي:</strong> لم تكتمل العملية — وتظهر حالتها بوضوح للتاجر دون اعتبارها مدفوعة.</span>
         </div>
       </div>
 
@@ -724,39 +716,38 @@
       <div class="merchant-benefits-box" style="margin-top: 36px;">
         <span class="section-tag"
           style="background: rgba(16, 185, 129, 0.12); color: var(--emerald-400); margin-bottom: 8px;"><i
-            class="fa-solid fa-star"></i> ▬ القيمة للتاجر • Slide 06</span>
-        <h3 style="margin-top: 6px;">ماذا تكسب منشأتك يوميًا مع Ultimate Pay؟</h3>
-        <p class="merchant-benefits-quote">«الخدمة ليست أداة تقنية إضافية — إنها جزء من دورة البيع: فاتورة، رمز، إشعار،
-          وقيد محاسبي صحيح.»</p>
+            class="fa-solid fa-star"></i> <span data-i18n="mb_tag">▬ القيمة للتاجر • Slide 06</span></span>
+        <h3 style="margin-top: 6px;" data-i18n="mb_title">ماذا تكسب منشأتك يوميًا مع Ultimate Pay؟</h3>
+        <p class="merchant-benefits-quote" data-i18n="mb_quote">«الخدمة ليست أداة تقنية إضافية — إنها جزء من دورة البيع: فاتورة، رمز، إشعار، وقيد محاسبي صحيح.»</p>
         <div class="merchant-benefits-grid">
           <div class="m-benefit-item">
             <div class="m-benefit-icon"><i class="fa-solid fa-link"></i></div>
-            <h4>ربط واضح بالفاتورة</h4>
-            <p>كل عملية دفع تُربط برقم الفاتورة ومبلغها.</p>
+            <h4 data-i18n="mb_1_t">ربط واضح بالفاتورة</h4>
+            <p data-i18n="mb_1_d">كل عملية دفع تُربط برقم الفاتورة ومبلغها.</p>
           </div>
 
           <div class="m-benefit-item">
             <div class="m-benefit-icon"><i class="fa-solid fa-bell"></i></div>
-            <h4>إشعار بالنتيجة</h4>
-            <p>يصل التاجر رقم الفاتورة والمبلغ وحالة السداد.</p>
+            <h4 data-i18n="mb_2_t">إشعار بالنتيجة</h4>
+            <p data-i18n="mb_2_d">يصل التاجر رقم الفاتورة والمبلغ وحالة السداد.</p>
           </div>
 
           <div class="m-benefit-item">
             <div class="m-benefit-icon"><i class="fa-solid fa-arrows-spin"></i></div>
-            <h4>تسجيل محاسبي تلقائي</h4>
-            <p>يُسجَّل المبلغ في النظام المحاسبي آلياً عند وصول الإشعار.</p>
+            <h4 data-i18n="mb_3_t">تسجيل محاسبي تلقائي</h4>
+            <p data-i18n="mb_3_d">يُسجَّل المبلغ في النظام المحاسبي آلياً عند وصول الإشعار.</p>
           </div>
 
           <div class="m-benefit-item">
             <div class="m-benefit-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-            <h4>متابعة أسهل للفواتير</h4>
-            <p>معرفة المسدد منها دون مراجعة يدوية طويلة.</p>
+            <h4 data-i18n="mb_4_t">متابعة أسهل للفواتير</h4>
+            <p data-i18n="mb_4_d">معرفة المسدد منها دون مراجعة يدوية طويلة.</p>
           </div>
 
           <div class="m-benefit-item">
             <div class="m-benefit-icon"><i class="fa-solid fa-keyboard"></i></div>
-            <h4>تقليل الإدخال اليدوي</h4>
-            <p>يخفف عمل المحاسب في تسجيل الدفعات.</p>
+            <h4 data-i18n="mb_5_t">تقليل الإدخال اليدوي</h4>
+            <p data-i18n="mb_5_d">يخفف عمل المحاسب في تسجيل الدفعات.</p>
           </div>
         </div>
       </div>
@@ -765,9 +756,9 @@
       <div class="roles-cooperation-box">
         <div class="roles-header">
           <span class="section-tag" style="background: rgba(16, 185, 129, 0.12); color: var(--emerald-400);"><i
-              class="fa-solid fa-handshake"></i> ▬ نموذج التعاون والتكامل • Slide 10</span>
-          <h3 class="roles-title">أدوار واضحة بين الأطراف</h3>
-          <p class="roles-subtitle">حدود مسؤوليات واضحة تضمن انضباط وسلاسة العمليات المالية والتقنية</p>
+              class="fa-solid fa-handshake"></i> <span data-i18n="roles_tag">▬ نموذج التعاون والتكامل • Slide 10</span></span>
+          <h3 class="roles-title" data-i18n="roles_title">أدوار واضحة بين الأطراف</h3>
+          <p class="roles-subtitle" data-i18n="roles_sub">حدود مسؤوليات واضحة تضمن انضباط وسلاسة العمليات المالية والتقنية</p>
         </div>
 
         <div class="roles-three-cols">
@@ -775,13 +766,13 @@
           <div class="role-col-card role-box-bank">
             <div class="role-col-header">
               <div class="role-col-icon"><i class="fa-solid fa-building-columns"></i></div>
-              <h4 class="role-col-title">المؤسسة المالية (البنك / المحفظة)</h4>
+              <h4 class="role-col-title" data-i18n="role_bank_t">المؤسسة المالية (البنك / المحفظة)</h4>
             </div>
             <ul class="role-list-items">
-              <li><i class="fa-solid fa-circle-check"></i> توفير وسائل الدفع للعميل</li>
-              <li><i class="fa-solid fa-circle-check"></i> تنفيذ الدفع وفق آليته المعتمدة</li>
-              <li><i class="fa-solid fa-circle-check"></i> اعتماد طلبات التفعيل لدى التاجر</li>
-              <li><i class="fa-solid fa-circle-check"></i> إتاحة نتيجة الدفع للمنصة</li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_bank_1">توفير وسائل الدفع للعميل</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_bank_2">تنفيذ الدفع وفق آليته المعتمدة</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_bank_3">اعتماد طلبات التفعيل لدى التاجر</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_bank_4">إتاحة نتيجة الدفع للمنصة</span></li>
             </ul>
           </div>
 
@@ -789,13 +780,13 @@
           <div class="role-col-card role-box-up">
             <div class="role-col-header">
               <div class="role-col-icon"><i class="fa-solid fa-bolt"></i></div>
-              <h4 class="role-col-title">Ultimate Pay — منصة الربط</h4>
+              <h4 class="role-col-title" data-i18n="role_up_t">Ultimate Pay — منصة الربط</h4>
             </div>
             <ul class="role-list-items">
-              <li><i class="fa-solid fa-circle-check"></i> تأكيد نتيجة الدفع</li>
-              <li><i class="fa-solid fa-circle-check"></i> ربط النتيجة بالفاتورة الصحيحة</li>
-              <li><i class="fa-solid fa-circle-check"></i> التكامل مع النظام المحاسبي للتاجر</li>
-              <li><i class="fa-solid fa-circle-check"></i> إشعار التاجر بنتيجة السداد</li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_up_1">تأكيد نتيجة الدفع</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_up_2">ربط النتيجة بالفاتورة الصحيحة</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_up_3">التكامل مع النظام المحاسبي للتاجر</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_up_4">إشعار التاجر بنتيجة السداد</span></li>
             </ul>
           </div>
 
@@ -803,29 +794,28 @@
           <div class="role-col-card role-box-merchant">
             <div class="role-col-header">
               <div class="role-col-icon"><i class="fa-solid fa-store"></i></div>
-              <h4 class="role-col-title">التاجر</h4>
+              <h4 class="role-col-title" data-i18n="role_mer_t">التاجر</h4>
             </div>
             <ul class="role-list-items">
-              <li><i class="fa-solid fa-circle-check"></i> إصدار الفواتير وطلبات الدفع</li>
-              <li><i class="fa-solid fa-circle-check"></i> استلام إشعار نتيجة السداد</li>
-              <li><i class="fa-solid fa-circle-check"></i> متابعة الفواتير المسددة</li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_mer_1">إصدار الفواتير في نظامه المحاسبي</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_mer_2">استلام إشعار نتيجة السداد</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="role_mer_3">متابعة الفواتير المسددة</span></li>
             </ul>
           </div>
         </div>
 
         <div class="role-activation-bar">
           <div class="activation-steps-flow">
-            <strong>تدفق التفعيل:</strong>
-            <span>طلب التاجر</span>
+            <strong data-i18n="role_act_lbl">تدفق التفعيل:</strong>
+            <span data-i18n="role_act_1">طلب التاجر</span>
             <i class="fa-solid fa-arrow-left"></i>
-            <span>اعتماد المؤسسة المالية</span>
+            <span data-i18n="role_act_2">اعتماد المؤسسة المالية</span>
             <i class="fa-solid fa-arrow-left"></i>
-            <span class="active-step">تفعيل وسيلة الدفع</span>
+            <span class="active-step" data-i18n="role_act_3">تفعيل وسيلة الدفع</span>
           </div>
           <div class="principle-callout">
             <i class="fa-solid fa-shield-halved"></i>
-            <span><strong>🛡 مبدأ أساسي:</strong> Ultimate Pay لا تحتفظ بأموال العملاء ولا تحوّلها — الأموال تنتقل
-              مباشرة من حساب العميل إلى حساب التاجر.</span>
+            <span data-i18n="role_principle"><strong>🛡 مبدأ أساسي:</strong> Ultimate Pay لا تحتفظ بأموال العملاء ولا تحوّلها — الأموال تنتقل مباشرة من حساب العميل إلى حساب التاجر.</span>
           </div>
         </div>
       </div>
@@ -855,9 +845,9 @@
         <div class="phase-card">
           <div class="phase-card-header">
             <div class="phase-badge-num">1</div>
-            <h4 class="phase-title">1. إنشاء الفاتورة وطلب الدفع</h4>
+            <h4 class="phase-title" data-i18n="wf_p1_t">1. إنشاء الفاتورة لدى التاجر</h4>
           </div>
-          <p class="phase-desc">
+          <p class="phase-desc" data-i18n="wf_p1_d">
             يصدر التاجر فاتورة عبر نظامه المحاسبي برقم ومبلغ محدد، ليتم ربطها آلياً بنتيجة السداد.
           </p>
         </div>
@@ -865,31 +855,30 @@
         <div class="phase-card">
           <div class="phase-card-header">
             <div class="phase-badge-num">2</div>
-            <h4 class="phase-title">2. سداد العميل لدى جهة الدفع</h4>
+            <h4 class="phase-title" data-i18n="wf_p2_t">2. سداد العميل لدى جهة الدفع</h4>
           </div>
-          <p class="phase-desc">
-            يقوم العميل بإتمام عملية الدفع عبر المحفظة أو التطبيق البنكي، وتنتقل الأموال مباشرة لحساب التاجر لدى جهة
-            الدفع.
+          <p class="phase-desc" data-i18n="wf_p2_d">
+            يقوم العميل بإتمام عملية الدفع عبر المحفظة أو التطبيق البنكي وفق آليته المعتمدة، وتنتقل الأموال مباشرة لحساب التاجر لدى جهة الدفع.
           </p>
         </div>
 
         <div class="phase-card">
           <div class="phase-card-header">
             <div class="phase-badge-num">3</div>
-            <h4 class="phase-title">3. تأكيد نتيجة العملية في Ultimate Pay</h4>
+            <h4 class="phase-title" data-i18n="wf_p3_t">3. تأكيد نتيجة العملية في Ultimate Pay</h4>
           </div>
-          <p class="phase-desc">
-            ترسل جهة الدفع تأكيد العملية إلى محول منصة Ultimate Pay، فتستقبل المنصة النتيجة بالمرجع المعتمد.
+          <p class="phase-desc" data-i18n="wf_p3_d">
+            ترسل جهة الدفع تأكيد العملية إلى منصة Ultimate Pay، فتستقبل المنصة النتيجة بالمرجع المعتمد.
           </p>
         </div>
 
         <div class="phase-card">
           <div class="phase-card-header">
             <div class="phase-badge-num">4</div>
-            <h4 class="phase-title">4. ربط النتيجة وتحديث النظام والإشعار</h4>
+            <h4 class="phase-title" data-i18n="wf_p4_t">4. ربط النتيجة وتحديث النظام والإشعار</h4>
           </div>
-          <p class="phase-desc">
-            تُربط النتيجة بالفاتورة، ويُرسل إشعار Webhook لتحديث النظام المحاسبي فورياً وإشعار التاجر بنتيجة السداد.
+          <p class="phase-desc" data-i18n="wf_p4_d">
+            تُربط النتيجة بالفاتورة، ويُرسل إشعار فوري لتحديث النظام المحاسبي وتنبيه التاجر بنتيجة السداد.
           </p>
         </div>
       </div>
@@ -1018,7 +1007,7 @@
             </h2>
             <div class="speech-quote-pill bank-quote" style="margin-bottom: 20px;">
               <i class="fa-solid fa-quote-right"></i>
-              <span>«قيمة واحدة لجميع الأطراف: البنك، المحفظة، التاجر، والعميل — وإدارة مالية منضبطة للجميع.»</span>
+              <span data-i18n="bank_quote">«قيمة واحدة لجميع الأطراف: البنك، المحفظة، التاجر، والعميل — وإدارة مالية منضبطة للجميع.»</span>
             </div>
             <p class="b-lead" data-i18n="bank_lead">
               توفر Ultimate Pay نموذج تعاون مؤسسي بحدود مسؤوليات واضحة يعزز وصول خدماتكم المالية:
@@ -1026,32 +1015,30 @@
 
             <div class="bank-collab-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
               <div class="bank-collab-item">
-                <span class="collab-badge">1. نطاق القبول</span>
-                <h4>توسيع نطاق القبول</h4>
-                <p>وصول خدمات البنك والمحفظة إلى شبكة تجار واسعة عبر قناة ربط واحدة.</p>
+                <span class="collab-badge" data-i18n="bc_1_b">1. نطاق القبول</span>
+                <h4 data-i18n="bc_1_t">توسيع نطاق القبول</h4>
+                <p data-i18n="bc_1_d">وصول خدمات البنك والمحفظة إلى شبكة تجار واسعة عبر قناة ربط واحدة.</p>
               </div>
               <div class="bank-collab-item">
-                <span class="collab-badge">2. تخفيف الأعباء</span>
-                <h4>تخفيف الأعباء التشغيلية</h4>
-                <p>المنصة تتولى ربط نتيجة الدفع بفاتورة التاجر.</p>
+                <span class="collab-badge" data-i18n="bc_2_b">2. تخفيف الأعباء</span>
+                <h4 data-i18n="bc_2_t">تخفيف الأعباء التشغيلية</h4>
+                <p data-i18n="bc_2_d">المنصة تتولى ربط نتيجة الدفع بفاتورة التاجر.</p>
               </div>
               <div class="bank-collab-item">
-                <span class="collab-badge">3. استقرار الودائع</span>
-                <h4>تعزيز التدفقات والودائع</h4>
-                <p>أموال المبيعات تنتقل مباشرة بين حسابات عملائكم وتجاركم لديكم — فتبقى السيولة داخل المؤسسة المالية.
-                </p>
+                <span class="collab-badge" data-i18n="bc_3_b">3. استقرار الودائع</span>
+                <h4 data-i18n="bc_3_t">تعزيز التدفقات والودائع</h4>
+                <p data-i18n="bc_3_d">أموال المبيعات تنتقل مباشرة بين حسابات عملائكم وتجاركم لديكم — فتبقى السيولة داخل المؤسسة المالية.</p>
               </div>
               <div class="bank-collab-item">
-                <span class="collab-badge">4. شمول مالي</span>
-                <h4>دعم الشمول المالي</h4>
-                <p>إتمام السداد يتم وفق الآلية المعتمدة لكل محفظة وتطبيق بنكي وبشكل مباشر بين حساب العميل وحساب التاجر.</p>
+                <span class="collab-badge" data-i18n="bc_4_b">4. شمول مالي</span>
+                <h4 data-i18n="bc_4_t">دعم الشمول المالي</h4>
+                <p data-i18n="bc_4_d">إتمام السداد يتم وفق الآلية المعتمدة لكل محفظة وتطبيق بنكي وبشكل مباشر بين حساب العميل وحساب التاجر.</p>
               </div>
             </div>
 
             <div class="bank-collab-note">
               <i class="fa-solid fa-scale-balanced" style="margin-left: 6px;"></i>
-              <strong>نموذج تعاون مؤسسي بحدود مسؤوليات واضحة:</strong> البنك/المحفظة يتولى تنفيذ الدفع ونقل الأموال
-              مباشرة بين الحسابات، والمنصة تتولى الربط التقني ومطابقة الفواتير وإشعار التاجر.
+              <span data-i18n="bank_note"><strong>نموذج تعاون مؤسسي بحدود مسؤوليات واضحة:</strong> البنك/المحفظة يتولى تنفيذ الدفع ونقل الأموال مباشرة بين الحسابات، والمنصة تتولى الربط التقني ومطابقة الفواتير وإشعار التاجر.</span>
             </div>
           </div>
 
@@ -1105,13 +1092,12 @@
         <div class="onboarding-track-card merchant">
           <div class="onboarding-card-header">
             <div class="onboarding-card-icon"><i class="fa-solid fa-store"></i></div>
-            <h3 class="onboarding-card-title">للتجار وأصحاب الأنشطة التجارية 🏬</h3>
+            <h3 class="onboarding-card-title" data-i18n="onb_m_t">للتجار وأصحاب الأنشطة التجارية 🏬</h3>
           </div>
           <ul class="onboarding-list">
-            <li><i class="fa-solid fa-circle-check"></i> <span>تجهيز بيانات النشاط التجاري والحساب المعتمد.</span></li>
-            <li><i class="fa-solid fa-circle-check"></i> <span>تحديد النظام المحاسبي المراد ربطه.</span></li>
-            <li><i class="fa-solid fa-circle-check"></i> <span>إضافة المحفظة وبدء استقبال الإشعارات بعد الاعتماد.</span>
-            </li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="onb_m_1">تجهيز بيانات النشاط التجاري والحساب المعتمد.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="onb_m_2">تحديد النظام المحاسبي المراد ربطه.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="onb_m_3">إضافة المحفظة وبدء استقبال الإشعارات بعد الاعتماد.</span></li>
           </ul>
         </div>
 
@@ -1119,13 +1105,12 @@
         <div class="onboarding-track-card bank">
           <div class="onboarding-card-header">
             <div class="onboarding-card-icon"><i class="fa-solid fa-building-columns"></i></div>
-            <h3 class="onboarding-card-title">للمؤسسات المالية (المحافظ) 🏛</h3>
+            <h3 class="onboarding-card-title" data-i18n="onb_b_t">للمؤسسات المالية (المحافظ) 🏛</h3>
           </div>
           <ul class="onboarding-list">
-            <li><i class="fa-solid fa-circle-check"></i> <span>مراجعة آلية التكامل المتاحة وتبادل الوثائق
-                اللازمة.</span></li>
-            <li><i class="fa-solid fa-circle-check"></i> <span>الاتفاق على نطاق الخدمة ونموذج التعاون.</span></li>
-            <li><i class="fa-solid fa-circle-check"></i> <span>تجهيز بيئة تجريبية لبدء التجربة عمليًا.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="onb_b_1">مراجعة آلية التكامل المتاحة وتبادل الوثائق اللازمة.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="onb_b_2">الاتفاق على نطاق الخدمة ونموذج التعاون.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="onb_b_3">تجهيز بيئة تجريبية لبدء التجربة عمليًا.</span></li>
           </ul>
         </div>
       </div>
@@ -1138,19 +1123,19 @@
       <div class="section-header text-center">
         <span class="section-tag"
           style="background:rgba(251,191,36,0.12);border-color:rgba(251,191,36,0.35);color:#FBBF24;">
-          <i class="fa-solid fa-gauge-high"></i> بوابة التاجر الرسمية (Merchant Portal)
+          <i class="fa-solid fa-gauge-high"></i> <span data-i18n="mp_tag">بوابة التاجر الرسمية (Merchant Portal)</span>
         </span>
         <h2 class="section-title">
-          <span>ما هي الخدمات والشاشات التي يجدها التاجر</span><br>
-          <span class="gradient-text">عندما ينضم للمنصة ويفتح حسابه؟</span>
+          <span data-i18n="mp_t1">ما هي الخدمات والشاشات التي يجدها التاجر</span><br>
+          <span class="gradient-text" data-i18n="mp_t2">عندما ينضم للمنصة ويفتح حسابه؟</span>
         </h2>
-        <p class="section-desc">
+        <p class="section-desc" data-i18n="mp_desc">
           عند تسجيل التاجر، يحصل على حساب رسمي في بوابة التاجر (Merchant Portal) — نظام متكامل يمنحه متابعة دقيقة
           لنقاط الدفع، سجل العمليات، الاستفسار عن الدفع، ومطابقة الفواتير.
         </p>
         <div class="portal-badge-pill">
           <i class="fa-solid fa-circle-info"></i>
-          <span>الوظائف التالية قد تختلف بحسب إعدادات التاجر والتكامل المعتمد.</span>
+          <span data-i18n="mp_note">الوظائف التالية قد تختلف بحسب إعدادات التاجر والتكامل المعتمد.</span>
         </div>
       </div>
 
@@ -1159,23 +1144,23 @@
         <button class="merchant-tab-btn active" data-tab="tabDashboard"
           onclick="switchMerchantTab('tabDashboard', this)">
           <i class="fa-solid fa-chart-pie"></i>
-          <span>1. لوحة المعلومات (Dashboard)</span>
+          <span data-i18n="mp_tab_1">1. لوحة المعلومات (Dashboard)</span>
         </button>
         <button class="merchant-tab-btn" data-tab="tabPoints" onclick="switchMerchantTab('tabPoints', this)">
           <i class="fa-solid fa-store"></i>
-          <span>2. نقاط الدفع الخاصة بي</span>
+          <span data-i18n="mp_tab_2">2. نقاط الدفع الخاصة بي</span>
         </button>
         <button class="merchant-tab-btn" data-tab="tabAddPoint" onclick="switchMerchantTab('tabAddPoint', this)">
           <i class="fa-solid fa-plus-circle"></i>
-          <span>3. إضافة نقطة دفع / محفظة</span>
+          <span data-i18n="mp_tab_3">3. إضافة نقطة دفع / محفظة</span>
         </button>
         <button class="merchant-tab-btn" data-tab="tabHistory" onclick="switchMerchantTab('tabHistory', this)">
           <i class="fa-solid fa-clock-rotate-left"></i>
-          <span>4. سجل المدفوعات التاريخي</span>
+          <span data-i18n="mp_tab_4">4. سجل المدفوعات التاريخي</span>
         </button>
         <button class="merchant-tab-btn" data-tab="tabInquiry" onclick="switchMerchantTab('tabInquiry', this)">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <span>5. الاستفسار ومطابقة الفاتورة</span>
+          <span data-i18n="mp_tab_5">5. الاستفسار ومطابقة الفاتورة</span>
         </button>
       </div>
 
@@ -1183,38 +1168,35 @@
       <div class="merchant-service-panel active" id="tabDashboard">
         <div class="service-card-layout">
           <div class="service-info-col">
-            <span class="service-tagline"><i class="fa-solid fa-shield-check"></i> واجهة الإدارة والرقابة اللحظية</span>
-            <h3><i class="fa-solid fa-chart-pie"></i> لوحة المعلومات (Dashboard)</h3>
-            <p>
+            <span class="service-tagline"><i class="fa-solid fa-shield-check"></i> <span data-i18n="mp_d_tag">واجهة الإدارة والرقابة اللحظية</span></span>
+            <h3><i class="fa-solid fa-chart-pie"></i> <span data-i18n="mp_d_t">لوحة المعلومات (Dashboard)</span></h3>
+            <p data-i18n="mp_d_p">
               تمنح التاجر رؤية شاملة لفروع ومنافذ البيع التابعة له، مع فلترة زمنية دقيقة وإحصائيات فورية عن
               حالة نقاط البيع ومطابقة الفواتير.
             </p>
             <ul class="service-details-list">
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>إجمالي نقاط الدفع:</strong> إحصاء فوري لنقاط
-                  البيع (المجموع، بانتظار قرار المؤسسة المالية، المعتمدة، والمرفوضة).</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>حالة المدفوعات الدقيقة:</strong> عدد الفواتير
-                  المسددة، المبالغ المطابقة برقم المعاملة، والمبالغ المتنازع عليها (Conflict).</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>تحديد النطاق الزمني:</strong> فلترة واستعراض
-                  المبيعات لأي تاريخ أو فترة زمنية بمرونة كاملة.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_d_f1"><strong>إجمالي نقاط الدفع:</strong> إحصاء فوري لنقاط البيع (المجموع، بانتظار قرار المؤسسة المالية، المعتمدة، والمرفوضة).</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_d_f2"><strong>حالة المدفوعات الدقيقة:</strong> عدد الفواتير المسددة، المبالغ المطابقة برقم المعاملة، والمبالغ المتنازع عليها (Conflict).</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_d_f3"><strong>تحديد النطاق الزمني:</strong> فلترة واستعراض المبيعات لأي تاريخ أو فترة زمنية بمرونة كاملة.</span></li>
             </ul>
             <button class="btn-primary"
-              onclick="openImageModal('assets/merchant_screens/screen_8.jpg', 'لوحة المعلومات الرئيسية (Dashboard) — بوابة التاجر العربية')"
+              onclick="openImageModal('assets/merchant_screens/screen_8.jpg', 'لوحة المعلومات الرئيسية (Dashboard) — بوابة التاجر العربية', 'Main Dashboard — Merchant Portal')"
               style="padding:10px 20px;font-size:0.9rem;border-radius:12px;margin-top:10px;cursor:pointer;">
-              <i class="fa-solid fa-expand"></i> تكبير لقطة الشاشة العربية
+              <i class="fa-solid fa-expand"></i> <span data-i18n="mp_btn_zoom_ar">تكبير لقطة الشاشة</span>
             </button>
           </div>
           <div class="service-screenshot-frame"
-            onclick="openImageModal('assets/merchant_screens/screen_8.jpg', 'لوحة المعلومات الرئيسية (Dashboard) — بوابة التاجر العربية')">
+            onclick="openImageModal('assets/merchant_screens/screen_8.jpg', 'لوحة المعلومات الرئيسية (Dashboard) — بوابة التاجر العربية', 'Main Dashboard — Merchant Portal')">
             <div class="browser-mock-header">
               <span class="mock-dot red"></span>
               <span class="mock-dot yellow"></span>
               <span class="mock-dot green"></span>
-              <span class="mock-title">portal.ultimate-pay.com/dashboard (العربية)</span>
+              <span class="mock-title">portal.ultimate-pay.com/dashboard</span>
             </div>
             <img src="assets/merchant_screens/screen_8.jpg"
-              alt="لوحة المعلومات الرئيسية Dashboard بوابة التاجر العربية">
+              alt="لوحة المعلومات الرئيسية Dashboard بوابة التاجر">
             <div class="frame-zoom-cta">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
+              <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="mp_zoom">تكبير بدقة 100%</span>
             </div>
           </div>
         </div>
@@ -1224,30 +1206,26 @@
       <div class="merchant-service-panel" id="tabPoints">
         <div class="service-card-layout">
           <div class="service-info-col">
-            <span class="service-tagline"><i class="fa-solid fa-store"></i> إدارة الحسابات والمحافظ المربوطة</span>
-            <h3><i class="fa-solid fa-wallet"></i> نقاط الدفع الخاصة بي</h3>
-            <p>
+            <span class="service-tagline"><i class="fa-solid fa-store"></i> <span data-i18n="mp_p_tag">إدارة الحسابات والمحافظ المربوطة</span></span>
+            <h3><i class="fa-solid fa-wallet"></i> <span data-i18n="mp_p_t">نقاط الدفع الخاصة بي</span></h3>
+            <p data-i18n="mp_p_p">
               تتيح للتاجر متابعة نقاط الدفع وأرقام المحافظ وحسابات البنوك المربوطة بفروعه، والاطلاع على حالة اعتماد
               كل نقطة من البنك أو المحفظة.
             </p>
             <ul class="service-details-list">
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>عرض المؤسسات المالية:</strong> عرض المحافظ الرقمية
-                  والبنوك المربوطة ضمن نطاق التكامل.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>رمز النقطة (Point Code):</strong> كود تعريفي مخصص
-                  لكل نقطة بيع لتمييز عملياتها.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>حالة النقطة وتاريخها:</strong> متابعة حالة
-                  الاعتماد (تمت الموافقة / قيد الانتظار) مع تاريخ الإجراء.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>زر مباشر لإضافة نقطة:</strong> إمكانية طلب تفعيل
-                  نقطة دفع أو محفظة جديدة بضغطة زر.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_p_f1"><strong>عرض المؤسسات المالية:</strong> عرض المحافظ الرقمية والبنوك المربوطة ضمن نطاق التكامل.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_p_f2"><strong>رمز النقطة (Point Code):</strong> كود تعريفي مخصص لكل نقطة بيع لتمييز عملياتها.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_p_f3"><strong>حالة النقطة وتاريخها:</strong> متابعة حالة الاعتماد (تمت الموافقة / قيد الانتظار) مع تاريخ الإجراء.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_p_f4"><strong>زر مباشر لإضافة نقطة:</strong> إمكانية طلب تفعيل نقطة دفع أو محفظة جديدة بضغطة زر.</span></li>
             </ul>
             <button class="btn-primary"
-              onclick="openImageModal('assets/merchant_screens/screen_10.jpg', 'نقاط الدفع الخاصة بالتاجر — بوابة التاجر العربية')"
+              onclick="openImageModal('assets/merchant_screens/screen_10.jpg', 'نقاط الدفع الخاصة بالتاجر — بوابة التاجر', 'My Payment Points — Merchant Portal')"
               style="padding:10px 20px;font-size:0.9rem;border-radius:12px;margin-top:10px;cursor:pointer;">
-              <i class="fa-solid fa-expand"></i> تكبير لقطة الشاشة العربية
+              <i class="fa-solid fa-expand"></i> <span data-i18n="mp_btn_zoom_ar">تكبير لقطة الشاشة</span>
             </button>
           </div>
           <div class="service-screenshot-frame"
-            onclick="openImageModal('assets/merchant_screens/screen_10.jpg', 'نقاط الدفع الخاصة بالتاجر — بوابة التاجر العربية')">
+            onclick="openImageModal('assets/merchant_screens/screen_10.jpg', 'نقاط الدفع الخاصة بالتاجر — بوابة التاجر', 'My Payment Points — Merchant Portal')">
             <div class="browser-mock-header">
               <span class="mock-dot red"></span>
               <span class="mock-dot yellow"></span>
@@ -1256,7 +1234,7 @@
             </div>
             <img src="assets/merchant_screens/screen_10.jpg" alt="نقاط الدفع الخاصة بي بوابة التاجر">
             <div class="frame-zoom-cta">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
+              <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="mp_zoom">تكبير بدقة 100%</span>
             </div>
           </div>
         </div>
@@ -1266,28 +1244,25 @@
       <div class="merchant-service-panel" id="tabAddPoint">
         <div class="service-card-layout">
           <div class="service-info-col">
-            <span class="service-tagline"><i class="fa-solid fa-plus-circle"></i> توسيع منافذ التحصيل</span>
-            <h3><i class="fa-solid fa-plus"></i> إضافة نقطة دفع / محفظة جديدة</h3>
-            <p>
+            <span class="service-tagline"><i class="fa-solid fa-plus-circle"></i> <span data-i18n="mp_a_tag">توسيع منافذ التحصيل</span></span>
+            <h3><i class="fa-solid fa-plus"></i> <span data-i18n="mp_a_t">إضافة نقطة دفع / محفظة جديدة</span></h3>
+            <p data-i18n="mp_a_p">
               شاشة واضحة تمكّن التاجر من تقديم طلب ربط محفظة رقمية أو حساب بنكي جديد لنقاط البيع الخاصة به لمراجعته
               واعتماده من المؤسسة المالية.
             </p>
             <ul class="service-details-list">
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>اختيار المؤسسة المالية:</strong> قائمة منسدلة
-                  تضم المحافظ الرقمية والبنوك المتاحة ضمن نطاق التكامل.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>إدخال رمز المحفظة / الكود:</strong> كتابة رقم
-                  الحساب أو المحفظة المراد استقبال الأموال عليه.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>المراجعة والاعتماد المصرفي:</strong> تُراجع المؤسسة
-                  المالية الطلب وتفعّله وفق إجراءاتها المعتمدة.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_a_f1"><strong>اختيار المؤسسة المالية:</strong> قائمة منسدلة تضم المحافظ الرقمية والبنوك المتاحة ضمن نطاق التكامل.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_a_f2"><strong>إدخال رمز المحفظة / الكود:</strong> كتابة رقم الحساب أو المحفظة المراد استقبال الأموال عليه.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_a_f3"><strong>المراجعة والاعتماد المصرفي:</strong> تُراجع المؤسسة المالية الطلب وتفعّله وفق إجراءاتها المعتمدة.</span></li>
             </ul>
             <button class="btn-primary"
-              onclick="openImageModal('assets/merchant_screens/screen_3.jpg', 'شاشة إضافة نقطة دفع جديدة — Merchant Portal')"
+              onclick="openImageModal('assets/merchant_screens/screen_3.jpg', 'شاشة إضافة نقطة دفع جديدة — بوابة التاجر', 'Add New Payment Point — Merchant Portal')"
               style="padding:10px 20px;font-size:0.9rem;border-radius:12px;margin-top:10px;cursor:pointer;">
-              <i class="fa-solid fa-expand"></i> تكبير لقطة الشاشة
+              <i class="fa-solid fa-expand"></i> <span data-i18n="mp_btn_zoom_ar">تكبير لقطة الشاشة</span>
             </button>
           </div>
           <div class="service-screenshot-frame"
-            onclick="openImageModal('assets/merchant_screens/screen_3.jpg', 'شاشة إضافة نقطة دفع جديدة — Merchant Portal')">
+            onclick="openImageModal('assets/merchant_screens/screen_3.jpg', 'شاشة إضافة نقطة دفع جديدة — بوابة التاجر', 'Add New Payment Point — Merchant Portal')">
             <div class="browser-mock-header">
               <span class="mock-dot red"></span>
               <span class="mock-dot yellow"></span>
@@ -1296,7 +1271,7 @@
             </div>
             <img src="assets/merchant_screens/screen_3.jpg" alt="إضافة نقطة دفع جديدة">
             <div class="frame-zoom-cta">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
+              <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="mp_zoom">تكبير بدقة 100%</span>
             </div>
           </div>
         </div>
@@ -1306,32 +1281,27 @@
       <div class="merchant-service-panel" id="tabHistory">
         <div class="service-card-layout">
           <div class="service-info-col">
-            <span class="service-tagline"><i class="fa-solid fa-file-invoice-dollar"></i> توثيق مالي شامل ودقيق</span>
-            <h3><i class="fa-solid fa-clock-rotate-left"></i> سجل المدفوعات التاريخي</h3>
-            <p>
+            <span class="service-tagline"><i class="fa-solid fa-file-invoice-dollar"></i> <span data-i18n="mp_h_tag">توثيق مالي شامل ودقيق</span></span>
+            <h3><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="mp_h_t">سجل المدفوعات التاريخي</span></h3>
+            <p data-i18n="mp_h_p">
               سجل مفصل لكل دفعة مؤكدة ومرتبطة بحساب التاجر عبر المحافظ والبنوك المتاحة في نطاق التكامل، بالوقت والتاريخ
               والمبلغ الدقيق.
             </p>
             <ul class="service-details-list">
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>رقم المرجع الموحد (Transaction ID):</strong> معرف
-                  مرجعي فريد لكل عملية لربطها بالفاتورة بدقة.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>المؤسسة ورمز النقطة:</strong> تحديد جهة الدفع
-                  المستخدمة ونقطة البيع المنفذة.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>المبلغ والعملة:</strong> عرض مبلغ العملية وعملتها
-                  كما وردت من جهة الدفع.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>حالة المطابقة المحاسبية:</strong> وسم يوضح
-                  (مطابقة حسب معرف المعاملة) أو (Conflict) للتأكد من ربطها بنظام Onyx.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>تاريخ ووقت العملية:</strong> توثيق زمني واضح
-                  لتاريخ ووقت استلام تأكيد السداد.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_h_f1"><strong>رقم المرجع الموحد (Transaction ID):</strong> معرف مرجعي فريد لكل عملية لربطها بالفاتورة بدقة.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_h_f2"><strong>المؤسسة ورمز النقطة:</strong> تحديد جهة الدفع المستخدمة ونقطة البيع المنفذة.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_h_f3"><strong>المبلغ والعملة:</strong> عرض مبلغ العملية وعملتها كما وردت من جهة الدفع.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_h_f4"><strong>حالة المطابقة المحاسبية:</strong> وسم يوضح (مطابقة حسب معرف المعاملة) أو (Conflict) للتأكد من ربطها بنظام Onyx.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_h_f5"><strong>تاريخ ووقت العملية:</strong> توثيق زمني واضح لتاريخ ووقت استلام تأكيد السداد.</span></li>
             </ul>
             <button class="btn-primary"
-              onclick="openImageModal('assets/merchant_screens/screen_11.jpg', 'سجل المدفوعات التاريخي — بوابة التاجر العربية')"
+              onclick="openImageModal('assets/merchant_screens/screen_11.jpg', 'سجل المدفوعات التاريخي — بوابة التاجر', 'Payment History Log — Merchant Portal')"
               style="padding:10px 20px;font-size:0.9rem;border-radius:12px;margin-top:10px;cursor:pointer;">
-              <i class="fa-solid fa-expand"></i> تكبير لقطة الشاشة العربية
+              <i class="fa-solid fa-expand"></i> <span data-i18n="mp_btn_zoom_ar">تكبير لقطة الشاشة</span>
             </button>
           </div>
           <div class="service-screenshot-frame"
-            onclick="openImageModal('assets/merchant_screens/screen_11.jpg', 'سجل المدفوعات التاريخي — بوابة التاجر العربية')">
+            onclick="openImageModal('assets/merchant_screens/screen_11.jpg', 'سجل المدفوعات التاريخي — بوابة التاجر', 'Payment History Log — Merchant Portal')">
             <div class="browser-mock-header">
               <span class="mock-dot red"></span>
               <span class="mock-dot yellow"></span>
@@ -1340,7 +1310,7 @@
             </div>
             <img src="assets/merchant_screens/screen_11.jpg" alt="سجل المدفوعات التاريخي بوابة التاجر">
             <div class="frame-zoom-cta">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
+              <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="mp_zoom">تكبير بدقة 100%</span>
             </div>
           </div>
         </div>
@@ -1350,36 +1320,32 @@
       <div class="merchant-service-panel" id="tabInquiry">
         <div class="service-card-layout">
           <div class="service-info-col">
-            <span class="service-tagline"><i class="fa-solid fa-magnifying-glass"></i> تحقق ومطابقة في حالات
-              الاستثناء</span>
-            <h3><i class="fa-solid fa-code-compare"></i> الاستفسار عن الدفع ومطابقة الفاتورة</h3>
-            <p>
+            <span class="service-tagline"><i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="mp_i_tag">تحقق ومطابقة في حالات الاستثناء</span></span>
+            <h3><i class="fa-solid fa-code-compare"></i> <span data-i18n="mp_i_t">الاستفسار عن الدفع ومطابقة الفاتورة</span></h3>
+            <p data-i18n="mp_i_p">
               أداة قوية تتيح للتاجر والكاشير البحث الفوري عن أي معاملة للتأكد من وصولها، أو مطابقة دفعة يدوياً برقم
               الفاتورة في نظام ERP حال حدوث أي انقطاع للإنترنت.
             </p>
             <ul class="service-details-list">
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>ابحث عن معاملة:</strong> استعلام فوري باختيار
-                  المؤسسة المالية وإدخال معرف المعاملة.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>مطابقة دفعة (Match a Payment):</strong> ربط
-                  العملية بمرجع الفاتورة الصحيح والمبلغ المتوقع يدوياً لحسم أي تضارب.</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span><strong>معالجة الاستثناءات بأمان:</strong> ضمان عدم
-                  تسليم بضاعة إلا بعد التحقق، ومنع تسجيل قيود محاسبية وهمية.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_i_f1"><strong>ابحث عن معاملة:</strong> استعلام فوري باختيار المؤسسة المالية وإدخال معرف المعاملة.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_i_f2"><strong>مطابقة دفعة (Match a Payment):</strong> ربط العملية بمرجع الفاتورة الصحيح والمبلغ المتوقع يدوياً لحسم أي تضارب.</span></li>
+              <li><i class="fa-solid fa-check-circle"></i><span data-i18n="mp_i_f3"><strong>معالجة الاستثناءات بأمان:</strong> ضمان عدم تسليم بضاعة إلا بعد التحقق، ومنع تسجيل قيود محاسبية وهمية.</span></li>
             </ul>
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
               <button class="btn-primary"
-                onclick="openImageModal('assets/merchant_screens/screen_6.jpg', 'الاستفسار عن الدفع — بوابة التاجر العربية')"
+                onclick="openImageModal('assets/merchant_screens/screen_6.jpg', 'الاستفسار عن الدفع — بوابة التاجر', 'Payment Inquiry — Merchant Portal')"
                 style="padding:10px 18px;font-size:0.88rem;border-radius:12px;cursor:pointer;">
-                <i class="fa-solid fa-search"></i> شاشة البحث
+                <i class="fa-solid fa-search"></i> <span data-i18n="mp_i_btn1">شاشة البحث</span>
               </button>
               <button class="btn-ghost"
-                onclick="openImageModal('assets/merchant_screens/screen_12.jpg', 'شاشة مطابقة دفعة بالفاتورة — بوابة التاجر العربية')"
+                onclick="openImageModal('assets/merchant_screens/screen_12.jpg', 'شاشة مطابقة دفعة بالفاتورة — بوابة التاجر', 'Match a Payment to Invoice — Merchant Portal')"
                 style="padding:10px 18px;font-size:0.88rem;border-radius:12px;cursor:pointer;">
-                <i class="fa-solid fa-link"></i> شاشة مطابقة الدفعة
+                <i class="fa-solid fa-link"></i> <span data-i18n="mp_i_btn2">شاشة مطابقة الدفعة</span>
               </button>
             </div>
           </div>
           <div class="service-screenshot-frame"
-            onclick="openImageModal('assets/merchant_screens/screen_6.jpg', 'الاستفسار ومطابقة الدفع — بوابة التاجر العربية')">
+            onclick="openImageModal('assets/merchant_screens/screen_6.jpg', 'الاستفسار ومطابقة الدفع — بوابة التاجر', 'Payment Inquiry & Matching — Merchant Portal')">
             <div class="browser-mock-header">
               <span class="mock-dot red"></span>
               <span class="mock-dot yellow"></span>
@@ -1388,7 +1354,7 @@
             </div>
             <img src="assets/merchant_screens/screen_6.jpg" alt="الاستفسار عن الدفع ومطابقة الفاتورة">
             <div class="frame-zoom-cta">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير بدقة 100%
+              <i class="fa-solid fa-magnifying-glass-plus"></i> <span data-i18n="mp_zoom">تكبير بدقة 100%</span>
             </div>
           </div>
         </div>
@@ -1425,7 +1391,7 @@
           <div class="official-contact-channels" style="margin-top:28px;">
             <a href="https://wa.me/967782665485" target="_blank" class="contact-pill whatsapp-pill">
               <i class="fa-brands fa-whatsapp"></i>
-              <span>واتساب خدمة العملاء: <strong>782665485</strong></span>
+              <span data-i18n="wa_hero_btn">واتساب خدمة العملاء: 782665485</span>
             </a>
             <a href="http://www.ultimate-pay.com" target="_blank" class="contact-pill" style="text-decoration:none;">
               <i class="fa-solid fa-globe"></i>
@@ -1454,13 +1420,13 @@
       </div>
 
       <div class="footer-badges">
-        <div class="f-badge"><i class="fa-solid fa-building-columns"></i> شركة مالية مرخصة من البنك المركزي</div>
-        <div class="f-badge"><i class="fa-solid fa-link"></i> ربط الدفع بالفاتورة الصحيحة</div>
-        <div class="f-badge"><i class="fa-solid fa-arrows-spin"></i> تكامل محاسبي تلقائي</div>
+        <div class="f-badge"><i class="fa-solid fa-building-columns"></i> <span data-i18n="f_b1">شركة مالية مرخصة من البنك المركزي</span></div>
+        <div class="f-badge"><i class="fa-solid fa-link"></i> <span data-i18n="f_b2">ربط الدفع بالفاتورة الصحيحة</span></div>
+        <div class="f-badge"><i class="fa-solid fa-arrows-spin"></i> <span data-i18n="f_b3">تكامل محاسبي تلقائي</span></div>
       </div>
 
       <div class="footer-copy">
-        <p>&copy; 2026 Ultimate Pay. جميع الحقوق محفوظة.</p>
+        <p data-i18n="footer_copy">&copy; 2026 Ultimate Pay. جميع الحقوق محفوظة.</p>
       </div>
     </div>
   </footer>
