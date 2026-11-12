@@ -12,13 +12,20 @@
   --bg-glass: rgba(255, 255, 255, 0.04);
   
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-focus: #10B981;
-  --border-highlight: rgba(16, 185, 129, 0.35);
+  --border-focus: #1fa64d;
+  --border-highlight: rgba(31, 166, 77, 0.35);
   
-  --emerald-500: #10B981;
+  /* Official Ultimate Pay Brand Identity (from https://www.ultimate-pay.com) */
+  --up-primary: #1fa64d;
+  --up-primary-hover: #27c05c;
+  --up-primary-glow: rgba(31, 166, 77, 0.35);
+  --up-primary-subtle: rgba(31, 166, 77, 0.12);
+  --up-primary-border: rgba(31, 166, 77, 0.35);
+  
+  --emerald-500: #1fa64d;
   --emerald-400: #34D399;
-  --emerald-600: #059669;
-  --emerald-glow: rgba(16, 185, 129, 0.25);
+  --emerald-600: #15803d;
+  --emerald-glow: rgba(31, 166, 77, 0.28);
   
   --cyan-400: #22D3EE;
   --cyan-500: #06B6D4;
@@ -34,8 +41,9 @@
   --text-muted: #64748B;
   --text-on-accent: #022C22;
   
-  --font-arabic: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-latin: 'Outfit', sans-serif;
+  /* Official Brand Fonts: IBM Plex Sans Arabic alongside Cairo and Outfit */
+  --font-arabic: 'IBM Plex Sans Arabic', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-latin: 'IBM Plex Sans', 'Outfit', sans-serif;
   
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -47,8 +55,12 @@
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
   --shadow-glow: 0 0 35px var(--emerald-glow);
   
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Ultimate Pay Spring Fluid Transitions & Easings */
+  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fluid: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-lift: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.25s ease;
 }
 
 /* Base Reset & Core Styles */
@@ -8086,4 +8098,339 @@ body.theme-light .payment-cycle-badge.paid {
 [dir="ltr"] .frame-zoom-cta {
   left: auto;
   right: 16px;
+}
+
+
+/* ==========================================================================
+   Ultimate Pay Official Visual Identity & Fluid Micro-Interactions System
+   Directly adapted & elevated from https://www.ultimate-pay.com
+   Featuring:
+   - Ultra-smooth spring easing curves (cubic-bezier(0.16, 1, 0.3, 1))
+   - Shimmer light gleam on hover for primary CTAs (.btn-shimmer)
+   - Tactile elevation and brand emerald glows on all interactive cards / divs
+   - Interactive Squircle icon animations with radiant drop-shadows
+   - Direction-aware glide for navigation links (RTL & LTR)
+   - High-contrast, polished dual-mode support (Dark & Light)
+   ========================================================================== */
+
+/* --- 1. Buttons Fluidity & Interactive Hover System --- */
+.btn-primary,
+.btn-large.btn-primary,
+.track-btn.active,
+.drawer-track-btn.active,
+.frame-zoom-cta {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              filter 0.25s ease,
+              border-color 0.25s ease;
+}
+
+/* Shimmer Light Gleam across buttons on hover */
+.btn-primary::after,
+.btn-large.btn-primary::after,
+.frame-zoom-cta::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(60deg, transparent 35%, rgba(255, 255, 255, 0.25) 50%, transparent 65%);
+  transform: rotate(25deg) translateX(-130%);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after,
+.btn-large.btn-primary:hover::after,
+.frame-zoom-cta:hover::after {
+  transform: rotate(25deg) translateX(130%);
+}
+
+.btn-primary:hover,
+.btn-large.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 8px 24px rgba(31, 166, 77, 0.42), 0 2px 8px rgba(31, 166, 77, 0.22) !important;
+  border-color: #34D399 !important;
+}
+
+.btn-primary:active,
+.btn-large.btn-primary:active {
+  transform: translateY(0) scale(0.97);
+  filter: brightness(0.96);
+  box-shadow: 0 4px 12px rgba(31, 166, 77, 0.3) !important;
+}
+
+/* Secondary Button Hover */
+.btn-secondary {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(31, 166, 77, 0.1) !important;
+  border-color: rgba(31, 166, 77, 0.45) !important;
+  color: #34D399 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.btn-secondary:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Ghost Button Hover */
+.btn-ghost {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.btn-ghost:hover {
+  transform: translateY(-1px);
+  color: #34D399 !important;
+  background: rgba(31, 166, 77, 0.1) !important;
+  border-color: rgba(31, 166, 77, 0.35) !important;
+}
+
+/* Floating Presentation & Toolbar Tools */
+.btn-tool {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              color 0.25s ease;
+}
+
+.btn-tool:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: rgba(31, 166, 77, 0.16) !important;
+  border-color: rgba(31, 166, 77, 0.5) !important;
+  color: #34D399 !important;
+  box-shadow: 0 4px 14px rgba(31, 166, 77, 0.25) !important;
+}
+
+.btn-tool:active {
+  transform: scale(0.95);
+}
+
+/* Track Pills & Filter Buttons */
+.track-btn,
+.drawer-track-btn {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.track-btn:hover:not(.active),
+.drawer-track-btn:hover:not(.active) {
+  transform: translateY(-2px);
+  border-color: rgba(31, 166, 77, 0.45);
+  box-shadow: 0 4px 14px rgba(31, 166, 77, 0.18);
+  background: rgba(31, 166, 77, 0.08);
+}
+
+.track-btn:active,
+.drawer-track-btn:active {
+  transform: scale(0.97);
+}
+
+/* Merchant Portal Screenshot Tabs */
+.merchant-tab-btn {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background 0.25s ease,
+              box-shadow 0.25s ease,
+              color 0.25s ease;
+}
+
+.merchant-tab-btn:hover:not(.active) {
+  transform: translateY(-2px);
+  border-color: rgba(31, 166, 77, 0.45) !important;
+  background: rgba(31, 166, 77, 0.08) !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 4px 14px rgba(31, 166, 77, 0.18);
+}
+
+.merchant-tab-btn.active {
+  border-color: #1fa64d !important;
+  box-shadow: 0 4px 18px rgba(31, 166, 77, 0.32) !important;
+}
+
+/* WhatsApp CTA Micro-Interactions */
+.btn-whatsapp-hero,
+.header-whatsapp-pill {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.25s ease;
+}
+
+.btn-whatsapp-hero:hover,
+.header-whatsapp-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.42), 0 0 15px rgba(37, 211, 102, 0.2) !important;
+  filter: brightness(1.06);
+}
+
+.btn-whatsapp-hero:hover i,
+.header-whatsapp-pill:hover i {
+  animation: upWhatsAppWiggle 0.45s ease-in-out;
+}
+
+@keyframes upWhatsAppWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg) scale(1.12); }
+  75% { transform: rotate(10deg) scale(1.12); }
+}
+
+/* --- 2. Fluidity & Softness of Divs, Containers & Cards --- */
+.glass-card,
+.party-card,
+.payment-cycle-card,
+.service-card,
+.service-card-layout,
+.phase-card,
+.why-card,
+.m-benefit-item,
+.bank-collab-item,
+.about-pillar-box,
+.role-col-card,
+.trust-item,
+.onboarding-track-card,
+.modal-card {
+  will-change: transform, box-shadow;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s ease,
+              background 0.28s ease !important;
+}
+
+/* Dark Mode Card Elevation & Emerald Ambient Glow */
+.glass-card:hover,
+.party-card:hover,
+.payment-cycle-card:hover,
+.service-card:hover,
+.service-card-layout:hover,
+.phase-card:hover,
+.why-card:hover,
+.m-benefit-item:hover,
+.bank-collab-item:hover,
+.about-pillar-box:hover,
+.role-col-card:hover,
+.trust-item:hover,
+.onboarding-track-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(31, 166, 77, 0.42) !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.55), 0 0 24px rgba(31, 166, 77, 0.16) !important;
+}
+
+/* Light Mode Card Elevation & Soft Shadow (High Precision) */
+body.theme-light .glass-card:hover,
+body.theme-light .party-card:hover,
+body.theme-light .payment-cycle-card:hover,
+body.theme-light .service-card:hover,
+body.theme-light .service-card-layout:hover,
+body.theme-light .phase-card:hover,
+body.theme-light .why-card:hover,
+body.theme-light .m-benefit-item:hover,
+body.theme-light .bank-collab-item:hover,
+body.theme-light .about-pillar-box:hover,
+body.theme-light .role-col-card:hover,
+body.theme-light .trust-item:hover,
+body.theme-light .onboarding-track-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(31, 166, 77, 0.45) !important;
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.08), 0 0 20px rgba(31, 166, 77, 0.12) !important;
+}
+
+/* --- 3. Interactive Squircle Icons inside Cards (Fintech Polish) --- */
+.party-icon,
+.pillar-icon,
+.card-icon,
+.service-icon-wrap,
+.why-icon,
+.phase-icon,
+.collab-badge,
+.payment-cycle-badge,
+.track-card-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.3s ease,
+              background 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.party-card:hover .party-icon,
+.about-pillar-box:hover .pillar-icon,
+.service-card:hover .service-icon-wrap,
+.service-card:hover .serv-badge,
+.why-card:hover .why-icon,
+.phase-card:hover .phase-icon,
+.payment-cycle-card:hover .payment-cycle-badge,
+.bank-collab-item:hover .collab-badge,
+.m-benefit-item:hover i,
+.onboarding-track-card:hover .track-card-icon,
+.trust-item:hover i {
+  transform: translateY(-2px) scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(31, 166, 77, 0.6));
+  border-color: rgba(31, 166, 77, 0.5) !important;
+  background: rgba(31, 166, 77, 0.16) !important;
+  color: #34D399 !important;
+}
+
+/* --- 4. Direction-Aware Quick Nav Links Hover --- */
+.quick-nav-link {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              color 0.25s ease;
+}
+
+.quick-nav-link:hover {
+  transform: translateY(-2px) translateX(-3px);
+  background: rgba(31, 166, 77, 0.16) !important;
+  border-color: rgba(31, 166, 77, 0.5) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(31, 166, 77, 0.25) !important;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
+}
+
+[dir="ltr"] .quick-nav-link:hover {
+  transform: translateY(-2px) translateX(3px);
+}
+
+body.theme-light .quick-nav-link:hover {
+  color: #047857 !important;
+  background: rgba(31, 166, 77, 0.12) !important;
+  border-color: rgba(31, 166, 77, 0.45) !important;
+  box-shadow: 0 6px 18px rgba(31, 166, 77, 0.18) !important;
+  text-shadow: none;
+}
+
+/* --- 5. Portal Screenshot Frame Fluid Hover --- */
+.portal-screenshot-frame {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.portal-screenshot-frame:hover {
+  transform: translateY(-3px);
+  border-color: rgba(31, 166, 77, 0.4) !important;
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.6), 0 0 28px rgba(31, 166, 77, 0.18) !important;
+}
+
+body.theme-light .portal-screenshot-frame:hover {
+  border-color: rgba(31, 166, 77, 0.45) !important;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.12), 0 0 24px rgba(31, 166, 77, 0.12) !important;
 }
