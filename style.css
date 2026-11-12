@@ -2160,9 +2160,7 @@ a {
 }
 
 @media (max-width: 860px) {
-  .track-selector {
-    display: none;
-  }
+  /* Mobile Track Selector is kept active and visible */
   .mobile-menu-btn {
     display: block;
   }
@@ -4734,8 +4732,9 @@ body.theme-light .financial-waterfall-box {
     text-overflow: ellipsis !important;
   }
 
+  /* Mobile Track Selector - Displayed prominently in header */
   .track-selector {
-    display: none !important;
+    display: flex !important;
   }
 
   .hide-mobile {
@@ -8433,4 +8432,295 @@ body.theme-light .quick-nav-link:hover {
 body.theme-light .portal-screenshot-frame:hover {
   border-color: rgba(31, 166, 77, 0.45) !important;
   box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.12), 0 0 24px rgba(31, 166, 77, 0.12) !important;
+}
+
+
+/* ==========================================================================
+   Universal Sticky / Fixed Header & Mobile Navigation Optimization
+   Resolves:
+   - Header permanently fixed and visible across ALL screens (Desktop, Tablet, Mobile)
+   - Mobile-optimized grid layout with 1-tap Target Audience Segmented Control
+   - Zero overlap on page content (via --header-height and scroll-margin-top)
+   - Smooth backdrop overlay & drawer integration
+   ========================================================================== */
+
+:root {
+  --header-height: 72px;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --header-height: 110px;
+  }
+}
+
+/* 1. Guaranteed Fixed Main Header */
+.main-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 990 !important;
+  background: rgba(7, 11, 20, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.theme-light .main-header {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* 2. Body Offset Prevention */
+body {
+  padding-top: var(--header-height, 72px) !important;
+}
+
+/* 3. Universal Anchor Navigation Margins (Never covered by fixed header) */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height, 72px) + 20px) !important;
+}
+
+section[id],
+div[id].section-accounting-cycle,
+div[id].calculator-section,
+.hero-section {
+  scroll-margin-top: calc(var(--header-height, 72px) + 20px) !important;
+}
+
+/* 4. Desktop Header Container Layout (>= 861px) */
+@media (min-width: 861px) {
+  .header-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    max-width: 1300px !important;
+    margin: 0 auto !important;
+    padding: 10px 24px !important;
+  }
+
+  .track-selector {
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: var(--radius-full) !important;
+    padding: 4px !important;
+    gap: 6px !important;
+  }
+
+  body.theme-light .track-selector {
+    background: #F1F5F9 !important;
+    border-color: #E2E8F0 !important;
+  }
+}
+
+/* 5. Mobile & Tablet Header Optimization (<= 860px) */
+@media (max-width: 860px) {
+  .main-header {
+    padding: 0 !important;
+  }
+
+  .header-container {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas: 
+      "logo actions"
+      "track track" !important;
+    row-gap: 8px !important;
+    column-gap: 12px !important;
+    padding: 8px 14px 10px 14px !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .brand-logo {
+    grid-area: logo !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+  }
+
+  .logo-mark {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .logo-primary {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .logo-tagline {
+    display: none !important; /* Hide secondary tagline on mobile to keep header clean */
+  }
+
+  .header-actions {
+    grid-area: actions !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .header-actions .btn-ghost {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border-subtle) !important;
+    font-size: 0.9rem !important;
+    color: var(--text-primary) !important;
+  }
+
+  #btnHeaderLang {
+    width: auto !important;
+    padding: 0 8px !important;
+    gap: 4px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+  }
+
+  .mobile-menu-btn {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border-subtle) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+  }
+
+  body.theme-light .mobile-menu-btn {
+    background: #F1F5F9 !important;
+    border-color: #E2E8F0 !important;
+    color: #0F172A !important;
+  }
+
+  /* Segmented Control for Target Audience on Mobile */
+  .track-selector {
+    grid-area: track !important;
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: var(--radius-full) !important;
+    padding: 3px !important;
+    gap: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  body.theme-light .track-selector {
+    background: #F1F5F9 !important;
+    border-color: #E2E8F0 !important;
+  }
+
+  .track-selector .track-btn {
+    flex: 1 1 50% !important;
+    justify-content: center !important;
+    padding: 7px 8px !important;
+    font-size: 0.8rem !important;
+    border-radius: var(--radius-full) !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    gap: 6px !important;
+  }
+
+  .track-selector .track-btn i {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .track-selector .track-btn {
+    font-size: 0.74rem !important;
+    padding: 6px 4px !important;
+    gap: 4px !important;
+  }
+  .track-selector .track-btn i {
+    font-size: 0.78rem !important;
+  }
+}
+
+/* 6. Active Track Indicator (High Precision & Contrast) */
+.track-btn.active {
+  background: var(--up-primary, #1fa64d) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border-color: var(--up-primary, #1fa64d) !important;
+  box-shadow: 0 4px 16px rgba(31, 166, 77, 0.45) !important;
+  transform: scale(1.01);
+}
+
+body.theme-light .track-btn.active {
+  background: var(--up-primary, #1fa64d) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border-color: var(--up-primary, #1fa64d) !important;
+  box-shadow: 0 4px 14px rgba(31, 166, 77, 0.35) !important;
+}
+
+.track-btn:not(.active) {
+  color: var(--text-secondary, #94A3B8) !important;
+  background: transparent !important;
+}
+
+body.theme-light .track-btn:not(.active) {
+  color: #475569 !important;
+  background: transparent !important;
+}
+
+/* 7. Quick Nav Bar Sticky Offset on Desktop */
+.quick-nav-bar {
+  position: sticky !important;
+  top: var(--header-height, 70px) !important;
+  z-index: 980 !important;
+}
+
+@media (max-width: 860px) {
+  .quick-nav-bar {
+    position: relative !important;
+    top: auto !important;
+    z-index: 20 !important;
+  }
+}
+
+/* 8. Mobile Drawer & Backdrop Layering */
+.drawer-backdrop {
+  z-index: 1000 !important;
+  background: rgba(3, 7, 18, 0.75) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+}
+
+.drawer-backdrop.active,
+.drawer-backdrop.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.mobile-drawer {
+  z-index: 1005 !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), right 0.35s cubic-bezier(0.16, 1, 0.3, 1), left 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }

@@ -685,6 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentLangLabel) {
       currentLangLabel.textContent = lang === 'ar' ? 'EN' : 'عربي';
     }
+    const headerLangLabel = document.getElementById('headerLangLabel');
+    if (headerLangLabel) {
+      headerLangLabel.textContent = lang === 'ar' ? 'EN' : 'عربي';
+    }
 
     const drawerLangLabel = document.getElementById('drawerLangLabel');
     if (drawerLangLabel) {
@@ -709,10 +713,17 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('ultimatepay_lang', lang);
   }
 
-  // Language Toggle Button (Toolbar)
+  // Language Toggle Button (Toolbar & Header)
   const btnToggleLang = document.getElementById('btnToggleLang');
   if (btnToggleLang) {
     btnToggleLang.addEventListener('click', () => {
+      applyLanguage(currentLang === 'ar' ? 'en' : 'ar');
+    });
+  }
+
+  const btnHeaderLang = document.getElementById('btnHeaderLang');
+  if (btnHeaderLang) {
+    btnHeaderLang.addEventListener('click', () => {
       applyLanguage(currentLang === 'ar' ? 'en' : 'ar');
     });
   }
@@ -733,11 +744,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 2. Audience Track Switcher (Merchants vs Banks)
+  // 2. Audience Track Switcher (Merchants vs Banks) & Smooth Scroll
   // ==========================================
   let currentTrack = 'merchants';
 
-  function setActiveTrack(trackId) {
+  function setActiveTrack(trackId, shouldScroll = false) {
     if (trackId !== 'merchants' && trackId !== 'banks') return;
     currentTrack = trackId;
 
@@ -747,29 +758,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update buttons in main header
     document.querySelectorAll('.track-selector .track-btn').forEach(btn => {
-      if (btn.getAttribute('data-target') === trackId) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+      const isTarget = btn.getAttribute('data-target') === trackId;
+      btn.classList.toggle('active', isTarget);
+      btn.setAttribute('aria-pressed', isTarget ? 'true' : 'false');
     });
 
     // Update buttons in sticky banner
     document.querySelectorAll('.track-pills .track-pill').forEach(pill => {
-      if (pill.getAttribute('data-target') === trackId) {
-        pill.classList.add('active');
-      } else {
-        pill.classList.remove('active');
-      }
+      pill.classList.toggle('active', pill.getAttribute('data-target') === trackId);
     });
 
     // Update buttons in mobile drawer
     document.querySelectorAll('.drawer-track-nav .drawer-track-btn').forEach(dBtn => {
-      if (dBtn.getAttribute('data-target') === trackId) {
-        dBtn.classList.add('active');
-      } else {
-        dBtn.classList.remove('active');
-      }
+      dBtn.classList.toggle('active', dBtn.getAttribute('data-target') === trackId);
     });
 
     // Switch Hero Content
@@ -784,13 +785,32 @@ document.addEventListener('DOMContentLoaded', () => {
         heroBanks.style.display = 'block';
       }
     }
+
+    // Scroll smoothly to the target section when user explicitly clicks
+    if (shouldScroll) {
+      const targetId = (trackId === 'merchants') ? 'servicesGrid' : 'bankPartnership';
+      const targetElem = document.getElementById(targetId);
+      if (targetElem) {
+        const header = document.getElementById('mainHeader');
+        const headerOffset = header ? header.offsetHeight : 70;
+        const elemPos = targetElem.getBoundingClientRect().top + window.pageYOffset - headerOffset - 14;
+        window.scrollTo({
+          top: Math.max(0, elemPos),
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 
   document.querySelectorAll('[data-target="merchants"], [data-target="banks"]').forEach(elem => {
     elem.addEventListener('click', (e) => {
+      e.preventDefault();
       const target = elem.getAttribute('data-target');
       if (target) {
-        setActiveTrack(target);
+        setActiveTrack(target, true);
+        if (typeof closeMobileDrawer === 'function') {
+          closeMobileDrawer();
+        }
       }
     });
   });
@@ -826,7 +846,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openMobileDrawer() {
     if (mobileDrawer && drawerBackdrop) {
       mobileDrawer.classList.add('open');
-      drawerBackdrop.classList.add('active');
+      drawerBackdrop.classList.add('active', 'open');
       document.body.style.overflow = 'hidden';
     }
   }
@@ -834,7 +854,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMobileDrawer() {
     if (mobileDrawer && drawerBackdrop) {
       mobileDrawer.classList.remove('open');
-      drawerBackdrop.classList.remove('active');
+      drawerBackdrop.classList.remove('active', 'open');
       document.body.style.overflow = '';
     }
   }
@@ -945,3 +965,33 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+
+
+// ==========================================
+// Universal Header-Offset-Aware Anchor Scrolling
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (!href || href === '#' || href === '#!') return;
+      const targetElem = document.querySelector(href);
+      if (targetElem) {
+        e.preventDefault();
+        const header = document.getElementById('mainHeader');
+        const headerOffset = header ? header.offsetHeight : 70;
+        const elemPos = targetElem.getBoundingClientRect().top + window.pageYOffset - headerOffset - 14;
+        window.scrollTo({
+          top: Math.max(0, elemPos),
+          behavior: 'smooth'
+        });
+        if (typeof closeMobileDrawer === 'function') {
+          closeMobileDrawer();
+        }
+        try {
+          history.pushState(null, '', href);
+        } catch (_) {}
+      }
+    });
+  });
+});
