@@ -763,10 +763,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('aria-pressed', isTarget ? 'true' : 'false');
     });
 
-    // Update buttons in sticky banner
-    document.querySelectorAll('.track-pills .track-pill').forEach(pill => {
-      pill.classList.toggle('active', pill.getAttribute('data-target') === trackId);
-    });
 
     // Update buttons in mobile drawer
     document.querySelectorAll('.drawer-track-nav .drawer-track-btn').forEach(dBtn => {
