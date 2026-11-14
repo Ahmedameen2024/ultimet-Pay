@@ -788,8 +788,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElem = document.getElementById(targetId);
       if (targetElem) {
         const header = document.getElementById('mainHeader');
-        const headerOffset = header ? header.offsetHeight : 70;
-        const elemPos = targetElem.getBoundingClientRect().top + window.pageYOffset - headerOffset - 14;
+        const quickNav = document.getElementById('quickNavBar');
+        let totalOffset = header ? header.offsetHeight : 80;
+        if (quickNav) {
+          const qStyle = window.getComputedStyle(quickNav);
+          if (qStyle.position === 'sticky') {
+            totalOffset += quickNav.offsetHeight;
+          }
+        }
+        const elemPos = targetElem.getBoundingClientRect().top + window.pageYOffset - totalOffset - 16;
         window.scrollTo({
           top: Math.max(0, elemPos),
           behavior: 'smooth'
@@ -964,7 +971,33 @@ document.addEventListener('keydown', function(e) {
 
 
 // ==========================================
-// Universal Header-Offset-Aware Anchor Scrolling
+// Dynamic Header Height Sync with --header-height
+// ==========================================
+(function initHeaderHeightSync() {
+  function syncHeaderHeight() {
+    const header = document.getElementById('mainHeader') || document.querySelector('.main-header');
+    if (!header) return;
+    const rect = header.getBoundingClientRect();
+    const actualHeight = Math.ceil(rect.height);
+    if (actualHeight > 0) {
+      document.documentElement.style.setProperty('--header-height', `${actualHeight}px`);
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', syncHeaderHeight);
+  window.addEventListener('load', syncHeaderHeight);
+  window.addEventListener('resize', syncHeaderHeight, { passive: true });
+
+  if (window.ResizeObserver) {
+    const header = document.getElementById('mainHeader') || document.querySelector('.main-header');
+    if (header) {
+      new ResizeObserver(() => syncHeaderHeight()).observe(header);
+    }
+  }
+})();
+
+// ==========================================
+// Universal Header & Sub-Nav Offset-Aware Anchor Scrolling
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -975,8 +1008,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (targetElem) {
         e.preventDefault();
         const header = document.getElementById('mainHeader');
-        const headerOffset = header ? header.offsetHeight : 70;
-        const elemPos = targetElem.getBoundingClientRect().top + window.pageYOffset - headerOffset - 14;
+        const quickNav = document.getElementById('quickNavBar');
+        let totalOffset = header ? header.offsetHeight : 80;
+        if (quickNav) {
+          const qStyle = window.getComputedStyle(quickNav);
+          if (qStyle.position === 'sticky') {
+            totalOffset += quickNav.offsetHeight;
+          }
+        }
+        const elemPos = targetElem.getBoundingClientRect().top + window.pageYOffset - totalOffset - 16;
         window.scrollTo({
           top: Math.max(0, elemPos),
           behavior: 'smooth'

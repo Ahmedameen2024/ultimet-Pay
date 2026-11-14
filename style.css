@@ -3526,9 +3526,9 @@ body.theme-light .wa-chip {
 /* Quick Sections Sub-Navigation Bar */
 .quick-nav-bar {
   position: sticky;
-  top: 68px;
-  z-index: 95;
-  background: rgba(7, 11, 20, 0.88);
+  top: var(--header-height, 80px);
+  z-index: 980;
+  background: rgba(7, 11, 20, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid var(--border-subtle);
@@ -4681,10 +4681,10 @@ body.theme-light .financial-waterfall-box {
   }
 
   .quick-nav-bar {
-    position: relative !important;
-    top: auto !important;
+    position: sticky !important;
+    top: var(--header-height, 104px) !important;
     padding: 8px 0 !important;
-    z-index: 10 !important;
+    z-index: 980 !important;
   }
 
   .quick-nav-container {
@@ -8531,12 +8531,12 @@ body.theme-light .portal-screenshot-frame:hover {
    ========================================================================== */
 
 :root {
-  --header-height: 72px;
+  --header-height: 80px;
 }
 
 @media (max-width: 860px) {
   :root {
-    --header-height: 110px;
+    --header-height: 104px;
   }
 }
 
@@ -8547,12 +8547,17 @@ body.theme-light .portal-screenshot-frame:hover {
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
+  height: 80px !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
   z-index: 990 !important;
   background: rgba(7, 11, 20, 0.94) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border-bottom: 1px solid var(--border-subtle) !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -8564,20 +8569,20 @@ body.theme-light .main-header {
 
 /* 2. Body Offset Prevention */
 body {
-  padding-top: var(--header-height, 72px) !important;
+  padding-top: var(--header-height, 80px) !important;
 }
 
-/* 3. Universal Anchor Navigation Margins (Never covered by fixed header) */
+/* 3. Universal Anchor Navigation Margins (Never covered by fixed header or sticky quick-nav) */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height, 72px) + 20px) !important;
+  scroll-padding-top: calc(var(--header-height, 80px) + 60px) !important;
 }
 
 section[id],
 div[id].section-accounting-cycle,
 div[id].calculator-section,
 .hero-section {
-  scroll-margin-top: calc(var(--header-height, 72px) + 20px) !important;
+  scroll-margin-top: calc(var(--header-height, 80px) + 60px) !important;
 }
 
 /* 4. Desktop Header Container Layout (>= 861px) */
@@ -8587,9 +8592,12 @@ div[id].calculator-section,
     align-items: center !important;
     justify-content: space-between !important;
     gap: 16px !important;
+    width: 100% !important;
     max-width: 1300px !important;
     margin: 0 auto !important;
-    padding: 10px 24px !important;
+    padding: 0 24px !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .track-selector {
@@ -8776,18 +8784,26 @@ body.theme-light .track-btn:not(.active) {
   background: transparent !important;
 }
 
-/* 7. Quick Nav Bar Sticky Offset on Desktop */
+/* 7. Quick Nav Bar Sticky Offset across ALL screens (Guaranteed Zero Header Overlap) */
 .quick-nav-bar {
   position: sticky !important;
-  top: var(--header-height, 70px) !important;
+  top: var(--header-height, 80px) !important;
   z-index: 980 !important;
+  background: rgba(7, 11, 20, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.25) !important;
+  padding: 10px 0 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
 }
 
 @media (max-width: 860px) {
   .quick-nav-bar {
-    position: relative !important;
-    top: auto !important;
-    z-index: 20 !important;
+    position: sticky !important;
+    top: var(--header-height, 104px) !important;
+    padding: 8px 0 !important;
+    z-index: 980 !important;
   }
 }
 
